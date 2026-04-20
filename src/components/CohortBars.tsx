@@ -138,10 +138,10 @@ export default function CohortBars({ models }: Props) {
       </div>
 
       <div
-        className="grid items-stretch overflow-y-auto"
+        className="grid items-stretch overflow-y-auto frontier-scroll"
         style={{
           gridTemplateColumns: "13rem 1fr",
-          maxHeight: expanded ? "70vh" : undefined,
+          maxHeight: expanded ? "65vh" : undefined,
         }}
       >
         {rows.map((row) => {
@@ -159,9 +159,14 @@ export default function CohortBars({ models }: Props) {
             />
           );
         })}
+      </div>
 
+      <div
+        className="grid mt-2"
+        style={{ gridTemplateColumns: "13rem 1fr" }}
+      >
         <div />
-        <div className="relative mt-1 h-6 border-t border-neutral-800">
+        <div className="relative h-6 border-t border-neutral-800">
           {ticks.map((t) => {
             const left = xPct(t.ts);
             return (
