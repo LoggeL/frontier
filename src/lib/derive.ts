@@ -67,6 +67,33 @@ export function normalize(value: number, extent: ColumnExtent): number {
   return higherIsBetter ? n : 1 - n;
 }
 
+/**
+ * Map `value` to 0..1 with `baseline` anchored at 0.5. Anything "better than
+ * baseline" (higherIsBetter aware) goes above 0.5 toward the column max;
+ * "worse" goes below toward the column min. Used for hover-to-pivot coloring.
+ */
+export function baselineNormalize(
+  value: number,
+  baseline: number,
+  extent: ColumnExtent,
+): number {
+  const { min, max, higherIsBetter } = extent;
+  if (value === baseline) return 0.5;
+  const valueIsBetter = higherIsBetter
+    ? value > baseline
+    : value < baseline;
+  if (valueIsBetter) {
+    const span = higherIsBetter ? max - baseline : baseline - min;
+    if (span <= 0) return 0.5;
+    const d = higherIsBetter ? value - baseline : baseline - value;
+    return 0.5 + 0.5 * (d / span);
+  }
+  const span = higherIsBetter ? baseline - min : max - baseline;
+  if (span <= 0) return 0.5;
+  const d = higherIsBetter ? baseline - value : value - baseline;
+  return 0.5 - 0.5 * (d / span);
+}
+
 /** Group models by their knowledgeCutoff (YYYY-MM) for scatter Y-axis banding. */
 export function cohortsByCutoff(models: Model[]): Map<string, Model[]> {
   const m = new Map<string, Model[]>();

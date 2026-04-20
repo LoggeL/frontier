@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import type { Benchmark, Model, Score } from "../lib/schema";
 import {
+  baselineNormalize,
   buildScoreMatrix,
   columnExtents,
   formatScore,
@@ -57,7 +58,10 @@ export default function ComparisonTable({
     key: { kind: "release" },
     dir: "desc",
   });
-  const [hoveredCol, setHoveredCol] = useState<string | null>(null);
+  const [hoverCell, setHoverCell] = useState<{
+    col: string;
+    value: number;
+  } | null>(null);
 
   const matrix = useMemo(() => buildScoreMatrix(scores), [scores]);
   const extents = useMemo(
@@ -93,7 +97,7 @@ export default function ComparisonTable({
       <div className="overflow-x-auto rounded-lg border border-neutral-800 bg-neutral-900/40">
         <table
           className="w-full text-sm"
-          onMouseLeave={() => setHoveredCol(null)}
+          onMouseLeave={() => setHoverCell(null)}
         >
           <thead className="sticky top-0 bg-neutral-900 text-left text-xs uppercase tracking-wide text-neutral-400">
             <tr>
@@ -127,14 +131,13 @@ export default function ComparisonTable({
                   sort.key.kind === "benchmark" &&
                   sort.key.benchmarkId === b.id &&
                   sort.key.variant === variant;
-                const isHovered = hoveredCol === colKey;
+                const isHovered = hoverCell?.col === colKey;
                 return (
                   <Th
                     key={b.id}
                     active={isSorted}
                     dir={sort.dir}
                     hovered={isHovered}
-                    onMouseEnter={() => setHoveredCol(colKey)}
                     onClick={() =>
                       toggleSort(setSort, sort, {
                         kind: "benchmark",
@@ -197,26 +200,32 @@ export default function ComparisonTable({
                 {visibleBenchmarks.map((b) => {
                   const variant = activeVariant[b.id] ?? b.variants[0]!.key;
                   const colKey = `${b.id}::${variant}`;
-                  const isColHovered = hoveredCol === colKey;
+                  const isHoveredCol = hoverCell?.col === colKey;
+                  const isHoveredCell =
+                    isHoveredCol && hoverCell?.value === undefined;
                   const cells = matrix.get(m.id)?.get(b.id) ?? [];
                   const cell = cells.find((c) => c.variant === variant);
                   if (!cell) {
                     return (
                       <td
                         key={b.id}
-                        className={[
-                          "px-3 py-2 text-center text-neutral-700",
-                          isColHovered ? "bg-neutral-900" : "",
-                        ].join(" ")}
-                        onMouseEnter={() => setHoveredCol(colKey)}
+                        className="px-3 py-2 text-center text-neutral-700"
                       >
                         —
                       </td>
                     );
                   }
                   const ext = extents.get(colKey);
-                  const norm = ext ? normalize(cell.value, ext) : 0.5;
-                  const bg = isColHovered ? heatColor(norm) : undefined;
+                  const baseline =
+                    isHoveredCol && hoverCell ? hoverCell.value : undefined;
+                  const norm = ext
+                    ? baseline !== undefined
+                      ? baselineNormalize(cell.value, baseline, ext)
+                      : normalize(cell.value, ext)
+                    : 0.5;
+                  const bg = ext ? heatColor(norm) : undefined;
+                  const isBaselineCell =
+                    baseline !== undefined && cell.value === baseline;
                   const variantMeta = b.variants.find(
                     (v) => v.key === variant,
                   );
@@ -230,18 +239,17 @@ export default function ComparisonTable({
                   return (
                     <td
                       key={b.id}
-                      className="px-3 py-2 text-right transition-colors duration-75"
+                      className={[
+                        "px-3 py-2 text-right transition-colors duration-75",
+                        isBaselineCell ? "ring-1 ring-inset ring-neutral-200" : "",
+                      ].join(" ")}
                       style={bg ? { backgroundColor: bg } : undefined}
-                      onMouseEnter={() => setHoveredCol(colKey)}
+                      onMouseEnter={() =>
+                        setHoverCell({ col: colKey, value: cell.value })
+                      }
                       title={tipLines}
                     >
-                      <span
-                        className={
-                          isColHovered
-                            ? "font-mono text-sm font-semibold text-neutral-50"
-                            : "font-mono text-sm text-neutral-200"
-                        }
-                      >
+                      <span className="font-mono text-sm text-neutral-100">
                         {formatScore(cell.value, b.unit)}
                       </span>
                       {variant !== "default" && (
