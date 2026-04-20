@@ -5196,5 +5196,923 @@
     "reportedOn": "2026-04-20",
     "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6",
     "notes": "Kimi K2.6 release post — competitor score re-evaluated by Kimi under identical conditions; may not match vendor-reported."
+  },
+  {
+    "modelId": "claude-opus-4-7",
+    "benchmarkId": "swe-bench-verified",
+    "variant": "default",
+    "value": 0.876,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://www.anthropic.com/news/claude-opus-4-7",
+    "notes": "Anthropic Opus 4.7 release page"
+  },
+  {
+    "modelId": "claude-opus-4-7",
+    "benchmarkId": "swe-bench-pro",
+    "variant": "default",
+    "value": 0.643,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://www.anthropic.com/news/claude-opus-4-7",
+    "notes": "Anthropic Opus 4.7 release page"
+  },
+  {
+    "modelId": "claude-opus-4-7",
+    "benchmarkId": "humaneval",
+    "variant": "default",
+    "value": 0.968,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://www.anthropic.com/news/claude-opus-4-7",
+    "notes": "Anthropic Opus 4.7 release page"
+  },
+  {
+    "modelId": "claude-opus-4-7",
+    "benchmarkId": "mmlu",
+    "variant": "default",
+    "value": 0.924,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://www.anthropic.com/news/claude-opus-4-7",
+    "notes": "Anthropic Opus 4.7 release page"
+  },
+  {
+    "modelId": "claude-opus-4-7",
+    "benchmarkId": "cursorbench",
+    "variant": "default",
+    "value": 0.7,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://www.anthropic.com/news/claude-opus-4-7",
+    "notes": "Anthropic Opus 4.7 release page — partner-reported"
+  },
+  {
+    "modelId": "claude-opus-4-7",
+    "benchmarkId": "biglaw-bench",
+    "variant": "default",
+    "value": 0.909,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://www.anthropic.com/news/claude-opus-4-7",
+    "notes": "Anthropic Opus 4.7 release page"
+  },
+  {
+    "modelId": "claude-opus-4-7",
+    "benchmarkId": "xbow-visual-acuity",
+    "variant": "default",
+    "value": 0.985,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://www.anthropic.com/news/claude-opus-4-7",
+    "notes": "Anthropic Opus 4.7 release page — partner-reported"
+  },
+  {
+    "modelId": "claude-opus-4-7",
+    "benchmarkId": "finance-agent",
+    "variant": "default",
+    "value": 0.813,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://www.anthropic.com/news/claude-opus-4-7",
+    "notes": "Anthropic Opus 4.7 release page"
+  },
+  {
+    "modelId": "claude-opus-4-7",
+    "benchmarkId": "research-agent",
+    "variant": "default",
+    "value": 0.715,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://www.anthropic.com/news/claude-opus-4-7",
+    "notes": "Anthropic Opus 4.7 release page"
+  },
+  {
+    "modelId": "gemini-3-pro",
+    "benchmarkId": "hle",
+    "variant": "default",
+    "value": 0.375,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf",
+    "notes": "Gemini 3 Pro Model Card"
+  },
+  {
+    "modelId": "gemini-3-pro",
+    "benchmarkId": "hle",
+    "variant": "with-tools",
+    "value": 0.458,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf",
+    "notes": "Gemini 3 Pro Model Card — search + code execution"
+  },
+  {
+    "modelId": "gemini-3-pro",
+    "benchmarkId": "hle",
+    "variant": "deep-think",
+    "value": 0.41,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://blog.google/products-and-platforms/products/gemini/gemini-3/",
+    "notes": "Gemini 3 Deep Think reported in blog"
+  },
+  {
+    "modelId": "gemini-3-pro",
+    "benchmarkId": "arc-agi-2",
+    "variant": "default",
+    "value": 0.311,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf",
+    "notes": "ARC Prize Verified"
+  },
+  {
+    "modelId": "gemini-3-pro",
+    "benchmarkId": "arc-agi-2",
+    "variant": "with-code",
+    "value": 0.451,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://blog.google/products-and-platforms/products/gemini/gemini-3/",
+    "notes": "Gemini 3 Pro with code execution"
+  },
+  {
+    "modelId": "gemini-3-pro",
+    "benchmarkId": "gpqa-diamond",
+    "variant": "default",
+    "value": 0.919,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf",
+    "notes": "Gemini 3 Pro Model Card"
+  },
+  {
+    "modelId": "gemini-3-pro",
+    "benchmarkId": "gpqa-diamond",
+    "variant": "deep-think",
+    "value": 0.938,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://blog.google/products-and-platforms/products/gemini/gemini-3/",
+    "notes": "Gemini 3 Deep Think"
+  },
+  {
+    "modelId": "gemini-3-pro",
+    "benchmarkId": "aime-2025",
+    "variant": "default",
+    "value": 0.95,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf",
+    "notes": "Gemini 3 Pro Model Card"
+  },
+  {
+    "modelId": "gemini-3-pro",
+    "benchmarkId": "matharena-apex",
+    "variant": "default",
+    "value": 0.234,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf",
+    "notes": "Gemini 3 Pro Model Card"
+  },
+  {
+    "modelId": "gemini-3-pro",
+    "benchmarkId": "mmmu-pro",
+    "variant": "default",
+    "value": 0.81,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf",
+    "notes": "Gemini 3 Pro Model Card"
+  },
+  {
+    "modelId": "gemini-3-pro",
+    "benchmarkId": "screenspot-pro",
+    "variant": "default",
+    "value": 0.727,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf",
+    "notes": "Gemini 3 Pro Model Card"
+  },
+  {
+    "modelId": "gemini-3-pro",
+    "benchmarkId": "charxiv",
+    "variant": "default",
+    "value": 0.814,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf",
+    "notes": "Gemini 3 Pro Model Card"
+  },
+  {
+    "modelId": "gemini-3-pro",
+    "benchmarkId": "omnidocbench",
+    "variant": "default",
+    "value": 0.115,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf",
+    "notes": "OCR edit distance, lower is better"
+  },
+  {
+    "modelId": "gemini-3-pro",
+    "benchmarkId": "video-mmmu",
+    "variant": "default",
+    "value": 0.876,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf",
+    "notes": "Gemini 3 Pro Model Card"
+  },
+  {
+    "modelId": "gemini-3-pro",
+    "benchmarkId": "livecodebench-pro",
+    "variant": "default",
+    "value": 2439,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf",
+    "notes": "Elo rating across Codeforces/ICPC/IOI"
+  },
+  {
+    "modelId": "gemini-3-pro",
+    "benchmarkId": "terminal-bench-2",
+    "variant": "default",
+    "value": 0.542,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf",
+    "notes": "Terminus-2 agent"
+  },
+  {
+    "modelId": "gemini-3-pro",
+    "benchmarkId": "swe-bench-verified",
+    "variant": "default",
+    "value": 0.762,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf",
+    "notes": "Single attempt"
+  },
+  {
+    "modelId": "gemini-3-pro",
+    "benchmarkId": "facts",
+    "variant": "default",
+    "value": 0.705,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf",
+    "notes": "Composite"
+  },
+  {
+    "modelId": "gemini-3-pro",
+    "benchmarkId": "simpleqa-verified",
+    "variant": "default",
+    "value": 0.721,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf",
+    "notes": "Parametric knowledge"
+  },
+  {
+    "modelId": "gemini-3-pro",
+    "benchmarkId": "mmmlu",
+    "variant": "default",
+    "value": 0.918,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf",
+    "notes": "Multilingual MMLU"
+  },
+  {
+    "modelId": "gemini-3-pro",
+    "benchmarkId": "global-piqa",
+    "variant": "default",
+    "value": 0.934,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf",
+    "notes": "100 languages/cultures"
+  },
+  {
+    "modelId": "gemini-3-pro",
+    "benchmarkId": "mrcr-v2",
+    "variant": "8-needle-128k",
+    "value": 0.77,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf",
+    "notes": "Long context @ 128k average"
+  },
+  {
+    "modelId": "gemini-3-pro",
+    "benchmarkId": "mrcr-v2",
+    "variant": "8-needle-1m",
+    "value": 0.263,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf",
+    "notes": "Long context @ 1M pointwise"
+  },
+  {
+    "modelId": "gemini-3-pro",
+    "benchmarkId": "lmarena",
+    "variant": "default",
+    "value": 1501,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://blog.google/products-and-platforms/products/gemini/gemini-3/",
+    "notes": "Chatbot Arena Elo"
+  },
+  {
+    "modelId": "gemini-3-pro",
+    "benchmarkId": "webdev-arena",
+    "variant": "default",
+    "value": 1487,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://blog.google/products-and-platforms/products/gemini/gemini-3/",
+    "notes": "WebDev Arena Elo"
+  },
+  {
+    "modelId": "gemini-3-pro",
+    "benchmarkId": "vending-bench-2",
+    "variant": "default",
+    "value": 5478.16,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf",
+    "notes": "Mean net worth (USD)"
+  },
+  {
+    "modelId": "deepseek-v3-2-reasoning",
+    "benchmarkId": "mmlu-pro",
+    "variant": "default",
+    "value": 0.85,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://arxiv.org/abs/2512.02556",
+    "notes": "DeepSeek V3.2 Reasoning paper"
+  },
+  {
+    "modelId": "deepseek-v3-2-reasoning",
+    "benchmarkId": "gpqa-diamond",
+    "variant": "default",
+    "value": 0.824,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://arxiv.org/abs/2512.02556",
+    "notes": "DeepSeek V3.2 Reasoning paper"
+  },
+  {
+    "modelId": "deepseek-v3-2-reasoning",
+    "benchmarkId": "hle",
+    "variant": "default",
+    "value": 0.251,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://arxiv.org/abs/2512.02556",
+    "notes": "Text-only, pass@1"
+  },
+  {
+    "modelId": "deepseek-v3-2-reasoning",
+    "benchmarkId": "hle",
+    "variant": "with-tools",
+    "value": 0.408,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://arxiv.org/abs/2512.02556",
+    "notes": "With search agent"
+  },
+  {
+    "modelId": "deepseek-v3-2-reasoning",
+    "benchmarkId": "livecodebench",
+    "variant": "default",
+    "value": 0.833,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://arxiv.org/abs/2512.02556",
+    "notes": "pass@1 CoT"
+  },
+  {
+    "modelId": "deepseek-v3-2-reasoning",
+    "benchmarkId": "codeforces-rating",
+    "variant": "default",
+    "value": 2386,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://arxiv.org/abs/2512.02556",
+    "notes": "Elo-style rating"
+  },
+  {
+    "modelId": "deepseek-v3-2-reasoning",
+    "benchmarkId": "aime-2025",
+    "variant": "default",
+    "value": 0.931,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://arxiv.org/abs/2512.02556",
+    "notes": "pass@1 thinking"
+  },
+  {
+    "modelId": "deepseek-v3-2-reasoning",
+    "benchmarkId": "hmmt-feb-2025",
+    "variant": "default",
+    "value": 0.925,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://arxiv.org/abs/2512.02556",
+    "notes": "pass@1 thinking"
+  },
+  {
+    "modelId": "deepseek-v3-2-reasoning",
+    "benchmarkId": "hmmt-nov-2025",
+    "variant": "default",
+    "value": 0.902,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://arxiv.org/abs/2512.02556",
+    "notes": "pass@1 thinking"
+  },
+  {
+    "modelId": "deepseek-v3-2-reasoning",
+    "benchmarkId": "imo-answerbench",
+    "variant": "default",
+    "value": 0.783,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://arxiv.org/abs/2512.02556",
+    "notes": "pass@1 thinking"
+  },
+  {
+    "modelId": "deepseek-v3-2-reasoning",
+    "benchmarkId": "terminal-bench-2",
+    "variant": "default",
+    "value": 0.464,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://arxiv.org/abs/2512.02556",
+    "notes": "Thinking, agent"
+  },
+  {
+    "modelId": "deepseek-v3-2-reasoning",
+    "benchmarkId": "swe-bench-verified",
+    "variant": "default",
+    "value": 0.731,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://arxiv.org/abs/2512.02556",
+    "notes": "Thinking, agent, resolved"
+  },
+  {
+    "modelId": "deepseek-v3-2-reasoning",
+    "benchmarkId": "swe-bench-multilingual",
+    "variant": "default",
+    "value": 0.702,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://arxiv.org/abs/2512.02556",
+    "notes": "Thinking, agent, resolved"
+  },
+  {
+    "modelId": "deepseek-v3-2-reasoning",
+    "benchmarkId": "browsecomp",
+    "variant": "default",
+    "value": 0.514,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://arxiv.org/abs/2512.02556",
+    "notes": "Thinking, search agent"
+  },
+  {
+    "modelId": "deepseek-v3-2-reasoning",
+    "benchmarkId": "browsecomp",
+    "variant": "with-context-mgmt",
+    "value": 0.676,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://arxiv.org/abs/2512.02556",
+    "notes": "Thinking, search agent with context mgmt"
+  },
+  {
+    "modelId": "deepseek-v3-2-reasoning",
+    "benchmarkId": "browsecomp-zh",
+    "variant": "default",
+    "value": 0.65,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://arxiv.org/abs/2512.02556",
+    "notes": "Thinking, search agent"
+  },
+  {
+    "modelId": "deepseek-v3-2-reasoning",
+    "benchmarkId": "tau2-telecom",
+    "variant": "default",
+    "value": 0.803,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://arxiv.org/abs/2512.02556",
+    "notes": "Thinking, tool use"
+  },
+  {
+    "modelId": "deepseek-v3-2-reasoning",
+    "benchmarkId": "mcp-universe",
+    "variant": "default",
+    "value": 0.459,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://arxiv.org/abs/2512.02556",
+    "notes": "Tool-use success rate"
+  },
+  {
+    "modelId": "deepseek-v3-2-reasoning",
+    "benchmarkId": "mcp-mark",
+    "variant": "default",
+    "value": 0.38,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://arxiv.org/abs/2512.02556",
+    "notes": "Tool-use pass@1"
+  },
+  {
+    "modelId": "deepseek-v3-2-reasoning",
+    "benchmarkId": "tool-decathlon",
+    "variant": "default",
+    "value": 0.352,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://arxiv.org/abs/2512.02556",
+    "notes": "Tool-use pass@1"
+  },
+  {
+    "modelId": "minimax-m2",
+    "benchmarkId": "swe-bench-verified",
+    "variant": "default",
+    "value": 0.694,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://huggingface.co/MiniMaxAI/MiniMax-M2",
+    "notes": "MiniMax-M2 HF card"
+  },
+  {
+    "modelId": "minimax-m2",
+    "benchmarkId": "gaia",
+    "variant": "text-only",
+    "value": 0.757,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://huggingface.co/MiniMaxAI/MiniMax-M2",
+    "notes": "MiniMax-M2 HF card — text-only split"
+  },
+  {
+    "modelId": "minimax-m2",
+    "benchmarkId": "terminal-bench",
+    "variant": "default",
+    "value": 0.463,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://huggingface.co/MiniMaxAI/MiniMax-M2",
+    "notes": "MiniMax-M2 HF card"
+  },
+  {
+    "modelId": "minimax-m2",
+    "benchmarkId": "tau2-telecom",
+    "variant": "default",
+    "value": 0.772,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://huggingface.co/MiniMaxAI/MiniMax-M2",
+    "notes": "MiniMax-M2 HF card"
+  },
+  {
+    "modelId": "minimax-m2",
+    "benchmarkId": "browsecomp",
+    "variant": "default",
+    "value": 0.44,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://huggingface.co/MiniMaxAI/MiniMax-M2",
+    "notes": "MiniMax-M2 HF card"
+  },
+  {
+    "modelId": "grok-4-20",
+    "benchmarkId": "wmdp-bio",
+    "variant": "default",
+    "value": 0.91,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://data.x.ai/2026-04-07-grok-4-20-model-card.pdf",
+    "notes": "xAI Grok 4.20 System Card — pre-mitigation"
+  },
+  {
+    "modelId": "grok-4-20",
+    "benchmarkId": "wmdp-chem",
+    "variant": "default",
+    "value": 0.9,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://data.x.ai/2026-04-07-grok-4-20-model-card.pdf",
+    "notes": "xAI Grok 4.20 System Card — pre-mitigation"
+  },
+  {
+    "modelId": "grok-4-20",
+    "benchmarkId": "wmdp-cyber",
+    "variant": "default",
+    "value": 0.91,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://data.x.ai/2026-04-07-grok-4-20-model-card.pdf",
+    "notes": "xAI Grok 4.20 System Card — pre-mitigation"
+  },
+  {
+    "modelId": "grok-4-20",
+    "benchmarkId": "cybench",
+    "variant": "default",
+    "value": 0.53,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://data.x.ai/2026-04-07-grok-4-20-model-card.pdf",
+    "notes": "xAI Grok 4.20 System Card — unguided success rate"
+  },
+  {
+    "modelId": "claude-opus-4-6",
+    "benchmarkId": "biglaw-bench",
+    "variant": "default",
+    "value": 0.902,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://www.anthropic.com/news/claude-opus-4-6",
+    "notes": "Anthropic Opus 4.6 release page"
+  },
+  {
+    "modelId": "claude-opus-4-6",
+    "benchmarkId": "browsecomp",
+    "variant": "default",
+    "value": 0.866,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://www.anthropic.com/engineering/eval-awareness-browsecomp",
+    "notes": "Multi-agent scaffold, eval-awareness-adjusted"
+  },
+  {
+    "modelId": "claude-opus-4-6",
+    "benchmarkId": "arc-agi-2",
+    "variant": "default",
+    "value": 0.692,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://www.anthropic.com/news/claude-opus-4-6",
+    "notes": "High effort"
+  },
+  {
+    "modelId": "claude-opus-4-6",
+    "benchmarkId": "mrcr-v2",
+    "variant": "8-needle-1m",
+    "value": 0.8,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://www.anthropic.com/news/claude-opus-4-6",
+    "notes": "Anthropic Opus 4.6 release page"
+  },
+  {
+    "modelId": "claude-opus-4-5",
+    "benchmarkId": "swe-bench-verified",
+    "variant": "default",
+    "value": 0.809,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://www.anthropic.com/news/claude-opus-4-5",
+    "notes": "Anthropic Opus 4.5 release page"
+  },
+  {
+    "modelId": "claude-sonnet-4-5",
+    "benchmarkId": "swe-bench-verified",
+    "variant": "default",
+    "value": 0.772,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://www.anthropic.com/news/claude-sonnet-4-5",
+    "notes": "Single attempt"
+  },
+  {
+    "modelId": "claude-sonnet-4-5",
+    "benchmarkId": "gpqa-diamond",
+    "variant": "default",
+    "value": 0.834,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://www.anthropic.com/news/claude-sonnet-4-5",
+    "notes": "Anthropic Sonnet 4.5"
+  },
+  {
+    "modelId": "claude-sonnet-4-5",
+    "benchmarkId": "mmmlu",
+    "variant": "default",
+    "value": 0.891,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://www.anthropic.com/news/claude-sonnet-4-5",
+    "notes": "Anthropic Sonnet 4.5 — reported as MMLU; is multilingual variant"
+  },
+  {
+    "modelId": "claude-sonnet-4-5",
+    "benchmarkId": "aime-2025",
+    "variant": "default",
+    "value": 0.87,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://www.anthropic.com/news/claude-sonnet-4-5",
+    "notes": "No tools"
+  },
+  {
+    "modelId": "claude-sonnet-4-5",
+    "benchmarkId": "osworld-verified",
+    "variant": "default",
+    "value": 0.614,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://www.anthropic.com/news/claude-sonnet-4-5",
+    "notes": "Anthropic Sonnet 4.5 — OSWorld"
+  },
+  {
+    "modelId": "claude-sonnet-4-5",
+    "benchmarkId": "terminal-bench",
+    "variant": "default",
+    "value": 0.5,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://www.anthropic.com/news/claude-sonnet-4-5",
+    "notes": "Anthropic Sonnet 4.5"
+  },
+  {
+    "modelId": "claude-haiku-4-5",
+    "benchmarkId": "swe-bench-verified",
+    "variant": "default",
+    "value": 0.733,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://www.anthropic.com/news/claude-haiku-4-5",
+    "notes": "Anthropic Haiku 4.5 release page"
+  },
+  {
+    "modelId": "muse-spark",
+    "benchmarkId": "mmmu-pro",
+    "variant": "default",
+    "value": 0.805,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://ai.meta.com/blog/introducing-muse-spark-msl/",
+    "notes": "Meta Muse Spark blog"
+  },
+  {
+    "modelId": "muse-spark",
+    "benchmarkId": "hle",
+    "variant": "default",
+    "value": 0.502,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://ai.meta.com/blog/introducing-muse-spark-msl/",
+    "notes": "No tools"
+  },
+  {
+    "modelId": "muse-spark",
+    "benchmarkId": "hle",
+    "variant": "with-tools",
+    "value": 0.58,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://ai.meta.com/blog/introducing-muse-spark-msl/",
+    "notes": "Contemplating mode"
+  },
+  {
+    "modelId": "qwen3-max-thinking",
+    "benchmarkId": "aime-2025",
+    "variant": "default",
+    "value": 0.923,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://huggingface.co/Qwen/Qwen3-235B-A22B-Thinking-2507",
+    "notes": "No tools"
+  },
+  {
+    "modelId": "qwen3-max-thinking",
+    "benchmarkId": "hmmt-feb-2025",
+    "variant": "default",
+    "value": 0.839,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://huggingface.co/Qwen/Qwen3-235B-A22B-Thinking-2507",
+    "notes": "Standard mode"
+  },
+  {
+    "modelId": "qwen3-max-thinking",
+    "benchmarkId": "livecodebench",
+    "variant": "default",
+    "value": 0.914,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://huggingface.co/Qwen/Qwen3-235B-A22B-Thinking-2507",
+    "notes": "LiveCodeBench v6"
+  },
+  {
+    "modelId": "qwen3-max-thinking",
+    "benchmarkId": "ifbench",
+    "variant": "default",
+    "value": 0.71,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://huggingface.co/Qwen/Qwen3-235B-A22B-Thinking-2507",
+    "notes": "Qwen"
+  },
+  {
+    "modelId": "qwen3-max-thinking",
+    "benchmarkId": "hle",
+    "variant": "default",
+    "value": 0.26,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://huggingface.co/Qwen/Qwen3-235B-A22B-Thinking-2507",
+    "notes": "Basic reasoning"
+  },
+  {
+    "modelId": "qwen3-max-thinking",
+    "benchmarkId": "hle",
+    "variant": "with-tools",
+    "value": 0.498,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://huggingface.co/Qwen/Qwen3-235B-A22B-Thinking-2507",
+    "notes": "With web search"
+  },
+  {
+    "modelId": "qwen3-max-thinking",
+    "benchmarkId": "gpqa-diamond",
+    "variant": "default",
+    "value": 0.928,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://huggingface.co/Qwen/Qwen3-235B-A22B-Thinking-2507",
+    "notes": "Qwen"
+  },
+  {
+    "modelId": "qwen3-5-397b-a17b",
+    "benchmarkId": "hmmt-feb-2025",
+    "variant": "default",
+    "value": 0.948,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B",
+    "notes": "Qwen3.5 paper"
+  },
+  {
+    "modelId": "qwen3-5-397b-a17b",
+    "benchmarkId": "gpqa-diamond",
+    "variant": "default",
+    "value": 0.884,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B",
+    "notes": "Qwen3.5 paper"
+  },
+  {
+    "modelId": "qwen3-5-397b-a17b",
+    "benchmarkId": "swe-bench-verified",
+    "variant": "default",
+    "value": 0.764,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B",
+    "notes": "Qwen3.5 paper"
+  },
+  {
+    "modelId": "qwen3-5-397b-a17b",
+    "benchmarkId": "math-vision-python",
+    "variant": "default",
+    "value": 0.886,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B",
+    "notes": "Qwen3.5 paper"
+  },
+  {
+    "modelId": "glm-5-1",
+    "benchmarkId": "gpqa-diamond",
+    "variant": "default",
+    "value": 0.862,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://docs.z.ai/guides/llm/glm-5.1",
+    "notes": "GLM-5.1 technical report"
+  },
+  {
+    "modelId": "glm-5-1",
+    "benchmarkId": "hle",
+    "variant": "default",
+    "value": 0.31,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://docs.z.ai/guides/llm/glm-5.1",
+    "notes": "Base, no tools"
+  },
+  {
+    "modelId": "glm-5-1",
+    "benchmarkId": "hle",
+    "variant": "with-tools",
+    "value": 0.523,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://docs.z.ai/guides/llm/glm-5.1",
+    "notes": "With tools enabled"
+  },
+  {
+    "modelId": "glm-5-1",
+    "benchmarkId": "swe-bench-pro",
+    "variant": "default",
+    "value": 0.584,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://docs.z.ai/guides/llm/glm-5.1",
+    "notes": "Z.AI docs"
+  },
+  {
+    "modelId": "glm-5-1",
+    "benchmarkId": "terminal-bench-2",
+    "variant": "default",
+    "value": 0.635,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://docs.z.ai/guides/llm/glm-5.1",
+    "notes": "GLM-5.1 technical report"
+  },
+  {
+    "modelId": "llama-4-maverick",
+    "benchmarkId": "mmlu",
+    "variant": "default",
+    "value": 0.855,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://huggingface.co/meta-llama/Llama-4-Maverick-17B-128E-Instruct",
+    "notes": "Pre-trained"
+  },
+  {
+    "modelId": "llama-4-maverick",
+    "benchmarkId": "mmmu-pro",
+    "variant": "default",
+    "value": 0.734,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://huggingface.co/meta-llama/Llama-4-Maverick-17B-128E-Instruct",
+    "notes": "Instruction-tuned (reported as MMMU)"
+  },
+  {
+    "modelId": "llama-4-maverick",
+    "benchmarkId": "gpqa-diamond",
+    "variant": "default",
+    "value": 0.698,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://huggingface.co/meta-llama/Llama-4-Maverick-17B-128E-Instruct",
+    "notes": "Instruction-tuned, Llama 4 Maverick"
+  },
+  {
+    "modelId": "llama-4-maverick",
+    "benchmarkId": "livecodebench",
+    "variant": "default",
+    "value": 0.434,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://huggingface.co/meta-llama/Llama-4-Maverick-17B-128E-Instruct",
+    "notes": "Instruction-tuned, pass@1"
+  },
+  {
+    "modelId": "llama-4-maverick",
+    "benchmarkId": "lmarena",
+    "variant": "default",
+    "value": 1417,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://ai.meta.com/blog/llama-4-multimodal-intelligence/",
+    "notes": "Llama 4 Maverick chat Elo"
+  },
+  {
+    "modelId": "grok-4-1-fast",
+    "benchmarkId": "lmarena",
+    "variant": "default",
+    "value": 1483,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://x.ai/news/grok-4-1-fast",
+    "notes": "Reasoning mode (quasarflux)"
+  },
+  {
+    "modelId": "deepseek-v3-2",
+    "benchmarkId": "gpqa-diamond",
+    "variant": "default",
+    "value": 0.81,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://api-docs.deepseek.com/news/news251201",
+    "notes": "Standard V3.2 non-reasoning"
   }
 ]

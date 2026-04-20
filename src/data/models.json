@@ -239,8 +239,13 @@
     "provider": "Z AI",
     "releaseDate": "2026-04-07",
     "knowledgeCutoff": "2026-01",
-    "openWeights": false,
-    "contextWindow": 128000
+    "openWeights": true,
+    "contextWindow": 128000,
+    "hfLink": "https://huggingface.co/zai-org/GLM-5.1",
+    "totalParams": 754,
+    "activeParams": 40,
+    "experts": 256,
+    "architecture": "moe"
   },
   {
     "id": "glm-5",
@@ -314,7 +319,7 @@
     "releaseDate": "2026-04-08",
     "knowledgeCutoff": "2026-01",
     "openWeights": false,
-    "contextWindow": 1000000
+    "contextWindow": 262144
   },
   {
     "id": "llama-4-maverick",

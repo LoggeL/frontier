@@ -85,6 +85,11 @@
         "key": "default",
         "label": "Default",
         "notes": "AA's standard 0-shot run on the diamond subset."
+      },
+      {
+        "key": "deep-think",
+        "label": "Deep Think",
+        "notes": "Vendor extended-reasoning mode (e.g. Google Deep Think)."
       }
     ],
     "primary": true
@@ -108,6 +113,11 @@
         "key": "with-tools",
         "label": "With tools",
         "notes": "Model has browsing + code execution. Not comparable to default — reported scores typically much higher."
+      },
+      {
+        "key": "deep-think",
+        "label": "Deep Think",
+        "notes": "Vendor's extended-reasoning mode (e.g. Google Deep Think)."
       }
     ],
     "primary": true
@@ -289,6 +299,11 @@
         "key": "default",
         "label": "Default",
         "notes": "Vendor-reported in Kimi K2.6 release post. Numbers for competitors are Kimi's own re-evaluations under the same conditions — may not match official reports."
+      },
+      {
+        "key": "with-context-mgmt",
+        "label": "With context mgmt",
+        "notes": "Vendor's agent scaffold with context management."
       }
     ]
   },
@@ -433,6 +448,680 @@
         "key": "default",
         "label": "Default",
         "notes": "Vendor-reported in Kimi K2.6 release post. Numbers for competitors are Kimi's own re-evaluations under the same conditions — may not match official reports."
+      }
+    ]
+  },
+  {
+    "id": "mmlu",
+    "name": "MMLU",
+    "category": "reasoning",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "Original MMLU (57 subjects, multi-task language understanding). Mostly saturated on frontier models.",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "0-shot or 5-shot, vendor-specific."
+      }
+    ]
+  },
+  {
+    "id": "mmmu-pro",
+    "name": "MMMU-Pro",
+    "category": "multimodal",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "Harder multimodal understanding benchmark.",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "Standard vendor reporting."
+      }
+    ]
+  },
+  {
+    "id": "video-mmmu",
+    "name": "Video-MMMU",
+    "category": "multimodal",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "Knowledge acquisition from videos.",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "Standard vendor reporting."
+      }
+    ]
+  },
+  {
+    "id": "swe-bench-verified",
+    "name": "SWE-Bench Verified",
+    "category": "agentic",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "Human-verified subset of SWE-Bench — resolve real GitHub issues with code edits.",
+    "sourceUrl": "https://www.swebench.com/",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "Vendor scaffold, single attempt."
+      },
+      {
+        "key": "vendor-scaffold",
+        "label": "Vendor scaffold",
+        "notes": "Vendor's own agent scaffold — not cross-vendor comparable."
+      }
+    ]
+  },
+  {
+    "id": "arc-agi-2",
+    "name": "ARC-AGI-2",
+    "category": "reasoning",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "Abstraction and Reasoning Corpus v2 — visual puzzle benchmark designed to resist memorization.",
+    "sourceUrl": "https://arcprize.org/",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default (verified)",
+        "notes": "ARC Prize Verified run, no tools."
+      },
+      {
+        "key": "with-code",
+        "label": "With code execution",
+        "notes": "Model runs generated code to probe solutions."
+      },
+      {
+        "key": "deep-think",
+        "label": "Deep Think mode",
+        "notes": "Vendor's extended-reasoning variant."
+      }
+    ]
+  },
+  {
+    "id": "matharena-apex",
+    "name": "MathArena Apex",
+    "category": "math",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "Contamination-resistant math-contest benchmark from MathArena.",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "Standard vendor reporting."
+      }
+    ]
+  },
+  {
+    "id": "humanitys-last-exam-deep-think",
+    "name": "HLE — Deep Think variants",
+    "category": "reasoning",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "HLE scores from vendors' extended-reasoning / deep-think modes.",
+    "variants": [
+      {
+        "key": "deep-think",
+        "label": "Deep Think mode",
+        "notes": "Google's Deep Think extension."
+      }
+    ]
+  },
+  {
+    "id": "hmmt-feb-2025",
+    "name": "HMMT Feb 2025",
+    "category": "math",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "Harvard-MIT Mathematics Tournament, Feb 2025 sitting.",
+    "variants": [
+      {
+        "key": "default",
+        "label": "pass@1",
+        "notes": "Single sample."
+      }
+    ]
+  },
+  {
+    "id": "hmmt-nov-2025",
+    "name": "HMMT Nov 2025",
+    "category": "math",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "Harvard-MIT Mathematics Tournament, Nov 2025 sitting.",
+    "variants": [
+      {
+        "key": "default",
+        "label": "pass@1",
+        "notes": "Standard vendor reporting."
+      }
+    ]
+  },
+  {
+    "id": "imo-answerbench",
+    "name": "IMO AnswerBench",
+    "category": "math",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "International Mathematical Olympiad answer-checking benchmark.",
+    "variants": [
+      {
+        "key": "default",
+        "label": "pass@1",
+        "notes": "Standard vendor reporting."
+      }
+    ]
+  },
+  {
+    "id": "codeforces-rating",
+    "name": "Codeforces Rating",
+    "category": "code",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "elo",
+    "primary": false,
+    "description": "Competitive-programming Codeforces Elo rating.",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Rating",
+        "notes": "Higher is better; Elo scale."
+      }
+    ]
+  },
+  {
+    "id": "livecodebench-pro",
+    "name": "LiveCodeBench Pro",
+    "category": "code",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "elo",
+    "primary": false,
+    "description": "Competitive-programming Elo across Codeforces / ICPC / IOI (LiveCodeBench Pro).",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Elo",
+        "notes": "Standard vendor reporting."
+      }
+    ]
+  },
+  {
+    "id": "browsecomp-zh",
+    "name": "BrowseComp-zh",
+    "category": "agentic",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "Chinese-language BrowseComp.",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "Search agent, pass@1."
+      }
+    ]
+  },
+  {
+    "id": "mcp-universe",
+    "name": "MCP-Universe",
+    "category": "agentic",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "Tool-use breadth benchmark over MCP servers.",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Success rate",
+        "notes": "Standard vendor reporting."
+      }
+    ]
+  },
+  {
+    "id": "mcp-mark",
+    "name": "MCP-Mark",
+    "category": "agentic",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "MCP tool-use benchmark.",
+    "variants": [
+      {
+        "key": "default",
+        "label": "pass@1",
+        "notes": "Standard vendor reporting."
+      }
+    ]
+  },
+  {
+    "id": "tool-decathlon",
+    "name": "Tool-Decathlon",
+    "category": "agentic",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "Ten-task tool-use agent benchmark.",
+    "variants": [
+      {
+        "key": "default",
+        "label": "pass@1",
+        "notes": "Standard vendor reporting."
+      }
+    ]
+  },
+  {
+    "id": "gaia",
+    "name": "GAIA",
+    "category": "agentic",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "General AI Agent assistants benchmark from Meta FAIR et al.",
+    "variants": [
+      {
+        "key": "text-only",
+        "label": "Text only",
+        "notes": "Text-only split."
+      },
+      {
+        "key": "default",
+        "label": "Full",
+        "notes": "Standard vendor reporting."
+      }
+    ]
+  },
+  {
+    "id": "lmarena",
+    "name": "LMArena",
+    "category": "composite",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "elo",
+    "primary": false,
+    "description": "Chatbot Arena Elo rating from human preference votes.",
+    "sourceUrl": "https://lmarena.ai/",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "Overall Elo."
+      }
+    ]
+  },
+  {
+    "id": "webdev-arena",
+    "name": "WebDev Arena",
+    "category": "code",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "elo",
+    "primary": false,
+    "description": "Web-development variant of Chatbot Arena (Elo).",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "Standard vendor reporting."
+      }
+    ]
+  },
+  {
+    "id": "mrcr-v2",
+    "name": "MRCR v2",
+    "category": "reasoning",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "Multi-needle Retrieval with Context Reasoning v2 — long-context stress test.",
+    "variants": [
+      {
+        "key": "8-needle-128k",
+        "label": "8-needle @ 128k",
+        "notes": "Standard vendor reporting."
+      },
+      {
+        "key": "8-needle-1m",
+        "label": "8-needle @ 1M",
+        "notes": "Standard vendor reporting."
+      }
+    ]
+  },
+  {
+    "id": "charxiv",
+    "name": "CharXiv Reasoning",
+    "category": "multimodal",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "Reasoning over charts from arXiv papers.",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "Standard vendor reporting."
+      }
+    ]
+  },
+  {
+    "id": "screenspot-pro",
+    "name": "ScreenSpot-Pro",
+    "category": "multimodal",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "Screen understanding benchmark.",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "Standard vendor reporting."
+      }
+    ]
+  },
+  {
+    "id": "omnidocbench",
+    "name": "OmniDocBench 1.5",
+    "category": "multimodal",
+    "source": "custom",
+    "higherIsBetter": false,
+    "unit": "score",
+    "primary": false,
+    "description": "Document OCR benchmark — overall edit distance (lower is better).",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Edit distance",
+        "notes": "Standard vendor reporting."
+      }
+    ]
+  },
+  {
+    "id": "simpleqa-verified",
+    "name": "SimpleQA Verified",
+    "category": "reasoning",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "Vendor-verified SimpleQA factuality benchmark.",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "Parametric knowledge."
+      }
+    ]
+  },
+  {
+    "id": "mmmlu",
+    "name": "MMMLU",
+    "category": "reasoning",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "Multilingual MMLU.",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "Standard vendor reporting."
+      }
+    ]
+  },
+  {
+    "id": "global-piqa",
+    "name": "Global PIQA",
+    "category": "reasoning",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "Commonsense reasoning across 100 languages/cultures.",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "Standard vendor reporting."
+      }
+    ]
+  },
+  {
+    "id": "facts",
+    "name": "FACTS Benchmark Suite",
+    "category": "reasoning",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "Grounding / parametric / multimodal / search retrieval composite.",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "Standard vendor reporting."
+      }
+    ]
+  },
+  {
+    "id": "vending-bench-2",
+    "name": "Vending-Bench 2",
+    "category": "agentic",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "score",
+    "primary": false,
+    "description": "Long-horizon agentic benchmark — mean net worth (USD) across runs.",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Mean net worth (USD)",
+        "notes": "Standard vendor reporting."
+      }
+    ]
+  },
+  {
+    "id": "cursorbench",
+    "name": "CursorBench",
+    "category": "agentic",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "Cursor's internal agentic coding benchmark.",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "Vendor partner-reported."
+      }
+    ]
+  },
+  {
+    "id": "biglaw-bench",
+    "name": "BigLaw Bench",
+    "category": "agentic",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "Harvey's BigLaw Bench — high-effort legal reasoning.",
+    "variants": [
+      {
+        "key": "default",
+        "label": "High effort",
+        "notes": "Standard vendor reporting."
+      }
+    ]
+  },
+  {
+    "id": "xbow-visual-acuity",
+    "name": "XBOW Visual Acuity",
+    "category": "multimodal",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "XBOW computer-use visual benchmark (partner-reported).",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "Standard vendor reporting."
+      }
+    ]
+  },
+  {
+    "id": "finance-agent",
+    "name": "Finance Agent",
+    "category": "agentic",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "Anthropic Finance Agent — general finance module.",
+    "variants": [
+      {
+        "key": "default",
+        "label": "General",
+        "notes": "Standard vendor reporting."
+      }
+    ]
+  },
+  {
+    "id": "research-agent",
+    "name": "Research Agent",
+    "category": "agentic",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "Anthropic's research-agent benchmark (averaged across 6 modules).",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Overall",
+        "notes": "Standard vendor reporting."
+      }
+    ]
+  },
+  {
+    "id": "wmdp-bio",
+    "name": "WMDP Bio",
+    "category": "reasoning",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "WMDP biology — capability-probing benchmark.",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "pre-mitigation accuracy."
+      }
+    ]
+  },
+  {
+    "id": "wmdp-chem",
+    "name": "WMDP Chem",
+    "category": "reasoning",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "WMDP chemistry — capability-probing benchmark.",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "Standard vendor reporting."
+      }
+    ]
+  },
+  {
+    "id": "wmdp-cyber",
+    "name": "WMDP Cyber",
+    "category": "reasoning",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "WMDP cyber — capability-probing benchmark.",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "Standard vendor reporting."
+      }
+    ]
+  },
+  {
+    "id": "cybench",
+    "name": "CyBench",
+    "category": "agentic",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "Unguided cyber-agent success rate.",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Unguided success",
+        "notes": "Standard vendor reporting."
+      }
+    ]
+  },
+  {
+    "id": "terminal-bench",
+    "name": "Terminal-Bench",
+    "category": "agentic",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "Original Terminal-Bench (predecessor to 2.0).",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "Standard vendor reporting."
       }
     ]
   }
