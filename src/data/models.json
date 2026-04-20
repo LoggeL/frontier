@@ -259,8 +259,8 @@
     "knowledgeCutoff": "2026-01",
     "openWeights": true,
     "contextWindow": 262144,
-    "hfLink": "https://huggingface.co/moonshotai/Kimi-K2-Instruct",
-    "totalParams": 1000,
+    "hfLink": "https://huggingface.co/moonshotai/Kimi-K2.6",
+    "totalParams": 1100,
     "activeParams": 32,
     "experts": 384,
     "architecture": "moe"
@@ -273,8 +273,8 @@
     "knowledgeCutoff": "2025-09",
     "openWeights": true,
     "contextWindow": 128000,
-    "hfLink": "https://huggingface.co/moonshotai/Kimi-K2-Instruct",
-    "totalParams": 1000,
+    "hfLink": "https://huggingface.co/moonshotai/Kimi-K2.5",
+    "totalParams": 1100,
     "activeParams": 32,
     "experts": 384,
     "architecture": "moe"
