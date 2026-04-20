@@ -482,6 +482,16 @@
         "key": "default",
         "label": "Default",
         "notes": "Standard vendor reporting."
+      },
+      {
+        "key": "with-tools",
+        "label": "With tools",
+        "notes": "Model has code execution / browsing. Not comparable to default."
+      },
+      {
+        "key": "deep-think",
+        "label": "Deep Think",
+        "notes": "Vendor extended-reasoning mode."
       }
     ]
   },
@@ -777,6 +787,11 @@
         "key": "default",
         "label": "Default",
         "notes": "Overall Elo."
+      },
+      {
+        "key": "with-thinking",
+        "label": "With thinking",
+        "notes": "Vendor reasoning mode on. Uses more tokens."
       }
     ]
   },
@@ -794,6 +809,11 @@
         "key": "default",
         "label": "Default",
         "notes": "Standard vendor reporting."
+      },
+      {
+        "key": "with-thinking",
+        "label": "With thinking",
+        "notes": "Vendor reasoning mode on."
       }
     ]
   },

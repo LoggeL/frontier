@@ -7230,5 +7230,293 @@
     "reportedOn": "2026-04-21",
     "sourceUrl": "https://aider.chat/docs/leaderboards/",
     "notes": "Aider Polyglot leaderboard"
+  },
+  {
+    "modelId": "gpt-5-4",
+    "benchmarkId": "mmmu-pro",
+    "variant": "with-tools",
+    "value": 0.821,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://mmmu-benchmark.github.io/",
+    "notes": "MMMU-Pro scraped — GPT-5.4 Thinking w/ tools"
+  },
+  {
+    "modelId": "gpt-5-4",
+    "benchmarkId": "mmmu-pro",
+    "variant": "default",
+    "value": 0.812,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://mmmu-benchmark.github.io/",
+    "notes": "MMMU-Pro scraped — GPT-5.4 Thinking w/o tools"
+  },
+  {
+    "modelId": "gemini-3-1-pro-preview",
+    "benchmarkId": "mmmu-pro",
+    "variant": "deep-think",
+    "value": 0.805,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://mmmu-benchmark.github.io/",
+    "notes": "MMMU-Pro scraped — Gemini 3.1 Pro Thinking (High)"
+  },
+  {
+    "modelId": "gpt-5-2",
+    "benchmarkId": "mmmu-pro",
+    "variant": "default",
+    "value": 0.795,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://mmmu-benchmark.github.io/",
+    "notes": "MMMU-Pro scraped — GPT-5.2 Thinking w/o tools"
+  },
+  {
+    "modelId": "gpt-5-1",
+    "benchmarkId": "mmmu-pro",
+    "variant": "default",
+    "value": 0.79,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://mmmu-benchmark.github.io/",
+    "notes": "MMMU-Pro scraped — GPT-5.1 Thinking"
+  },
+  {
+    "modelId": "gpt-5",
+    "benchmarkId": "mmmu-pro",
+    "variant": "default",
+    "value": 0.784,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://mmmu-benchmark.github.io/",
+    "notes": "MMMU-Pro scraped — GPT-5 w/ thinking"
+  },
+  {
+    "modelId": "claude-opus-4-6",
+    "benchmarkId": "mmmu-pro",
+    "variant": "with-tools",
+    "value": 0.773,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://mmmu-benchmark.github.io/",
+    "notes": "MMMU-Pro scraped — Claude Opus 4.6 w/ tools"
+  },
+  {
+    "modelId": "o3",
+    "benchmarkId": "mmmu-pro",
+    "variant": "default",
+    "value": 0.764,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://mmmu-benchmark.github.io/",
+    "notes": "MMMU-Pro scraped — o3"
+  },
+  {
+    "modelId": "gpt-5-1",
+    "benchmarkId": "mmmu-pro",
+    "variant": "default",
+    "value": 0.76,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://mmmu-benchmark.github.io/",
+    "notes": "MMMU-Pro scraped — GPT-5.1 non-reasoning"
+  },
+  {
+    "modelId": "claude-sonnet-4-6",
+    "benchmarkId": "mmmu-pro",
+    "variant": "with-tools",
+    "value": 0.756,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://mmmu-benchmark.github.io/",
+    "notes": "MMMU-Pro scraped — Claude Sonnet 4.6 w/ tools"
+  },
+  {
+    "modelId": "claude-sonnet-4-6",
+    "benchmarkId": "mmmu-pro",
+    "variant": "default",
+    "value": 0.745,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://mmmu-benchmark.github.io/",
+    "notes": "MMMU-Pro scraped — Claude Sonnet 4.6 w/o tools"
+  },
+  {
+    "modelId": "claude-opus-4-6",
+    "benchmarkId": "mmmu-pro",
+    "variant": "default",
+    "value": 0.739,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://mmmu-benchmark.github.io/",
+    "notes": "MMMU-Pro scraped — Claude Opus 4.6 w/o tools"
+  },
+  {
+    "modelId": "claude-opus-4-5",
+    "benchmarkId": "mmmu-pro",
+    "variant": "default",
+    "value": 0.739,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://mmmu-benchmark.github.io/",
+    "notes": "MMMU-Pro scraped — Claude Opus 4.5"
+  },
+  {
+    "modelId": "claude-sonnet-4-5",
+    "benchmarkId": "mmmu-pro",
+    "variant": "default",
+    "value": 0.689,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://mmmu-benchmark.github.io/",
+    "notes": "MMMU-Pro scraped — Claude Sonnet 4.5"
+  },
+  {
+    "modelId": "gemini-2-5-pro",
+    "benchmarkId": "mmmu-pro",
+    "variant": "default",
+    "value": 0.68,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://mmmu-benchmark.github.io/",
+    "notes": "MMMU-Pro scraped — Gemini 2.5 Pro 05-06"
+  },
+  {
+    "modelId": "claude-sonnet-4-5",
+    "benchmarkId": "mmmu-pro",
+    "variant": "default",
+    "value": 0.634,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://mmmu-benchmark.github.io/",
+    "notes": "MMMU-Pro scraped — Claude Sonnet 4.5 w/o tools (non-reasoning)"
+  },
+  {
+    "modelId": "claude-opus-4-7",
+    "benchmarkId": "lmarena",
+    "variant": "with-thinking",
+    "value": 1504,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://lmarena.ai/leaderboard",
+    "notes": "Chatbot Arena — reasoning mode"
+  },
+  {
+    "modelId": "claude-opus-4-6",
+    "benchmarkId": "lmarena",
+    "variant": "with-thinking",
+    "value": 1502,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://lmarena.ai/leaderboard",
+    "notes": "Chatbot Arena — reasoning mode"
+  },
+  {
+    "modelId": "grok-4-20",
+    "benchmarkId": "lmarena",
+    "variant": "with-thinking",
+    "value": 1480,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://lmarena.ai/leaderboard",
+    "notes": "Chatbot Arena — reasoning mode"
+  },
+  {
+    "modelId": "claude-opus-4-6",
+    "benchmarkId": "webdev-arena",
+    "variant": "with-thinking",
+    "value": 1549,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://lmarena.ai/leaderboard",
+    "notes": "WebDev Arena thinking variant"
+  },
+  {
+    "modelId": "claude-opus-4-5",
+    "benchmarkId": "webdev-arena",
+    "variant": "with-thinking",
+    "value": 1491,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://lmarena.ai/leaderboard",
+    "notes": "WebDev Arena thinking-32k"
+  },
+  {
+    "modelId": "claude-opus-4-5",
+    "benchmarkId": "webdev-arena",
+    "variant": "default",
+    "value": 1468,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://lmarena.ai/leaderboard",
+    "notes": "WebDev Arena"
+  },
+  {
+    "modelId": "claude-opus-4-5",
+    "benchmarkId": "swe-bench-verified",
+    "variant": "default",
+    "value": 0.768,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://www.swebench.com/",
+    "notes": "swebench.com leaderboard — high reasoning"
+  },
+  {
+    "modelId": "gemini-3-flash-reasoning",
+    "benchmarkId": "swe-bench-verified",
+    "variant": "default",
+    "value": 0.758,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://www.swebench.com/",
+    "notes": "swebench.com leaderboard — high reasoning"
+  },
+  {
+    "modelId": "glm-5",
+    "benchmarkId": "swe-bench-verified",
+    "variant": "default",
+    "value": 0.728,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://www.swebench.com/",
+    "notes": "swebench.com leaderboard — high reasoning"
+  },
+  {
+    "modelId": "gpt-5-2",
+    "benchmarkId": "swe-bench-verified",
+    "variant": "default",
+    "value": 0.728,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://www.swebench.com/",
+    "notes": "swebench.com leaderboard — high reasoning"
+  },
+  {
+    "modelId": "claude-sonnet-4-5",
+    "benchmarkId": "swe-bench-verified",
+    "variant": "default",
+    "value": 0.714,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://www.swebench.com/",
+    "notes": "swebench.com leaderboard — high reasoning"
+  },
+  {
+    "modelId": "kimi-k2-5",
+    "benchmarkId": "swe-bench-verified",
+    "variant": "default",
+    "value": 0.708,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://www.swebench.com/",
+    "notes": "swebench.com leaderboard — high reasoning"
+  },
+  {
+    "modelId": "deepseek-v3-2-reasoning",
+    "benchmarkId": "swe-bench-verified",
+    "variant": "default",
+    "value": 0.7,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://www.swebench.com/",
+    "notes": "swebench.com leaderboard — high reasoning (already on V3.2 paper at 0.731)"
+  },
+  {
+    "modelId": "gpt-5-mini",
+    "benchmarkId": "swe-bench-verified",
+    "variant": "default",
+    "value": 0.562,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://www.swebench.com/",
+    "notes": "swebench.com leaderboard — default"
+  },
+  {
+    "modelId": "claude-sonnet-4-6",
+    "benchmarkId": "osworld-verified",
+    "variant": "default",
+    "value": 0.721,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://os-world.github.io/",
+    "notes": "os-world.github.io leaderboard"
+  },
+  {
+    "modelId": "kimi-k2-5",
+    "benchmarkId": "osworld-verified",
+    "variant": "default",
+    "value": 0.633,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://os-world.github.io/",
+    "notes": "os-world.github.io leaderboard"
   }
 ]
