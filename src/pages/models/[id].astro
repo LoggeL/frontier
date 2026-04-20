@@ -1,0 +1,47 @@
+---
+import "../../styles/global.css";
+import ModelDetail from "../../components/ModelDetail";
+import { models, benchmarks, scores } from "../../lib/data";
+
+export function getStaticPaths() {
+  return models.map((m) => ({
+    params: { id: m.id },
+    props: { modelId: m.id },
+  }));
+}
+
+const { modelId } = Astro.props as { modelId: string };
+const model = models.find((m) => m.id === modelId);
+if (!model) throw new Error(`Unknown model id: ${modelId}`);
+---
+
+<!doctype html>
+<html lang="en" class="bg-neutral-950">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{model.name} · Frontier</title>
+    <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`} />
+    <meta
+      name="description"
+      content={`${model.name} — benchmark comparison, peers, and frontier gaps.`}
+    />
+  </head>
+  <body class="min-h-screen px-6 py-10 text-neutral-100">
+    <main class="mx-auto flex max-w-[1400px] flex-col gap-8">
+      <nav class="flex items-center gap-3 text-xs text-neutral-500">
+        <a href={import.meta.env.BASE_URL} class="text-amber-300 hover:underline">← all models</a>
+        <span>/</span>
+        <span class="text-neutral-400">{model.name}</span>
+      </nav>
+
+      <ModelDetail
+        client:load
+        model={model}
+        models={models}
+        benchmarks={benchmarks}
+        scores={scores}
+      />
+    </main>
+  </body>
+</html>

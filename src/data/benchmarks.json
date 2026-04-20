@@ -1,0 +1,277 @@
+[
+  {
+    "id": "aa-intelligence-index",
+    "name": "AA Intelligence Index",
+    "category": "composite",
+    "source": "aa",
+    "higherIsBetter": true,
+    "unit": "index",
+    "description": "Artificial Analysis composite across 10 sub-benchmarks (GPQA Diamond, HLE, SciCode, Terminal-Bench Hard, τ²-Bench Telecom, AA-LCR, AA-Omniscience, GDPval-AA, IFBench, CritPt).",
+    "sourceUrl": "https://artificialanalysis.ai/methodology/intelligence-benchmarking",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "AA's published composite on a 0–100 scale. Current frontier around 57 (Opus 4.7)."
+      }
+    ],
+    "primary": true
+  },
+  {
+    "id": "aa-coding-index",
+    "name": "AA Coding Index",
+    "category": "code",
+    "source": "aa",
+    "higherIsBetter": true,
+    "unit": "index",
+    "description": "AA composite across coding-heavy benchmarks (LiveCodeBench, SciCode, Terminal-Bench Hard). 0–100.",
+    "sourceUrl": "https://artificialanalysis.ai/methodology/intelligence-benchmarking",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "Average of coding sub-benchmarks, normalized to 0–100."
+      }
+    ],
+    "primary": true
+  },
+  {
+    "id": "aa-math-index",
+    "name": "AA Math Index",
+    "category": "math",
+    "source": "aa",
+    "higherIsBetter": true,
+    "unit": "index",
+    "description": "AA composite of math benchmarks (AIME 2025, MATH-500). 0–100.",
+    "sourceUrl": "https://artificialanalysis.ai/methodology/intelligence-benchmarking",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "Math composite. Often null for models AA hasn't re-evaluated against the current math suite."
+      }
+    ],
+    "primary": true
+  },
+  {
+    "id": "mmlu-pro",
+    "name": "MMLU-Pro",
+    "category": "reasoning",
+    "source": "aa",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "description": "Harder, deduplicated variant of MMLU across 14 domains.",
+    "sourceUrl": "https://arxiv.org/abs/2406.01574",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default (0-shot CoT)",
+        "notes": "Zero-shot with chain-of-thought. AA dropped this from the Intelligence Index but still reports per-model scores."
+      }
+    ],
+    "primary": false
+  },
+  {
+    "id": "gpqa-diamond",
+    "name": "GPQA Diamond",
+    "category": "reasoning",
+    "source": "aa",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "description": "Graduate-level science (bio/physics/chem) — diamond subset, 198 questions.",
+    "sourceUrl": "https://arxiv.org/abs/2311.12022",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "AA's standard 0-shot run on the diamond subset."
+      }
+    ],
+    "primary": true
+  },
+  {
+    "id": "hle",
+    "name": "Humanity's Last Exam",
+    "category": "reasoning",
+    "source": "aa",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "description": "2,500 expert-authored questions across mathematics, humanities and the natural sciences. Intentionally hard — frontier models still under 45%.",
+    "sourceUrl": "https://agi.safe.ai/",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default (no tools)",
+        "notes": "No tool use, no web. Single-shot. What AA publishes."
+      },
+      {
+        "key": "with-tools",
+        "label": "With tools",
+        "notes": "Model has browsing + code execution. Not comparable to default — reported scores typically much higher."
+      }
+    ],
+    "primary": true
+  },
+  {
+    "id": "math-500",
+    "name": "MATH-500",
+    "category": "math",
+    "source": "aa",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "description": "500-problem subset of the MATH benchmark (competition-style).",
+    "sourceUrl": "https://arxiv.org/abs/2305.20050",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default (pass@1)",
+        "notes": "Single sample. AA reports null for many 2026 frontier models (rerun pending)."
+      }
+    ],
+    "primary": false
+  },
+  {
+    "id": "aime-2025",
+    "name": "AIME 2025",
+    "category": "math",
+    "source": "aa",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "description": "American Invitational Mathematics Examination 2025 — 30 problems.",
+    "sourceUrl": "https://artofproblemsolving.com/wiki/index.php/AIME_Problems_and_Solutions",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "AA reports a single default score per model (their `aime_25` field)."
+      }
+    ],
+    "primary": true
+  },
+  {
+    "id": "livecodebench",
+    "name": "LiveCodeBench",
+    "category": "code",
+    "source": "aa",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "description": "Contamination-controlled coding benchmark from recent competitive-programming problems.",
+    "sourceUrl": "https://livecodebench.github.io/",
+    "variants": [
+      {
+        "key": "default",
+        "label": "pass@1 (no tools)",
+        "notes": "Single sample, no execution feedback. AA default."
+      }
+    ],
+    "primary": true
+  },
+  {
+    "id": "scicode",
+    "name": "SciCode",
+    "category": "code",
+    "source": "aa",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "description": "Scientific coding benchmark across physics, chemistry, biology and math. Still in AA's current Intelligence Index.",
+    "sourceUrl": "https://scicode-bench.github.io/",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Subproblem accuracy",
+        "notes": "Fraction of scientific subproblems solved."
+      }
+    ],
+    "primary": false
+  },
+  {
+    "id": "ifbench",
+    "name": "IFBench",
+    "category": "reasoning",
+    "source": "aa",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "description": "Instruction-Following Bench — tests adherence to complex, multi-part instructions. In AA's current Intelligence Index.",
+    "sourceUrl": "https://artificialanalysis.ai/methodology/intelligence-benchmarking",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "AA's single-run evaluation."
+      }
+    ],
+    "primary": false
+  },
+  {
+    "id": "aa-lcr",
+    "name": "AA-LCR",
+    "category": "reasoning",
+    "source": "aa",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "description": "Long-Context Reasoning benchmark authored by AA. Part of the current Intelligence Index.",
+    "sourceUrl": "https://artificialanalysis.ai/methodology/intelligence-benchmarking",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "Standard AA run."
+      }
+    ],
+    "primary": false
+  },
+  {
+    "id": "terminal-bench-hard",
+    "name": "Terminal-Bench Hard",
+    "category": "agentic",
+    "source": "aa",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "description": "Hard subset of Terminal-Bench — agent executes real shell commands against a sandboxed filesystem to complete tasks. Part of the current Intelligence Index.",
+    "sourceUrl": "https://artificialanalysis.ai/methodology/intelligence-benchmarking",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "AA's scaffold, hard split."
+      }
+    ],
+    "primary": false
+  },
+  {
+    "id": "tau2-telecom",
+    "name": "τ²-Bench Telecom",
+    "category": "agentic",
+    "source": "aa",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "description": "Conversational agent benchmark against a telecom support API — tool use + multi-turn dialogue. Replaced τ-bench airline/retail in AA's current suite.",
+    "sourceUrl": "https://arxiv.org/abs/2506.07982",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Telecom",
+        "notes": "AA's reported run on the telecom domain."
+      }
+    ],
+    "primary": false
+  },
+  {
+    "id": "humaneval",
+    "name": "HumanEval",
+    "category": "code",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "pass@1",
+    "description": "Legacy function-completion benchmark. Saturated — included only for historical continuity, not tracked by AA any more.",
+    "sourceUrl": "https://arxiv.org/abs/2107.03374",
+    "variants": [
+      {
+        "key": "default",
+        "label": "pass@1",
+        "notes": "Single sample. Most frontier models above 95% — use with care."
+      }
+    ],
+    "primary": false
+  }
+]

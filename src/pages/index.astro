@@ -1,0 +1,86 @@
+---
+import "../styles/global.css";
+import ComparisonTable from "../components/ComparisonTable";
+import CohortBars from "../components/CohortBars";
+import { models, benchmarks, scores } from "../lib/data";
+
+const openCount = models.filter((m) => m.openWeights).length;
+const closedCount = models.length - openCount;
+const primaryBenchmarks = benchmarks.filter((b) => b.primary);
+const benchmarkCount = benchmarks.length;
+const variantCount = benchmarks.reduce(
+  (acc, b) => acc + b.variants.length,
+  0,
+);
+const scoreCount = scores.length;
+---
+
+<!doctype html>
+<html lang="en" class="bg-neutral-950">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontier · LLM benchmark compare</title>
+    <meta
+      name="description"
+      content="Compare frontier and open-weight LLMs across Artificial Analysis benchmarks, with a training-to-release timeline that surfaces pretraining cohorts."
+    />
+  </head>
+  <body class="min-h-screen px-6 py-10 text-neutral-100">
+    <main class="mx-auto flex max-w-[1400px] flex-col gap-10">
+      <header class="flex flex-col gap-2">
+        <h1 class="text-3xl font-semibold tracking-tight">Frontier</h1>
+        <p class="max-w-2xl text-sm text-neutral-400">
+          Static, JSON-backed comparison of frontier and open-weight models
+          across AA and custom benchmarks. Dataset:
+          <span class="font-mono text-neutral-300">
+            {models.length} models ({openCount} open · {closedCount} closed)
+          </span>
+          ·
+          <span class="font-mono text-neutral-300">
+            {benchmarkCount} benchmarks / {variantCount} variants
+          </span>
+          ·
+          <span class="font-mono text-neutral-300">
+            {scoreCount} scores
+          </span>.
+        </p>
+      </header>
+
+      <section class="flex flex-col gap-3">
+        <div class="flex items-baseline justify-between">
+          <h2 class="text-lg font-semibold text-neutral-200">
+            Benchmark comparison
+          </h2>
+          <span class="text-xs text-neutral-500">
+            Sort by clicking column headers · hover cells for variant / score notes
+          </span>
+        </div>
+        <ComparisonTable
+          client:load
+          models={models}
+          benchmarks={primaryBenchmarks}
+          scores={scores}
+        />
+      </section>
+
+      <section class="flex flex-col gap-3">
+        <div class="flex items-baseline justify-between">
+          <h2 class="text-lg font-semibold text-neutral-200">
+            Cutoff vs release
+          </h2>
+          <span class="text-xs text-neutral-500">
+            Models in the same cluster likely share a pretraining run
+          </span>
+        </div>
+        <CohortBars client:visible models={models} />
+      </section>
+
+      <footer class="mt-6 border-t border-neutral-900 pt-6 text-xs text-neutral-600">
+        Data lives in <code class="font-mono text-neutral-400">src/data/*.json</code>.
+        See <code class="font-mono text-neutral-400">src/data/README.md</code>
+        for how to add models, benchmarks, variants, and scores.
+      </footer>
+    </main>
+  </body>
+</html>
