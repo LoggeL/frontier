@@ -57,6 +57,7 @@ export default function ComparisonTable({
     key: { kind: "benchmark", benchmarkId: "aa-intelligence-index", variant: "default" },
     dir: "desc",
   });
+  const [hoveredCol, setHoveredCol] = useState<string | null>(null);
 
   const matrix = useMemo(() => buildScoreMatrix(scores), [scores]);
   const extents = useMemo(
@@ -90,7 +91,10 @@ export default function ComparisonTable({
       />
 
       <div className="overflow-x-auto rounded-lg border border-neutral-800 bg-neutral-900/40">
-        <table className="w-full text-sm">
+        <table
+          className="w-full text-sm"
+          onMouseLeave={() => setHoveredCol(null)}
+        >
           <thead className="sticky top-0 bg-neutral-900 text-left text-xs uppercase tracking-wide text-neutral-400">
             <tr>
               <Th
@@ -118,15 +122,19 @@ export default function ComparisonTable({
               </Th>
               {visibleBenchmarks.map((b) => {
                 const variant = activeVariant[b.id] ?? b.variants[0]!.key;
+                const colKey = `${b.id}::${variant}`;
                 const isSorted =
                   sort.key.kind === "benchmark" &&
                   sort.key.benchmarkId === b.id &&
                   sort.key.variant === variant;
+                const isHovered = hoveredCol === colKey;
                 return (
                   <Th
                     key={b.id}
                     active={isSorted}
                     dir={sort.dir}
+                    hovered={isHovered}
+                    onMouseEnter={() => setHoveredCol(colKey)}
                     onClick={() =>
                       toggleSort(setSort, sort, {
                         kind: "benchmark",
@@ -188,21 +196,27 @@ export default function ComparisonTable({
                 </td>
                 {visibleBenchmarks.map((b) => {
                   const variant = activeVariant[b.id] ?? b.variants[0]!.key;
+                  const colKey = `${b.id}::${variant}`;
+                  const isColHovered = hoveredCol === colKey;
                   const cells = matrix.get(m.id)?.get(b.id) ?? [];
                   const cell = cells.find((c) => c.variant === variant);
                   if (!cell) {
                     return (
                       <td
                         key={b.id}
-                        className="px-3 py-2 text-center text-neutral-700"
+                        className={[
+                          "px-3 py-2 text-center text-neutral-700",
+                          isColHovered ? "bg-neutral-900" : "",
+                        ].join(" ")}
+                        onMouseEnter={() => setHoveredCol(colKey)}
                       >
                         —
                       </td>
                     );
                   }
-                  const ext = extents.get(`${b.id}::${variant}`);
+                  const ext = extents.get(colKey);
                   const norm = ext ? normalize(cell.value, ext) : 0.5;
-                  const bg = heatColor(norm);
+                  const bg = isColHovered ? heatColor(norm) : undefined;
                   const variantMeta = b.variants.find(
                     (v) => v.key === variant,
                   );
@@ -216,11 +230,18 @@ export default function ComparisonTable({
                   return (
                     <td
                       key={b.id}
-                      className="px-3 py-2 text-right"
-                      style={{ backgroundColor: bg }}
+                      className="px-3 py-2 text-right transition-colors duration-75"
+                      style={bg ? { backgroundColor: bg } : undefined}
+                      onMouseEnter={() => setHoveredCol(colKey)}
                       title={tipLines}
                     >
-                      <span className="font-mono text-sm">
+                      <span
+                        className={
+                          isColHovered
+                            ? "font-mono text-sm font-semibold text-neutral-50"
+                            : "font-mono text-sm text-neutral-200"
+                        }
+                      >
                         {formatScore(cell.value, b.unit)}
                       </span>
                       {variant !== "default" && (
@@ -243,25 +264,31 @@ export default function ComparisonTable({
 function Th({
   children,
   onClick,
+  onMouseEnter,
   active,
   dir,
   sticky,
+  hovered,
 }: {
   children: React.ReactNode;
   onClick?: () => void;
+  onMouseEnter?: () => void;
   active?: boolean;
   dir?: "asc" | "desc";
   sticky?: boolean;
+  hovered?: boolean;
 }) {
   const arrow = active ? (dir === "asc" ? " ↑" : " ↓") : "";
   return (
     <th
       onClick={onClick}
+      onMouseEnter={onMouseEnter}
       className={[
-        "px-3 py-2 align-bottom",
+        "px-3 py-2 align-bottom transition-colors",
         sticky ? "sticky left-0 bg-neutral-900 z-10" : "",
-        onClick ? "cursor-pointer select-none hover:text-neutral-100" : "",
+        onClick ? "cursor-pointer select-none" : "",
         active ? "text-amber-400" : "",
+        hovered ? "bg-neutral-800 text-neutral-100" : "hover:text-neutral-100",
       ].join(" ")}
     >
       <span className="whitespace-nowrap">
