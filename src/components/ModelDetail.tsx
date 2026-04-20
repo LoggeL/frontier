@@ -397,7 +397,12 @@ function FrontierTable({
                   {isFrontier && (
                     <span className="mr-1.5 align-middle text-amber-300">★</span>
                   )}
-                  {r.benchmark.name}
+                  <a
+                    href={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/benchmarks/${r.benchmark.id}/`}
+                    className="hover:text-amber-300"
+                  >
+                    {r.benchmark.name}
+                  </a>
                 </td>
                 <td className="px-3 py-2 text-neutral-500">
                   {r.variantLabel}

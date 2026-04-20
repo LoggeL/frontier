@@ -26,20 +26,16 @@ export default function BenchmarkHeader({
         title={tooltip}
       >
         {benchmark.name}
-        {benchmark.sourceUrl && (
-          <a
-            href={benchmark.sourceUrl}
-            target="_blank"
-            rel="noreferrer"
-            onClick={(e) => e.stopPropagation()}
-            onMouseDown={(e) => e.stopPropagation()}
-            className="inline-flex h-3.5 w-3.5 items-center justify-center rounded-full border border-neutral-600 text-[9px] font-semibold leading-none text-neutral-400 hover:border-amber-400 hover:text-amber-300"
-            aria-label={`About ${benchmark.name}`}
-            title={`Open source for ${benchmark.name}`}
-          >
-            i
-          </a>
-        )}
+        <a
+          href={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/benchmarks/${benchmark.id}/`}
+          onClick={(e) => e.stopPropagation()}
+          onMouseDown={(e) => e.stopPropagation()}
+          className="inline-flex h-3.5 w-3.5 items-center justify-center rounded-full border border-neutral-600 text-[9px] font-semibold leading-none text-neutral-400 hover:border-amber-400 hover:text-amber-300"
+          aria-label={`About ${benchmark.name}`}
+          title={`Leaderboard for ${benchmark.name}`}
+        >
+          i
+        </a>
       </span>
       {benchmark.variants.length > 1 ? (
         <select
