@@ -252,6 +252,20 @@
     "contextWindow": 128000
   },
   {
+    "id": "kimi-k2-6",
+    "name": "Kimi K2.6",
+    "provider": "Kimi",
+    "releaseDate": "2026-04-20",
+    "knowledgeCutoff": "2026-01",
+    "openWeights": true,
+    "contextWindow": 262144,
+    "hfLink": "https://huggingface.co/moonshotai/Kimi-K2-Instruct",
+    "totalParams": 1000,
+    "activeParams": 32,
+    "experts": 384,
+    "architecture": "moe"
+  },
+  {
     "id": "kimi-k2-5",
     "name": "Kimi K2.5 (Reasoning)",
     "provider": "Kimi",

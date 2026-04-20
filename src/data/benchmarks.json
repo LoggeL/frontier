@@ -273,5 +273,167 @@
       }
     ],
     "primary": false
+  },
+  {
+    "id": "browsecomp",
+    "name": "BrowseComp",
+    "category": "agentic",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "Web browsing/research agent benchmark.",
+    "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "Vendor-reported in Kimi K2.6 release post. Numbers for competitors are Kimi's own re-evaluations under the same conditions — may not match official reports."
+      }
+    ]
+  },
+  {
+    "id": "deep-search-qa",
+    "name": "DeepSearchQA",
+    "category": "agentic",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "Deep-search QA benchmark. Reported as f1-score.",
+    "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "Vendor-reported in Kimi K2.6 release post. Numbers for competitors are Kimi's own re-evaluations under the same conditions — may not match official reports."
+      }
+    ]
+  },
+  {
+    "id": "toolathlon",
+    "name": "Toolathlon",
+    "category": "agentic",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "Multi-tool agent benchmark.",
+    "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "Vendor-reported in Kimi K2.6 release post. Numbers for competitors are Kimi's own re-evaluations under the same conditions — may not match official reports."
+      }
+    ]
+  },
+  {
+    "id": "osworld-verified",
+    "name": "OSWorld-Verified",
+    "category": "agentic",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "Verified subset of OSWorld (computer-use agent).",
+    "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "Vendor-reported in Kimi K2.6 release post. Numbers for competitors are Kimi's own re-evaluations under the same conditions — may not match official reports."
+      }
+    ]
+  },
+  {
+    "id": "terminal-bench-2",
+    "name": "Terminal-Bench 2.0",
+    "category": "agentic",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "Terminal-Bench v2 (Terminus-2). Shell-agent tasks.",
+    "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "Vendor-reported in Kimi K2.6 release post. Numbers for competitors are Kimi's own re-evaluations under the same conditions — may not match official reports."
+      }
+    ]
+  },
+  {
+    "id": "swe-bench-pro",
+    "name": "SWE-Bench Pro",
+    "category": "agentic",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "Harder SWE-Bench split with more complex issues.",
+    "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "Vendor-reported in Kimi K2.6 release post. Numbers for competitors are Kimi's own re-evaluations under the same conditions — may not match official reports."
+      }
+    ]
+  },
+  {
+    "id": "swe-bench-multilingual",
+    "name": "SWE-Bench Multilingual",
+    "category": "agentic",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "SWE-Bench across multiple programming languages.",
+    "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "Vendor-reported in Kimi K2.6 release post. Numbers for competitors are Kimi's own re-evaluations under the same conditions — may not match official reports."
+      }
+    ]
+  },
+  {
+    "id": "math-vision-python",
+    "name": "MathVision w/ python",
+    "category": "multimodal",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "MathVision with Python tool use.",
+    "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "Vendor-reported in Kimi K2.6 release post. Numbers for competitors are Kimi's own re-evaluations under the same conditions — may not match official reports."
+      }
+    ]
+  },
+  {
+    "id": "v-star-python",
+    "name": "V* w/ python",
+    "category": "multimodal",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "V* visual reasoning with Python tool use.",
+    "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "Vendor-reported in Kimi K2.6 release post. Numbers for competitors are Kimi's own re-evaluations under the same conditions — may not match official reports."
+      }
+    ]
   }
 ]

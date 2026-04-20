@@ -4854,5 +4854,347 @@
     "reportedOn": "2026-04-21",
     "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
     "notes": "AA API — Muse Spark"
+  },
+  {
+    "modelId": "kimi-k2-6",
+    "benchmarkId": "hle",
+    "variant": "with-tools",
+    "value": 0.54,
+    "reportedOn": "2026-04-20",
+    "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6",
+    "notes": "Kimi K2.6 release post"
+  },
+  {
+    "modelId": "gpt-5-4",
+    "benchmarkId": "hle",
+    "variant": "with-tools",
+    "value": 0.521,
+    "reportedOn": "2026-04-20",
+    "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6",
+    "notes": "Kimi K2.6 release post — competitor score re-evaluated by Kimi under identical conditions; may not match vendor-reported."
+  },
+  {
+    "modelId": "claude-opus-4-6",
+    "benchmarkId": "hle",
+    "variant": "with-tools",
+    "value": 0.53,
+    "reportedOn": "2026-04-20",
+    "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6",
+    "notes": "Kimi K2.6 release post — competitor score re-evaluated by Kimi under identical conditions; may not match vendor-reported."
+  },
+  {
+    "modelId": "gemini-3-1-pro-preview",
+    "benchmarkId": "hle",
+    "variant": "with-tools",
+    "value": 0.514,
+    "reportedOn": "2026-04-20",
+    "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6",
+    "notes": "Kimi K2.6 release post — competitor score re-evaluated by Kimi under identical conditions; may not match vendor-reported."
+  },
+  {
+    "modelId": "kimi-k2-6",
+    "benchmarkId": "browsecomp",
+    "variant": "default",
+    "value": 0.832,
+    "reportedOn": "2026-04-20",
+    "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6",
+    "notes": "Kimi K2.6 release post"
+  },
+  {
+    "modelId": "gpt-5-4",
+    "benchmarkId": "browsecomp",
+    "variant": "default",
+    "value": 0.827,
+    "reportedOn": "2026-04-20",
+    "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6",
+    "notes": "Kimi K2.6 release post — competitor score re-evaluated by Kimi under identical conditions; may not match vendor-reported."
+  },
+  {
+    "modelId": "claude-opus-4-6",
+    "benchmarkId": "browsecomp",
+    "variant": "default",
+    "value": 0.837,
+    "reportedOn": "2026-04-20",
+    "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6",
+    "notes": "Kimi K2.6 release post — competitor score re-evaluated by Kimi under identical conditions; may not match vendor-reported."
+  },
+  {
+    "modelId": "gemini-3-1-pro-preview",
+    "benchmarkId": "browsecomp",
+    "variant": "default",
+    "value": 0.859,
+    "reportedOn": "2026-04-20",
+    "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6",
+    "notes": "Kimi K2.6 release post — competitor score re-evaluated by Kimi under identical conditions; may not match vendor-reported."
+  },
+  {
+    "modelId": "kimi-k2-6",
+    "benchmarkId": "deep-search-qa",
+    "variant": "default",
+    "value": 0.925,
+    "reportedOn": "2026-04-20",
+    "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6",
+    "notes": "Kimi K2.6 release post"
+  },
+  {
+    "modelId": "gpt-5-4",
+    "benchmarkId": "deep-search-qa",
+    "variant": "default",
+    "value": 0.786,
+    "reportedOn": "2026-04-20",
+    "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6",
+    "notes": "Kimi K2.6 release post — competitor score re-evaluated by Kimi under identical conditions; may not match vendor-reported."
+  },
+  {
+    "modelId": "claude-opus-4-6",
+    "benchmarkId": "deep-search-qa",
+    "variant": "default",
+    "value": 0.913,
+    "reportedOn": "2026-04-20",
+    "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6",
+    "notes": "Kimi K2.6 release post — competitor score re-evaluated by Kimi under identical conditions; may not match vendor-reported."
+  },
+  {
+    "modelId": "gemini-3-1-pro-preview",
+    "benchmarkId": "deep-search-qa",
+    "variant": "default",
+    "value": 0.819,
+    "reportedOn": "2026-04-20",
+    "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6",
+    "notes": "Kimi K2.6 release post — competitor score re-evaluated by Kimi under identical conditions; may not match vendor-reported."
+  },
+  {
+    "modelId": "kimi-k2-6",
+    "benchmarkId": "toolathlon",
+    "variant": "default",
+    "value": 0.5,
+    "reportedOn": "2026-04-20",
+    "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6",
+    "notes": "Kimi K2.6 release post"
+  },
+  {
+    "modelId": "gpt-5-4",
+    "benchmarkId": "toolathlon",
+    "variant": "default",
+    "value": 0.546,
+    "reportedOn": "2026-04-20",
+    "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6",
+    "notes": "Kimi K2.6 release post — competitor score re-evaluated by Kimi under identical conditions; may not match vendor-reported."
+  },
+  {
+    "modelId": "claude-opus-4-6",
+    "benchmarkId": "toolathlon",
+    "variant": "default",
+    "value": 0.472,
+    "reportedOn": "2026-04-20",
+    "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6",
+    "notes": "Kimi K2.6 release post — competitor score re-evaluated by Kimi under identical conditions; may not match vendor-reported."
+  },
+  {
+    "modelId": "gemini-3-1-pro-preview",
+    "benchmarkId": "toolathlon",
+    "variant": "default",
+    "value": 0.488,
+    "reportedOn": "2026-04-20",
+    "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6",
+    "notes": "Kimi K2.6 release post — competitor score re-evaluated by Kimi under identical conditions; may not match vendor-reported."
+  },
+  {
+    "modelId": "kimi-k2-6",
+    "benchmarkId": "osworld-verified",
+    "variant": "default",
+    "value": 0.731,
+    "reportedOn": "2026-04-20",
+    "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6",
+    "notes": "Kimi K2.6 release post"
+  },
+  {
+    "modelId": "gpt-5-4",
+    "benchmarkId": "osworld-verified",
+    "variant": "default",
+    "value": 0.75,
+    "reportedOn": "2026-04-20",
+    "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6",
+    "notes": "Kimi K2.6 release post — competitor score re-evaluated by Kimi under identical conditions; may not match vendor-reported."
+  },
+  {
+    "modelId": "claude-opus-4-6",
+    "benchmarkId": "osworld-verified",
+    "variant": "default",
+    "value": 0.727,
+    "reportedOn": "2026-04-20",
+    "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6",
+    "notes": "Kimi K2.6 release post — competitor score re-evaluated by Kimi under identical conditions; may not match vendor-reported."
+  },
+  {
+    "modelId": "kimi-k2-6",
+    "benchmarkId": "terminal-bench-2",
+    "variant": "default",
+    "value": 0.667,
+    "reportedOn": "2026-04-20",
+    "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6",
+    "notes": "Kimi K2.6 release post"
+  },
+  {
+    "modelId": "gpt-5-4",
+    "benchmarkId": "terminal-bench-2",
+    "variant": "default",
+    "value": 0.654,
+    "reportedOn": "2026-04-20",
+    "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6",
+    "notes": "Kimi K2.6 release post — competitor score re-evaluated by Kimi under identical conditions; may not match vendor-reported."
+  },
+  {
+    "modelId": "claude-opus-4-6",
+    "benchmarkId": "terminal-bench-2",
+    "variant": "default",
+    "value": 0.654,
+    "reportedOn": "2026-04-20",
+    "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6",
+    "notes": "Kimi K2.6 release post — competitor score re-evaluated by Kimi under identical conditions; may not match vendor-reported."
+  },
+  {
+    "modelId": "gemini-3-1-pro-preview",
+    "benchmarkId": "terminal-bench-2",
+    "variant": "default",
+    "value": 0.685,
+    "reportedOn": "2026-04-20",
+    "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6",
+    "notes": "Kimi K2.6 release post — competitor score re-evaluated by Kimi under identical conditions; may not match vendor-reported."
+  },
+  {
+    "modelId": "kimi-k2-6",
+    "benchmarkId": "swe-bench-pro",
+    "variant": "default",
+    "value": 0.586,
+    "reportedOn": "2026-04-20",
+    "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6",
+    "notes": "Kimi K2.6 release post"
+  },
+  {
+    "modelId": "gpt-5-4",
+    "benchmarkId": "swe-bench-pro",
+    "variant": "default",
+    "value": 0.577,
+    "reportedOn": "2026-04-20",
+    "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6",
+    "notes": "Kimi K2.6 release post — competitor score re-evaluated by Kimi under identical conditions; may not match vendor-reported."
+  },
+  {
+    "modelId": "claude-opus-4-6",
+    "benchmarkId": "swe-bench-pro",
+    "variant": "default",
+    "value": 0.534,
+    "reportedOn": "2026-04-20",
+    "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6",
+    "notes": "Kimi K2.6 release post — competitor score re-evaluated by Kimi under identical conditions; may not match vendor-reported."
+  },
+  {
+    "modelId": "gemini-3-1-pro-preview",
+    "benchmarkId": "swe-bench-pro",
+    "variant": "default",
+    "value": 0.542,
+    "reportedOn": "2026-04-20",
+    "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6",
+    "notes": "Kimi K2.6 release post — competitor score re-evaluated by Kimi under identical conditions; may not match vendor-reported."
+  },
+  {
+    "modelId": "kimi-k2-6",
+    "benchmarkId": "swe-bench-multilingual",
+    "variant": "default",
+    "value": 0.767,
+    "reportedOn": "2026-04-20",
+    "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6",
+    "notes": "Kimi K2.6 release post"
+  },
+  {
+    "modelId": "gpt-5-4",
+    "benchmarkId": "swe-bench-multilingual",
+    "variant": "default",
+    "value": 0.778,
+    "reportedOn": "2026-04-20",
+    "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6",
+    "notes": "Kimi K2.6 release post — competitor score re-evaluated by Kimi under identical conditions; may not match vendor-reported."
+  },
+  {
+    "modelId": "gemini-3-1-pro-preview",
+    "benchmarkId": "swe-bench-multilingual",
+    "variant": "default",
+    "value": 0.769,
+    "reportedOn": "2026-04-20",
+    "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6",
+    "notes": "Kimi K2.6 release post — competitor score re-evaluated by Kimi under identical conditions; may not match vendor-reported."
+  },
+  {
+    "modelId": "kimi-k2-6",
+    "benchmarkId": "math-vision-python",
+    "variant": "default",
+    "value": 0.932,
+    "reportedOn": "2026-04-20",
+    "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6",
+    "notes": "Kimi K2.6 release post"
+  },
+  {
+    "modelId": "gpt-5-4",
+    "benchmarkId": "math-vision-python",
+    "variant": "default",
+    "value": 0.961,
+    "reportedOn": "2026-04-20",
+    "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6",
+    "notes": "Kimi K2.6 release post — competitor score re-evaluated by Kimi under identical conditions; may not match vendor-reported."
+  },
+  {
+    "modelId": "claude-opus-4-6",
+    "benchmarkId": "math-vision-python",
+    "variant": "default",
+    "value": 0.846,
+    "reportedOn": "2026-04-20",
+    "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6",
+    "notes": "Kimi K2.6 release post — competitor score re-evaluated by Kimi under identical conditions; may not match vendor-reported."
+  },
+  {
+    "modelId": "gemini-3-1-pro-preview",
+    "benchmarkId": "math-vision-python",
+    "variant": "default",
+    "value": 0.957,
+    "reportedOn": "2026-04-20",
+    "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6",
+    "notes": "Kimi K2.6 release post — competitor score re-evaluated by Kimi under identical conditions; may not match vendor-reported."
+  },
+  {
+    "modelId": "kimi-k2-6",
+    "benchmarkId": "v-star-python",
+    "variant": "default",
+    "value": 0.969,
+    "reportedOn": "2026-04-20",
+    "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6",
+    "notes": "Kimi K2.6 release post"
+  },
+  {
+    "modelId": "gpt-5-4",
+    "benchmarkId": "v-star-python",
+    "variant": "default",
+    "value": 0.984,
+    "reportedOn": "2026-04-20",
+    "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6",
+    "notes": "Kimi K2.6 release post — competitor score re-evaluated by Kimi under identical conditions; may not match vendor-reported."
+  },
+  {
+    "modelId": "claude-opus-4-6",
+    "benchmarkId": "v-star-python",
+    "variant": "default",
+    "value": 0.864,
+    "reportedOn": "2026-04-20",
+    "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6",
+    "notes": "Kimi K2.6 release post — competitor score re-evaluated by Kimi under identical conditions; may not match vendor-reported."
+  },
+  {
+    "modelId": "gemini-3-1-pro-preview",
+    "benchmarkId": "v-star-python",
+    "variant": "default",
+    "value": 0.969,
+    "reportedOn": "2026-04-20",
+    "sourceUrl": "https://www.kimi.com/blog/kimi-k2-6",
+    "notes": "Kimi K2.6 release post — competitor score re-evaluated by Kimi under identical conditions; may not match vendor-reported."
   }
 ]
