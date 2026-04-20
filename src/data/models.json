@@ -85,7 +85,7 @@
     "name": "GPT-5.4 (xhigh)",
     "provider": "OpenAI",
     "releaseDate": "2026-03-05",
-    "knowledgeCutoff": "2025-06",
+    "knowledgeCutoff": "2025-08",
     "openWeights": false,
     "contextWindow": 400000
   },
@@ -166,7 +166,7 @@
     "name": "Gemini 3.1 Pro Preview",
     "provider": "Google",
     "releaseDate": "2026-02-19",
-    "knowledgeCutoff": "2025-11",
+    "knowledgeCutoff": "2025-01",
     "openWeights": false,
     "contextWindow": 2000000
   },
@@ -292,6 +292,15 @@
     "activeParams": 10,
     "experts": 256,
     "architecture": "moe"
+  },
+  {
+    "id": "muse-spark",
+    "name": "Muse Spark",
+    "provider": "Meta",
+    "releaseDate": "2026-04-08",
+    "knowledgeCutoff": "2026-01",
+    "openWeights": false,
+    "contextWindow": 1000000
   },
   {
     "id": "llama-4-maverick",

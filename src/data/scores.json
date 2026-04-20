@@ -4773,5 +4773,86 @@
     "variant": "default",
     "value": 0.89,
     "notes": "Vendor-reported; not in AA API."
+  },
+  {
+    "modelId": "muse-spark",
+    "benchmarkId": "aa-intelligence-index",
+    "variant": "default",
+    "value": 52.1,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API — Muse Spark"
+  },
+  {
+    "modelId": "muse-spark",
+    "benchmarkId": "aa-coding-index",
+    "variant": "default",
+    "value": 47.5,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API — Muse Spark"
+  },
+  {
+    "modelId": "muse-spark",
+    "benchmarkId": "gpqa-diamond",
+    "variant": "default",
+    "value": 0.884,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API — Muse Spark"
+  },
+  {
+    "modelId": "muse-spark",
+    "benchmarkId": "hle",
+    "variant": "default",
+    "value": 0.399,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API — Muse Spark"
+  },
+  {
+    "modelId": "muse-spark",
+    "benchmarkId": "scicode",
+    "variant": "default",
+    "value": 0.515,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API — Muse Spark"
+  },
+  {
+    "modelId": "muse-spark",
+    "benchmarkId": "ifbench",
+    "variant": "default",
+    "value": 0.759,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API — Muse Spark"
+  },
+  {
+    "modelId": "muse-spark",
+    "benchmarkId": "aa-lcr",
+    "variant": "default",
+    "value": 0.697,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API — Muse Spark"
+  },
+  {
+    "modelId": "muse-spark",
+    "benchmarkId": "terminal-bench-hard",
+    "variant": "default",
+    "value": 0.455,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API — Muse Spark"
+  },
+  {
+    "modelId": "muse-spark",
+    "benchmarkId": "tau2-telecom",
+    "variant": "default",
+    "value": 0.915,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API — Muse Spark"
   }
 ]
