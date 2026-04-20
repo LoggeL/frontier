@@ -306,6 +306,7 @@ function computeFrontier(
       );
       if (entries.length === 0) continue;
       const selected = entries.find((s) => s.modelId === model.id)?.value;
+      if (selected === undefined) continue;
       const cmp = (a: number, x: number) =>
         b.higherIsBetter ? a > x : a < x;
       let top = entries[0]!;
@@ -362,7 +363,7 @@ function FrontierTable({
             <th className="px-3 py-2 text-right">Frontier</th>
             <th className="px-3 py-2">Leader</th>
             <th className="px-3 py-2 text-right">Gap</th>
-            <th className="px-3 py-2 text-right">%ile</th>
+            <th className="px-3 py-2 text-right w-32">%ile</th>
           </tr>
         </thead>
         <tbody>
@@ -374,36 +375,58 @@ function FrontierTable({
                   ? r.frontierValue - r.selected
                   : r.selected - r.frontierValue;
             const isFrontier = r.isSelectedFrontier;
+            const pct = r.selected === undefined ? null : r.percentileAmongScored;
+            const scoreBg = pct === null ? undefined : heatBg(pct / 100);
+            const gapBg =
+              pct === null
+                ? undefined
+                : isFrontier
+                  ? heatBg(1)
+                  : heatBg(pct / 100);
             return (
               <tr
                 key={`${r.benchmark.id}::${r.variant}`}
-                className="border-t border-neutral-800 hover:bg-neutral-900"
+                className={[
+                  "border-t border-neutral-800",
+                  isFrontier
+                    ? "bg-amber-500/5 hover:bg-amber-500/10"
+                    : "hover:bg-neutral-900",
+                ].join(" ")}
               >
-                <td className="px-3 py-2 text-neutral-200">
+                <td className="px-3 py-2 text-neutral-100">
+                  {isFrontier && (
+                    <span className="mr-1.5 align-middle text-amber-300">★</span>
+                  )}
                   {r.benchmark.name}
                 </td>
                 <td className="px-3 py-2 text-neutral-500">
                   {r.variantLabel}
                 </td>
-                <td className="px-3 py-2 text-right font-mono">
+                <td
+                  className="px-3 py-2 text-right font-mono font-semibold"
+                  style={scoreBg ? { backgroundColor: scoreBg } : undefined}
+                >
                   {r.selected === undefined ? (
                     <span className="text-neutral-700">—</span>
                   ) : (
-                    <span
-                      className={
-                        isFrontier ? "text-emerald-400" : "text-neutral-200"
-                      }
-                    >
+                    <span className="text-neutral-50">
                       {formatScore(r.selected, r.benchmark.unit)}
                     </span>
                   )}
                 </td>
-                <td className="px-3 py-2 text-right font-mono text-neutral-200">
+                <td
+                  className="px-3 py-2 text-right font-mono text-amber-200"
+                  style={{
+                    backgroundColor: isFrontier
+                      ? "hsla(40, 80%, 50%, 0.18)"
+                      : "hsla(40, 60%, 40%, 0.08)",
+                  }}
+                >
                   {formatScore(r.frontierValue, r.benchmark.unit)}
                 </td>
                 <td className="px-3 py-2">
                   {isFrontier ? (
-                    <span className="rounded bg-emerald-500/10 px-1.5 py-0.5 text-[11px] text-emerald-300">
+                    <span className="rounded bg-amber-500/20 px-1.5 py-0.5 text-[11px] font-semibold uppercase tracking-wider text-amber-200">
                       this model
                     </span>
                   ) : (
@@ -415,13 +438,16 @@ function FrontierTable({
                     </a>
                   )}
                 </td>
-                <td className="px-3 py-2 text-right font-mono text-xs">
+                <td
+                  className="px-3 py-2 text-right font-mono text-xs"
+                  style={gapBg ? { backgroundColor: gapBg } : undefined}
+                >
                   {gap === undefined ? (
                     <span className="text-neutral-700">—</span>
                   ) : gap === 0 ? (
-                    <span className="text-emerald-400">0</span>
+                    <span className="font-semibold text-emerald-300">—</span>
                   ) : (
-                    <span className="text-neutral-400">
+                    <span className="text-neutral-100">
                       {r.benchmark.unit === "accuracy" ||
                       r.benchmark.unit === "pass@1"
                         ? `${(gap * 100).toFixed(1)}pp`
@@ -429,13 +455,11 @@ function FrontierTable({
                     </span>
                   )}
                 </td>
-                <td className="px-3 py-2 text-right font-mono text-xs">
-                  {r.selected === undefined ? (
-                    <span className="text-neutral-700">—</span>
+                <td className="px-2 py-2">
+                  {pct === null ? (
+                    <div className="text-right text-neutral-700 font-mono text-xs">—</div>
                   ) : (
-                    <span className="text-neutral-400">
-                      {r.percentileAmongScored}
-                    </span>
+                    <PercentileBar value={pct} />
                   )}
                 </td>
               </tr>
@@ -445,6 +469,38 @@ function FrontierTable({
       </table>
     </div>
   );
+}
+
+function PercentileBar({ value }: { value: number }) {
+  const color = heatColor(value / 100);
+  return (
+    <div className="flex items-center gap-2">
+      <div className="relative h-2 flex-1 rounded bg-neutral-800">
+        <div
+          className="absolute inset-y-0 left-0 rounded"
+          style={{ width: `${value}%`, backgroundColor: color }}
+        />
+      </div>
+      <span
+        className="w-6 text-right font-mono text-[10px]"
+        style={{ color }}
+      >
+        {value}
+      </span>
+    </div>
+  );
+}
+
+function heatBg(norm: number): string {
+  const clamped = Math.max(0, Math.min(1, norm));
+  const hue = 120 * clamped;
+  return `hsla(${hue}, 65%, 42%, 0.35)`;
+}
+
+function heatColor(norm: number): string {
+  const clamped = Math.max(0, Math.min(1, norm));
+  const hue = 120 * clamped;
+  return `hsl(${hue}, 75%, 60%)`;
 }
 
 function lookupValue(
