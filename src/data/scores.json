@@ -6159,5 +6159,131 @@
     "reportedOn": "2026-04-21",
     "sourceUrl": "https://lmcouncil.ai/benchmarks",
     "notes": "LM Council leaderboard (AI Explained / Simple-Bench)."
+  },
+  {
+    "modelId": "claude-opus-4-5",
+    "benchmarkId": "simple-bench",
+    "variant": "default",
+    "value": 0.62,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://epoch.ai/benchmarks/simplebench",
+    "notes": "Epoch AI / LM Council — SimpleBench AVG@5"
+  },
+  {
+    "modelId": "gemini-3-flash-reasoning",
+    "benchmarkId": "simple-bench",
+    "variant": "default",
+    "value": 0.611,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://epoch.ai/benchmarks/simplebench",
+    "notes": "Epoch AI / LM Council — SimpleBench AVG@5 — Reported as Gemini 3 Flash Preview; mapped to reasoning variant"
+  },
+  {
+    "modelId": "grok-4",
+    "benchmarkId": "simple-bench",
+    "variant": "default",
+    "value": 0.605,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://epoch.ai/benchmarks/simplebench",
+    "notes": "Epoch AI / LM Council — SimpleBench AVG@5"
+  },
+  {
+    "modelId": "claude-opus-4-1",
+    "benchmarkId": "simple-bench",
+    "variant": "default",
+    "value": 0.6,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://epoch.ai/benchmarks/simplebench",
+    "notes": "Epoch AI / LM Council — SimpleBench AVG@5"
+  },
+  {
+    "modelId": "claude-opus-4",
+    "benchmarkId": "simple-bench",
+    "variant": "default",
+    "value": 0.588,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://epoch.ai/benchmarks/simplebench",
+    "notes": "Epoch AI / LM Council — SimpleBench AVG@5"
+  },
+  {
+    "modelId": "glm-5-1",
+    "benchmarkId": "simple-bench",
+    "variant": "default",
+    "value": 0.587,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://epoch.ai/benchmarks/simplebench",
+    "notes": "Epoch AI / LM Council — SimpleBench AVG@5"
+  },
+  {
+    "modelId": "gpt-5",
+    "benchmarkId": "simple-bench",
+    "variant": "default",
+    "value": 0.567,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://epoch.ai/benchmarks/simplebench",
+    "notes": "Epoch AI / LM Council — SimpleBench AVG@5 — GPT-5 (high) variant"
+  },
+  {
+    "modelId": "grok-4-1-fast",
+    "benchmarkId": "simple-bench",
+    "variant": "default",
+    "value": 0.56,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://epoch.ai/benchmarks/simplebench",
+    "notes": "Epoch AI / LM Council — SimpleBench AVG@5"
+  },
+  {
+    "modelId": "claude-sonnet-4-5",
+    "benchmarkId": "simple-bench",
+    "variant": "default",
+    "value": 0.543,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://epoch.ai/benchmarks/simplebench",
+    "notes": "Epoch AI / LM Council — SimpleBench AVG@5"
+  },
+  {
+    "modelId": "gpt-5-1",
+    "benchmarkId": "simple-bench",
+    "variant": "default",
+    "value": 0.532,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://epoch.ai/benchmarks/simplebench",
+    "notes": "Epoch AI / LM Council — SimpleBench AVG@5 — GPT-5.1 (high)"
+  },
+  {
+    "modelId": "glm-5",
+    "benchmarkId": "simple-bench",
+    "variant": "default",
+    "value": 0.532,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://epoch.ai/benchmarks/simplebench",
+    "notes": "Epoch AI / LM Council — SimpleBench AVG@5"
+  },
+  {
+    "modelId": "o3",
+    "benchmarkId": "simple-bench",
+    "variant": "default",
+    "value": 0.531,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://epoch.ai/benchmarks/simplebench",
+    "notes": "Epoch AI / LM Council — SimpleBench AVG@5 — o3 (high)"
+  },
+  {
+    "modelId": "kimi-k2-5",
+    "benchmarkId": "simple-bench",
+    "variant": "default",
+    "value": 0.468,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://epoch.ai/benchmarks/simplebench",
+    "notes": "Epoch AI / LM Council — SimpleBench AVG@5"
+  },
+  {
+    "modelId": "claude-sonnet-4",
+    "benchmarkId": "simple-bench",
+    "variant": "default",
+    "value": 0.455,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://epoch.ai/benchmarks/simplebench",
+    "notes": "Epoch AI / LM Council — SimpleBench AVG@5 — Claude 4 Sonnet (thinking)"
   }
 ]
