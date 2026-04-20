@@ -54,7 +54,7 @@ export default function ComparisonTable({
       ),
   );
   const [sort, setSort] = useState<SortState>({
-    key: { kind: "benchmark", benchmarkId: "aa-intelligence-index", variant: "default" },
+    key: { kind: "release" },
     dir: "desc",
   });
   const [hoveredCol, setHoveredCol] = useState<string | null>(null);
