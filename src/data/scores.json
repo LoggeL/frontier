@@ -6114,5 +6114,50 @@
     "reportedOn": "2026-04-21",
     "sourceUrl": "https://api-docs.deepseek.com/news/news251201",
     "notes": "Standard V3.2 non-reasoning"
+  },
+  {
+    "modelId": "gemini-3-1-pro-preview",
+    "benchmarkId": "simple-bench",
+    "variant": "default",
+    "value": 0.796,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://lmcouncil.ai/benchmarks",
+    "notes": "LM Council leaderboard (AI Explained / Simple-Bench)."
+  },
+  {
+    "modelId": "gemini-3-pro",
+    "benchmarkId": "simple-bench",
+    "variant": "default",
+    "value": 0.764,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://lmcouncil.ai/benchmarks",
+    "notes": "LM Council leaderboard (AI Explained / Simple-Bench)."
+  },
+  {
+    "modelId": "claude-opus-4-6",
+    "benchmarkId": "simple-bench",
+    "variant": "default",
+    "value": 0.676,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://lmcouncil.ai/benchmarks",
+    "notes": "LM Council leaderboard (AI Explained / Simple-Bench)."
+  },
+  {
+    "modelId": "claude-opus-4-7",
+    "benchmarkId": "simple-bench",
+    "variant": "default",
+    "value": 0.629,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://lmcouncil.ai/benchmarks",
+    "notes": "LM Council leaderboard (AI Explained / Simple-Bench)."
+  },
+  {
+    "modelId": "gemini-2-5-pro",
+    "benchmarkId": "simple-bench",
+    "variant": "default",
+    "value": 0.624,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://lmcouncil.ai/benchmarks",
+    "notes": "LM Council leaderboard (AI Explained / Simple-Bench)."
   }
 ]

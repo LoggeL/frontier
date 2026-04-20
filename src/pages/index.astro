@@ -30,7 +30,15 @@ const scoreCount = scores.length;
   <body class="min-h-screen px-6 py-10 text-neutral-100">
     <main class="mx-auto flex max-w-[1400px] flex-col gap-10">
       <header class="flex flex-col gap-2">
-        <h1 class="text-3xl font-semibold tracking-tight">Frontier</h1>
+        <div class="flex items-baseline justify-between gap-3 flex-wrap">
+          <h1 class="text-3xl font-semibold tracking-tight">Frontier</h1>
+          <a
+            href={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/benchmarks/`}
+            class="text-sm text-amber-300 hover:underline"
+          >
+            benchmark overview →
+          </a>
+        </div>
         <p class="max-w-2xl text-sm text-neutral-400">
           Static, JSON-backed comparison of frontier and open-weight models
           across AA and custom benchmarks. Dataset:

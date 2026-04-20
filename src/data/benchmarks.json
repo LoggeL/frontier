@@ -1124,5 +1124,23 @@
         "notes": "Standard vendor reporting."
       }
     ]
+  },
+  {
+    "id": "simple-bench",
+    "name": "Simple-Bench",
+    "category": "reasoning",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "Multiple-choice reasoning benchmark by AI Explained where non-specialized humans outperform SOTA models. Covers spatio-temporal reasoning, social intelligence and linguistic adversarial robustness. Human baseline: 83.7%.",
+    "sourceUrl": "https://simple-bench.com/",
+    "variants": [
+      {
+        "key": "default",
+        "label": "AVG@5",
+        "notes": "Average over 5 samples, temperature 0.7 top_p 0.95 (except o1-series). Multiple-choice open-ended evaluation."
+      }
+    ]
   }
 ]

@@ -32,7 +32,7 @@ if (!benchmark) throw new Error(`Unknown benchmark id: ${benchmarkId}`);
       <nav class="flex items-center gap-3 text-xs text-neutral-500">
         <a href={import.meta.env.BASE_URL} class="text-amber-300 hover:underline">← all models</a>
         <span>/</span>
-        <span class="text-neutral-400">benchmarks</span>
+        <a href={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/benchmarks/`} class="text-amber-300 hover:underline">benchmarks</a>
         <span>/</span>
         <span class="text-neutral-400">{benchmark.name}</span>
       </nav>

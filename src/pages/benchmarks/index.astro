@@ -1,0 +1,185 @@
+---
+import "../../styles/global.css";
+import { benchmarks, scores, models } from "../../lib/data";
+import type { Benchmark } from "../../lib/schema";
+import { formatScore } from "../../lib/derive";
+
+interface OverviewRow {
+  benchmark: Benchmark;
+  modelCount: number;
+  variantCount: number;
+  leaderName?: string;
+  leaderId?: string;
+  leaderValue?: number;
+}
+
+const modelNameById = new Map(models.map((m) => [m.id, m.name]));
+
+const rows: OverviewRow[] = benchmarks.map((b) => {
+  const relevant = scores.filter((s) => s.benchmarkId === b.id);
+  const modelCount = new Set(relevant.map((s) => s.modelId)).size;
+  let leader: { modelId: string; value: number } | undefined;
+  for (const s of relevant) {
+    if (!leader) {
+      leader = { modelId: s.modelId, value: s.value };
+      continue;
+    }
+    const wins = b.higherIsBetter ? s.value > leader.value : s.value < leader.value;
+    if (wins) leader = { modelId: s.modelId, value: s.value };
+  }
+  return {
+    benchmark: b,
+    modelCount,
+    variantCount: b.variants.length,
+    leaderId: leader?.modelId,
+    leaderName: leader ? modelNameById.get(leader.modelId) : undefined,
+    leaderValue: leader?.value,
+  };
+});
+
+const CATEGORY_ORDER: Benchmark["category"][] = [
+  "composite",
+  "reasoning",
+  "math",
+  "code",
+  "multimodal",
+  "agentic",
+  "custom",
+];
+
+const grouped = CATEGORY_ORDER.map((cat) => ({
+  category: cat,
+  rows: rows.filter((r) => r.benchmark.category === cat),
+})).filter((g) => g.rows.length > 0);
+
+const totalScores = scores.length;
+const totalVariants = benchmarks.reduce((a, b) => a + b.variants.length, 0);
+const primaryCount = benchmarks.filter((b) => b.primary).length;
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+---
+
+<!doctype html>
+<html lang="en" class="bg-neutral-950">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Benchmark overview · Frontier</title>
+    <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`} />
+    <meta
+      name="description"
+      content="Every benchmark tracked on Frontier, grouped by category, with the current leader per benchmark."
+    />
+  </head>
+  <body class="min-h-screen px-6 py-10 text-neutral-100">
+    <main class="mx-auto flex max-w-[1400px] flex-col gap-8">
+      <nav class="flex items-center gap-3 text-xs text-neutral-500">
+        <a href={import.meta.env.BASE_URL} class="text-amber-300 hover:underline">← all models</a>
+        <span>/</span>
+        <span class="text-neutral-400">benchmarks</span>
+      </nav>
+
+      <header class="flex flex-col gap-2">
+        <h1 class="text-3xl font-semibold tracking-tight">Benchmarks</h1>
+        <p class="max-w-3xl text-sm text-neutral-400">
+          Every benchmark tracked on Frontier, grouped by category. Each row
+          links to a per-benchmark leaderboard with all models ranked.
+          <span class="font-mono text-neutral-300">
+            {benchmarks.length} benchmarks
+          </span>
+          ·
+          <span class="font-mono text-neutral-300">
+            {primaryCount} primary
+          </span>
+          ·
+          <span class="font-mono text-neutral-300">
+            {totalVariants} variants
+          </span>
+          ·
+          <span class="font-mono text-neutral-300">
+            {totalScores} scores
+          </span>.
+        </p>
+      </header>
+
+      {grouped.map((group) => (
+        <section class="flex flex-col gap-3">
+          <h2 class="text-sm font-semibold uppercase tracking-widest text-neutral-500">
+            {group.category}
+          </h2>
+          <div class="overflow-x-auto rounded-lg border border-neutral-800 bg-neutral-900/40">
+            <table class="w-full text-sm">
+              <thead class="bg-neutral-900 text-left text-xs uppercase tracking-wide text-neutral-400">
+                <tr>
+                  <th class="px-3 py-2">Benchmark</th>
+                  <th class="px-3 py-2">Source</th>
+                  <th class="px-3 py-2 text-right">Variants</th>
+                  <th class="px-3 py-2 text-right">Models</th>
+                  <th class="px-3 py-2">Leader</th>
+                  <th class="px-3 py-2 text-right">Best score</th>
+                </tr>
+              </thead>
+              <tbody>
+                {group.rows.map((r) => (
+                  <tr class="border-t border-neutral-800 hover:bg-neutral-900">
+                    <td class="px-3 py-2">
+                      <div class="flex flex-col leading-tight">
+                        <a
+                          href={`${base}/benchmarks/${r.benchmark.id}/`}
+                          class="font-medium text-neutral-100 hover:text-amber-300"
+                        >
+                          {r.benchmark.name}
+                          {r.benchmark.primary && (
+                            <span class="ml-1.5 rounded bg-emerald-500/10 px-1 py-0.5 text-[9px] uppercase tracking-wider text-emerald-300">
+                              primary
+                            </span>
+                          )}
+                        </a>
+                        {r.benchmark.description && (
+                          <span class="text-[11px] text-neutral-500 line-clamp-1">
+                            {r.benchmark.description}
+                          </span>
+                        )}
+                      </div>
+                    </td>
+                    <td class="px-3 py-2">
+                      <span class={
+                        r.benchmark.source === "aa"
+                          ? "rounded-full border border-amber-500/40 bg-amber-500/10 px-2 py-0.5 text-[10px] text-amber-300"
+                          : "rounded-full border border-neutral-800 bg-neutral-950 px-2 py-0.5 text-[10px] text-neutral-400"
+                      }>
+                        {r.benchmark.source === "aa" ? "AA" : "custom"}
+                      </span>
+                    </td>
+                    <td class="px-3 py-2 text-right font-mono text-xs text-neutral-400">
+                      {r.variantCount}
+                    </td>
+                    <td class="px-3 py-2 text-right font-mono text-xs text-neutral-400">
+                      {r.modelCount}
+                    </td>
+                    <td class="px-3 py-2">
+                      {r.leaderId ? (
+                        <a
+                          href={`${base}/models/${r.leaderId}/`}
+                          class="text-amber-300 hover:underline"
+                        >
+                          {r.leaderName}
+                        </a>
+                      ) : (
+                        <span class="text-neutral-700">—</span>
+                      )}
+                    </td>
+                    <td class="px-3 py-2 text-right font-mono text-sm text-neutral-100">
+                      {r.leaderValue !== undefined
+                        ? formatScore(r.leaderValue, r.benchmark.unit)
+                        : <span class="text-neutral-700">—</span>}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      ))}
+    </main>
+  </body>
+</html>
