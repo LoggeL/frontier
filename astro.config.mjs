@@ -11,4 +11,9 @@ export default defineConfig({
     react(),
     tailwind({ applyBaseStyles: false }),
   ],
+  vite: {
+    resolve: {
+      dedupe: ["react", "react-dom"],
+    },
+  },
 });
