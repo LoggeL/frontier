@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import type { Model } from "../lib/schema";
 
 interface Props {
@@ -34,8 +34,13 @@ interface Row {
 }
 
 export default function CohortBars({ models }: Props) {
-  const { rows, minTs, maxTs, ticks, todayTs } = useMemo(() => {
-    const rows: Row[] = models.map((m) => {
+  const [expanded, setExpanded] = useState(false);
+
+  const { rows, minTs, maxTs, ticks, todayTs, totalModels } = useMemo(() => {
+    const todayTs = Date.now();
+    const YEAR_MS = 365 * 86_400_000;
+
+    const allRows: Row[] = models.map((m) => {
       const cutoffTs = Date.UTC(
         Number(m.knowledgeCutoff.slice(0, 4)),
         Number(m.knowledgeCutoff.slice(5, 7)) - 1,
@@ -56,16 +61,32 @@ export default function CohortBars({ models }: Props) {
       };
     });
 
-    rows.sort((a, b) => {
-      if (a.cutoffTs !== b.cutoffTs) return b.cutoffTs - a.cutoffTs;
-      return b.releaseTs - a.releaseTs;
-    });
+    let rows: Row[];
+    let minTs: number;
+    let maxTs: number;
 
-    const minCutoff = Math.min(...rows.map((r) => r.cutoffTs));
-    const maxRelease = Math.max(...rows.map((r) => r.releaseTs));
-    const pad = 30 * 86_400_000;
-    const minTs = minCutoff - pad;
-    const maxTs = maxRelease + pad;
+    if (expanded) {
+      rows = [...allRows].sort((a, b) => {
+        if (a.cutoffTs !== b.cutoffTs) return b.cutoffTs - a.cutoffTs;
+        return b.releaseTs - a.releaseTs;
+      });
+      const minCutoff = Math.min(...rows.map((r) => r.cutoffTs));
+      const maxRelease = Math.max(...rows.map((r) => r.releaseTs));
+      const pad = 30 * 86_400_000;
+      minTs = minCutoff - pad;
+      maxTs = maxRelease + pad;
+    } else {
+      rows = [...allRows]
+        .sort((a, b) => b.releaseTs - a.releaseTs)
+        .slice(0, 10)
+        .sort((a, b) => {
+          if (a.cutoffTs !== b.cutoffTs) return b.cutoffTs - a.cutoffTs;
+          return b.releaseTs - a.releaseTs;
+        });
+      const pad = 30 * 86_400_000;
+      minTs = todayTs - YEAR_MS - pad;
+      maxTs = todayTs + pad;
+    }
 
     const ticks: { ts: number; label: string }[] = [];
     const start = new Date(minTs);
@@ -83,15 +104,22 @@ export default function CohortBars({ models }: Props) {
       }
     }
 
-    return { rows, minTs, maxTs, ticks, todayTs: Date.now() };
-  }, [models]);
+    return {
+      rows,
+      minTs,
+      maxTs,
+      ticks,
+      todayTs,
+      totalModels: allRows.length,
+    };
+  }, [models, expanded]);
 
   const range = maxTs - minTs;
   const xPct = (ts: number) => ((ts - minTs) / range) * 100;
 
   return (
     <div className="rounded-lg border border-neutral-800 bg-neutral-900/40 p-5">
-      <div className="mb-4 flex items-center justify-between text-xs text-neutral-500">
+      <div className="mb-4 flex flex-wrap items-center justify-between gap-3 text-xs text-neutral-500">
         <div>
           Each bar spans from a model's knowledge cutoff
           <span className="mx-1 inline-block h-2 w-2 rounded-full bg-neutral-400 align-middle" />
@@ -99,11 +127,22 @@ export default function CohortBars({ models }: Props) {
           <span className="mx-1 inline-block h-2 w-2 bg-neutral-400 align-middle" />.
           Bars starting on the same date likely share a pretraining run.
         </div>
+        <button
+          onClick={() => setExpanded((v) => !v)}
+          className="rounded border border-neutral-800 bg-neutral-900 px-2 py-1 text-xs text-neutral-300 hover:border-amber-400 hover:text-amber-300"
+        >
+          {expanded
+            ? `Show recent (${Math.min(10, totalModels)} / past year)`
+            : `Show all ${totalModels} models`}
+        </button>
       </div>
 
       <div
-        className="grid items-stretch"
-        style={{ gridTemplateColumns: "13rem 1fr" }}
+        className="grid items-stretch overflow-y-auto"
+        style={{
+          gridTemplateColumns: "13rem 1fr",
+          maxHeight: expanded ? "70vh" : undefined,
+        }}
       >
         {rows.map((row) => {
           const leftPct = xPct(row.cutoffTs);
