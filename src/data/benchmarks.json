@@ -1142,5 +1142,23 @@
         "notes": "Average over 5 samples, temperature 0.7 top_p 0.95 (except o1-series). Multiple-choice open-ended evaluation."
       }
     ]
+  },
+  {
+    "id": "aider-polyglot",
+    "name": "Aider Polyglot",
+    "category": "code",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "Aider multi-language coding benchmark (polyglot). Measures pass rate on real code edits.",
+    "sourceUrl": "https://aider.chat/docs/leaderboards/",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Polyglot",
+        "notes": "Aider Polyglot standard scoring."
+      }
+    ]
   }
 ]

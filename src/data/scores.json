@@ -6285,5 +6285,950 @@
     "reportedOn": "2026-04-21",
     "sourceUrl": "https://epoch.ai/benchmarks/simplebench",
     "notes": "Epoch AI / LM Council — SimpleBench AVG@5 — Claude 4 Sonnet (thinking)"
+  },
+  {
+    "modelId": "claude-opus-4-7",
+    "benchmarkId": "lmarena",
+    "variant": "default",
+    "value": 1497,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://lmarena.ai/",
+    "notes": "Chatbot Arena Text Elo"
+  },
+  {
+    "modelId": "claude-opus-4-6",
+    "benchmarkId": "lmarena",
+    "variant": "default",
+    "value": 1496,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://lmarena.ai/",
+    "notes": "Chatbot Arena Text Elo"
+  },
+  {
+    "modelId": "claude-opus-4-5",
+    "benchmarkId": "lmarena",
+    "variant": "default",
+    "value": 1469,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://lmarena.ai/",
+    "notes": "Chatbot Arena Text Elo"
+  },
+  {
+    "modelId": "claude-sonnet-4-6",
+    "benchmarkId": "lmarena",
+    "variant": "default",
+    "value": 1463,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://lmarena.ai/",
+    "notes": "Chatbot Arena Text Elo"
+  },
+  {
+    "modelId": "claude-sonnet-4-5",
+    "benchmarkId": "lmarena",
+    "variant": "default",
+    "value": 1452,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://lmarena.ai/",
+    "notes": "Chatbot Arena Text Elo"
+  },
+  {
+    "modelId": "gpt-5-4",
+    "benchmarkId": "lmarena",
+    "variant": "default",
+    "value": 1467,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://lmarena.ai/",
+    "notes": "Chatbot Arena Text Elo"
+  },
+  {
+    "modelId": "gpt-5-3-codex",
+    "benchmarkId": "lmarena",
+    "variant": "default",
+    "value": 1451,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://lmarena.ai/",
+    "notes": "Chatbot Arena Text Elo"
+  },
+  {
+    "modelId": "gpt-5-2",
+    "benchmarkId": "lmarena",
+    "variant": "default",
+    "value": 1439,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://lmarena.ai/",
+    "notes": "Chatbot Arena Text Elo"
+  },
+  {
+    "modelId": "gpt-5-1",
+    "benchmarkId": "lmarena",
+    "variant": "default",
+    "value": 1439,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://lmarena.ai/",
+    "notes": "Chatbot Arena Text Elo"
+  },
+  {
+    "modelId": "gpt-5",
+    "benchmarkId": "lmarena",
+    "variant": "default",
+    "value": 1433,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://lmarena.ai/",
+    "notes": "Chatbot Arena Text Elo"
+  },
+  {
+    "modelId": "gemini-3-1-pro-preview",
+    "benchmarkId": "lmarena",
+    "variant": "default",
+    "value": 1493,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://lmarena.ai/",
+    "notes": "Chatbot Arena Text Elo"
+  },
+  {
+    "modelId": "gemini-3-flash-reasoning",
+    "benchmarkId": "lmarena",
+    "variant": "default",
+    "value": 1474,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://lmarena.ai/",
+    "notes": "Chatbot Arena Text Elo"
+  },
+  {
+    "modelId": "gemini-2-5-pro",
+    "benchmarkId": "lmarena",
+    "variant": "default",
+    "value": 1448,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://lmarena.ai/",
+    "notes": "Chatbot Arena Text Elo"
+  },
+  {
+    "modelId": "grok-4-20",
+    "benchmarkId": "lmarena",
+    "variant": "default",
+    "value": 1482,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://lmarena.ai/",
+    "notes": "Chatbot Arena Text Elo"
+  },
+  {
+    "modelId": "grok-4-1-fast",
+    "benchmarkId": "lmarena",
+    "variant": "default",
+    "value": 1461,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://lmarena.ai/",
+    "notes": "Chatbot Arena Text Elo"
+  },
+  {
+    "modelId": "qwen3-5-397b-a17b",
+    "benchmarkId": "lmarena",
+    "variant": "default",
+    "value": 1447,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://lmarena.ai/",
+    "notes": "Chatbot Arena Text Elo"
+  },
+  {
+    "modelId": "qwen3-max-thinking",
+    "benchmarkId": "lmarena",
+    "variant": "default",
+    "value": 1435,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://lmarena.ai/",
+    "notes": "Chatbot Arena Text Elo"
+  },
+  {
+    "modelId": "kimi-k2-5",
+    "benchmarkId": "lmarena",
+    "variant": "default",
+    "value": 1451,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://lmarena.ai/",
+    "notes": "Chatbot Arena Text Elo"
+  },
+  {
+    "modelId": "glm-5-1",
+    "benchmarkId": "lmarena",
+    "variant": "default",
+    "value": 1469,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://lmarena.ai/",
+    "notes": "Chatbot Arena Text Elo"
+  },
+  {
+    "modelId": "muse-spark",
+    "benchmarkId": "lmarena",
+    "variant": "default",
+    "value": 1493,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://lmarena.ai/",
+    "notes": "Chatbot Arena Text Elo"
+  },
+  {
+    "modelId": "claude-opus-4-7",
+    "benchmarkId": "webdev-arena",
+    "variant": "default",
+    "value": 1567,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://lmarena.ai/",
+    "notes": "WebDev Arena Elo"
+  },
+  {
+    "modelId": "claude-opus-4-6",
+    "benchmarkId": "webdev-arena",
+    "variant": "default",
+    "value": 1544,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://lmarena.ai/",
+    "notes": "WebDev Arena Elo"
+  },
+  {
+    "modelId": "claude-sonnet-4-6",
+    "benchmarkId": "webdev-arena",
+    "variant": "default",
+    "value": 1524,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://lmarena.ai/",
+    "notes": "WebDev Arena Elo"
+  },
+  {
+    "modelId": "claude-opus-4-5",
+    "benchmarkId": "webdev-arena",
+    "variant": "default",
+    "value": 1468,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://lmarena.ai/",
+    "notes": "WebDev Arena Elo"
+  },
+  {
+    "modelId": "gpt-5-4",
+    "benchmarkId": "webdev-arena",
+    "variant": "default",
+    "value": 1457,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://lmarena.ai/",
+    "notes": "WebDev Arena Elo"
+  },
+  {
+    "modelId": "gemini-3-1-pro-preview",
+    "benchmarkId": "webdev-arena",
+    "variant": "default",
+    "value": 1456,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://lmarena.ai/",
+    "notes": "WebDev Arena Elo"
+  },
+  {
+    "modelId": "gemini-3-flash-reasoning",
+    "benchmarkId": "webdev-arena",
+    "variant": "default",
+    "value": 1437,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://lmarena.ai/",
+    "notes": "WebDev Arena Elo"
+  },
+  {
+    "modelId": "kimi-k2-5",
+    "benchmarkId": "webdev-arena",
+    "variant": "default",
+    "value": 1429,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://lmarena.ai/",
+    "notes": "WebDev Arena Elo"
+  },
+  {
+    "modelId": "glm-5-1",
+    "benchmarkId": "webdev-arena",
+    "variant": "default",
+    "value": 1536,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://lmarena.ai/",
+    "notes": "WebDev Arena Elo"
+  },
+  {
+    "modelId": "gpt-5-4",
+    "benchmarkId": "terminal-bench-2",
+    "variant": "default",
+    "value": 0.818,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://tbench.ai/",
+    "notes": "tbench.ai — Base scaffold"
+  },
+  {
+    "modelId": "claude-opus-4-6",
+    "benchmarkId": "terminal-bench-2",
+    "variant": "default",
+    "value": 0.58,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://tbench.ai/",
+    "notes": "tbench.ai — Claude Code scaffold"
+  },
+  {
+    "modelId": "kimi-k2-5",
+    "benchmarkId": "terminal-bench-2",
+    "variant": "default",
+    "value": 0.432,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://tbench.ai/",
+    "notes": "tbench.ai — AfterQuery"
+  },
+  {
+    "modelId": "claude-sonnet-4-5",
+    "benchmarkId": "terminal-bench-2",
+    "variant": "default",
+    "value": 0.401,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://tbench.ai/",
+    "notes": "tbench.ai — Claude Code scaffold"
+  },
+  {
+    "modelId": "deepseek-v3-2",
+    "benchmarkId": "terminal-bench-2",
+    "variant": "default",
+    "value": 0.396,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://tbench.ai/",
+    "notes": "tbench.ai — Base"
+  },
+  {
+    "modelId": "grok-4",
+    "benchmarkId": "terminal-bench-2",
+    "variant": "default",
+    "value": 0.272,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://tbench.ai/",
+    "notes": "tbench.ai — Base"
+  },
+  {
+    "modelId": "gpt-5-mini",
+    "benchmarkId": "terminal-bench-2",
+    "variant": "default",
+    "value": 0.348,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://tbench.ai/",
+    "notes": "tbench.ai — Base"
+  },
+  {
+    "modelId": "gemini-3-1-pro-preview",
+    "benchmarkId": "terminal-bench-2",
+    "variant": "default",
+    "value": 0.784,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://tbench.ai/",
+    "notes": "tbench.ai — Per LM Council JS dump"
+  },
+  {
+    "modelId": "gemini-3-1-pro-preview",
+    "benchmarkId": "hle",
+    "variant": "deep-think",
+    "value": 0.4644,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://labs.scale.com/leaderboard/humanitys_last_exam",
+    "notes": "Scale HLE thinking-high"
+  },
+  {
+    "modelId": "muse-spark",
+    "benchmarkId": "hle",
+    "variant": "deep-think",
+    "value": 0.4056,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://labs.scale.com/leaderboard/humanitys_last_exam",
+    "notes": "Scale HLE Contemplating"
+  },
+  {
+    "modelId": "claude-opus-4-6",
+    "benchmarkId": "hle",
+    "variant": "deep-think",
+    "value": 0.3444,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://labs.scale.com/leaderboard/humanitys_last_exam",
+    "notes": "Scale HLE thinking-max"
+  },
+  {
+    "modelId": "gemini-2-5-pro",
+    "benchmarkId": "simpleqa-verified",
+    "variant": "default",
+    "value": 0.53,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://epoch.ai/benchmarks/simple-qa-verified",
+    "notes": "Epoch AI leaderboard"
+  },
+  {
+    "modelId": "claude-opus-4-6",
+    "benchmarkId": "swe-bench-verified",
+    "variant": "default",
+    "value": 0.787,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://lmcouncil.ai/benchmarks",
+    "notes": "LM Council dump"
+  },
+  {
+    "modelId": "claude-opus-4-5",
+    "benchmarkId": "mmlu",
+    "variant": "default",
+    "value": 0.918,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmlu",
+    "notes": "llm-stats MMLU leaderboard"
+  },
+  {
+    "modelId": "claude-sonnet-4-5",
+    "benchmarkId": "mmlu",
+    "variant": "default",
+    "value": 0.892,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmlu",
+    "notes": "llm-stats MMLU leaderboard"
+  },
+  {
+    "modelId": "gpt-5",
+    "benchmarkId": "mmlu",
+    "variant": "default",
+    "value": 0.925,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmlu",
+    "notes": "llm-stats MMLU leaderboard"
+  },
+  {
+    "modelId": "gemini-3-pro",
+    "benchmarkId": "mmlu",
+    "variant": "default",
+    "value": 0.918,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmlu",
+    "notes": "llm-stats MMLU leaderboard"
+  },
+  {
+    "modelId": "gemini-2-5-pro",
+    "benchmarkId": "mmlu",
+    "variant": "default",
+    "value": 0.898,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmlu",
+    "notes": "llm-stats MMLU leaderboard"
+  },
+  {
+    "modelId": "grok-4",
+    "benchmarkId": "mmlu",
+    "variant": "default",
+    "value": 0.866,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmlu",
+    "notes": "llm-stats MMLU leaderboard"
+  },
+  {
+    "modelId": "deepseek-v3-2",
+    "benchmarkId": "mmlu",
+    "variant": "default",
+    "value": 0.885,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmlu",
+    "notes": "llm-stats MMLU leaderboard"
+  },
+  {
+    "modelId": "llama-3-3-70b",
+    "benchmarkId": "mmlu",
+    "variant": "default",
+    "value": 0.86,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmlu",
+    "notes": "llm-stats MMLU leaderboard"
+  },
+  {
+    "modelId": "mistral-large-2",
+    "benchmarkId": "mmlu",
+    "variant": "default",
+    "value": 0.84,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmlu",
+    "notes": "llm-stats MMLU leaderboard"
+  },
+  {
+    "modelId": "glm-5-1",
+    "benchmarkId": "mmlu",
+    "variant": "default",
+    "value": 0.89,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmlu",
+    "notes": "llm-stats MMLU leaderboard"
+  },
+  {
+    "modelId": "claude-opus-4-6",
+    "benchmarkId": "mrcr-v2",
+    "variant": "8-needle-128k",
+    "value": 0.93,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://llm-stats.com/benchmarks/mrcr-v2-(8-needle)",
+    "notes": "llm-stats MRCR v2 128k"
+  },
+  {
+    "modelId": "gemini-3-1-pro-preview",
+    "benchmarkId": "mrcr-v2",
+    "variant": "8-needle-128k",
+    "value": 0.849,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://llm-stats.com/benchmarks/mrcr-v2-(8-needle)",
+    "notes": "llm-stats MRCR v2 128k"
+  },
+  {
+    "modelId": "gpt-5-4",
+    "benchmarkId": "mrcr-v2",
+    "variant": "8-needle-128k",
+    "value": 0.793,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://llm-stats.com/benchmarks/mrcr-v2-(8-needle)",
+    "notes": "llm-stats MRCR v2 128k"
+  },
+  {
+    "modelId": "gpt-5-2",
+    "benchmarkId": "mrcr-v2",
+    "variant": "8-needle-128k",
+    "value": 0.85,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://llm-stats.com/benchmarks/mrcr-v2-(8-needle)",
+    "notes": "llm-stats MRCR v2 128k"
+  },
+  {
+    "modelId": "grok-4-20",
+    "benchmarkId": "ifbench",
+    "variant": "default",
+    "value": 0.812,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://artificialanalysis.ai/evaluations/ifbench",
+    "notes": "Grok 4.20 reasoning"
+  },
+  {
+    "modelId": "gemini-3-pro",
+    "benchmarkId": "ifbench",
+    "variant": "default",
+    "value": 0.74,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://artificialanalysis.ai/evaluations/ifbench",
+    "notes": "AA IFBench"
+  },
+  {
+    "modelId": "qwen3-5-397b-a17b",
+    "benchmarkId": "ifbench",
+    "variant": "default",
+    "value": 0.765,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://artificialanalysis.ai/evaluations/ifbench",
+    "notes": "AA IFBench"
+  },
+  {
+    "modelId": "claude-sonnet-4",
+    "benchmarkId": "ifbench",
+    "variant": "default",
+    "value": 0.5,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://artificialanalysis.ai/evaluations/ifbench",
+    "notes": "AA IFBench"
+  },
+  {
+    "modelId": "gemini-3-pro",
+    "benchmarkId": "arc-agi-2",
+    "variant": "deep-think",
+    "value": 0.846,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://arcprize.org/leaderboard",
+    "notes": "Gemini 3 Deep Think verified"
+  },
+  {
+    "modelId": "gemini-3-1-pro-preview",
+    "benchmarkId": "arc-agi-2",
+    "variant": "default",
+    "value": 0.771,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://arcprize.org/leaderboard",
+    "notes": "ARC Prize verified"
+  },
+  {
+    "modelId": "gpt-5-4",
+    "benchmarkId": "arc-agi-2",
+    "variant": "default",
+    "value": 0.733,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://arcprize.org/leaderboard",
+    "notes": "ARC Prize verified"
+  },
+  {
+    "modelId": "claude-sonnet-4-6",
+    "benchmarkId": "arc-agi-2",
+    "variant": "default",
+    "value": 0.583,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://arcprize.org/leaderboard",
+    "notes": "ARC Prize verified"
+  },
+  {
+    "modelId": "gpt-5-2",
+    "benchmarkId": "arc-agi-2",
+    "variant": "default",
+    "value": 0.529,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://arcprize.org/leaderboard",
+    "notes": "ARC Prize verified"
+  },
+  {
+    "modelId": "claude-opus-4-5",
+    "benchmarkId": "arc-agi-2",
+    "variant": "default",
+    "value": 0.376,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://arcprize.org/leaderboard",
+    "notes": "ARC Prize verified"
+  },
+  {
+    "modelId": "gemini-3-flash-reasoning",
+    "benchmarkId": "arc-agi-2",
+    "variant": "default",
+    "value": 0.336,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://arcprize.org/leaderboard",
+    "notes": "ARC Prize verified"
+  },
+  {
+    "modelId": "kimi-k2-5",
+    "benchmarkId": "arc-agi-2",
+    "variant": "default",
+    "value": 0.12,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://arcprize.org/leaderboard",
+    "notes": "ARC Prize verified"
+  },
+  {
+    "modelId": "grok-4",
+    "benchmarkId": "arc-agi-2",
+    "variant": "default",
+    "value": 0.159,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://arcprize.org/leaderboard",
+    "notes": "ARC Prize verified"
+  },
+  {
+    "modelId": "o3",
+    "benchmarkId": "arc-agi-2",
+    "variant": "default",
+    "value": 0.065,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://arcprize.org/leaderboard",
+    "notes": "ARC Prize verified"
+  },
+  {
+    "modelId": "gemini-2-5-pro",
+    "benchmarkId": "arc-agi-2",
+    "variant": "default",
+    "value": 0.049,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://arcprize.org/leaderboard",
+    "notes": "ARC Prize verified"
+  },
+  {
+    "modelId": "claude-opus-4",
+    "benchmarkId": "arc-agi-2",
+    "variant": "default",
+    "value": 0.086,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://arcprize.org/leaderboard",
+    "notes": "ARC Prize verified"
+  },
+  {
+    "modelId": "glm-5",
+    "benchmarkId": "arc-agi-2",
+    "variant": "default",
+    "value": 0.05,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://arcprize.org/leaderboard",
+    "notes": "ARC Prize verified"
+  },
+  {
+    "modelId": "deepseek-v3-2",
+    "benchmarkId": "arc-agi-2",
+    "variant": "default",
+    "value": 0.04,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://arcprize.org/leaderboard",
+    "notes": "ARC Prize verified"
+  },
+  {
+    "modelId": "claude-opus-4-7",
+    "benchmarkId": "browsecomp",
+    "variant": "default",
+    "value": 0.793,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://llm-stats.com/benchmarks/browsecomp",
+    "notes": "llm-stats BrowseComp"
+  },
+  {
+    "modelId": "gpt-5-2",
+    "benchmarkId": "browsecomp",
+    "variant": "default",
+    "value": 0.658,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://llm-stats.com/benchmarks/browsecomp",
+    "notes": "llm-stats BrowseComp"
+  },
+  {
+    "modelId": "gpt-5-4",
+    "benchmarkId": "browsecomp",
+    "variant": "default",
+    "value": 0.827,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://llm-stats.com/benchmarks/browsecomp",
+    "notes": "llm-stats BrowseComp"
+  },
+  {
+    "modelId": "gemini-3-pro",
+    "benchmarkId": "browsecomp",
+    "variant": "default",
+    "value": 0.592,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://llm-stats.com/benchmarks/browsecomp",
+    "notes": "llm-stats BrowseComp"
+  },
+  {
+    "modelId": "gemini-3-1-pro-preview",
+    "benchmarkId": "browsecomp",
+    "variant": "default",
+    "value": 0.859,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://llm-stats.com/benchmarks/browsecomp",
+    "notes": "llm-stats BrowseComp"
+  },
+  {
+    "modelId": "qwen3-max-thinking",
+    "benchmarkId": "browsecomp",
+    "variant": "default",
+    "value": 0.786,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://llm-stats.com/benchmarks/browsecomp",
+    "notes": "llm-stats BrowseComp"
+  },
+  {
+    "modelId": "glm-5-1",
+    "benchmarkId": "browsecomp",
+    "variant": "default",
+    "value": 0.68,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://llm-stats.com/benchmarks/browsecomp",
+    "notes": "llm-stats BrowseComp"
+  },
+  {
+    "modelId": "qwen3-5-397b-a17b",
+    "benchmarkId": "browsecomp-zh",
+    "variant": "default",
+    "value": 0.703,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://llm-stats.com/benchmarks/browsecomp-zh",
+    "notes": "llm-stats BrowseComp-zh"
+  },
+  {
+    "modelId": "qwen3-5-122b-a10b",
+    "benchmarkId": "browsecomp-zh",
+    "variant": "default",
+    "value": 0.699,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://llm-stats.com/benchmarks/browsecomp-zh",
+    "notes": "llm-stats BrowseComp-zh"
+  },
+  {
+    "modelId": "gpt-5-2",
+    "benchmarkId": "mcp-mark",
+    "variant": "default",
+    "value": 0.575,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://mcpmark.ai/leaderboard",
+    "notes": "MCPMark pass@1"
+  },
+  {
+    "modelId": "gemini-3-pro",
+    "benchmarkId": "mcp-mark",
+    "variant": "default",
+    "value": 0.539,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://mcpmark.ai/leaderboard",
+    "notes": "MCPMark pass@1"
+  },
+  {
+    "modelId": "gpt-5",
+    "benchmarkId": "mcp-universe",
+    "variant": "default",
+    "value": 0.437,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://mcp-universe.github.io/",
+    "notes": "MCP-Universe overall"
+  },
+  {
+    "modelId": "grok-4",
+    "benchmarkId": "mcp-universe",
+    "variant": "default",
+    "value": 0.333,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://mcp-universe.github.io/",
+    "notes": "MCP-Universe overall"
+  },
+  {
+    "modelId": "claude-opus-4-1",
+    "benchmarkId": "mcp-universe",
+    "variant": "default",
+    "value": 0.294,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://mcp-universe.github.io/",
+    "notes": "MCP-Universe overall"
+  },
+  {
+    "modelId": "gpt-5-4",
+    "benchmarkId": "tool-decathlon",
+    "variant": "default",
+    "value": 0.546,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://llm-stats.com/benchmarks/tool-decathlon",
+    "notes": "Tool-Decathlon pass rate"
+  },
+  {
+    "modelId": "kimi-k2-6",
+    "benchmarkId": "tool-decathlon",
+    "variant": "default",
+    "value": 0.5,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://llm-stats.com/benchmarks/tool-decathlon",
+    "notes": "Tool-Decathlon pass rate"
+  },
+  {
+    "modelId": "gemini-3-flash-reasoning",
+    "benchmarkId": "tool-decathlon",
+    "variant": "default",
+    "value": 0.494,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://llm-stats.com/benchmarks/tool-decathlon",
+    "notes": "Tool-Decathlon pass rate"
+  },
+  {
+    "modelId": "claude-opus-4-6",
+    "benchmarkId": "tool-decathlon",
+    "variant": "default",
+    "value": 0.472,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://llm-stats.com/benchmarks/tool-decathlon",
+    "notes": "Tool-Decathlon pass rate"
+  },
+  {
+    "modelId": "claude-sonnet-4-5",
+    "benchmarkId": "humaneval",
+    "variant": "default",
+    "value": 0.976,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://evalplus.github.io/leaderboard.html",
+    "notes": "EvalPlus HumanEval"
+  },
+  {
+    "modelId": "claude-opus-4-6",
+    "benchmarkId": "humaneval",
+    "variant": "default",
+    "value": 0.95,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://evalplus.github.io/leaderboard.html",
+    "notes": "EvalPlus HumanEval"
+  },
+  {
+    "modelId": "deepseek-r1",
+    "benchmarkId": "humaneval",
+    "variant": "default",
+    "value": 0.961,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://evalplus.github.io/leaderboard.html",
+    "notes": "EvalPlus HumanEval"
+  },
+  {
+    "modelId": "grok-4-20",
+    "benchmarkId": "humaneval",
+    "variant": "default",
+    "value": 0.941,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://evalplus.github.io/leaderboard.html",
+    "notes": "EvalPlus HumanEval"
+  },
+  {
+    "modelId": "llama-4-scout",
+    "benchmarkId": "humaneval",
+    "variant": "default",
+    "value": 0.741,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://evalplus.github.io/leaderboard.html",
+    "notes": "EvalPlus HumanEval"
+  },
+  {
+    "modelId": "gemini-2-5-flash",
+    "benchmarkId": "humaneval",
+    "variant": "default",
+    "value": 0.963,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://evalplus.github.io/leaderboard.html",
+    "notes": "EvalPlus HumanEval"
+  },
+  {
+    "modelId": "claude-opus-4-5",
+    "benchmarkId": "aider-polyglot",
+    "variant": "default",
+    "value": 0.894,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://aider.chat/docs/leaderboards/",
+    "notes": "Aider Polyglot leaderboard"
+  },
+  {
+    "modelId": "gpt-5",
+    "benchmarkId": "aider-polyglot",
+    "variant": "default",
+    "value": 0.88,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://aider.chat/docs/leaderboards/",
+    "notes": "Aider Polyglot leaderboard"
+  },
+  {
+    "modelId": "o3-pro",
+    "benchmarkId": "aider-polyglot",
+    "variant": "default",
+    "value": 0.849,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://aider.chat/docs/leaderboards/",
+    "notes": "Aider Polyglot leaderboard"
+  },
+  {
+    "modelId": "gemini-2-5-pro",
+    "benchmarkId": "aider-polyglot",
+    "variant": "default",
+    "value": 0.831,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://aider.chat/docs/leaderboards/",
+    "notes": "Aider Polyglot leaderboard"
+  },
+  {
+    "modelId": "claude-opus-4-6",
+    "benchmarkId": "aider-polyglot",
+    "variant": "default",
+    "value": 0.821,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://aider.chat/docs/leaderboards/",
+    "notes": "Aider Polyglot leaderboard"
+  },
+  {
+    "modelId": "deepseek-v3-2",
+    "benchmarkId": "aider-polyglot",
+    "variant": "default",
+    "value": 0.702,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://aider.chat/docs/leaderboards/",
+    "notes": "Aider Polyglot leaderboard"
+  },
+  {
+    "modelId": "grok-4-20",
+    "benchmarkId": "aider-polyglot",
+    "variant": "default",
+    "value": 0.796,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://aider.chat/docs/leaderboards/",
+    "notes": "Aider Polyglot leaderboard"
   }
 ]
