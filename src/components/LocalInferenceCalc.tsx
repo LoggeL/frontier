@@ -170,12 +170,19 @@ export default function LocalInferenceCalc() {
     const effectiveBw = gpu.bandwidth * numGpus * tpEff;
     const effectiveTflops = gpu.fp16Tflops * numGpus * tpEff;
 
-    const tpsPerUserMemBound = effectiveBw / activeGB;
-    const tpsTotalMemBound = tpsPerUserMemBound * batch;
+    // Memory-bound per forward pass: weights read ONCE (shared), KV read per-user (scales with batch).
+    // Per-forward bytes = activeGB + kvGB (kvGB already = per_token × ctx × batch)
+    const perForwardBytes = activeGB + kvGB;
+    const forwardsPerSecMem = effectiveBw / perForwardBytes;
+    const tpsPerUserMemBound = forwardsPerSecMem; // 1 token per user per forward
+    const tpsTotalMemBound = forwardsPerSecMem * batch;
 
+    // Compute-bound: 2·active_B FLOPs per output token per user
     const tpsTotalCompute = (effectiveTflops * 1e12) / (2 * activeB * 1e9);
+    const tpsPerUserCompute = tpsTotalCompute / batch;
+
     const tpsTotal = Math.min(tpsTotalMemBound, tpsTotalCompute);
-    const tpsPerUser = tpsTotal / batch;
+    const tpsPerUser = Math.min(tpsPerUserMemBound, tpsPerUserCompute);
     const bottleneck = tpsTotalMemBound < tpsTotalCompute ? "memory-bound" : "compute-bound";
 
     const prefillTflopsTokens = (effectiveTflops * 1e12) / (2 * activeB * 1e9);
@@ -369,8 +376,8 @@ export default function LocalInferenceCalc() {
             />
           </div>
           <div className="mt-2 text-xs text-neutral-500 font-mono">
-            {fmtNum(result.tpsPerUserMemBound, 0)} tok/s mem-bound ceiling ·
-            active {fmtGB(result.activeGB)} / {fmtNum(gpu.bandwidth * numGpus * result.tpEff, 0)} GB/s
+            per-forward read: active {fmtGB(result.activeGB)} + KV {fmtGB(result.kvGB)} ·
+            {" "}{fmtNum(gpu.bandwidth * numGpus * result.tpEff, 0)} GB/s
           </div>
         </Section>
 
@@ -400,9 +407,9 @@ export default function LocalInferenceCalc() {
         <Section title="Notes">
           <ul className="list-disc space-y-1 pl-5 text-xs text-neutral-400">
             <li>
-              Decode speed assumes memory-bandwidth-bound autoregressive generation:
-              <span className="font-mono text-neutral-300"> tok/s ≈ bandwidth ÷ active_weights</span>.
-              For MoE, only <em>active</em> params are fetched per token.
+              Decode speed assumes memory-bound autoregressive generation:
+              <span className="font-mono text-neutral-300"> tok/s/user ≈ bandwidth ÷ (active_weights + batch · KV)</span>.
+              Weights are shared across the batch; KV cache is per-user, so per-user throughput drops at high batch.
             </li>
             <li>
               Compute ceiling uses <span className="font-mono text-neutral-300">TFLOPS ÷ (2 · active_B)</span>.
