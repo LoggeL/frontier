@@ -32,12 +32,20 @@ const scoreCount = scores.length;
       <header class="flex flex-col gap-2">
         <div class="flex items-baseline justify-between gap-3 flex-wrap">
           <h1 class="text-3xl font-semibold tracking-tight">Frontier</h1>
-          <a
-            href={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/benchmarks/`}
-            class="text-sm text-amber-300 hover:underline"
-          >
-            benchmark overview →
-          </a>
+          <nav class="flex items-baseline gap-4 text-sm">
+            <a
+              href={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/calculator/`}
+              class="text-amber-300 hover:underline"
+            >
+              local inference calc →
+            </a>
+            <a
+              href={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/benchmarks/`}
+              class="text-amber-300 hover:underline"
+            >
+              benchmark overview →
+            </a>
+          </nav>
         </div>
         <p class="max-w-2xl text-sm text-neutral-400">
           Static, JSON-backed comparison of frontier and open-weight models

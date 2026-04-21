@@ -1,0 +1,46 @@
+---
+import "../styles/global.css";
+import LocalInferenceCalc from "../components/LocalInferenceCalc";
+---
+
+<!doctype html>
+<html lang="en" class="bg-neutral-950">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local inference calculator · Frontier</title>
+    <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`} />
+    <meta
+      name="description"
+      content="Estimate VRAM, tokens/sec, and latency for running open-weight LLMs locally. Covers dense and MoE architectures across consumer, datacenter, and Apple silicon hardware."
+    />
+  </head>
+  <body class="min-h-screen px-6 py-10 text-neutral-100">
+    <main class="mx-auto flex max-w-[1400px] flex-col gap-8">
+      <header class="flex flex-col gap-2">
+        <div class="flex items-baseline justify-between gap-3 flex-wrap">
+          <h1 class="text-3xl font-semibold tracking-tight">Local inference calculator</h1>
+          <a
+            href={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/`}
+            class="text-sm text-amber-300 hover:underline"
+          >
+            ← back to comparison
+          </a>
+        </div>
+        <p class="max-w-3xl text-sm text-neutral-400">
+          Rough VRAM, throughput, and latency estimates for open-weight LLMs on local hardware.
+          Pick a model, quantization, GPU, context, and batch size — the numbers update live. Memory-bound
+          decode is assumed for throughput; MoE uses <span class="font-mono text-neutral-300">active</span>
+          parameters for per-token bandwidth.
+        </p>
+      </header>
+
+      <LocalInferenceCalc client:load />
+
+      <footer class="mt-4 border-t border-neutral-900 pt-6 text-xs text-neutral-600">
+        Estimates only. Real-world performance depends on runtime (vLLM, llama.cpp, TensorRT-LLM, MLX),
+        kernel quality, batching policy, and interconnect. Treat ±30% error as normal.
+      </footer>
+    </main>
+  </body>
+</html>

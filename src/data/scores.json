@@ -4857,6 +4857,96 @@
   },
   {
     "modelId": "kimi-k2-6",
+    "benchmarkId": "aa-intelligence-index",
+    "variant": "default",
+    "value": 53.9,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://artificialanalysis.ai/models/kimi-k2-6",
+    "notes": "AA — Kimi K2.6"
+  },
+  {
+    "modelId": "kimi-k2-6",
+    "benchmarkId": "aa-coding-index",
+    "variant": "default",
+    "value": 47.12,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://artificialanalysis.ai/models/kimi-k2-6",
+    "notes": "AA — Kimi K2.6"
+  },
+  {
+    "modelId": "kimi-k2-6",
+    "benchmarkId": "gpqa-diamond",
+    "variant": "default",
+    "value": 0.911,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://artificialanalysis.ai/models/kimi-k2-6",
+    "notes": "AA — Kimi K2.6"
+  },
+  {
+    "modelId": "kimi-k2-6",
+    "benchmarkId": "hle",
+    "variant": "default",
+    "value": 0.359,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://artificialanalysis.ai/models/kimi-k2-6",
+    "notes": "AA — Kimi K2.6 (no tools)"
+  },
+  {
+    "modelId": "kimi-k2-6",
+    "benchmarkId": "scicode",
+    "variant": "default",
+    "value": 0.535,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://artificialanalysis.ai/models/kimi-k2-6",
+    "notes": "AA — Kimi K2.6"
+  },
+  {
+    "modelId": "kimi-k2-6",
+    "benchmarkId": "ifbench",
+    "variant": "default",
+    "value": 0.76,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://artificialanalysis.ai/models/kimi-k2-6",
+    "notes": "AA — Kimi K2.6"
+  },
+  {
+    "modelId": "kimi-k2-6",
+    "benchmarkId": "aa-lcr",
+    "variant": "default",
+    "value": 0.697,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://artificialanalysis.ai/models/kimi-k2-6",
+    "notes": "AA — Kimi K2.6"
+  },
+  {
+    "modelId": "kimi-k2-6",
+    "benchmarkId": "terminal-bench-hard",
+    "variant": "default",
+    "value": 0.439,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://artificialanalysis.ai/models/kimi-k2-6",
+    "notes": "AA — Kimi K2.6"
+  },
+  {
+    "modelId": "kimi-k2-6",
+    "benchmarkId": "tau2-telecom",
+    "variant": "default",
+    "value": 0.959,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://artificialanalysis.ai/models/kimi-k2-6",
+    "notes": "AA — Kimi K2.6"
+  },
+  {
+    "modelId": "kimi-k2-6",
+    "benchmarkId": "mmmu-pro",
+    "variant": "default",
+    "value": 0.794,
+    "reportedOn": "2026-04-21",
+    "sourceUrl": "https://artificialanalysis.ai/models/kimi-k2-6",
+    "notes": "AA — Kimi K2.6"
+  },
+  {
+    "modelId": "kimi-k2-6",
     "benchmarkId": "hle",
     "variant": "with-tools",
     "value": 0.54,
