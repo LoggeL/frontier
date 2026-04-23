@@ -519,5 +519,14 @@
     "activeParams": 12,
     "experts": 10,
     "architecture": "moe"
+  },
+  {
+    "id": "mimo-v2-5-pro",
+    "name": "MiMo 2.5 Pro",
+    "provider": "Xiaomi",
+    "releaseDate": "2026-04-22",
+    "knowledgeCutoff": "2026-01",
+    "openWeights": false,
+    "contextWindow": 131072
   }
 ]

@@ -4862,7 +4862,7 @@
     "value": 53.9,
     "reportedOn": "2026-04-21",
     "sourceUrl": "https://artificialanalysis.ai/models/kimi-k2-6",
-    "notes": "AA — Kimi K2.6"
+    "notes": "AA \u2014 Kimi K2.6"
   },
   {
     "modelId": "kimi-k2-6",
@@ -4871,7 +4871,7 @@
     "value": 47.12,
     "reportedOn": "2026-04-21",
     "sourceUrl": "https://artificialanalysis.ai/models/kimi-k2-6",
-    "notes": "AA — Kimi K2.6"
+    "notes": "AA \u2014 Kimi K2.6"
   },
   {
     "modelId": "kimi-k2-6",
@@ -4880,7 +4880,7 @@
     "value": 0.911,
     "reportedOn": "2026-04-21",
     "sourceUrl": "https://artificialanalysis.ai/models/kimi-k2-6",
-    "notes": "AA — Kimi K2.6"
+    "notes": "AA \u2014 Kimi K2.6"
   },
   {
     "modelId": "kimi-k2-6",
@@ -4889,7 +4889,7 @@
     "value": 0.359,
     "reportedOn": "2026-04-21",
     "sourceUrl": "https://artificialanalysis.ai/models/kimi-k2-6",
-    "notes": "AA — Kimi K2.6 (no tools)"
+    "notes": "AA \u2014 Kimi K2.6 (no tools)"
   },
   {
     "modelId": "kimi-k2-6",
@@ -4898,7 +4898,7 @@
     "value": 0.535,
     "reportedOn": "2026-04-21",
     "sourceUrl": "https://artificialanalysis.ai/models/kimi-k2-6",
-    "notes": "AA — Kimi K2.6"
+    "notes": "AA \u2014 Kimi K2.6"
   },
   {
     "modelId": "kimi-k2-6",
@@ -4907,7 +4907,7 @@
     "value": 0.76,
     "reportedOn": "2026-04-21",
     "sourceUrl": "https://artificialanalysis.ai/models/kimi-k2-6",
-    "notes": "AA — Kimi K2.6"
+    "notes": "AA \u2014 Kimi K2.6"
   },
   {
     "modelId": "kimi-k2-6",
@@ -4916,7 +4916,7 @@
     "value": 0.697,
     "reportedOn": "2026-04-21",
     "sourceUrl": "https://artificialanalysis.ai/models/kimi-k2-6",
-    "notes": "AA — Kimi K2.6"
+    "notes": "AA \u2014 Kimi K2.6"
   },
   {
     "modelId": "kimi-k2-6",
@@ -4925,7 +4925,7 @@
     "value": 0.439,
     "reportedOn": "2026-04-21",
     "sourceUrl": "https://artificialanalysis.ai/models/kimi-k2-6",
-    "notes": "AA — Kimi K2.6"
+    "notes": "AA \u2014 Kimi K2.6"
   },
   {
     "modelId": "kimi-k2-6",
@@ -4934,7 +4934,7 @@
     "value": 0.959,
     "reportedOn": "2026-04-21",
     "sourceUrl": "https://artificialanalysis.ai/models/kimi-k2-6",
-    "notes": "AA — Kimi K2.6"
+    "notes": "AA \u2014 Kimi K2.6"
   },
   {
     "modelId": "kimi-k2-6",
@@ -4943,7 +4943,7 @@
     "value": 0.794,
     "reportedOn": "2026-04-21",
     "sourceUrl": "https://artificialanalysis.ai/models/kimi-k2-6",
-    "notes": "AA — Kimi K2.6"
+    "notes": "AA \u2014 Kimi K2.6"
   },
   {
     "modelId": "kimi-k2-6",
@@ -7725,5 +7725,86 @@
     "reportedOn": "2026-04-23",
     "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
     "notes": "AA API \u2014 MiniMax-M2.7"
+  },
+  {
+    "modelId": "mimo-v2-5-pro",
+    "benchmarkId": "aa-intelligence-index",
+    "variant": "default",
+    "value": 53.8,
+    "reportedOn": "2026-04-23",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 MiMo-V2.5-Pro"
+  },
+  {
+    "modelId": "mimo-v2-5-pro",
+    "benchmarkId": "aa-coding-index",
+    "variant": "default",
+    "value": 45.5,
+    "reportedOn": "2026-04-23",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 MiMo-V2.5-Pro"
+  },
+  {
+    "modelId": "mimo-v2-5-pro",
+    "benchmarkId": "gpqa-diamond",
+    "variant": "default",
+    "value": 0.866,
+    "reportedOn": "2026-04-23",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 MiMo-V2.5-Pro"
+  },
+  {
+    "modelId": "mimo-v2-5-pro",
+    "benchmarkId": "hle",
+    "variant": "default",
+    "value": 0.338,
+    "reportedOn": "2026-04-23",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 MiMo-V2.5-Pro"
+  },
+  {
+    "modelId": "mimo-v2-5-pro",
+    "benchmarkId": "scicode",
+    "variant": "default",
+    "value": 0.502,
+    "reportedOn": "2026-04-23",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 MiMo-V2.5-Pro"
+  },
+  {
+    "modelId": "mimo-v2-5-pro",
+    "benchmarkId": "ifbench",
+    "variant": "default",
+    "value": 0.799,
+    "reportedOn": "2026-04-23",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 MiMo-V2.5-Pro"
+  },
+  {
+    "modelId": "mimo-v2-5-pro",
+    "benchmarkId": "aa-lcr",
+    "variant": "default",
+    "value": 0.733,
+    "reportedOn": "2026-04-23",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 MiMo-V2.5-Pro"
+  },
+  {
+    "modelId": "mimo-v2-5-pro",
+    "benchmarkId": "terminal-bench-hard",
+    "variant": "default",
+    "value": 0.432,
+    "reportedOn": "2026-04-23",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 MiMo-V2.5-Pro"
+  },
+  {
+    "modelId": "mimo-v2-5-pro",
+    "benchmarkId": "tau2-telecom",
+    "variant": "default",
+    "value": 0.942,
+    "reportedOn": "2026-04-23",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 MiMo-V2.5-Pro"
   }
 ]
