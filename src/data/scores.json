@@ -7608,5 +7608,41 @@
     "reportedOn": "2026-04-21",
     "sourceUrl": "https://os-world.github.io/",
     "notes": "os-world.github.io leaderboard"
+  },
+  {
+    "modelId": "minimax-m2-7",
+    "benchmarkId": "swe-bench-pro",
+    "variant": "default",
+    "value": 0.5622,
+    "reportedOn": "2026-04-23",
+    "sourceUrl": "https://huggingface.co/MiniMaxAI/MiniMax-M2.7",
+    "notes": "MiniMax-M2.7 HF card"
+  },
+  {
+    "modelId": "minimax-m2-7",
+    "benchmarkId": "swe-bench-multilingual",
+    "variant": "default",
+    "value": 0.765,
+    "reportedOn": "2026-04-23",
+    "sourceUrl": "https://huggingface.co/MiniMaxAI/MiniMax-M2.7",
+    "notes": "MiniMax-M2.7 HF card"
+  },
+  {
+    "modelId": "minimax-m2-7",
+    "benchmarkId": "terminal-bench-2",
+    "variant": "default",
+    "value": 0.57,
+    "reportedOn": "2026-04-23",
+    "sourceUrl": "https://huggingface.co/MiniMaxAI/MiniMax-M2.7",
+    "notes": "MiniMax-M2.7 HF card"
+  },
+  {
+    "modelId": "minimax-m2-7",
+    "benchmarkId": "toolathlon",
+    "variant": "default",
+    "value": 0.463,
+    "reportedOn": "2026-04-23",
+    "sourceUrl": "https://huggingface.co/MiniMaxAI/MiniMax-M2.7",
+    "notes": "MiniMax-M2.7 HF card"
   }
 ]

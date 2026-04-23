@@ -299,6 +299,20 @@
     "architecture": "moe"
   },
   {
+    "id": "minimax-m2-7",
+    "name": "MiniMax M2.7",
+    "provider": "MiniMax",
+    "releaseDate": "2026-04-23",
+    "knowledgeCutoff": "2026-01",
+    "openWeights": true,
+    "contextWindow": 1000000,
+    "hfLink": "https://huggingface.co/MiniMaxAI/MiniMax-M2.7",
+    "totalParams": 230,
+    "activeParams": 10,
+    "experts": 256,
+    "architecture": "moe"
+  },
+  {
     "id": "minimax-m2",
     "name": "MiniMax-M2",
     "provider": "MiniMax",
