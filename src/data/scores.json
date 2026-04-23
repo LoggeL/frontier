@@ -7968,5 +7968,86 @@
     "reportedOn": "2026-04-23",
     "sourceUrl": "https://openai.com/index/introducing-gpt-5-5/",
     "notes": "OpenAI GPT-5.5 launch post"
+  },
+  {
+    "modelId": "gpt-5-5",
+    "benchmarkId": "aa-intelligence-index",
+    "variant": "default",
+    "value": 60.2,
+    "reportedOn": "2026-04-23",
+    "sourceUrl": "https://artificialanalysis.ai/models/gpt-5-5",
+    "notes": "Artificial Analysis API \u2014 GPT-5.5 (xhigh)"
+  },
+  {
+    "modelId": "gpt-5-5",
+    "benchmarkId": "aa-coding-index",
+    "variant": "default",
+    "value": 59.1,
+    "reportedOn": "2026-04-23",
+    "sourceUrl": "https://artificialanalysis.ai/models/gpt-5-5",
+    "notes": "Artificial Analysis API \u2014 GPT-5.5 (xhigh)"
+  },
+  {
+    "modelId": "gpt-5-5",
+    "benchmarkId": "gpqa-diamond",
+    "variant": "default",
+    "value": 0.935,
+    "reportedOn": "2026-04-23",
+    "sourceUrl": "https://artificialanalysis.ai/models/gpt-5-5",
+    "notes": "Artificial Analysis API \u2014 GPT-5.5 (xhigh)"
+  },
+  {
+    "modelId": "gpt-5-5",
+    "benchmarkId": "hle",
+    "variant": "default",
+    "value": 0.443,
+    "reportedOn": "2026-04-23",
+    "sourceUrl": "https://artificialanalysis.ai/models/gpt-5-5",
+    "notes": "Artificial Analysis API \u2014 GPT-5.5 (xhigh)"
+  },
+  {
+    "modelId": "gpt-5-5",
+    "benchmarkId": "scicode",
+    "variant": "default",
+    "value": 0.561,
+    "reportedOn": "2026-04-23",
+    "sourceUrl": "https://artificialanalysis.ai/models/gpt-5-5",
+    "notes": "Artificial Analysis API \u2014 GPT-5.5 (xhigh)"
+  },
+  {
+    "modelId": "gpt-5-5",
+    "benchmarkId": "ifbench",
+    "variant": "default",
+    "value": 0.759,
+    "reportedOn": "2026-04-23",
+    "sourceUrl": "https://artificialanalysis.ai/models/gpt-5-5",
+    "notes": "Artificial Analysis API \u2014 GPT-5.5 (xhigh)"
+  },
+  {
+    "modelId": "gpt-5-5",
+    "benchmarkId": "aa-lcr",
+    "variant": "default",
+    "value": 0.743,
+    "reportedOn": "2026-04-23",
+    "sourceUrl": "https://artificialanalysis.ai/models/gpt-5-5",
+    "notes": "Artificial Analysis API \u2014 GPT-5.5 (xhigh)"
+  },
+  {
+    "modelId": "gpt-5-5",
+    "benchmarkId": "terminal-bench-hard",
+    "variant": "default",
+    "value": 0.606,
+    "reportedOn": "2026-04-23",
+    "sourceUrl": "https://artificialanalysis.ai/models/gpt-5-5",
+    "notes": "Artificial Analysis API \u2014 GPT-5.5 (xhigh)"
+  },
+  {
+    "modelId": "gpt-5-5",
+    "benchmarkId": "tau2-telecom",
+    "variant": "default",
+    "value": 0.939,
+    "reportedOn": "2026-04-23",
+    "sourceUrl": "https://artificialanalysis.ai/models/gpt-5-5",
+    "notes": "Artificial Analysis API \u2014 GPT-5.5 (xhigh)"
   }
 ]
