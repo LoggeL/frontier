@@ -27,15 +27,16 @@ export default function ModelDetail({
 
   const matrix = useMemo(() => buildScoreMatrix(scores), [scores]);
 
+  const intelligenceIndex = lookupValue(matrix, model.id, "aa-intelligence-index");
+
   const peers = useMemo(() => {
     switch (peerMode) {
       case "intelligence": {
-        const idx = lookupValue(matrix, model.id, "aa-intelligence-index");
-        if (idx === undefined) return [model];
+        if (intelligenceIndex === undefined) return [];
         const band = 7;
         return models.filter((m) => {
           const v = lookupValue(matrix, m.id, "aa-intelligence-index");
-          return v !== undefined && Math.abs(v - idx) <= band;
+          return v !== undefined && Math.abs(v - intelligenceIndex) <= band;
         });
       }
       case "cohort":
@@ -51,7 +52,7 @@ export default function ModelDetail({
         });
       }
     }
-  }, [peerMode, model, models, matrix]);
+  }, [peerMode, model, models, matrix, intelligenceIndex]);
 
   const frontier = useMemo(
     () => computeFrontier(model, benchmarks, scores, models),
@@ -95,7 +96,11 @@ export default function ModelDetail({
           </div>
         </div>
 
-        {peers.length <= 1 ? (
+        {peerMode === "intelligence" && intelligenceIndex === undefined ? (
+          <div className="rounded border border-neutral-800 bg-neutral-900/40 p-6 text-sm text-neutral-500">
+            No Artificial Analysis Intelligence Index score is available for this model yet, so the intelligence peer set cannot be computed.
+          </div>
+        ) : peers.length <= 1 ? (
           <div className="rounded border border-neutral-800 bg-neutral-900/40 p-6 text-sm text-neutral-500">
             No peers found for this dimension.
           </div>
