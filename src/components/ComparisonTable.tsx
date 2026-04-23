@@ -48,6 +48,7 @@ export default function ComparisonTable({
   const [categoryFilter, setCategoryFilter] = useState<Set<string>>(
     new Set(ALL_CATEGORIES),
   );
+  const [search, setSearch] = useState("");
   const [activeVariant, setActiveVariant] = useState<Record<string, string>>(
     () =>
       Object.fromEntries(
@@ -68,6 +69,10 @@ export default function ComparisonTable({
     () => columnExtents(benchmarks, scores),
     [benchmarks, scores],
   );
+  const searchTerms = useMemo(
+    () => search.toLowerCase().trim().split(/\s+/).filter(Boolean),
+    [search],
+  );
 
   const visibleBenchmarks = useMemo(
     () => benchmarks.filter((b) => categoryFilter.has(b.category)),
@@ -75,12 +80,25 @@ export default function ComparisonTable({
   );
 
   const visibleModels = useMemo(() => {
-    const filtered = models.filter(
-      (m) =>
-        providerFilter.has(m.provider) && (!openOnly || m.openWeights),
-    );
+    const filtered = models.filter((m) => {
+      if (!providerFilter.has(m.provider)) return false;
+      if (openOnly && !m.openWeights) return false;
+      if (searchTerms.length === 0) return true;
+      const haystack = [
+        m.name,
+        m.id,
+        m.provider,
+        m.knowledgeCutoff,
+        m.releaseDate,
+        m.cohortLabel ?? "",
+        m.openWeights ? "open open-weight open-weights" : "closed",
+      ]
+        .join(" ")
+        .toLowerCase();
+      return searchTerms.every((term) => haystack.includes(term));
+    });
     return [...filtered].sort(comparator(sort, matrix, activeVariant));
-  }, [models, providerFilter, openOnly, sort, matrix, activeVariant]);
+  }, [models, providerFilter, openOnly, searchTerms, sort, matrix, activeVariant]);
 
   return (
     <div className="flex flex-col gap-3">
@@ -92,6 +110,9 @@ export default function ComparisonTable({
         setOpenOnly={setOpenOnly}
         categoryFilter={categoryFilter}
         setCategoryFilter={setCategoryFilter}
+        search={search}
+        setSearch={setSearch}
+        resultCount={visibleModels.length}
       />
 
       <div className="overflow-x-auto rounded-lg border border-neutral-800 bg-neutral-900/40">
@@ -201,8 +222,6 @@ export default function ComparisonTable({
                   const variant = activeVariant[b.id] ?? b.variants[0]!.key;
                   const colKey = `${b.id}::${variant}`;
                   const isHoveredCol = hoverCell?.col === colKey;
-                  const isHoveredCell =
-                    isHoveredCol && hoverCell?.value === undefined;
                   const cells = matrix.get(m.id)?.get(b.id) ?? [];
                   const cell = cells.find((c) => c.variant === variant);
                   if (!cell) {
@@ -315,6 +334,9 @@ function Toolbar({
   setOpenOnly,
   categoryFilter,
   setCategoryFilter,
+  search,
+  setSearch,
+  resultCount,
 }: {
   models: Model[];
   providerFilter: Set<string>;
@@ -323,40 +345,57 @@ function Toolbar({
   setOpenOnly: (b: boolean) => void;
   categoryFilter: Set<string>;
   setCategoryFilter: (s: Set<string>) => void;
+  search: string;
+  setSearch: (s: string) => void;
+  resultCount: number;
 }) {
   const providers = Array.from(new Set(models.map((m) => m.provider))).sort();
 
   return (
-    <div className="flex flex-wrap items-center gap-2 text-xs">
-      <span className="text-neutral-500">Providers:</span>
-      {providers.map((p) => (
-        <Pill
-          key={p}
-          active={providerFilter.has(p)}
-          onClick={() => toggleSet(providerFilter, setProviderFilter, p)}
-        >
-          {p}
-        </Pill>
-      ))}
-      <span className="ml-4 text-neutral-500">Categories:</span>
-      {ALL_CATEGORIES.map((c) => (
-        <Pill
-          key={c}
-          active={categoryFilter.has(c)}
-          onClick={() => toggleSet(categoryFilter, setCategoryFilter, c)}
-        >
-          {c}
-        </Pill>
-      ))}
-      <label className="ml-4 inline-flex items-center gap-1.5 text-neutral-400">
+    <div className="flex flex-col gap-2 text-xs">
+      <div className="flex flex-wrap items-center gap-2">
         <input
-          type="checkbox"
-          checked={openOnly}
-          onChange={(e) => setOpenOnly(e.target.checked)}
-          className="accent-amber-400"
+          type="search"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          placeholder="Search model, provider, id, cutoff..."
+          className="min-w-[240px] flex-1 rounded-md border border-neutral-800 bg-neutral-950 px-3 py-2 text-sm text-neutral-100 placeholder:text-neutral-500 focus:border-amber-400 focus:outline-none"
         />
-        open-weight only
-      </label>
+        <span className="text-neutral-500">{resultCount} shown</span>
+        <label className="ml-2 inline-flex items-center gap-1.5 text-neutral-400">
+          <input
+            type="checkbox"
+            checked={openOnly}
+            onChange={(e) => setOpenOnly(e.target.checked)}
+            className="accent-amber-400"
+          />
+          open-weight only
+        </label>
+      </div>
+      <div className="flex flex-wrap items-center gap-2">
+        <span className="text-neutral-500">Providers:</span>
+        {providers.map((p) => (
+          <Pill
+            key={p}
+            active={providerFilter.has(p)}
+            onClick={() => toggleSet(providerFilter, setProviderFilter, p)}
+          >
+            {p}
+          </Pill>
+        ))}
+      </div>
+      <div className="flex flex-wrap items-center gap-2">
+        <span className="text-neutral-500">Categories:</span>
+        {ALL_CATEGORIES.map((c) => (
+          <Pill
+            key={c}
+            active={categoryFilter.has(c)}
+            onClick={() => toggleSet(categoryFilter, setCategoryFilter, c)}
+          >
+            {c}
+          </Pill>
+        ))}
+      </div>
     </div>
   );
 }
@@ -451,9 +490,8 @@ function getSortValue(
 }
 
 function heatColor(norm: number): string {
-  // red (low) → neutral → green (high); low-saturation for readability
   const clamped = Math.max(0, Math.min(1, norm));
-  const hue = 120 * clamped; // 0 red → 120 green
+  const hue = 120 * clamped;
   const sat = 40;
   const light = 18;
   const alpha = 0.35 + clamped * 0.25;
