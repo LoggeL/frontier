@@ -302,7 +302,7 @@
     "id": "minimax-m2-7",
     "name": "MiniMax M2.7",
     "provider": "MiniMax",
-    "releaseDate": "2026-04-23",
+    "releaseDate": "2026-03-17",
     "knowledgeCutoff": "2026-01",
     "openWeights": true,
     "contextWindow": 1000000,
