@@ -5,6 +5,7 @@ import {
   formatParams,
   formatScore,
   monthsBetween,
+  type ScoreMatrix,
 } from "../lib/derive";
 import ComparisonTable from "./ComparisonTable";
 
@@ -29,15 +30,21 @@ export default function ModelDetail({
 
   const intelligenceIndex = lookupValue(matrix, model.id, "aa-intelligence-index");
 
+  const intelligencePeers = useMemo(() => {
+    if (intelligenceIndex !== undefined) {
+      const band = 7;
+      return models.filter((m) => {
+        const v = lookupValue(matrix, m.id, "aa-intelligence-index");
+        return v !== undefined && Math.abs(v - intelligenceIndex) <= band;
+      });
+    }
+    return computeMetricSimilarityPeers(model, models, benchmarks, matrix);
+  }, [intelligenceIndex, model, models, benchmarks, matrix]);
+
   const peers = useMemo(() => {
     switch (peerMode) {
       case "intelligence": {
-        if (intelligenceIndex === undefined) return [];
-        const band = 7;
-        return models.filter((m) => {
-          const v = lookupValue(matrix, m.id, "aa-intelligence-index");
-          return v !== undefined && Math.abs(v - intelligenceIndex) <= band;
-        });
+        return intelligencePeers;
       }
       case "cohort":
         return models.filter(
@@ -52,7 +59,7 @@ export default function ModelDetail({
         });
       }
     }
-  }, [peerMode, model, models, matrix, intelligenceIndex]);
+  }, [peerMode, model, models, matrix, intelligencePeers]);
 
   const frontier = useMemo(
     () => computeFrontier(model, benchmarks, scores, models),
@@ -96,11 +103,7 @@ export default function ModelDetail({
           </div>
         </div>
 
-        {peerMode === "intelligence" && intelligenceIndex === undefined ? (
-          <div className="rounded border border-neutral-800 bg-neutral-900/40 p-6 text-sm text-neutral-500">
-            No Artificial Analysis Intelligence Index score is available for this model yet, so the intelligence peer set cannot be computed.
-          </div>
-        ) : peers.length <= 1 ? (
+        {peers.length <= 1 ? (
           <div className="rounded border border-neutral-800 bg-neutral-900/40 p-6 text-sm text-neutral-500">
             No peers found for this dimension.
           </div>
@@ -240,6 +243,40 @@ function ModelHero({
       </div>
     </div>
   );
+}
+
+function computeMetricSimilarityPeers(
+  model: Model,
+  models: Model[],
+  benchmarks: Benchmark[],
+  matrix: ScoreMatrix,
+): Model[] {
+  const benchmarkIds = benchmarks.map((b) => b.id);
+  const target = benchmarkIds
+    .map((bid) => [bid, lookupValue(matrix, model.id, bid)] as const)
+    .filter((entry): entry is readonly [string, number] => entry[1] !== undefined);
+
+  if (target.length === 0) return [model];
+
+  const scored = models
+    .map((candidate) => {
+      const deltas: number[] = [];
+      for (const [bid, value] of target) {
+        const peerValue = lookupValue(matrix, candidate.id, bid);
+        if (peerValue === undefined) continue;
+        deltas.push(Math.abs(peerValue - value));
+      }
+      if (deltas.length < Math.max(3, Math.ceil(target.length * 0.3))) {
+        return null;
+      }
+      const avgDelta = deltas.reduce((sum, x) => sum + x, 0) / deltas.length;
+      return { candidate, avgDelta, overlap: deltas.length };
+    })
+    .filter((entry): entry is { candidate: Model; avgDelta: number; overlap: number } => entry !== null)
+    .sort((a, b) => a.avgDelta - b.avgDelta || b.overlap - a.overlap || a.candidate.name.localeCompare(b.candidate.name));
+
+  const top = scored.slice(0, 12).map((entry) => entry.candidate);
+  return top.some((entry) => entry.id === model.id) ? top : [model, ...top].slice(0, 12);
 }
 
 function Meta({
