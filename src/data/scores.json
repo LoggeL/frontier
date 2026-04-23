@@ -7932,5 +7932,41 @@
     "reportedOn": "2026-04-20",
     "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
     "notes": "AA API \u2014 Qwen3 Max Thinking"
+  },
+  {
+    "modelId": "gpt-5-5",
+    "benchmarkId": "terminal-bench-2",
+    "variant": "default",
+    "value": 0.827,
+    "reportedOn": "2026-04-23",
+    "sourceUrl": "https://openai.com/index/introducing-gpt-5-5/",
+    "notes": "OpenAI GPT-5.5 launch post"
+  },
+  {
+    "modelId": "gpt-5-5",
+    "benchmarkId": "osworld-verified",
+    "variant": "default",
+    "value": 0.787,
+    "reportedOn": "2026-04-23",
+    "sourceUrl": "https://openai.com/index/introducing-gpt-5-5/",
+    "notes": "OpenAI GPT-5.5 launch post"
+  },
+  {
+    "modelId": "gpt-5-5",
+    "benchmarkId": "toolathlon",
+    "variant": "default",
+    "value": 0.556,
+    "reportedOn": "2026-04-23",
+    "sourceUrl": "https://openai.com/index/introducing-gpt-5-5/",
+    "notes": "OpenAI GPT-5.5 launch post"
+  },
+  {
+    "modelId": "gpt-5-5",
+    "benchmarkId": "browsecomp",
+    "variant": "default",
+    "value": 0.844,
+    "reportedOn": "2026-04-23",
+    "sourceUrl": "https://openai.com/index/introducing-gpt-5-5/",
+    "notes": "OpenAI GPT-5.5 launch post"
   }
 ]
