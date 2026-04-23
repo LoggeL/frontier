@@ -13,6 +13,8 @@ interface Props {
   models: Model[];
   benchmarks: Benchmark[];
   scores: Score[];
+  focusModelId?: string;
+  visibleBenchmarkIds?: string[];
 }
 
 type SortKey =
@@ -40,6 +42,8 @@ export default function ComparisonTable({
   models,
   benchmarks,
   scores,
+  focusModelId,
+  visibleBenchmarkIds,
 }: Props) {
   const [providerFilter, setProviderFilter] = useState<Set<string>>(
     new Set(Array.from(new Set(models.map((m) => m.provider)))),
@@ -75,8 +79,10 @@ export default function ComparisonTable({
   );
 
   const visibleBenchmarks = useMemo(
-    () => benchmarks.filter((b) => categoryFilter.has(b.category)),
-    [benchmarks, categoryFilter],
+    () => benchmarks.filter(
+      (b) => categoryFilter.has(b.category) && (!visibleBenchmarkIds || visibleBenchmarkIds.includes(b.id)),
+    ),
+    [benchmarks, categoryFilter, visibleBenchmarkIds],
   );
 
   const visibleModels = useMemo(() => {
@@ -97,8 +103,15 @@ export default function ComparisonTable({
         .toLowerCase();
       return searchTerms.every((term) => haystack.includes(term));
     });
-    return [...filtered].sort(comparator(sort, matrix, activeVariant));
-  }, [models, providerFilter, openOnly, searchTerms, sort, matrix, activeVariant]);
+    const sorted = [...filtered].sort(comparator(sort, matrix, activeVariant));
+    if (!focusModelId) return sorted;
+    const idx = sorted.findIndex((m) => m.id === focusModelId);
+    if (idx <= 0) return sorted;
+    const focus = sorted[idx]!;
+    const without = sorted.filter((m) => m.id !== focusModelId);
+    const middle = Math.floor(without.length / 2);
+    return [...without.slice(0, middle), focus, ...without.slice(middle)];
+  }, [models, providerFilter, openOnly, searchTerms, sort, matrix, activeVariant, focusModelId]);
 
   return (
     <div className="flex flex-col gap-3">
@@ -180,18 +193,31 @@ export default function ComparisonTable({
             </tr>
           </thead>
           <tbody>
-            {visibleModels.map((m) => (
+            {visibleModels.map((m) => {
+              const isFocus = m.id === focusModelId;
+              return (
               <tr
                 key={m.id}
-                className="border-t border-neutral-800 hover:bg-neutral-900"
+                className={[
+                  "border-t border-neutral-800 hover:bg-neutral-900",
+                  isFocus ? "bg-amber-500/8" : "",
+                ].join(" ")}
               >
-                <td className="sticky left-0 bg-neutral-950 px-3 py-2 font-medium text-neutral-100">
+                <td className={[
+                  "sticky left-0 px-3 py-2 font-medium text-neutral-100",
+                  isFocus ? "bg-amber-950/40" : "bg-neutral-950",
+                ].join(" ")}>
                   <a
                     href={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/models/${m.id}/`}
                     className="flex flex-col leading-tight hover:text-amber-300"
                   >
                     <span className="inline-flex items-center gap-1">
                       {m.name}
+                      {isFocus && (
+                        <span className="rounded bg-amber-400/20 px-1 text-[9px] uppercase tracking-wider text-amber-200">
+                          target
+                        </span>
+                      )}
                       {m.openWeights && (
                         <span
                           className="rounded bg-amber-500/15 px-1 text-[9px] uppercase tracking-wider text-amber-300"
@@ -280,7 +306,7 @@ export default function ComparisonTable({
                   );
                 })}
               </tr>
-            ))}
+            );})}
           </tbody>
         </table>
       </div>

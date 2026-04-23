@@ -112,6 +112,10 @@ export default function ModelDetail({
             models={peers}
             benchmarks={benchmarks}
             scores={scores}
+            focusModelId={model.id}
+            visibleBenchmarkIds={benchmarks
+              .filter((b) => lookupValue(matrix, model.id, b.id) !== undefined)
+              .map((b) => b.id)}
           />
         )}
       </section>
