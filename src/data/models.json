@@ -1,339 +1,29 @@
 [
   {
-    "id": "claude-opus-4-7",
-    "name": "Claude Opus 4.7",
-    "provider": "Anthropic",
-    "releaseDate": "2026-04-16",
-    "knowledgeCutoff": "2026-01",
-    "openWeights": false,
-    "contextWindow": 1000000
-  },
-  {
-    "id": "claude-opus-4-6",
-    "name": "Claude Opus 4.6",
-    "provider": "Anthropic",
-    "releaseDate": "2026-02-05",
-    "knowledgeCutoff": "2025-11",
-    "openWeights": false,
-    "contextWindow": 1000000
-  },
-  {
-    "id": "claude-opus-4-5",
-    "name": "Claude Opus 4.5",
-    "provider": "Anthropic",
-    "releaseDate": "2025-11-24",
-    "knowledgeCutoff": "2025-07",
-    "openWeights": false,
-    "contextWindow": 500000
-  },
-  {
-    "id": "claude-opus-4-1",
-    "name": "Claude Opus 4.1 (Reasoning)",
-    "provider": "Anthropic",
-    "releaseDate": "2025-08-05",
-    "knowledgeCutoff": "2025-03",
-    "openWeights": false,
-    "contextWindow": 200000
-  },
-  {
-    "id": "claude-opus-4",
-    "name": "Claude Opus 4 (Reasoning)",
-    "provider": "Anthropic",
-    "releaseDate": "2025-05-22",
-    "knowledgeCutoff": "2025-03",
-    "openWeights": false,
-    "contextWindow": 200000
-  },
-  {
-    "id": "claude-sonnet-4-6",
-    "name": "Claude Sonnet 4.6",
-    "provider": "Anthropic",
-    "releaseDate": "2026-02-17",
-    "knowledgeCutoff": "2025-09",
-    "openWeights": false,
-    "contextWindow": 1000000
-  },
-  {
-    "id": "claude-sonnet-4-5",
-    "name": "Claude Sonnet 4.5",
-    "provider": "Anthropic",
-    "releaseDate": "2025-09-29",
-    "knowledgeCutoff": "2025-07",
-    "openWeights": false,
-    "contextWindow": 1000000
-  },
-  {
-    "id": "claude-sonnet-4",
-    "name": "Claude Sonnet 4 (Reasoning)",
-    "provider": "Anthropic",
-    "releaseDate": "2025-05-22",
-    "knowledgeCutoff": "2025-03",
-    "openWeights": false,
-    "contextWindow": 1000000
-  },
-  {
-    "id": "claude-haiku-4-5",
-    "name": "Claude Haiku 4.5",
-    "provider": "Anthropic",
-    "releaseDate": "2025-10-15",
-    "knowledgeCutoff": "2025-09",
-    "openWeights": false,
-    "contextWindow": 200000
-  },
-  {
-    "id": "gpt-5-4",
-    "name": "GPT-5.4 (xhigh)",
-    "provider": "OpenAI",
-    "releaseDate": "2026-03-05",
-    "knowledgeCutoff": "2025-08",
-    "openWeights": false,
-    "contextWindow": 400000
-  },
-  {
-    "id": "gpt-5-3-codex",
-    "name": "GPT-5.3 Codex (xhigh)",
-    "provider": "OpenAI",
-    "releaseDate": "2026-02-05",
-    "knowledgeCutoff": "2025-06",
-    "openWeights": false,
-    "contextWindow": 400000
-  },
-  {
-    "id": "gpt-5-2",
-    "name": "GPT-5.2 (xhigh)",
-    "provider": "OpenAI",
-    "releaseDate": "2025-12-11",
-    "knowledgeCutoff": "2025-09",
-    "openWeights": false,
-    "contextWindow": 400000
-  },
-  {
-    "id": "gpt-5-1",
-    "name": "GPT-5.1",
-    "provider": "OpenAI",
-    "releaseDate": "2025-11-13",
-    "knowledgeCutoff": "2025-07",
-    "openWeights": false,
-    "contextWindow": 400000
-  },
-  {
-    "id": "gpt-5",
-    "name": "GPT-5",
-    "provider": "OpenAI",
-    "releaseDate": "2025-08-07",
-    "knowledgeCutoff": "2024-10",
-    "openWeights": false,
-    "contextWindow": 400000
-  },
-  {
-    "id": "gpt-5-mini",
-    "name": "GPT-5 mini",
-    "provider": "OpenAI",
-    "releaseDate": "2025-08-07",
-    "knowledgeCutoff": "2024-10",
-    "openWeights": false,
-    "contextWindow": 400000
-  },
-  {
-    "id": "gpt-5-codex",
-    "name": "GPT-5 Codex",
-    "provider": "OpenAI",
-    "releaseDate": "2025-09-23",
-    "knowledgeCutoff": "2024-10",
-    "openWeights": false,
-    "contextWindow": 400000
-  },
-  {
-    "id": "o3",
-    "name": "o3",
-    "provider": "OpenAI",
-    "releaseDate": "2025-04-16",
-    "knowledgeCutoff": "2024-06",
-    "openWeights": false,
-    "contextWindow": 200000
-  },
-  {
-    "id": "o3-pro",
-    "name": "o3-pro",
-    "provider": "OpenAI",
-    "releaseDate": "2025-06-10",
-    "knowledgeCutoff": "2024-06",
-    "openWeights": false,
-    "contextWindow": 200000
-  },
-  {
-    "id": "gemini-3-1-pro-preview",
-    "name": "Gemini 3.1 Pro Preview",
-    "provider": "Google",
-    "releaseDate": "2026-02-19",
-    "knowledgeCutoff": "2025-01",
-    "openWeights": false,
-    "contextWindow": 2000000
-  },
-  {
-    "id": "gemini-3-pro",
-    "name": "Gemini 3 Pro Preview",
-    "provider": "Google",
-    "releaseDate": "2025-11-18",
-    "knowledgeCutoff": "2025-10",
-    "openWeights": false,
-    "contextWindow": 2000000
-  },
-  {
-    "id": "gemini-3-flash-reasoning",
-    "name": "Gemini 3 Flash Preview (Reasoning)",
-    "provider": "Google",
-    "releaseDate": "2025-12-17",
-    "knowledgeCutoff": "2025-10",
-    "openWeights": false,
-    "contextWindow": 1000000
-  },
-  {
-    "id": "gemini-2-5-pro",
-    "name": "Gemini 2.5 Pro",
-    "provider": "Google",
-    "releaseDate": "2025-06-05",
-    "knowledgeCutoff": "2025-01",
-    "openWeights": false,
-    "contextWindow": 2000000
-  },
-  {
-    "id": "gemini-2-5-flash",
-    "name": "Gemini 2.5 Flash",
-    "provider": "Google",
-    "releaseDate": "2025-05-20",
-    "knowledgeCutoff": "2025-01",
-    "openWeights": false,
-    "contextWindow": 1000000
-  },
-  {
-    "id": "grok-4-20",
-    "name": "Grok 4.20 0309 v2 (Reasoning)",
-    "provider": "xAI",
-    "releaseDate": "2026-04-07",
-    "knowledgeCutoff": "2025-11",
-    "openWeights": false,
-    "contextWindow": 256000
-  },
-  {
-    "id": "grok-4-1-fast",
-    "name": "Grok 4.1 Fast (Reasoning)",
-    "provider": "xAI",
-    "releaseDate": "2025-11-19",
-    "knowledgeCutoff": "2025-07",
-    "openWeights": false,
-    "contextWindow": 2000000
-  },
-  {
-    "id": "grok-4",
-    "name": "Grok 4",
-    "provider": "xAI",
-    "releaseDate": "2025-07-10",
-    "knowledgeCutoff": "2024-11",
-    "openWeights": false,
-    "contextWindow": 256000
-  },
-  {
-    "id": "glm-5-1",
-    "name": "GLM-5.1 (Reasoning)",
-    "provider": "Z AI",
-    "releaseDate": "2026-04-07",
-    "knowledgeCutoff": "2026-01",
+    "id": "mistral-large-2",
+    "name": "Mistral Large 2 (Jul '24)",
+    "provider": "Mistral",
+    "releaseDate": "2024-07-24",
+    "knowledgeCutoff": "2024-04",
     "openWeights": true,
     "contextWindow": 128000,
-    "hfLink": "https://huggingface.co/zai-org/GLM-5.1",
-    "totalParams": 754,
-    "activeParams": 40,
-    "experts": 256,
-    "architecture": "moe"
+    "hfLink": "https://huggingface.co/mistralai/Mistral-Large-Instruct-2407",
+    "totalParams": 123,
+    "activeParams": 123,
+    "architecture": "dense"
   },
   {
-    "id": "glm-5",
-    "name": "GLM-5 (Reasoning)",
-    "provider": "Z AI",
-    "releaseDate": "2026-02-11",
-    "knowledgeCutoff": "2025-09",
-    "openWeights": false,
-    "contextWindow": 128000
-  },
-  {
-    "id": "kimi-k2-6",
-    "name": "Kimi K2.6",
-    "provider": "Kimi",
-    "releaseDate": "2026-04-20",
-    "knowledgeCutoff": "2026-01",
-    "openWeights": true,
-    "contextWindow": 262144,
-    "hfLink": "https://huggingface.co/moonshotai/Kimi-K2.6",
-    "totalParams": 1100,
-    "activeParams": 32,
-    "experts": 384,
-    "architecture": "moe"
-  },
-  {
-    "id": "kimi-k2-5",
-    "name": "Kimi K2.5 (Reasoning)",
-    "provider": "Kimi",
-    "releaseDate": "2026-01-27",
-    "knowledgeCutoff": "2025-09",
-    "openWeights": true,
-    "contextWindow": 128000,
-    "hfLink": "https://huggingface.co/moonshotai/Kimi-K2.5",
-    "totalParams": 1100,
-    "activeParams": 32,
-    "experts": 384,
-    "architecture": "moe"
-  },
-  {
-    "id": "kimi-k2-thinking",
-    "name": "Kimi K2 Thinking",
-    "provider": "Kimi",
-    "releaseDate": "2025-11-06",
-    "knowledgeCutoff": "2025-06",
-    "openWeights": true,
-    "contextWindow": 128000,
-    "hfLink": "https://huggingface.co/moonshotai/Kimi-K2-Thinking",
-    "totalParams": 1000,
-    "activeParams": 32,
-    "experts": 384,
-    "architecture": "moe"
-  },
-  {
-    "id": "minimax-m2-7",
-    "name": "MiniMax M2.7",
-    "provider": "MiniMax",
-    "releaseDate": "2026-03-17",
-    "knowledgeCutoff": "2026-01",
-    "openWeights": true,
-    "contextWindow": 1000000,
-    "hfLink": "https://huggingface.co/MiniMaxAI/MiniMax-M2.7",
-    "totalParams": 230,
-    "activeParams": 10,
-    "experts": 256,
-    "architecture": "moe"
-  },
-  {
-    "id": "minimax-m2",
-    "name": "MiniMax-M2",
-    "provider": "MiniMax",
-    "releaseDate": "2025-10-26",
-    "knowledgeCutoff": "2025-06",
-    "openWeights": true,
-    "contextWindow": 1000000,
-    "hfLink": "https://huggingface.co/MiniMaxAI/MiniMax-M2",
-    "totalParams": 230,
-    "activeParams": 10,
-    "experts": 256,
-    "architecture": "moe"
-  },
-  {
-    "id": "muse-spark",
-    "name": "Muse Spark",
+    "id": "llama-3-3-70b",
+    "name": "Llama 3.3 70B",
     "provider": "Meta",
-    "releaseDate": "2026-04-08",
-    "knowledgeCutoff": "2026-01",
-    "openWeights": false,
-    "contextWindow": 262144
+    "releaseDate": "2024-12-06",
+    "knowledgeCutoff": "2023-12",
+    "openWeights": true,
+    "contextWindow": 128000,
+    "hfLink": "https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct",
+    "totalParams": 70,
+    "activeParams": 70,
+    "architecture": "dense"
   },
   {
     "id": "llama-4-maverick",
@@ -364,17 +54,228 @@
     "architecture": "moe"
   },
   {
-    "id": "llama-3-3-70b",
-    "name": "Llama 3.3 70B",
-    "provider": "Meta",
-    "releaseDate": "2024-12-06",
-    "knowledgeCutoff": "2023-12",
+    "id": "o3",
+    "name": "o3",
+    "provider": "OpenAI",
+    "releaseDate": "2025-04-16",
+    "knowledgeCutoff": "2024-06",
+    "openWeights": false,
+    "contextWindow": 200000
+  },
+  {
+    "id": "qwen3-235b-a22b",
+    "name": "Qwen3 235B A22B",
+    "provider": "Alibaba",
+    "releaseDate": "2025-04-28",
+    "knowledgeCutoff": "2024-09",
     "openWeights": true,
     "contextWindow": 128000,
-    "hfLink": "https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct",
-    "totalParams": 70,
-    "activeParams": 70,
-    "architecture": "dense"
+    "hfLink": "https://huggingface.co/Qwen/Qwen3-235B-A22B",
+    "totalParams": 235,
+    "activeParams": 22,
+    "experts": 128,
+    "architecture": "moe"
+  },
+  {
+    "id": "gemini-2-5-flash",
+    "name": "Gemini 2.5 Flash",
+    "provider": "Google",
+    "releaseDate": "2025-05-20",
+    "knowledgeCutoff": "2025-01",
+    "openWeights": false,
+    "contextWindow": 1000000
+  },
+  {
+    "id": "claude-opus-4",
+    "name": "Claude Opus 4 (Reasoning)",
+    "provider": "Anthropic",
+    "releaseDate": "2025-05-22",
+    "knowledgeCutoff": "2025-03",
+    "openWeights": false,
+    "contextWindow": 200000
+  },
+  {
+    "id": "claude-sonnet-4",
+    "name": "Claude Sonnet 4 (Reasoning)",
+    "provider": "Anthropic",
+    "releaseDate": "2025-05-22",
+    "knowledgeCutoff": "2025-03",
+    "openWeights": false,
+    "contextWindow": 1000000
+  },
+  {
+    "id": "deepseek-r1",
+    "name": "DeepSeek R1 0528",
+    "provider": "DeepSeek",
+    "releaseDate": "2025-05-28",
+    "knowledgeCutoff": "2024-07",
+    "openWeights": true,
+    "contextWindow": 128000,
+    "hfLink": "https://huggingface.co/deepseek-ai/DeepSeek-R1-0528",
+    "totalParams": 671,
+    "activeParams": 37,
+    "experts": 256,
+    "architecture": "moe",
+    "cohortLabel": "deepseek-v3-pretrain"
+  },
+  {
+    "id": "gemini-2-5-pro",
+    "name": "Gemini 2.5 Pro",
+    "provider": "Google",
+    "releaseDate": "2025-06-05",
+    "knowledgeCutoff": "2025-01",
+    "openWeights": false,
+    "contextWindow": 2000000
+  },
+  {
+    "id": "o3-pro",
+    "name": "o3-pro",
+    "provider": "OpenAI",
+    "releaseDate": "2025-06-10",
+    "knowledgeCutoff": "2024-06",
+    "openWeights": false,
+    "contextWindow": 200000
+  },
+  {
+    "id": "grok-4",
+    "name": "Grok 4",
+    "provider": "xAI",
+    "releaseDate": "2025-07-10",
+    "knowledgeCutoff": "2024-11",
+    "openWeights": false,
+    "contextWindow": 256000
+  },
+  {
+    "id": "claude-opus-4-1",
+    "name": "Claude Opus 4.1 (Reasoning)",
+    "provider": "Anthropic",
+    "releaseDate": "2025-08-05",
+    "knowledgeCutoff": "2025-03",
+    "openWeights": false,
+    "contextWindow": 200000
+  },
+  {
+    "id": "gpt-5",
+    "name": "GPT-5",
+    "provider": "OpenAI",
+    "releaseDate": "2025-08-07",
+    "knowledgeCutoff": "2024-10",
+    "openWeights": false,
+    "contextWindow": 400000
+  },
+  {
+    "id": "gpt-5-mini",
+    "name": "GPT-5 mini",
+    "provider": "OpenAI",
+    "releaseDate": "2025-08-07",
+    "knowledgeCutoff": "2024-10",
+    "openWeights": false,
+    "contextWindow": 400000
+  },
+  {
+    "id": "deepseek-v3-1",
+    "name": "DeepSeek V3.1",
+    "provider": "DeepSeek",
+    "releaseDate": "2025-08-21",
+    "knowledgeCutoff": "2024-07",
+    "openWeights": true,
+    "contextWindow": 128000,
+    "hfLink": "https://huggingface.co/deepseek-ai/DeepSeek-V3.1",
+    "totalParams": 671,
+    "activeParams": 37,
+    "experts": 256,
+    "architecture": "moe"
+  },
+  {
+    "id": "gpt-5-codex",
+    "name": "GPT-5 Codex",
+    "provider": "OpenAI",
+    "releaseDate": "2025-09-23",
+    "knowledgeCutoff": "2024-10",
+    "openWeights": false,
+    "contextWindow": 400000
+  },
+  {
+    "id": "claude-sonnet-4-5",
+    "name": "Claude Sonnet 4.5",
+    "provider": "Anthropic",
+    "releaseDate": "2025-09-29",
+    "knowledgeCutoff": "2025-07",
+    "openWeights": false,
+    "contextWindow": 1000000
+  },
+  {
+    "id": "claude-haiku-4-5",
+    "name": "Claude Haiku 4.5",
+    "provider": "Anthropic",
+    "releaseDate": "2025-10-15",
+    "knowledgeCutoff": "2025-09",
+    "openWeights": false,
+    "contextWindow": 200000
+  },
+  {
+    "id": "minimax-m2",
+    "name": "MiniMax-M2",
+    "provider": "MiniMax",
+    "releaseDate": "2025-10-26",
+    "knowledgeCutoff": "2025-06",
+    "openWeights": true,
+    "contextWindow": 1000000,
+    "hfLink": "https://huggingface.co/MiniMaxAI/MiniMax-M2",
+    "totalParams": 230,
+    "activeParams": 10,
+    "experts": 256,
+    "architecture": "moe"
+  },
+  {
+    "id": "kimi-k2-thinking",
+    "name": "Kimi K2 Thinking",
+    "provider": "Kimi",
+    "releaseDate": "2025-11-06",
+    "knowledgeCutoff": "2025-06",
+    "openWeights": true,
+    "contextWindow": 128000,
+    "hfLink": "https://huggingface.co/moonshotai/Kimi-K2-Thinking",
+    "totalParams": 1000,
+    "activeParams": 32,
+    "experts": 384,
+    "architecture": "moe"
+  },
+  {
+    "id": "gpt-5-1",
+    "name": "GPT-5.1",
+    "provider": "OpenAI",
+    "releaseDate": "2025-11-13",
+    "knowledgeCutoff": "2025-07",
+    "openWeights": false,
+    "contextWindow": 400000
+  },
+  {
+    "id": "gemini-3-pro",
+    "name": "Gemini 3 Pro Preview",
+    "provider": "Google",
+    "releaseDate": "2025-11-18",
+    "knowledgeCutoff": "2025-10",
+    "openWeights": false,
+    "contextWindow": 2000000
+  },
+  {
+    "id": "grok-4-1-fast",
+    "name": "Grok 4.1 Fast (Reasoning)",
+    "provider": "xAI",
+    "releaseDate": "2025-11-19",
+    "knowledgeCutoff": "2025-07",
+    "openWeights": false,
+    "contextWindow": 2000000
+  },
+  {
+    "id": "claude-opus-4-5",
+    "name": "Claude Opus 4.5",
+    "provider": "Anthropic",
+    "releaseDate": "2025-11-24",
+    "knowledgeCutoff": "2025-07",
+    "openWeights": false,
+    "contextWindow": 500000
   },
   {
     "id": "deepseek-v3-2",
@@ -405,33 +306,81 @@
     "architecture": "moe"
   },
   {
-    "id": "deepseek-v3-1",
-    "name": "DeepSeek V3.1",
-    "provider": "DeepSeek",
-    "releaseDate": "2025-08-21",
-    "knowledgeCutoff": "2024-07",
+    "id": "mistral-large-3",
+    "name": "Mistral Large 3",
+    "provider": "Mistral",
+    "releaseDate": "2025-12-02",
+    "knowledgeCutoff": "2025-06",
+    "openWeights": false,
+    "contextWindow": 128000
+  },
+  {
+    "id": "gpt-5-2",
+    "name": "GPT-5.2 (xhigh)",
+    "provider": "OpenAI",
+    "releaseDate": "2025-12-11",
+    "knowledgeCutoff": "2025-09",
+    "openWeights": false,
+    "contextWindow": 400000
+  },
+  {
+    "id": "gemini-3-flash-reasoning",
+    "name": "Gemini 3 Flash Preview (Reasoning)",
+    "provider": "Google",
+    "releaseDate": "2025-12-17",
+    "knowledgeCutoff": "2025-10",
+    "openWeights": false,
+    "contextWindow": 1000000
+  },
+  {
+    "id": "qwen3-max-thinking",
+    "name": "Qwen3 Max Thinking",
+    "provider": "Alibaba",
+    "releaseDate": "2026-01-26",
+    "knowledgeCutoff": "2025-03",
+    "openWeights": false,
+    "contextWindow": 256000
+  },
+  {
+    "id": "kimi-k2-5",
+    "name": "Kimi K2.5 (Reasoning)",
+    "provider": "Kimi",
+    "releaseDate": "2026-01-27",
+    "knowledgeCutoff": "2025-09",
     "openWeights": true,
     "contextWindow": 128000,
-    "hfLink": "https://huggingface.co/deepseek-ai/DeepSeek-V3.1",
-    "totalParams": 671,
-    "activeParams": 37,
-    "experts": 256,
+    "hfLink": "https://huggingface.co/moonshotai/Kimi-K2.5",
+    "totalParams": 1100,
+    "activeParams": 32,
+    "experts": 384,
     "architecture": "moe"
   },
   {
-    "id": "deepseek-r1",
-    "name": "DeepSeek R1 0528",
-    "provider": "DeepSeek",
-    "releaseDate": "2025-05-28",
-    "knowledgeCutoff": "2024-07",
-    "openWeights": true,
-    "contextWindow": 128000,
-    "hfLink": "https://huggingface.co/deepseek-ai/DeepSeek-R1-0528",
-    "totalParams": 671,
-    "activeParams": 37,
-    "experts": 256,
-    "architecture": "moe",
-    "cohortLabel": "deepseek-v3-pretrain"
+    "id": "claude-opus-4-6",
+    "name": "Claude Opus 4.6",
+    "provider": "Anthropic",
+    "releaseDate": "2026-02-05",
+    "knowledgeCutoff": "2025-11",
+    "openWeights": false,
+    "contextWindow": 1000000
+  },
+  {
+    "id": "gpt-5-3-codex",
+    "name": "GPT-5.3 Codex (xhigh)",
+    "provider": "OpenAI",
+    "releaseDate": "2026-02-05",
+    "knowledgeCutoff": "2025-06",
+    "openWeights": false,
+    "contextWindow": 400000
+  },
+  {
+    "id": "glm-5",
+    "name": "GLM-5 (Reasoning)",
+    "provider": "Z AI",
+    "releaseDate": "2026-02-11",
+    "knowledgeCutoff": "2025-09",
+    "openWeights": false,
+    "contextWindow": 128000
   },
   {
     "id": "qwen3-5-397b-a17b",
@@ -448,6 +397,24 @@
     "architecture": "moe"
   },
   {
+    "id": "claude-sonnet-4-6",
+    "name": "Claude Sonnet 4.6",
+    "provider": "Anthropic",
+    "releaseDate": "2026-02-17",
+    "knowledgeCutoff": "2025-09",
+    "openWeights": false,
+    "contextWindow": 1000000
+  },
+  {
+    "id": "gemini-3-1-pro-preview",
+    "name": "Gemini 3.1 Pro Preview",
+    "provider": "Google",
+    "releaseDate": "2026-02-19",
+    "knowledgeCutoff": "2025-01",
+    "openWeights": false,
+    "contextWindow": 2000000
+  },
+  {
     "id": "qwen3-5-122b-a10b",
     "name": "Qwen3.5 122B A10B (Reasoning)",
     "provider": "Alibaba",
@@ -462,49 +429,13 @@
     "architecture": "moe"
   },
   {
-    "id": "qwen3-235b-a22b",
-    "name": "Qwen3 235B A22B",
-    "provider": "Alibaba",
-    "releaseDate": "2025-04-28",
-    "knowledgeCutoff": "2024-09",
-    "openWeights": true,
-    "contextWindow": 128000,
-    "hfLink": "https://huggingface.co/Qwen/Qwen3-235B-A22B",
-    "totalParams": 235,
-    "activeParams": 22,
-    "experts": 128,
-    "architecture": "moe"
-  },
-  {
-    "id": "qwen3-max-thinking",
-    "name": "Qwen3 Max Thinking",
-    "provider": "Alibaba",
-    "releaseDate": "2026-01-26",
-    "knowledgeCutoff": "2025-03",
+    "id": "gpt-5-4",
+    "name": "GPT-5.4 (xhigh)",
+    "provider": "OpenAI",
+    "releaseDate": "2026-03-05",
+    "knowledgeCutoff": "2025-08",
     "openWeights": false,
-    "contextWindow": 256000
-  },
-  {
-    "id": "mistral-large-3",
-    "name": "Mistral Large 3",
-    "provider": "Mistral",
-    "releaseDate": "2025-12-02",
-    "knowledgeCutoff": "2025-06",
-    "openWeights": false,
-    "contextWindow": 128000
-  },
-  {
-    "id": "mistral-large-2",
-    "name": "Mistral Large 2 (Jul '24)",
-    "provider": "Mistral",
-    "releaseDate": "2024-07-24",
-    "knowledgeCutoff": "2024-04",
-    "openWeights": true,
-    "contextWindow": 128000,
-    "hfLink": "https://huggingface.co/mistralai/Mistral-Large-Instruct-2407",
-    "totalParams": 123,
-    "activeParams": 123,
-    "architecture": "dense"
+    "contextWindow": 400000
   },
   {
     "id": "nvidia-nemotron-3-super",
@@ -521,6 +452,75 @@
     "architecture": "moe"
   },
   {
+    "id": "minimax-m2-7",
+    "name": "MiniMax M2.7",
+    "provider": "MiniMax",
+    "releaseDate": "2026-03-17",
+    "knowledgeCutoff": "2026-01",
+    "openWeights": true,
+    "contextWindow": 1000000,
+    "hfLink": "https://huggingface.co/MiniMaxAI/MiniMax-M2.7",
+    "totalParams": 230,
+    "activeParams": 10,
+    "experts": 256,
+    "architecture": "moe"
+  },
+  {
+    "id": "glm-5-1",
+    "name": "GLM-5.1 (Reasoning)",
+    "provider": "Z AI",
+    "releaseDate": "2026-04-07",
+    "knowledgeCutoff": "2026-01",
+    "openWeights": true,
+    "contextWindow": 128000,
+    "hfLink": "https://huggingface.co/zai-org/GLM-5.1",
+    "totalParams": 754,
+    "activeParams": 40,
+    "experts": 256,
+    "architecture": "moe"
+  },
+  {
+    "id": "grok-4-20",
+    "name": "Grok 4.20 0309 v2 (Reasoning)",
+    "provider": "xAI",
+    "releaseDate": "2026-04-07",
+    "knowledgeCutoff": "2025-11",
+    "openWeights": false,
+    "contextWindow": 256000
+  },
+  {
+    "id": "muse-spark",
+    "name": "Muse Spark",
+    "provider": "Meta",
+    "releaseDate": "2026-04-08",
+    "knowledgeCutoff": "2026-01",
+    "openWeights": false,
+    "contextWindow": 262144
+  },
+  {
+    "id": "claude-opus-4-7",
+    "name": "Claude Opus 4.7",
+    "provider": "Anthropic",
+    "releaseDate": "2026-04-16",
+    "knowledgeCutoff": "2026-01",
+    "openWeights": false,
+    "contextWindow": 1000000
+  },
+  {
+    "id": "kimi-k2-6",
+    "name": "Kimi K2.6",
+    "provider": "Kimi",
+    "releaseDate": "2026-04-20",
+    "knowledgeCutoff": "2026-01",
+    "openWeights": true,
+    "contextWindow": 262144,
+    "hfLink": "https://huggingface.co/moonshotai/Kimi-K2.6",
+    "totalParams": 1100,
+    "activeParams": 32,
+    "experts": 384,
+    "architecture": "moe"
+  },
+  {
     "id": "mimo-v2-5-pro",
     "name": "MiMo 2.5 Pro",
     "provider": "Xiaomi",
@@ -528,5 +528,18 @@
     "knowledgeCutoff": "2026-01",
     "openWeights": false,
     "contextWindow": 131072
+  },
+  {
+    "id": "qwen3-6-27b",
+    "name": "Qwen3.6 27B",
+    "provider": "Alibaba",
+    "releaseDate": "2026-04-22",
+    "knowledgeCutoff": "2025-06",
+    "openWeights": true,
+    "contextWindow": 262144,
+    "hfLink": "https://huggingface.co/Qwen/Qwen3.6-27B",
+    "totalParams": 27,
+    "activeParams": 27,
+    "architecture": "dense"
   }
 ]
