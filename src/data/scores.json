@@ -8049,5 +8049,977 @@
     "reportedOn": "2026-04-23",
     "sourceUrl": "https://artificialanalysis.ai/models/gpt-5-5",
     "notes": "Artificial Analysis API \u2014 GPT-5.5 (xhigh)"
+  },
+  {
+    "modelId": "deepseek-v4-pro",
+    "benchmarkId": "aa-intelligence-index",
+    "variant": "default",
+    "value": 51.5,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 DeepSeek V4 Pro (Reasoning, Max Effort)"
+  },
+  {
+    "modelId": "deepseek-v4-pro",
+    "benchmarkId": "aa-coding-index",
+    "variant": "default",
+    "value": 47.5,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 DeepSeek V4 Pro (Reasoning, Max Effort)"
+  },
+  {
+    "modelId": "deepseek-v4-pro",
+    "benchmarkId": "gpqa-diamond",
+    "variant": "default",
+    "value": 0.888,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 DeepSeek V4 Pro (Reasoning, Max Effort)"
+  },
+  {
+    "modelId": "deepseek-v4-pro",
+    "benchmarkId": "hle",
+    "variant": "default",
+    "value": 0.359,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 DeepSeek V4 Pro (Reasoning, Max Effort)"
+  },
+  {
+    "modelId": "deepseek-v4-pro",
+    "benchmarkId": "scicode",
+    "variant": "default",
+    "value": 0.5,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 DeepSeek V4 Pro (Reasoning, Max Effort)"
+  },
+  {
+    "modelId": "deepseek-v4-pro",
+    "benchmarkId": "ifbench",
+    "variant": "default",
+    "value": 0.765,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 DeepSeek V4 Pro (Reasoning, Max Effort)"
+  },
+  {
+    "modelId": "deepseek-v4-pro",
+    "benchmarkId": "aa-lcr",
+    "variant": "default",
+    "value": 0.663,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 DeepSeek V4 Pro (Reasoning, Max Effort)"
+  },
+  {
+    "modelId": "deepseek-v4-pro",
+    "benchmarkId": "terminal-bench-hard",
+    "variant": "default",
+    "value": 0.462,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 DeepSeek V4 Pro (Reasoning, Max Effort)"
+  },
+  {
+    "modelId": "deepseek-v4-pro",
+    "benchmarkId": "tau2-telecom",
+    "variant": "default",
+    "value": 0.962,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 DeepSeek V4 Pro (Reasoning, Max Effort)"
+  },
+  {
+    "modelId": "deepseek-v4-pro-high",
+    "benchmarkId": "aa-intelligence-index",
+    "variant": "default",
+    "value": 49.8,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 DeepSeek V4 Pro (Reasoning, High Effort)"
+  },
+  {
+    "modelId": "deepseek-v4-pro-high",
+    "benchmarkId": "aa-coding-index",
+    "variant": "default",
+    "value": 43.3,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 DeepSeek V4 Pro (Reasoning, High Effort)"
+  },
+  {
+    "modelId": "deepseek-v4-pro-high",
+    "benchmarkId": "gpqa-diamond",
+    "variant": "default",
+    "value": 0.905,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 DeepSeek V4 Pro (Reasoning, High Effort)"
+  },
+  {
+    "modelId": "deepseek-v4-pro-high",
+    "benchmarkId": "hle",
+    "variant": "default",
+    "value": 0.335,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 DeepSeek V4 Pro (Reasoning, High Effort)"
+  },
+  {
+    "modelId": "deepseek-v4-pro-high",
+    "benchmarkId": "scicode",
+    "variant": "default",
+    "value": 0.464,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 DeepSeek V4 Pro (Reasoning, High Effort)"
+  },
+  {
+    "modelId": "deepseek-v4-pro-high",
+    "benchmarkId": "ifbench",
+    "variant": "default",
+    "value": 0.713,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 DeepSeek V4 Pro (Reasoning, High Effort)"
+  },
+  {
+    "modelId": "deepseek-v4-pro-high",
+    "benchmarkId": "aa-lcr",
+    "variant": "default",
+    "value": 0.65,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 DeepSeek V4 Pro (Reasoning, High Effort)"
+  },
+  {
+    "modelId": "deepseek-v4-pro-high",
+    "benchmarkId": "terminal-bench-hard",
+    "variant": "default",
+    "value": 0.417,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 DeepSeek V4 Pro (Reasoning, High Effort)"
+  },
+  {
+    "modelId": "deepseek-v4-pro-high",
+    "benchmarkId": "tau2-telecom",
+    "variant": "default",
+    "value": 0.942,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 DeepSeek V4 Pro (Reasoning, High Effort)"
+  },
+  {
+    "modelId": "deepseek-v4-flash",
+    "benchmarkId": "aa-intelligence-index",
+    "variant": "default",
+    "value": 46.5,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 DeepSeek V4 Flash (Reasoning, Max Effort)"
+  },
+  {
+    "modelId": "deepseek-v4-flash",
+    "benchmarkId": "aa-coding-index",
+    "variant": "default",
+    "value": 38.7,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 DeepSeek V4 Flash (Reasoning, Max Effort)"
+  },
+  {
+    "modelId": "deepseek-v4-flash",
+    "benchmarkId": "gpqa-diamond",
+    "variant": "default",
+    "value": 0.894,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 DeepSeek V4 Flash (Reasoning, Max Effort)"
+  },
+  {
+    "modelId": "deepseek-v4-flash",
+    "benchmarkId": "hle",
+    "variant": "default",
+    "value": 0.321,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 DeepSeek V4 Flash (Reasoning, Max Effort)"
+  },
+  {
+    "modelId": "deepseek-v4-flash",
+    "benchmarkId": "scicode",
+    "variant": "default",
+    "value": 0.449,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 DeepSeek V4 Flash (Reasoning, Max Effort)"
+  },
+  {
+    "modelId": "deepseek-v4-flash",
+    "benchmarkId": "ifbench",
+    "variant": "default",
+    "value": 0.792,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 DeepSeek V4 Flash (Reasoning, Max Effort)"
+  },
+  {
+    "modelId": "deepseek-v4-flash",
+    "benchmarkId": "aa-lcr",
+    "variant": "default",
+    "value": 0.63,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 DeepSeek V4 Flash (Reasoning, Max Effort)"
+  },
+  {
+    "modelId": "deepseek-v4-flash",
+    "benchmarkId": "terminal-bench-hard",
+    "variant": "default",
+    "value": 0.356,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 DeepSeek V4 Flash (Reasoning, Max Effort)"
+  },
+  {
+    "modelId": "deepseek-v4-flash",
+    "benchmarkId": "tau2-telecom",
+    "variant": "default",
+    "value": 0.95,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 DeepSeek V4 Flash (Reasoning, Max Effort)"
+  },
+  {
+    "modelId": "deepseek-v4-flash-high",
+    "benchmarkId": "aa-intelligence-index",
+    "variant": "default",
+    "value": 44.9,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 DeepSeek V4 Flash (Reasoning, High Effort)"
+  },
+  {
+    "modelId": "deepseek-v4-flash-high",
+    "benchmarkId": "aa-coding-index",
+    "variant": "default",
+    "value": 39.8,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 DeepSeek V4 Flash (Reasoning, High Effort)"
+  },
+  {
+    "modelId": "deepseek-v4-flash-high",
+    "benchmarkId": "gpqa-diamond",
+    "variant": "default",
+    "value": 0.867,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 DeepSeek V4 Flash (Reasoning, High Effort)"
+  },
+  {
+    "modelId": "deepseek-v4-flash-high",
+    "benchmarkId": "hle",
+    "variant": "default",
+    "value": 0.278,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 DeepSeek V4 Flash (Reasoning, High Effort)"
+  },
+  {
+    "modelId": "deepseek-v4-flash-high",
+    "benchmarkId": "scicode",
+    "variant": "default",
+    "value": 0.42,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 DeepSeek V4 Flash (Reasoning, High Effort)"
+  },
+  {
+    "modelId": "deepseek-v4-flash-high",
+    "benchmarkId": "ifbench",
+    "variant": "default",
+    "value": 0.735,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 DeepSeek V4 Flash (Reasoning, High Effort)"
+  },
+  {
+    "modelId": "deepseek-v4-flash-high",
+    "benchmarkId": "aa-lcr",
+    "variant": "default",
+    "value": 0.627,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 DeepSeek V4 Flash (Reasoning, High Effort)"
+  },
+  {
+    "modelId": "deepseek-v4-flash-high",
+    "benchmarkId": "terminal-bench-hard",
+    "variant": "default",
+    "value": 0.386,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 DeepSeek V4 Flash (Reasoning, High Effort)"
+  },
+  {
+    "modelId": "deepseek-v4-flash-high",
+    "benchmarkId": "tau2-telecom",
+    "variant": "default",
+    "value": 0.956,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 DeepSeek V4 Flash (Reasoning, High Effort)"
+  },
+  {
+    "modelId": "gpt-5-5-high",
+    "benchmarkId": "aa-intelligence-index",
+    "variant": "default",
+    "value": 58.9,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 GPT-5.5 (high)"
+  },
+  {
+    "modelId": "gpt-5-5-high",
+    "benchmarkId": "aa-coding-index",
+    "variant": "default",
+    "value": 58.5,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 GPT-5.5 (high)"
+  },
+  {
+    "modelId": "gpt-5-5-high",
+    "benchmarkId": "gpqa-diamond",
+    "variant": "default",
+    "value": 0.932,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 GPT-5.5 (high)"
+  },
+  {
+    "modelId": "gpt-5-5-high",
+    "benchmarkId": "hle",
+    "variant": "default",
+    "value": 0.43,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 GPT-5.5 (high)"
+  },
+  {
+    "modelId": "gpt-5-5-high",
+    "benchmarkId": "scicode",
+    "variant": "default",
+    "value": 0.559,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 GPT-5.5 (high)"
+  },
+  {
+    "modelId": "gpt-5-5-high",
+    "benchmarkId": "ifbench",
+    "variant": "default",
+    "value": 0.716,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 GPT-5.5 (high)"
+  },
+  {
+    "modelId": "gpt-5-5-high",
+    "benchmarkId": "aa-lcr",
+    "variant": "default",
+    "value": 0.733,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 GPT-5.5 (high)"
+  },
+  {
+    "modelId": "gpt-5-5-high",
+    "benchmarkId": "terminal-bench-hard",
+    "variant": "default",
+    "value": 0.598,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 GPT-5.5 (high)"
+  },
+  {
+    "modelId": "gpt-5-5-high",
+    "benchmarkId": "tau2-telecom",
+    "variant": "default",
+    "value": 0.93,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 GPT-5.5 (high)"
+  },
+  {
+    "modelId": "gpt-5-5-medium",
+    "benchmarkId": "aa-intelligence-index",
+    "variant": "default",
+    "value": 56.7,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 GPT-5.5 (medium)"
+  },
+  {
+    "modelId": "gpt-5-5-medium",
+    "benchmarkId": "aa-coding-index",
+    "variant": "default",
+    "value": 56.2,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 GPT-5.5 (medium)"
+  },
+  {
+    "modelId": "gpt-5-5-medium",
+    "benchmarkId": "gpqa-diamond",
+    "variant": "default",
+    "value": 0.926,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 GPT-5.5 (medium)"
+  },
+  {
+    "modelId": "gpt-5-5-medium",
+    "benchmarkId": "hle",
+    "variant": "default",
+    "value": 0.406,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 GPT-5.5 (medium)"
+  },
+  {
+    "modelId": "gpt-5-5-medium",
+    "benchmarkId": "scicode",
+    "variant": "default",
+    "value": 0.535,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 GPT-5.5 (medium)"
+  },
+  {
+    "modelId": "gpt-5-5-medium",
+    "benchmarkId": "ifbench",
+    "variant": "default",
+    "value": 0.71,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 GPT-5.5 (medium)"
+  },
+  {
+    "modelId": "gpt-5-5-medium",
+    "benchmarkId": "aa-lcr",
+    "variant": "default",
+    "value": 0.723,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 GPT-5.5 (medium)"
+  },
+  {
+    "modelId": "gpt-5-5-medium",
+    "benchmarkId": "terminal-bench-hard",
+    "variant": "default",
+    "value": 0.576,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 GPT-5.5 (medium)"
+  },
+  {
+    "modelId": "gpt-5-5-medium",
+    "benchmarkId": "tau2-telecom",
+    "variant": "default",
+    "value": 0.918,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 GPT-5.5 (medium)"
+  },
+  {
+    "modelId": "gpt-5-5-low",
+    "benchmarkId": "aa-intelligence-index",
+    "variant": "default",
+    "value": 50.8,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 GPT-5.5 (low)"
+  },
+  {
+    "modelId": "gpt-5-5-low",
+    "benchmarkId": "aa-coding-index",
+    "variant": "default",
+    "value": 52.1,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 GPT-5.5 (low)"
+  },
+  {
+    "modelId": "gpt-5-5-low",
+    "benchmarkId": "gpqa-diamond",
+    "variant": "default",
+    "value": 0.91,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 GPT-5.5 (low)"
+  },
+  {
+    "modelId": "gpt-5-5-low",
+    "benchmarkId": "hle",
+    "variant": "default",
+    "value": 0.31,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 GPT-5.5 (low)"
+  },
+  {
+    "modelId": "gpt-5-5-low",
+    "benchmarkId": "scicode",
+    "variant": "default",
+    "value": 0.516,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 GPT-5.5 (low)"
+  },
+  {
+    "modelId": "gpt-5-5-low",
+    "benchmarkId": "ifbench",
+    "variant": "default",
+    "value": 0.644,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 GPT-5.5 (low)"
+  },
+  {
+    "modelId": "gpt-5-5-low",
+    "benchmarkId": "aa-lcr",
+    "variant": "default",
+    "value": 0.72,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 GPT-5.5 (low)"
+  },
+  {
+    "modelId": "gpt-5-5-low",
+    "benchmarkId": "terminal-bench-hard",
+    "variant": "default",
+    "value": 0.523,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 GPT-5.5 (low)"
+  },
+  {
+    "modelId": "gpt-5-5-low",
+    "benchmarkId": "tau2-telecom",
+    "variant": "default",
+    "value": 0.839,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 GPT-5.5 (low)"
+  },
+  {
+    "modelId": "qwen3-6-max",
+    "benchmarkId": "aa-intelligence-index",
+    "variant": "default",
+    "value": 51.8,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 Qwen3.6 Max Preview"
+  },
+  {
+    "modelId": "qwen3-6-max",
+    "benchmarkId": "aa-coding-index",
+    "variant": "default",
+    "value": 44.9,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 Qwen3.6 Max Preview"
+  },
+  {
+    "modelId": "qwen3-6-max",
+    "benchmarkId": "gpqa-diamond",
+    "variant": "default",
+    "value": 0.888,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 Qwen3.6 Max Preview"
+  },
+  {
+    "modelId": "qwen3-6-max",
+    "benchmarkId": "hle",
+    "variant": "default",
+    "value": 0.289,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 Qwen3.6 Max Preview"
+  },
+  {
+    "modelId": "qwen3-6-max",
+    "benchmarkId": "scicode",
+    "variant": "default",
+    "value": 0.469,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 Qwen3.6 Max Preview"
+  },
+  {
+    "modelId": "qwen3-6-max",
+    "benchmarkId": "ifbench",
+    "variant": "default",
+    "value": 0.766,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 Qwen3.6 Max Preview"
+  },
+  {
+    "modelId": "qwen3-6-max",
+    "benchmarkId": "aa-lcr",
+    "variant": "default",
+    "value": 0.697,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 Qwen3.6 Max Preview"
+  },
+  {
+    "modelId": "qwen3-6-max",
+    "benchmarkId": "terminal-bench-hard",
+    "variant": "default",
+    "value": 0.439,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 Qwen3.6 Max Preview"
+  },
+  {
+    "modelId": "qwen3-6-max",
+    "benchmarkId": "tau2-telecom",
+    "variant": "default",
+    "value": 0.959,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 Qwen3.6 Max Preview"
+  },
+  {
+    "modelId": "qwen3-6-plus",
+    "benchmarkId": "aa-intelligence-index",
+    "variant": "default",
+    "value": 50,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 Qwen3.6 Plus"
+  },
+  {
+    "modelId": "qwen3-6-plus",
+    "benchmarkId": "aa-coding-index",
+    "variant": "default",
+    "value": 42.9,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 Qwen3.6 Plus"
+  },
+  {
+    "modelId": "qwen3-6-plus",
+    "benchmarkId": "gpqa-diamond",
+    "variant": "default",
+    "value": 0.882,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 Qwen3.6 Plus"
+  },
+  {
+    "modelId": "qwen3-6-plus",
+    "benchmarkId": "hle",
+    "variant": "default",
+    "value": 0.257,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 Qwen3.6 Plus"
+  },
+  {
+    "modelId": "qwen3-6-plus",
+    "benchmarkId": "scicode",
+    "variant": "default",
+    "value": 0.407,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 Qwen3.6 Plus"
+  },
+  {
+    "modelId": "qwen3-6-plus",
+    "benchmarkId": "ifbench",
+    "variant": "default",
+    "value": 0.752,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 Qwen3.6 Plus"
+  },
+  {
+    "modelId": "qwen3-6-plus",
+    "benchmarkId": "aa-lcr",
+    "variant": "default",
+    "value": 0.697,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 Qwen3.6 Plus"
+  },
+  {
+    "modelId": "qwen3-6-plus",
+    "benchmarkId": "terminal-bench-hard",
+    "variant": "default",
+    "value": 0.439,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 Qwen3.6 Plus"
+  },
+  {
+    "modelId": "qwen3-6-plus",
+    "benchmarkId": "tau2-telecom",
+    "variant": "default",
+    "value": 0.977,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 Qwen3.6 Plus"
+  },
+  {
+    "modelId": "qwen3-6-35b-a3b",
+    "benchmarkId": "aa-intelligence-index",
+    "variant": "default",
+    "value": 43.5,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 Qwen3.6 35B A3B (Reasoning)"
+  },
+  {
+    "modelId": "qwen3-6-35b-a3b",
+    "benchmarkId": "aa-coding-index",
+    "variant": "default",
+    "value": 35.1,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 Qwen3.6 35B A3B (Reasoning)"
+  },
+  {
+    "modelId": "qwen3-6-35b-a3b",
+    "benchmarkId": "gpqa-diamond",
+    "variant": "default",
+    "value": 0.841,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 Qwen3.6 35B A3B (Reasoning)"
+  },
+  {
+    "modelId": "qwen3-6-35b-a3b",
+    "benchmarkId": "hle",
+    "variant": "default",
+    "value": 0.202,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 Qwen3.6 35B A3B (Reasoning)"
+  },
+  {
+    "modelId": "qwen3-6-35b-a3b",
+    "benchmarkId": "scicode",
+    "variant": "default",
+    "value": 0.358,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 Qwen3.6 35B A3B (Reasoning)"
+  },
+  {
+    "modelId": "qwen3-6-35b-a3b",
+    "benchmarkId": "ifbench",
+    "variant": "default",
+    "value": 0.644,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 Qwen3.6 35B A3B (Reasoning)"
+  },
+  {
+    "modelId": "qwen3-6-35b-a3b",
+    "benchmarkId": "aa-lcr",
+    "variant": "default",
+    "value": 0.637,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 Qwen3.6 35B A3B (Reasoning)"
+  },
+  {
+    "modelId": "qwen3-6-35b-a3b",
+    "benchmarkId": "terminal-bench-hard",
+    "variant": "default",
+    "value": 0.348,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 Qwen3.6 35B A3B (Reasoning)"
+  },
+  {
+    "modelId": "qwen3-6-35b-a3b",
+    "benchmarkId": "tau2-telecom",
+    "variant": "default",
+    "value": 0.953,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 Qwen3.6 35B A3B (Reasoning)"
+  },
+  {
+    "modelId": "qwen3-6-35b-a3b-non-reasoning",
+    "benchmarkId": "aa-intelligence-index",
+    "variant": "default",
+    "value": 31.5,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 Qwen3.6 35B A3B (Non-reasoning)"
+  },
+  {
+    "modelId": "qwen3-6-35b-a3b-non-reasoning",
+    "benchmarkId": "aa-coding-index",
+    "variant": "default",
+    "value": 17.6,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 Qwen3.6 35B A3B (Non-reasoning)"
+  },
+  {
+    "modelId": "qwen3-6-35b-a3b-non-reasoning",
+    "benchmarkId": "gpqa-diamond",
+    "variant": "default",
+    "value": 0.817,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 Qwen3.6 35B A3B (Non-reasoning)"
+  },
+  {
+    "modelId": "qwen3-6-35b-a3b-non-reasoning",
+    "benchmarkId": "hle",
+    "variant": "default",
+    "value": 0.125,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 Qwen3.6 35B A3B (Non-reasoning)"
+  },
+  {
+    "modelId": "qwen3-6-35b-a3b-non-reasoning",
+    "benchmarkId": "scicode",
+    "variant": "default",
+    "value": 0.013,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 Qwen3.6 35B A3B (Non-reasoning)"
+  },
+  {
+    "modelId": "qwen3-6-35b-a3b-non-reasoning",
+    "benchmarkId": "ifbench",
+    "variant": "default",
+    "value": 0.362,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 Qwen3.6 35B A3B (Non-reasoning)"
+  },
+  {
+    "modelId": "qwen3-6-35b-a3b-non-reasoning",
+    "benchmarkId": "aa-lcr",
+    "variant": "default",
+    "value": 0.567,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 Qwen3.6 35B A3B (Non-reasoning)"
+  },
+  {
+    "modelId": "qwen3-6-35b-a3b-non-reasoning",
+    "benchmarkId": "terminal-bench-hard",
+    "variant": "default",
+    "value": 0.258,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 Qwen3.6 35B A3B (Non-reasoning)"
+  },
+  {
+    "modelId": "qwen3-6-35b-a3b-non-reasoning",
+    "benchmarkId": "tau2-telecom",
+    "variant": "default",
+    "value": 0.851,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 Qwen3.6 35B A3B (Non-reasoning)"
+  },
+  {
+    "modelId": "qwen3-6-27b-non-reasoning",
+    "benchmarkId": "aa-intelligence-index",
+    "variant": "default",
+    "value": 37.1,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 Qwen3.6 27B (Non-reasoning)"
+  },
+  {
+    "modelId": "qwen3-6-27b-non-reasoning",
+    "benchmarkId": "aa-coding-index",
+    "variant": "default",
+    "value": 26.6,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 Qwen3.6 27B (Non-reasoning)"
+  },
+  {
+    "modelId": "qwen3-6-27b-non-reasoning",
+    "benchmarkId": "gpqa-diamond",
+    "variant": "default",
+    "value": 0.829,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 Qwen3.6 27B (Non-reasoning)"
+  },
+  {
+    "modelId": "qwen3-6-27b-non-reasoning",
+    "benchmarkId": "hle",
+    "variant": "default",
+    "value": 0.136,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 Qwen3.6 27B (Non-reasoning)"
+  },
+  {
+    "modelId": "qwen3-6-27b-non-reasoning",
+    "benchmarkId": "scicode",
+    "variant": "default",
+    "value": 0.373,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 Qwen3.6 27B (Non-reasoning)"
+  },
+  {
+    "modelId": "qwen3-6-27b-non-reasoning",
+    "benchmarkId": "ifbench",
+    "variant": "default",
+    "value": 0.457,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 Qwen3.6 27B (Non-reasoning)"
+  },
+  {
+    "modelId": "qwen3-6-27b-non-reasoning",
+    "benchmarkId": "aa-lcr",
+    "variant": "default",
+    "value": 0.55,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 Qwen3.6 27B (Non-reasoning)"
+  },
+  {
+    "modelId": "qwen3-6-27b-non-reasoning",
+    "benchmarkId": "terminal-bench-hard",
+    "variant": "default",
+    "value": 0.212,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 Qwen3.6 27B (Non-reasoning)"
+  },
+  {
+    "modelId": "qwen3-6-27b-non-reasoning",
+    "benchmarkId": "tau2-telecom",
+    "variant": "default",
+    "value": 0.936,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 Qwen3.6 27B (Non-reasoning)"
   }
 ]

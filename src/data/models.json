@@ -429,16 +429,6 @@
     "architecture": "moe"
   },
   {
-    "id": "gpt-5-5",
-    "name": "GPT-5.5 (xhigh)",
-    "provider": "OpenAI",
-    "releaseDate": "2026-04-23",
-    "knowledgeCutoff": "2025-06",
-    "contextWindow": 400000,
-    "openWeights": false,
-    "cohortLabel": "reasoning frontier"
-  },
-  {
     "id": "gpt-5-4",
     "name": "GPT-5.4 (xhigh)",
     "provider": "OpenAI",
@@ -474,6 +464,16 @@
     "activeParams": 10,
     "experts": 256,
     "architecture": "moe"
+  },
+  {
+    "id": "qwen3-6-plus",
+    "name": "Qwen3.6 Plus",
+    "provider": "Alibaba",
+    "releaseDate": "2026-04-02",
+    "knowledgeCutoff": "2026-01",
+    "openWeights": false,
+    "contextWindow": 1000000,
+    "cohortLabel": "Qwen3.6"
   },
   {
     "id": "glm-5-1",
@@ -517,6 +517,36 @@
     "contextWindow": 1000000
   },
   {
+    "id": "qwen3-6-35b-a3b",
+    "name": "Qwen3.6 35B A3B (Reasoning)",
+    "provider": "Alibaba",
+    "releaseDate": "2026-04-16",
+    "knowledgeCutoff": "2025-06",
+    "openWeights": true,
+    "contextWindow": 262144,
+    "hfLink": "https://huggingface.co/Qwen/Qwen3.6-35B-A3B",
+    "totalParams": 35,
+    "activeParams": 3,
+    "experts": 128,
+    "architecture": "moe",
+    "cohortLabel": "Qwen3.6"
+  },
+  {
+    "id": "qwen3-6-35b-a3b-non-reasoning",
+    "name": "Qwen3.6 35B A3B (Non-reasoning)",
+    "provider": "Alibaba",
+    "releaseDate": "2026-04-16",
+    "knowledgeCutoff": "2025-06",
+    "openWeights": true,
+    "contextWindow": 262144,
+    "hfLink": "https://huggingface.co/Qwen/Qwen3.6-35B-A3B",
+    "totalParams": 35,
+    "activeParams": 3,
+    "experts": 128,
+    "architecture": "moe",
+    "cohortLabel": "Qwen3.6"
+  },
+  {
     "id": "kimi-k2-6",
     "name": "Kimi K2.6",
     "provider": "Kimi",
@@ -529,6 +559,16 @@
     "activeParams": 32,
     "experts": 384,
     "architecture": "moe"
+  },
+  {
+    "id": "qwen3-6-max",
+    "name": "Qwen3.6 Max Preview",
+    "provider": "Alibaba",
+    "releaseDate": "2026-04-20",
+    "knowledgeCutoff": "2026-01",
+    "openWeights": false,
+    "contextWindow": 1000000,
+    "cohortLabel": "Qwen3.6"
   },
   {
     "id": "mimo-v2-5-pro",
@@ -550,6 +590,101 @@
     "hfLink": "https://huggingface.co/Qwen/Qwen3.6-27B",
     "totalParams": 27,
     "activeParams": 27,
-    "architecture": "dense"
+    "architecture": "dense",
+    "cohortLabel": "Qwen3.6"
+  },
+  {
+    "id": "qwen3-6-27b-non-reasoning",
+    "name": "Qwen3.6 27B (Non-reasoning)",
+    "provider": "Alibaba",
+    "releaseDate": "2026-04-22",
+    "knowledgeCutoff": "2025-06",
+    "openWeights": true,
+    "contextWindow": 262144,
+    "hfLink": "https://huggingface.co/Qwen/Qwen3.6-27B",
+    "totalParams": 27,
+    "activeParams": 27,
+    "architecture": "dense",
+    "cohortLabel": "Qwen3.6"
+  },
+  {
+    "id": "gpt-5-5",
+    "name": "GPT-5.5 (xhigh)",
+    "provider": "OpenAI",
+    "releaseDate": "2026-04-23",
+    "knowledgeCutoff": "2025-06",
+    "contextWindow": 400000,
+    "openWeights": false,
+    "cohortLabel": "GPT-5.5"
+  },
+  {
+    "id": "gpt-5-5-high",
+    "name": "GPT-5.5 (high)",
+    "provider": "OpenAI",
+    "releaseDate": "2026-04-23",
+    "knowledgeCutoff": "2025-06",
+    "contextWindow": 400000,
+    "openWeights": false,
+    "cohortLabel": "GPT-5.5"
+  },
+  {
+    "id": "gpt-5-5-low",
+    "name": "GPT-5.5 (low)",
+    "provider": "OpenAI",
+    "releaseDate": "2026-04-23",
+    "knowledgeCutoff": "2025-06",
+    "contextWindow": 400000,
+    "openWeights": false,
+    "cohortLabel": "GPT-5.5"
+  },
+  {
+    "id": "gpt-5-5-medium",
+    "name": "GPT-5.5 (medium)",
+    "provider": "OpenAI",
+    "releaseDate": "2026-04-23",
+    "knowledgeCutoff": "2025-06",
+    "contextWindow": 400000,
+    "openWeights": false,
+    "cohortLabel": "GPT-5.5"
+  },
+  {
+    "id": "deepseek-v4-flash",
+    "name": "DeepSeek V4 Flash (Reasoning, Max Effort)",
+    "provider": "DeepSeek",
+    "releaseDate": "2026-04-24",
+    "knowledgeCutoff": "2025-01",
+    "openWeights": false,
+    "contextWindow": 128000,
+    "cohortLabel": "DeepSeek V4"
+  },
+  {
+    "id": "deepseek-v4-flash-high",
+    "name": "DeepSeek V4 Flash (Reasoning, High Effort)",
+    "provider": "DeepSeek",
+    "releaseDate": "2026-04-24",
+    "knowledgeCutoff": "2025-01",
+    "openWeights": false,
+    "contextWindow": 128000,
+    "cohortLabel": "DeepSeek V4"
+  },
+  {
+    "id": "deepseek-v4-pro",
+    "name": "DeepSeek V4 Pro (Reasoning, Max Effort)",
+    "provider": "DeepSeek",
+    "releaseDate": "2026-04-24",
+    "knowledgeCutoff": "2025-01",
+    "openWeights": false,
+    "contextWindow": 128000,
+    "cohortLabel": "DeepSeek V4"
+  },
+  {
+    "id": "deepseek-v4-pro-high",
+    "name": "DeepSeek V4 Pro (Reasoning, High Effort)",
+    "provider": "DeepSeek",
+    "releaseDate": "2026-04-24",
+    "knowledgeCutoff": "2025-01",
+    "openWeights": false,
+    "contextWindow": 128000,
+    "cohortLabel": "DeepSeek V4"
   }
 ]
