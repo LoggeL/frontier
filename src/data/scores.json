@@ -9021,5 +9021,86 @@
     "reportedOn": "2026-04-26",
     "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
     "notes": "AA API \u2014 Qwen3.6 27B (Non-reasoning)"
+  },
+  {
+    "modelId": "gpt-5-5-non-reasoning",
+    "benchmarkId": "aa-intelligence-index",
+    "variant": "default",
+    "value": 40.9,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 GPT-5.5 (Non-reasoning)"
+  },
+  {
+    "modelId": "gpt-5-5-non-reasoning",
+    "benchmarkId": "aa-coding-index",
+    "variant": "default",
+    "value": 48.6,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 GPT-5.5 (Non-reasoning)"
+  },
+  {
+    "modelId": "gpt-5-5-non-reasoning",
+    "benchmarkId": "gpqa-diamond",
+    "variant": "default",
+    "value": 0.768,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 GPT-5.5 (Non-reasoning)"
+  },
+  {
+    "modelId": "gpt-5-5-non-reasoning",
+    "benchmarkId": "hle",
+    "variant": "default",
+    "value": 0.126,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 GPT-5.5 (Non-reasoning)"
+  },
+  {
+    "modelId": "gpt-5-5-non-reasoning",
+    "benchmarkId": "scicode",
+    "variant": "default",
+    "value": 0.473,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 GPT-5.5 (Non-reasoning)"
+  },
+  {
+    "modelId": "gpt-5-5-non-reasoning",
+    "benchmarkId": "ifbench",
+    "variant": "default",
+    "value": 0.461,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 GPT-5.5 (Non-reasoning)"
+  },
+  {
+    "modelId": "gpt-5-5-non-reasoning",
+    "benchmarkId": "aa-lcr",
+    "variant": "default",
+    "value": 0.563,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 GPT-5.5 (Non-reasoning)"
+  },
+  {
+    "modelId": "gpt-5-5-non-reasoning",
+    "benchmarkId": "terminal-bench-hard",
+    "variant": "default",
+    "value": 0.492,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 GPT-5.5 (Non-reasoning)"
+  },
+  {
+    "modelId": "gpt-5-5-non-reasoning",
+    "benchmarkId": "tau2-telecom",
+    "variant": "default",
+    "value": 0.693,
+    "reportedOn": "2026-04-26",
+    "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "notes": "AA API \u2014 GPT-5.5 (Non-reasoning)"
   }
 ]

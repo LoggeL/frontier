@@ -648,6 +648,16 @@
     "cohortLabel": "GPT-5.5"
   },
   {
+    "id": "gpt-5-5-non-reasoning",
+    "name": "GPT-5.5 (Non-reasoning)",
+    "provider": "OpenAI",
+    "releaseDate": "2026-04-23",
+    "knowledgeCutoff": "2025-06",
+    "contextWindow": 400000,
+    "openWeights": false,
+    "cohortLabel": "GPT-5.5"
+  },
+  {
     "id": "deepseek-v4-flash",
     "name": "DeepSeek V4 Flash (Reasoning, Max Effort)",
     "provider": "DeepSeek",

@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { Benchmark, Model, Score } from "../lib/schema";
 import {
   baselineNormalize,
@@ -67,6 +67,13 @@ export default function ComparisonTable({
     col: string;
     value: number;
   } | null>(null);
+  const effortGroups = useMemo(() => buildReasoningEffortGroups(models), [models]);
+  const [effortGroupId, setEffortGroupId] = useState(() =>
+    effortGroups[0]?.baseId ?? "",
+  );
+  const [effortModelIds, setEffortModelIds] = useState<Set<string>>(() =>
+    new Set(effortGroups[0]?.models.map((m) => m.id) ?? []),
+  );
 
   const matrix = useMemo(() => buildScoreMatrix(scores), [scores]);
   const extents = useMemo(
@@ -77,6 +84,22 @@ export default function ComparisonTable({
     () => search.toLowerCase().trim().split(/\s+/).filter(Boolean),
     [search],
   );
+
+  useEffect(() => {
+    if (effortGroups.length === 0) return;
+    const current = effortGroups.find((g) => g.baseId === effortGroupId);
+    if (!current) {
+      const first = effortGroups[0]!;
+      setEffortGroupId(first.baseId);
+      setEffortModelIds(new Set(first.models.map((m) => m.id)));
+    }
+  }, [effortGroups, effortGroupId]);
+
+  const selectedEffortModels = useMemo(() => {
+    const group = effortGroups.find((g) => g.baseId === effortGroupId);
+    if (!group) return [];
+    return group.models.filter((m) => effortModelIds.has(m.id));
+  }, [effortGroups, effortGroupId, effortModelIds]);
 
   const visibleBenchmarks = useMemo(
     () => benchmarks.filter(
@@ -126,6 +149,18 @@ export default function ComparisonTable({
         search={search}
         setSearch={setSearch}
         resultCount={visibleModels.length}
+        effortGroups={effortGroups}
+        effortGroupId={effortGroupId}
+        setEffortGroupId={setEffortGroupId}
+        effortModelIds={effortModelIds}
+        setEffortModelIds={setEffortModelIds}
+      />
+
+      <ReasoningEffortCompare
+        models={selectedEffortModels}
+        benchmarks={visibleBenchmarks}
+        matrix={matrix}
+        activeVariant={activeVariant}
       />
 
       <div className="overflow-x-auto rounded-lg border border-neutral-800 bg-neutral-900/40">
@@ -314,6 +349,182 @@ export default function ComparisonTable({
   );
 }
 
+interface ReasoningEffortGroup {
+  baseId: string;
+  label: string;
+  models: Model[];
+}
+
+function buildReasoningEffortGroups(models: Model[]): ReasoningEffortGroup[] {
+  const groups = new Map<string, Model[]>();
+  for (const model of models) {
+    const effort = reasoningEffortLabel(model);
+    if (!effort) continue;
+    const baseId = model.id
+      .replace(/-non-reasoning$/, "")
+      .replace(/-(?:xhigh|high|medium|low)$/, "");
+    const arr = groups.get(baseId) ?? [];
+    arr.push(model);
+    groups.set(baseId, arr);
+  }
+
+  return Array.from(groups.entries())
+    .map(([baseId, groupModels]) => ({
+      baseId,
+      label: baseModelLabel(groupModels[0]!),
+      models: groupModels.sort(
+        (a, b) => reasoningEffortRank(a) - reasoningEffortRank(b),
+      ),
+    }))
+    .filter((g) => g.models.length > 1)
+    .sort((a, b) => b.models.length - a.models.length || a.label.localeCompare(b.label));
+}
+
+function baseModelLabel(model: Model): string {
+  return model.name.replace(/\s*\((?:Non-reasoning|xhigh|high|medium|low)\)$/, "");
+}
+
+function reasoningEffortLabel(model: Model): string | null {
+  const m = model.name.match(/\((Non-reasoning|xhigh|high|medium|low)\)$/i);
+  return m?.[1] ?? null;
+}
+
+function reasoningEffortRank(model: Model): number {
+  const label = reasoningEffortLabel(model)?.toLowerCase();
+  switch (label) {
+    case "non-reasoning":
+      return 0;
+    case "low":
+      return 1;
+    case "medium":
+      return 2;
+    case "high":
+      return 3;
+    case "xhigh":
+      return 4;
+    default:
+      return 99;
+  }
+}
+
+function ReasoningEffortCompare({
+  models,
+  benchmarks,
+  matrix,
+  activeVariant,
+}: {
+  models: Model[];
+  benchmarks: Benchmark[];
+  matrix: ReturnType<typeof buildScoreMatrix>;
+  activeVariant: Record<string, string>;
+}) {
+  if (models.length < 2) return null;
+  const usableBenchmarks = benchmarks.filter((b) =>
+    models.some((m) => {
+      const variant = activeVariant[b.id] ?? b.variants[0]?.key ?? "default";
+      return matrix
+        .get(m.id)
+        ?.get(b.id)
+        ?.some((c) => c.variant === variant);
+    }),
+  );
+  if (usableBenchmarks.length === 0) return null;
+
+  return (
+    <div className="overflow-x-auto rounded-lg border border-amber-400/20 bg-amber-400/5">
+      <table className="w-full text-xs">
+        <thead className="bg-neutral-950/80 text-left uppercase tracking-wide text-neutral-500">
+          <tr>
+            <th className="px-3 py-2 text-neutral-300">Effort compare</th>
+            {models.map((m) => (
+              <th key={m.id} className="px-3 py-2 text-right text-neutral-300">
+                <a
+                  href={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/models/${m.id}/`}
+                  className="hover:text-amber-300"
+                >
+                  {reasoningEffortLabel(m)}
+                </a>
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {usableBenchmarks.map((b) => {
+            const variant = activeVariant[b.id] ?? b.variants[0]?.key ?? "default";
+            const values = models.map((m) =>
+              matrix
+                .get(m.id)
+                ?.get(b.id)
+                ?.find((c) => c.variant === variant),
+            );
+            const numeric = values.filter((v): v is NonNullable<typeof v> => Boolean(v));
+            const best = numeric.length
+              ? numeric.reduce((a, bCell) =>
+                  b.higherIsBetter
+                    ? bCell.value > a.value
+                      ? bCell
+                      : a
+                    : bCell.value < a.value
+                      ? bCell
+                      : a,
+                )
+              : undefined;
+            return (
+              <tr key={b.id} className="border-t border-neutral-800/80">
+                <td className="px-3 py-2 text-neutral-400">
+                  {b.name}
+                  {variant !== "default" && (
+                    <span className="ml-1 text-neutral-600">· {variant}</span>
+                  )}
+                </td>
+                {values.map((cell, idx) => {
+                  const isBest = best && cell?.value === best.value;
+                  const previous = idx > 0 ? values[idx - 1] : undefined;
+                  const delta = cell && previous ? cell.value - previous.value : undefined;
+                  return (
+                    <td key={models[idx]!.id} className="px-3 py-2 text-right">
+                      {cell ? (
+                        <span className={isBest ? "font-semibold text-amber-200" : "font-mono text-neutral-200"}>
+                          {formatScore(cell.value, b.unit)}
+                        </span>
+                      ) : (
+                        <span className="text-neutral-700">—</span>
+                      )}
+                      {delta !== undefined && Math.abs(delta) > 0 && (
+                        <span className={[
+                          "ml-1 font-mono text-[10px]",
+                          delta > 0 ? "text-emerald-300" : "text-red-300",
+                        ].join(" ")}>
+                          {delta > 0 ? "+" : ""}{formatDelta(delta, b.unit)}
+                        </span>
+                      )}
+                    </td>
+                  );
+                })}
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+function formatDelta(delta: number, unit: Benchmark["unit"]): string {
+  switch (unit) {
+    case "accuracy":
+    case "pass@1":
+      return `${(delta * 100).toFixed(1)}pp`;
+    case "elo":
+      return Math.round(delta).toString();
+    case "index":
+      return delta.toFixed(1);
+    case "score":
+    default:
+      return delta.toFixed(2);
+  }
+}
+
 function Th({
   children,
   onClick,
@@ -363,6 +574,11 @@ function Toolbar({
   search,
   setSearch,
   resultCount,
+  effortGroups,
+  effortGroupId,
+  setEffortGroupId,
+  effortModelIds,
+  setEffortModelIds,
 }: {
   models: Model[];
   providerFilter: Set<string>;
@@ -374,8 +590,14 @@ function Toolbar({
   search: string;
   setSearch: (s: string) => void;
   resultCount: number;
+  effortGroups: ReasoningEffortGroup[];
+  effortGroupId: string;
+  setEffortGroupId: (id: string) => void;
+  effortModelIds: Set<string>;
+  setEffortModelIds: (s: Set<string>) => void;
 }) {
   const providers = Array.from(new Set(models.map((m) => m.provider))).sort();
+  const activeEffortGroup = effortGroups.find((g) => g.baseId === effortGroupId);
 
   return (
     <div className="flex flex-col gap-2 text-xs">
@@ -398,6 +620,38 @@ function Toolbar({
           open-weight only
         </label>
       </div>
+      {effortGroups.length > 0 && (
+        <div className="flex flex-wrap items-center gap-2 rounded-lg border border-neutral-800 bg-neutral-950/70 p-2">
+          <span className="text-neutral-500">Reasoning efforts:</span>
+          <select
+            value={effortGroupId}
+            onChange={(e) => {
+              const id = e.target.value;
+              const group = effortGroups.find((g) => g.baseId === id);
+              setEffortGroupId(id);
+              setEffortModelIds(new Set(group?.models.map((m) => m.id) ?? []));
+            }}
+            className="rounded-md border border-neutral-800 bg-neutral-950 px-2 py-1 text-neutral-200 focus:border-amber-400 focus:outline-none"
+          >
+            {effortGroups.map((g) => (
+              <option key={g.baseId} value={g.baseId}>
+                {g.label}
+              </option>
+            ))}
+          </select>
+          {activeEffortGroup?.models.map((m) => (
+            <label key={m.id} className="inline-flex items-center gap-1.5 text-neutral-400">
+              <input
+                type="checkbox"
+                checked={effortModelIds.has(m.id)}
+                onChange={() => toggleSet(effortModelIds, setEffortModelIds, m.id)}
+                className="accent-amber-400"
+              />
+              {reasoningEffortLabel(m)}
+            </label>
+          ))}
+        </div>
+      )}
       <div className="flex flex-wrap items-center gap-2">
         <span className="text-neutral-500">Providers:</span>
         {providers.map((p) => (
