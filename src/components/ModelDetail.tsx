@@ -27,6 +27,10 @@ export default function ModelDetail({
   const [peerMode, setPeerMode] = useState<PeerMode>("intelligence");
 
   const matrix = useMemo(() => buildScoreMatrix(scores), [scores]);
+  const reasoningVariants = useMemo(
+    () => models.filter((m) => reasoningFamilyKey(m) === reasoningFamilyKey(model)).sort(compareReasoningVariants),
+    [model, models],
+  );
 
   const intelligenceIndex = lookupValue(matrix, model.id, "aa-intelligence-index");
 
@@ -71,6 +75,14 @@ export default function ModelDetail({
       <ModelHero
         model={model}
         models={models}
+        reasoningVariants={reasoningVariants}
+        matrix={matrix}
+      />
+
+      <ReasoningEffortCompare
+        currentModel={model}
+        models={reasoningVariants}
+        benchmarks={benchmarks}
         matrix={matrix}
       />
 
@@ -139,10 +151,12 @@ export default function ModelDetail({
 function ModelHero({
   model,
   models,
+  reasoningVariants,
   matrix,
 }: {
   model: Model;
   models: Model[];
+  reasoningVariants: Model[];
   matrix: ReturnType<typeof buildScoreMatrix>;
 }) {
   const gap = monthsBetween(model.knowledgeCutoff, model.releaseDate);
@@ -220,6 +234,30 @@ function ModelHero({
         </div>
 
         <div className="flex shrink-0 flex-col items-start gap-1 sm:items-end">
+          {reasoningVariants.length > 1 && (
+            <>
+              <span className="text-[11px] uppercase tracking-wide text-neutral-500">
+                Reasoning effort
+              </span>
+              <select
+                defaultValue={model.id}
+                onChange={(e) => {
+                  const next = e.target.value;
+                  if (next && next !== model.id) {
+                    const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+                    window.location.href = `${base}/models/${next}/`;
+                  }
+                }}
+                className="mb-3 rounded border border-amber-500/30 bg-neutral-950 px-2 py-1 text-sm text-neutral-200 focus:outline-none focus:ring-1 focus:ring-amber-400"
+              >
+                {reasoningVariants.map((variant) => (
+                  <option key={variant.id} value={variant.id}>
+                    {reasoningEffortLabel(variant) ?? variant.name}
+                  </option>
+                ))}
+              </select>
+            </>
+          )}
           <span className="text-[11px] uppercase tracking-wide text-neutral-500">
             Jump to
           </span>
@@ -247,6 +285,166 @@ function ModelHero({
       </div>
     </div>
   );
+}
+
+
+function ReasoningEffortCompare({
+  currentModel,
+  models,
+  benchmarks,
+  matrix,
+}: {
+  currentModel: Model;
+  models: Model[];
+  benchmarks: Benchmark[];
+  matrix: ReturnType<typeof buildScoreMatrix>;
+}) {
+  if (models.length < 2) return null;
+
+  const rows = benchmarks
+    .map((benchmark) => {
+      const values = models.map((model) => ({
+        model,
+        value: lookupValue(matrix, model.id, benchmark.id),
+      }));
+      return { benchmark, values };
+    })
+    .filter((row) => row.values.some((entry) => entry.value !== undefined));
+
+  if (rows.length === 0) return null;
+
+  return (
+    <section className="flex flex-col gap-3">
+      <div>
+        <h2 className="text-lg font-semibold text-neutral-200">
+          Reasoning efforts
+        </h2>
+        <p className="text-xs text-neutral-500">
+          Same model family, different reasoning-effort settings.
+        </p>
+      </div>
+      <div className="overflow-x-auto rounded-lg border border-amber-400/20 bg-amber-400/5">
+        <table className="w-full text-xs">
+          <thead className="bg-neutral-950/80 text-left uppercase tracking-wide text-neutral-500">
+            <tr>
+              <th className="px-3 py-2 text-neutral-300">Benchmark</th>
+              {models.map((model) => (
+                <th key={model.id} className="px-3 py-2 text-right text-neutral-300">
+                  <a
+                    href={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/models/${model.id}/`}
+                    className={[
+                      "hover:text-amber-300",
+                      model.id === currentModel.id ? "text-amber-200" : "",
+                    ].join(" ")}
+                  >
+                    {reasoningEffortLabel(model) ?? model.name}
+                  </a>
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map(({ benchmark, values }) => {
+              const numeric = values.filter(
+                (entry): entry is { model: Model; value: number } => entry.value !== undefined,
+              );
+              const best = numeric.reduce((winner, entry) => {
+                if (!winner) return entry;
+                return benchmark.higherIsBetter
+                  ? entry.value > winner.value
+                    ? entry
+                    : winner
+                  : entry.value < winner.value
+                    ? entry
+                    : winner;
+              }, undefined as { model: Model; value: number } | undefined);
+
+              return (
+                <tr key={benchmark.id} className="border-t border-neutral-800/80">
+                  <td className="px-3 py-2 text-neutral-400">
+                    <a
+                      href={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/benchmarks/${benchmark.id}/`}
+                      className="hover:text-amber-300"
+                    >
+                      {benchmark.name}
+                    </a>
+                  </td>
+                  {values.map(({ model, value }) => {
+                    const isBest = best?.model.id === model.id;
+                    const isCurrent = model.id === currentModel.id;
+                    return (
+                      <td
+                        key={model.id}
+                        className={[
+                          "px-3 py-2 text-right font-mono",
+                          isCurrent ? "bg-amber-400/10" : "",
+                        ].join(" ")}
+                      >
+                        {value === undefined ? (
+                          <span className="text-neutral-700">—</span>
+                        ) : (
+                          <span className={isBest ? "font-semibold text-amber-200" : "text-neutral-200"}>
+                            {formatScore(value, benchmark.unit)}
+                          </span>
+                        )}
+                      </td>
+                    );
+                  })}
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  );
+}
+
+function reasoningFamilyKey(model: Model): string {
+  return `${model.provider}::${reasoningFamilyLabel(model).toLowerCase()}`;
+}
+
+function reasoningFamilyLabel(model: Model): string {
+  return model.name
+    .replace(/\s*\((?:Non-reasoning|xhigh|high|medium|low)\)$/i, "")
+    .replace(/\s*\((?:Reasoning|Reasoning,\s*Max Effort|Reasoning,\s*High Effort)\)$/i, "")
+    .trim();
+}
+
+function reasoningEffortLabel(model: Model): string | null {
+  const paren = model.name.match(/\((Non-reasoning|xhigh|high|medium|low|Reasoning|Reasoning,\s*Max Effort|Reasoning,\s*High Effort)\)$/i)?.[1];
+  if (!paren) return /\bthinking\b/i.test(model.name) ? "reasoning" : null;
+  const normalized = paren.toLowerCase();
+  if (normalized === "reasoning") return "reasoning";
+  if (normalized === "reasoning, max effort") return "max";
+  if (normalized === "reasoning, high effort") return "high";
+  return normalized;
+}
+
+function reasoningEffortRank(model: Model): number {
+  switch (reasoningEffortLabel(model)?.toLowerCase()) {
+    case "non-reasoning":
+      return 0;
+    case "low":
+      return 1;
+    case "medium":
+      return 2;
+    case "high":
+      return 3;
+    case "reasoning":
+      return 4;
+    case "xhigh":
+    case "max":
+      return 5;
+    default:
+      return 5;
+  }
+}
+
+function compareReasoningVariants(a: Model, b: Model): number {
+  const rankDiff = reasoningEffortRank(b) - reasoningEffortRank(a);
+  if (rankDiff !== 0) return rankDiff;
+  return b.releaseDate.localeCompare(a.releaseDate) || a.name.localeCompare(b.name);
 }
 
 function computeMetricSimilarityPeers(
