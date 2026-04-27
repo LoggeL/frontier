@@ -24,6 +24,14 @@ Append an object to `models.json`:
 }
 ```
 
+
+Optional Artificial Analysis Intelligence Index benchmark cost / token fields shown in the main dashboard:
+
+- `aaBenchmarkTotalCost` — total USD cost to run the AA Intelligence Index evaluations
+- `aaBenchmarkInputCost`, `aaBenchmarkOutputCost`, `aaBenchmarkAnswerCost`, `aaBenchmarkReasoningCost` — cost breakdown
+- `aaBenchmarkTotalTokens` — total tokens used to run the AA Intelligence Index evaluations
+- `aaBenchmarkInputTokens`, `aaBenchmarkOutputTokens`, `aaBenchmarkAnswerTokens`, `aaBenchmarkReasoningTokens` — token breakdown
+
 If `openWeights` is `true`, you **must** also include `hfLink`, `totalParams`, `activeParams`, and `architecture` (`"dense"` or `"moe"`). MoE models also require `experts`.
 
 ```json

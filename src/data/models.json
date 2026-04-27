@@ -10,7 +10,17 @@
     "hfLink": "https://huggingface.co/mistralai/Mistral-Large-Instruct-2407",
     "totalParams": 123,
     "activeParams": 123,
-    "architecture": "dense"
+    "architecture": "dense",
+    "aaBenchmarkInputTokens": 54205157,
+    "aaBenchmarkAnswerTokens": 2623156,
+    "aaBenchmarkOutputTokens": 2623156,
+    "aaBenchmarkReasoningTokens": 0,
+    "aaBenchmarkTotalTokens": 56828313,
+    "aaBenchmarkTotalCost": 124.14925,
+    "aaBenchmarkInputCost": 108.410314,
+    "aaBenchmarkOutputCost": 15.738935999999999,
+    "aaBenchmarkAnswerCost": 15.738935999999999,
+    "aaBenchmarkReasoningCost": 0
   },
   {
     "id": "llama-3-3-70b",
@@ -37,7 +47,17 @@
     "totalParams": 400,
     "activeParams": 17,
     "experts": 128,
-    "architecture": "moe"
+    "architecture": "moe",
+    "aaBenchmarkInputTokens": 158145255,
+    "aaBenchmarkAnswerTokens": 8154181,
+    "aaBenchmarkOutputTokens": 8154181,
+    "aaBenchmarkReasoningTokens": 0,
+    "aaBenchmarkTotalTokens": 166299436,
+    "aaBenchmarkTotalCost": 62.28189309999999,
+    "aaBenchmarkInputCost": 55.35083924999999,
+    "aaBenchmarkOutputCost": 6.93105385,
+    "aaBenchmarkAnswerCost": 6.93105385,
+    "aaBenchmarkReasoningCost": 0
   },
   {
     "id": "llama-4-scout",
@@ -51,7 +71,17 @@
     "totalParams": 109,
     "activeParams": 17,
     "experts": 16,
-    "architecture": "moe"
+    "architecture": "moe",
+    "aaBenchmarkInputTokens": 126947307,
+    "aaBenchmarkAnswerTokens": 7335858,
+    "aaBenchmarkOutputTokens": 7335858,
+    "aaBenchmarkReasoningTokens": 0,
+    "aaBenchmarkTotalTokens": 134283165,
+    "aaBenchmarkTotalCost": 26.422708470000003,
+    "aaBenchmarkInputCost": 21.58104219,
+    "aaBenchmarkOutputCost": 4.84166628,
+    "aaBenchmarkAnswerCost": 4.84166628,
+    "aaBenchmarkReasoningCost": 0
   },
   {
     "id": "o3",
@@ -60,7 +90,17 @@
     "releaseDate": "2025-04-16",
     "knowledgeCutoff": "2024-06",
     "openWeights": false,
-    "contextWindow": 200000
+    "contextWindow": 200000,
+    "aaBenchmarkInputTokens": 319263653,
+    "aaBenchmarkAnswerTokens": 7344091,
+    "aaBenchmarkOutputTokens": 48282256,
+    "aaBenchmarkReasoningTokens": 40938164,
+    "aaBenchmarkTotalTokens": 367545909,
+    "aaBenchmarkTotalCost": 1024.7853539999999,
+    "aaBenchmarkInputCost": 638.527306,
+    "aaBenchmarkOutputCost": 386.258048,
+    "aaBenchmarkAnswerCost": 58.752728,
+    "aaBenchmarkReasoningCost": 327.505312
   },
   {
     "id": "qwen3-235b-a22b",
@@ -83,7 +123,17 @@
     "releaseDate": "2025-05-20",
     "knowledgeCutoff": "2025-01",
     "openWeights": false,
-    "contextWindow": 1000000
+    "contextWindow": 1000000,
+    "aaBenchmarkInputTokens": 135237924,
+    "aaBenchmarkAnswerTokens": 17480533,
+    "aaBenchmarkOutputTokens": 17480533,
+    "aaBenchmarkReasoningTokens": 0,
+    "aaBenchmarkTotalTokens": 152718457,
+    "aaBenchmarkTotalCost": 84.27270970000001,
+    "aaBenchmarkInputCost": 40.57137719999999,
+    "aaBenchmarkOutputCost": 43.70133250000001,
+    "aaBenchmarkAnswerCost": 43.70133250000001,
+    "aaBenchmarkReasoningCost": 0
   },
   {
     "id": "claude-opus-4",
@@ -116,7 +166,17 @@
     "activeParams": 37,
     "experts": 256,
     "architecture": "moe",
-    "cohortLabel": "deepseek-v3-pretrain"
+    "cohortLabel": "deepseek-v3-pretrain",
+    "aaBenchmarkInputTokens": 54584835,
+    "aaBenchmarkAnswerTokens": 4635254,
+    "aaBenchmarkOutputTokens": 49146757,
+    "aaBenchmarkReasoningTokens": 44511502,
+    "aaBenchmarkTotalTokens": 103731592,
+    "aaBenchmarkTotalCost": 280.10590665,
+    "aaBenchmarkInputCost": 73.68952725,
+    "aaBenchmarkOutputCost": 206.4163794,
+    "aaBenchmarkAnswerCost": 19.4680668,
+    "aaBenchmarkReasoningCost": 186.9483084
   },
   {
     "id": "gemini-2-5-pro",
@@ -125,7 +185,17 @@
     "releaseDate": "2025-06-05",
     "knowledgeCutoff": "2025-01",
     "openWeights": false,
-    "contextWindow": 2000000
+    "contextWindow": 2000000,
+    "aaBenchmarkInputTokens": 81649130,
+    "aaBenchmarkAnswerTokens": 5463027,
+    "aaBenchmarkOutputTokens": 54625405,
+    "aaBenchmarkReasoningTokens": 49162377,
+    "aaBenchmarkTotalTokens": 136274535,
+    "aaBenchmarkTotalCost": 648.3154625,
+    "aaBenchmarkInputCost": 102.0614125,
+    "aaBenchmarkOutputCost": 546.25405,
+    "aaBenchmarkAnswerCost": 54.63027,
+    "aaBenchmarkReasoningCost": 491.62377
   },
   {
     "id": "o3-pro",
@@ -143,7 +213,17 @@
     "releaseDate": "2025-07-10",
     "knowledgeCutoff": "2024-11",
     "openWeights": false,
-    "contextWindow": 256000
+    "contextWindow": 256000,
+    "aaBenchmarkInputTokens": 81718777,
+    "aaBenchmarkAnswerTokens": 3150271,
+    "aaBenchmarkOutputTokens": 88212386,
+    "aaBenchmarkReasoningTokens": 85062115,
+    "aaBenchmarkTotalTokens": 169931163,
+    "aaBenchmarkTotalCost": 1568.3421210000001,
+    "aaBenchmarkInputCost": 245.15633100000002,
+    "aaBenchmarkOutputCost": 1323.18579,
+    "aaBenchmarkAnswerCost": 47.254065,
+    "aaBenchmarkReasoningCost": 1275.9317250000001
   },
   {
     "id": "claude-opus-4-1",
@@ -161,7 +241,17 @@
     "releaseDate": "2025-08-07",
     "knowledgeCutoff": "2024-10",
     "openWeights": false,
-    "contextWindow": 400000
+    "contextWindow": 400000,
+    "aaBenchmarkInputTokens": 120172089,
+    "aaBenchmarkAnswerTokens": 4161590,
+    "aaBenchmarkOutputTokens": 76015676,
+    "aaBenchmarkReasoningTokens": 71854085,
+    "aaBenchmarkTotalTokens": 196187765,
+    "aaBenchmarkTotalCost": 910.3718712499999,
+    "aaBenchmarkInputCost": 150.21511125,
+    "aaBenchmarkOutputCost": 760.15676,
+    "aaBenchmarkAnswerCost": 41.6159,
+    "aaBenchmarkReasoningCost": 718.54085
   },
   {
     "id": "gpt-5-mini",
@@ -170,7 +260,17 @@
     "releaseDate": "2025-08-07",
     "knowledgeCutoff": "2024-10",
     "openWeights": false,
-    "contextWindow": 400000
+    "contextWindow": 400000,
+    "aaBenchmarkInputTokens": 122449644,
+    "aaBenchmarkAnswerTokens": 3809599,
+    "aaBenchmarkOutputTokens": 68922645,
+    "aaBenchmarkReasoningTokens": 65113046,
+    "aaBenchmarkTotalTokens": 191372289,
+    "aaBenchmarkTotalCost": 168.45770100000001,
+    "aaBenchmarkInputCost": 30.612411,
+    "aaBenchmarkOutputCost": 137.84529,
+    "aaBenchmarkAnswerCost": 7.619198,
+    "aaBenchmarkReasoningCost": 130.226092
   },
   {
     "id": "deepseek-v3-1",
@@ -184,7 +284,17 @@
     "totalParams": 671,
     "activeParams": 37,
     "experts": 256,
-    "architecture": "moe"
+    "architecture": "moe",
+    "aaBenchmarkInputTokens": 151672029,
+    "aaBenchmarkAnswerTokens": 9238929,
+    "aaBenchmarkOutputTokens": 9238929,
+    "aaBenchmarkReasoningTokens": 0,
+    "aaBenchmarkTotalTokens": 160910958,
+    "aaBenchmarkTotalCost": 99.60698752500002,
+    "aaBenchmarkInputCost": 84.17797609500002,
+    "aaBenchmarkOutputCost": 15.429011430000001,
+    "aaBenchmarkAnswerCost": 15.429011430000001,
+    "aaBenchmarkReasoningCost": 0
   },
   {
     "id": "gpt-5-codex",
@@ -193,7 +303,17 @@
     "releaseDate": "2025-09-23",
     "knowledgeCutoff": "2024-10",
     "openWeights": false,
-    "contextWindow": 400000
+    "contextWindow": 400000,
+    "aaBenchmarkInputTokens": 219262101,
+    "aaBenchmarkAnswerTokens": 3657496,
+    "aaBenchmarkOutputTokens": 72068846,
+    "aaBenchmarkReasoningTokens": 68411350,
+    "aaBenchmarkTotalTokens": 291330947,
+    "aaBenchmarkTotalCost": 994.76608625,
+    "aaBenchmarkInputCost": 274.07762625,
+    "aaBenchmarkOutputCost": 720.68846,
+    "aaBenchmarkAnswerCost": 36.574960000000004,
+    "aaBenchmarkReasoningCost": 684.1134999999999
   },
   {
     "id": "claude-sonnet-4-5",
@@ -225,7 +345,17 @@
     "totalParams": 230,
     "activeParams": 10,
     "experts": 256,
-    "architecture": "moe"
+    "architecture": "moe",
+    "aaBenchmarkInputTokens": 115874257,
+    "aaBenchmarkAnswerTokens": 4626921,
+    "aaBenchmarkOutputTokens": 69535793,
+    "aaBenchmarkReasoningTokens": 64908872,
+    "aaBenchmarkTotalTokens": 185410050,
+    "aaBenchmarkTotalCost": 118.20522869999999,
+    "aaBenchmarkInputCost": 34.7622771,
+    "aaBenchmarkOutputCost": 83.4429516,
+    "aaBenchmarkAnswerCost": 5.5523052,
+    "aaBenchmarkReasoningCost": 77.8906464
   },
   {
     "id": "kimi-k2-thinking",
@@ -239,7 +369,17 @@
     "totalParams": 1000,
     "activeParams": 32,
     "experts": 384,
-    "architecture": "moe"
+    "architecture": "moe",
+    "aaBenchmarkInputTokens": 96873370,
+    "aaBenchmarkAnswerTokens": 4812127,
+    "aaBenchmarkOutputTokens": 100010575,
+    "aaBenchmarkReasoningTokens": 95198448,
+    "aaBenchmarkTotalTokens": 196883945,
+    "aaBenchmarkTotalCost": 308.1504595,
+    "aaBenchmarkInputCost": 58.124022,
+    "aaBenchmarkOutputCost": 250.02643750000001,
+    "aaBenchmarkAnswerCost": 12.0303175,
+    "aaBenchmarkReasoningCost": 237.99612
   },
   {
     "id": "gpt-5-1",
@@ -248,7 +388,17 @@
     "releaseDate": "2025-11-13",
     "knowledgeCutoff": "2025-07",
     "openWeights": false,
-    "contextWindow": 400000
+    "contextWindow": 400000,
+    "aaBenchmarkInputTokens": 73837231,
+    "aaBenchmarkAnswerTokens": 5150812,
+    "aaBenchmarkOutputTokens": 68667516,
+    "aaBenchmarkReasoningTokens": 63516704,
+    "aaBenchmarkTotalTokens": 142504747,
+    "aaBenchmarkTotalCost": 778.97169875,
+    "aaBenchmarkInputCost": 92.29653875,
+    "aaBenchmarkOutputCost": 686.67516,
+    "aaBenchmarkAnswerCost": 51.508120000000005,
+    "aaBenchmarkReasoningCost": 635.1670399999999
   },
   {
     "id": "gemini-3-pro",
@@ -257,7 +407,17 @@
     "releaseDate": "2025-11-18",
     "knowledgeCutoff": "2025-10",
     "openWeights": false,
-    "contextWindow": 2000000
+    "contextWindow": 2000000,
+    "aaBenchmarkInputTokens": 75417295,
+    "aaBenchmarkAnswerTokens": 4984429,
+    "aaBenchmarkOutputTokens": 55750224,
+    "aaBenchmarkReasoningTokens": 50765794,
+    "aaBenchmarkTotalTokens": 131167519,
+    "aaBenchmarkTotalCost": 819.837278,
+    "aaBenchmarkInputCost": 150.83459,
+    "aaBenchmarkOutputCost": 669.002688,
+    "aaBenchmarkAnswerCost": 59.813148000000005,
+    "aaBenchmarkReasoningCost": 609.189528
   },
   {
     "id": "grok-4-1-fast",
@@ -266,7 +426,17 @@
     "releaseDate": "2025-11-19",
     "knowledgeCutoff": "2025-07",
     "openWeights": false,
-    "contextWindow": 2000000
+    "contextWindow": 2000000,
+    "aaBenchmarkInputTokens": 95769224,
+    "aaBenchmarkAnswerTokens": 4435790,
+    "aaBenchmarkOutputTokens": 4435790,
+    "aaBenchmarkReasoningTokens": 0,
+    "aaBenchmarkTotalTokens": 100205014,
+    "aaBenchmarkTotalCost": 21.371739799999997,
+    "aaBenchmarkInputCost": 19.153844799999998,
+    "aaBenchmarkOutputCost": 2.217895,
+    "aaBenchmarkAnswerCost": 2.217895,
+    "aaBenchmarkReasoningCost": 0
   },
   {
     "id": "claude-opus-4-5",
@@ -275,7 +445,17 @@
     "releaseDate": "2025-11-24",
     "knowledgeCutoff": "2025-07",
     "openWeights": false,
-    "contextWindow": 500000
+    "contextWindow": 500000,
+    "aaBenchmarkInputTokens": 191190900,
+    "aaBenchmarkAnswerTokens": 7872264,
+    "aaBenchmarkOutputTokens": 7872264,
+    "aaBenchmarkReasoningTokens": 0,
+    "aaBenchmarkTotalTokens": 199063164,
+    "aaBenchmarkTotalCost": 1152.7611000000002,
+    "aaBenchmarkInputCost": 955.9545,
+    "aaBenchmarkOutputCost": 196.8066,
+    "aaBenchmarkAnswerCost": 196.8066,
+    "aaBenchmarkReasoningCost": 0
   },
   {
     "id": "deepseek-v3-2",
@@ -289,7 +469,17 @@
     "totalParams": 671,
     "activeParams": 37,
     "experts": 256,
-    "architecture": "moe"
+    "architecture": "moe",
+    "aaBenchmarkInputTokens": 345523776,
+    "aaBenchmarkAnswerTokens": 15266067,
+    "aaBenchmarkOutputTokens": 15266067,
+    "aaBenchmarkReasoningTokens": 0,
+    "aaBenchmarkTotalTokens": 360789843,
+    "aaBenchmarkTotalCost": 103.15840542000001,
+    "aaBenchmarkInputCost": 96.74665728000001,
+    "aaBenchmarkOutputCost": 6.411748139999999,
+    "aaBenchmarkAnswerCost": 6.411748139999999,
+    "aaBenchmarkReasoningCost": 0
   },
   {
     "id": "deepseek-v3-2-reasoning",
@@ -303,7 +493,17 @@
     "totalParams": 671,
     "activeParams": 37,
     "experts": 256,
-    "architecture": "moe"
+    "architecture": "moe",
+    "aaBenchmarkInputTokens": 160120975,
+    "aaBenchmarkAnswerTokens": 4172762,
+    "aaBenchmarkOutputTokens": 61435589,
+    "aaBenchmarkReasoningTokens": 57262826,
+    "aaBenchmarkTotalTokens": 221556564,
+    "aaBenchmarkTotalCost": 70.63682038,
+    "aaBenchmarkInputCost": 44.833873000000004,
+    "aaBenchmarkOutputCost": 25.80294738,
+    "aaBenchmarkAnswerCost": 1.7525600399999999,
+    "aaBenchmarkReasoningCost": 24.050386919999998
   },
   {
     "id": "mistral-large-3",
@@ -312,7 +512,17 @@
     "releaseDate": "2025-12-02",
     "knowledgeCutoff": "2025-06",
     "openWeights": false,
-    "contextWindow": 128000
+    "contextWindow": 128000,
+    "aaBenchmarkInputTokens": 61757253,
+    "aaBenchmarkAnswerTokens": 5196739,
+    "aaBenchmarkOutputTokens": 5196739,
+    "aaBenchmarkReasoningTokens": 0,
+    "aaBenchmarkTotalTokens": 66953992,
+    "aaBenchmarkTotalCost": 38.673735,
+    "aaBenchmarkInputCost": 30.8786265,
+    "aaBenchmarkOutputCost": 7.7951084999999996,
+    "aaBenchmarkAnswerCost": 7.7951084999999996,
+    "aaBenchmarkReasoningCost": 0
   },
   {
     "id": "gpt-5-2",
@@ -321,7 +531,17 @@
     "releaseDate": "2025-12-11",
     "knowledgeCutoff": "2025-09",
     "openWeights": false,
-    "contextWindow": 400000
+    "contextWindow": 400000,
+    "aaBenchmarkInputTokens": 279734866,
+    "aaBenchmarkAnswerTokens": 4608336,
+    "aaBenchmarkOutputTokens": 129620261,
+    "aaBenchmarkReasoningTokens": 125011925,
+    "aaBenchmarkTotalTokens": 409355127,
+    "aaBenchmarkTotalCost": 2304.2196695,
+    "aaBenchmarkInputCost": 489.5360155,
+    "aaBenchmarkOutputCost": 1814.683654,
+    "aaBenchmarkAnswerCost": 64.516704,
+    "aaBenchmarkReasoningCost": 1750.16695
   },
   {
     "id": "gemini-3-flash-reasoning",
@@ -330,7 +550,17 @@
     "releaseDate": "2025-12-17",
     "knowledgeCutoff": "2025-10",
     "openWeights": false,
-    "contextWindow": 1000000
+    "contextWindow": 1000000,
+    "aaBenchmarkInputTokens": 124405020,
+    "aaBenchmarkAnswerTokens": 4209804,
+    "aaBenchmarkOutputTokens": 72019315,
+    "aaBenchmarkReasoningTokens": 67809511,
+    "aaBenchmarkTotalTokens": 196424335,
+    "aaBenchmarkTotalCost": 278.26045500000004,
+    "aaBenchmarkInputCost": 62.20251,
+    "aaBenchmarkOutputCost": 216.05794500000002,
+    "aaBenchmarkAnswerCost": 12.629412,
+    "aaBenchmarkReasoningCost": 203.42853300000002
   },
   {
     "id": "qwen3-max-thinking",
@@ -339,7 +569,17 @@
     "releaseDate": "2026-01-26",
     "knowledgeCutoff": "2025-03",
     "openWeights": false,
-    "contextWindow": 256000
+    "contextWindow": 256000,
+    "aaBenchmarkInputTokens": 128776506,
+    "aaBenchmarkAnswerTokens": 6407440,
+    "aaBenchmarkOutputTokens": 85667483,
+    "aaBenchmarkReasoningTokens": 79260042,
+    "aaBenchmarkTotalTokens": 214443989,
+    "aaBenchmarkTotalCost": 668.5367052,
+    "aaBenchmarkInputCost": 154.5318072,
+    "aaBenchmarkOutputCost": 514.004898,
+    "aaBenchmarkAnswerCost": 38.44464,
+    "aaBenchmarkReasoningCost": 475.560252
   },
   {
     "id": "kimi-k2-5",
@@ -353,7 +593,17 @@
     "totalParams": 1100,
     "activeParams": 32,
     "experts": 384,
-    "architecture": "moe"
+    "architecture": "moe",
+    "aaBenchmarkInputTokens": 174567446,
+    "aaBenchmarkAnswerTokens": 6800919,
+    "aaBenchmarkOutputTokens": 88638618,
+    "aaBenchmarkReasoningTokens": 81837699,
+    "aaBenchmarkTotalTokens": 263206064,
+    "aaBenchmarkTotalCost": 370.65632159999996,
+    "aaBenchmarkInputCost": 104.74046759999999,
+    "aaBenchmarkOutputCost": 265.91585399999997,
+    "aaBenchmarkAnswerCost": 20.402757,
+    "aaBenchmarkReasoningCost": 245.51309700000002
   },
   {
     "id": "claude-opus-4-6",
@@ -362,7 +612,17 @@
     "releaseDate": "2026-02-05",
     "knowledgeCutoff": "2025-11",
     "openWeights": false,
-    "contextWindow": 1000000
+    "contextWindow": 1000000,
+    "aaBenchmarkInputTokens": 235732591,
+    "aaBenchmarkAnswerTokens": 10895113,
+    "aaBenchmarkOutputTokens": 10895113,
+    "aaBenchmarkReasoningTokens": 0,
+    "aaBenchmarkTotalTokens": 246627704,
+    "aaBenchmarkTotalCost": 1451.04078,
+    "aaBenchmarkInputCost": 1178.662955,
+    "aaBenchmarkOutputCost": 272.37782500000003,
+    "aaBenchmarkAnswerCost": 272.37782500000003,
+    "aaBenchmarkReasoningCost": 0
   },
   {
     "id": "gpt-5-3-codex",
@@ -371,7 +631,17 @@
     "releaseDate": "2026-02-05",
     "knowledgeCutoff": "2025-06",
     "openWeights": false,
-    "contextWindow": 400000
+    "contextWindow": 400000,
+    "aaBenchmarkInputTokens": 278033547,
+    "aaBenchmarkAnswerTokens": 4189567,
+    "aaBenchmarkOutputTokens": 77499767,
+    "aaBenchmarkReasoningTokens": 73310200,
+    "aaBenchmarkTotalTokens": 355533314,
+    "aaBenchmarkTotalCost": 1571.55544525,
+    "aaBenchmarkInputCost": 486.55870725,
+    "aaBenchmarkOutputCost": 1084.996738,
+    "aaBenchmarkAnswerCost": 58.653938000000004,
+    "aaBenchmarkReasoningCost": 1026.3428
   },
   {
     "id": "glm-5",
@@ -380,7 +650,17 @@
     "releaseDate": "2026-02-11",
     "knowledgeCutoff": "2025-09",
     "openWeights": false,
-    "contextWindow": 128000
+    "contextWindow": 128000,
+    "aaBenchmarkInputTokens": 197209375,
+    "aaBenchmarkAnswerTokens": 7286065,
+    "aaBenchmarkOutputTokens": 109321829,
+    "aaBenchmarkReasoningTokens": 102035764,
+    "aaBenchmarkTotalTokens": 306531204,
+    "aaBenchmarkTotalCost": 547.0392278,
+    "aaBenchmarkInputCost": 197.209375,
+    "aaBenchmarkOutputCost": 349.8298528,
+    "aaBenchmarkAnswerCost": 23.315408,
+    "aaBenchmarkReasoningCost": 326.51444480000004
   },
   {
     "id": "qwen3-5-397b-a17b",
@@ -394,7 +674,17 @@
     "totalParams": 397,
     "activeParams": 17,
     "experts": 128,
-    "architecture": "moe"
+    "architecture": "moe",
+    "aaBenchmarkInputTokens": 180261076,
+    "aaBenchmarkAnswerTokens": 6260752,
+    "aaBenchmarkOutputTokens": 85941062,
+    "aaBenchmarkReasoningTokens": 79680310,
+    "aaBenchmarkTotalTokens": 266202138,
+    "aaBenchmarkTotalCost": 417.5444688,
+    "aaBenchmarkInputCost": 108.1566456,
+    "aaBenchmarkOutputCost": 309.3878232,
+    "aaBenchmarkAnswerCost": 22.5387072,
+    "aaBenchmarkReasoningCost": 286.84911600000004
   },
   {
     "id": "claude-sonnet-4-6",
@@ -403,7 +693,17 @@
     "releaseDate": "2026-02-17",
     "knowledgeCutoff": "2025-09",
     "openWeights": false,
-    "contextWindow": 1000000
+    "contextWindow": 1000000,
+    "aaBenchmarkInputTokens": 396751692,
+    "aaBenchmarkAnswerTokens": 13758308,
+    "aaBenchmarkOutputTokens": 13758308,
+    "aaBenchmarkReasoningTokens": 0,
+    "aaBenchmarkTotalTokens": 410510000,
+    "aaBenchmarkTotalCost": 1396.629696,
+    "aaBenchmarkInputCost": 1190.255076,
+    "aaBenchmarkOutputCost": 206.37462,
+    "aaBenchmarkAnswerCost": 206.37462,
+    "aaBenchmarkReasoningCost": 0
   },
   {
     "id": "gemini-3-1-pro-preview",
@@ -412,7 +712,17 @@
     "releaseDate": "2026-02-19",
     "knowledgeCutoff": "2025-01",
     "openWeights": false,
-    "contextWindow": 2000000
+    "contextWindow": 2000000,
+    "aaBenchmarkInputTokens": 102389176,
+    "aaBenchmarkAnswerTokens": 4311515,
+    "aaBenchmarkOutputTokens": 57292121,
+    "aaBenchmarkReasoningTokens": 52980606,
+    "aaBenchmarkTotalTokens": 159681297,
+    "aaBenchmarkTotalCost": 892.283804,
+    "aaBenchmarkInputCost": 204.778352,
+    "aaBenchmarkOutputCost": 687.505452,
+    "aaBenchmarkAnswerCost": 51.73818,
+    "aaBenchmarkReasoningCost": 635.767272
   },
   {
     "id": "qwen3-5-122b-a10b",
@@ -426,7 +736,17 @@
     "totalParams": 122,
     "activeParams": 10,
     "experts": 128,
-    "architecture": "moe"
+    "architecture": "moe",
+    "aaBenchmarkInputTokens": 154144577,
+    "aaBenchmarkAnswerTokens": 9145746,
+    "aaBenchmarkOutputTokens": 91338871,
+    "aaBenchmarkReasoningTokens": 82193125,
+    "aaBenchmarkTotalTokens": 245483448,
+    "aaBenchmarkTotalCost": 353.942218,
+    "aaBenchmarkInputCost": 61.6578308,
+    "aaBenchmarkOutputCost": 292.2843872,
+    "aaBenchmarkAnswerCost": 29.266387200000004,
+    "aaBenchmarkReasoningCost": 263.018
   },
   {
     "id": "gpt-5-4",
@@ -435,7 +755,17 @@
     "releaseDate": "2026-03-05",
     "knowledgeCutoff": "2025-08",
     "openWeights": false,
-    "contextWindow": 400000
+    "contextWindow": 400000,
+    "aaBenchmarkInputTokens": 416930095,
+    "aaBenchmarkAnswerTokens": 6085023,
+    "aaBenchmarkOutputTokens": 120579080,
+    "aaBenchmarkReasoningTokens": 114494057,
+    "aaBenchmarkTotalTokens": 537509175,
+    "aaBenchmarkTotalCost": 2851.0114375000003,
+    "aaBenchmarkInputCost": 1042.3252375,
+    "aaBenchmarkOutputCost": 1808.6862,
+    "aaBenchmarkAnswerCost": 91.27534499999999,
+    "aaBenchmarkReasoningCost": 1717.410855
   },
   {
     "id": "nvidia-nemotron-3-super",
@@ -463,7 +793,17 @@
     "totalParams": 230,
     "activeParams": 10,
     "experts": 256,
-    "architecture": "moe"
+    "architecture": "moe",
+    "aaBenchmarkInputTokens": 237301834,
+    "aaBenchmarkAnswerTokens": 8409975,
+    "aaBenchmarkOutputTokens": 86930041,
+    "aaBenchmarkReasoningTokens": 78520066,
+    "aaBenchmarkTotalTokens": 324231875,
+    "aaBenchmarkTotalCost": 175.5065994,
+    "aaBenchmarkInputCost": 71.1905502,
+    "aaBenchmarkOutputCost": 104.3160492,
+    "aaBenchmarkAnswerCost": 10.091969999999998,
+    "aaBenchmarkReasoningCost": 94.22407919999999
   },
   {
     "id": "qwen3-6-plus",
@@ -473,7 +813,17 @@
     "knowledgeCutoff": "2026-01",
     "openWeights": false,
     "contextWindow": 1000000,
-    "cohortLabel": "Qwen3.6"
+    "cohortLabel": "Qwen3.6",
+    "aaBenchmarkInputTokens": 357585996,
+    "aaBenchmarkAnswerTokens": 15687089,
+    "aaBenchmarkOutputTokens": 101285828,
+    "aaBenchmarkReasoningTokens": 85598739,
+    "aaBenchmarkTotalTokens": 458871824,
+    "aaBenchmarkTotalCost": 482.650482,
+    "aaBenchmarkInputCost": 178.792998,
+    "aaBenchmarkOutputCost": 303.857484,
+    "aaBenchmarkAnswerCost": 47.061267,
+    "aaBenchmarkReasoningCost": 256.79621699999996
   },
   {
     "id": "glm-5-1",
@@ -487,7 +837,17 @@
     "totalParams": 754,
     "activeParams": 40,
     "experts": 256,
-    "architecture": "moe"
+    "architecture": "moe",
+    "aaBenchmarkInputTokens": 36475389,
+    "aaBenchmarkAnswerTokens": 1818005,
+    "aaBenchmarkOutputTokens": 112018616,
+    "aaBenchmarkReasoningTokens": 110200611,
+    "aaBenchmarkTotalTokens": 148494005,
+    "aaBenchmarkTotalCost": 543.947455,
+    "aaBenchmarkInputCost": 51.065544599999996,
+    "aaBenchmarkOutputCost": 492.88191040000004,
+    "aaBenchmarkAnswerCost": 7.999222000000001,
+    "aaBenchmarkReasoningCost": 484.8826884
   },
   {
     "id": "grok-4-20",
@@ -496,7 +856,17 @@
     "releaseDate": "2026-04-07",
     "knowledgeCutoff": "2025-11",
     "openWeights": false,
-    "contextWindow": 256000
+    "contextWindow": 256000,
+    "aaBenchmarkInputTokens": 74252469,
+    "aaBenchmarkAnswerTokens": 5175753,
+    "aaBenchmarkOutputTokens": 60942393,
+    "aaBenchmarkReasoningTokens": 55766640,
+    "aaBenchmarkTotalTokens": 135194862,
+    "aaBenchmarkTotalCost": 514.159296,
+    "aaBenchmarkInputCost": 148.504938,
+    "aaBenchmarkOutputCost": 365.654358,
+    "aaBenchmarkAnswerCost": 31.054518,
+    "aaBenchmarkReasoningCost": 334.59984000000003
   },
   {
     "id": "muse-spark",
@@ -505,7 +875,17 @@
     "releaseDate": "2026-04-08",
     "knowledgeCutoff": "2026-01",
     "openWeights": false,
-    "contextWindow": 262144
+    "contextWindow": 262144,
+    "aaBenchmarkInputTokens": 133207685,
+    "aaBenchmarkAnswerTokens": 5689828,
+    "aaBenchmarkOutputTokens": 58369032,
+    "aaBenchmarkReasoningTokens": 52679203,
+    "aaBenchmarkTotalTokens": 191576717,
+    "aaBenchmarkTotalCost": 0,
+    "aaBenchmarkInputCost": 0,
+    "aaBenchmarkOutputCost": 0,
+    "aaBenchmarkAnswerCost": 0,
+    "aaBenchmarkReasoningCost": 0
   },
   {
     "id": "claude-opus-4-7",
@@ -514,7 +894,17 @@
     "releaseDate": "2026-04-16",
     "knowledgeCutoff": "2026-01",
     "openWeights": false,
-    "contextWindow": 1000000
+    "contextWindow": 1000000,
+    "aaBenchmarkInputTokens": 402525634,
+    "aaBenchmarkAnswerTokens": 19174823,
+    "aaBenchmarkOutputTokens": 111936386,
+    "aaBenchmarkReasoningTokens": 92761563,
+    "aaBenchmarkTotalTokens": 514462020,
+    "aaBenchmarkTotalCost": 4811.0378200000005,
+    "aaBenchmarkInputCost": 2012.6281700000002,
+    "aaBenchmarkOutputCost": 2798.40965,
+    "aaBenchmarkAnswerCost": 479.370575,
+    "aaBenchmarkReasoningCost": 2319.0390749999997
   },
   {
     "id": "qwen3-6-35b-a3b",
@@ -529,7 +919,17 @@
     "activeParams": 3,
     "experts": 128,
     "architecture": "moe",
-    "cohortLabel": "Qwen3.6"
+    "cohortLabel": "Qwen3.6",
+    "aaBenchmarkInputTokens": 270349628,
+    "aaBenchmarkAnswerTokens": 11465020,
+    "aaBenchmarkOutputTokens": 143188723,
+    "aaBenchmarkReasoningTokens": 131723703,
+    "aaBenchmarkTotalTokens": 413538351,
+    "aaBenchmarkTotalCost": 423.55573725,
+    "aaBenchmarkInputCost": 101.3811105,
+    "aaBenchmarkOutputCost": 322.17462675,
+    "aaBenchmarkAnswerCost": 25.796295,
+    "aaBenchmarkReasoningCost": 296.37833175000003
   },
   {
     "id": "qwen3-6-35b-a3b-non-reasoning",
@@ -544,7 +944,17 @@
     "activeParams": 3,
     "experts": 128,
     "architecture": "moe",
-    "cohortLabel": "Qwen3.6"
+    "cohortLabel": "Qwen3.6",
+    "aaBenchmarkInputTokens": 359329738,
+    "aaBenchmarkAnswerTokens": 24315413,
+    "aaBenchmarkOutputTokens": 24315413,
+    "aaBenchmarkReasoningTokens": 0,
+    "aaBenchmarkTotalTokens": 383645151,
+    "aaBenchmarkTotalCost": 189.45833100000002,
+    "aaBenchmarkInputCost": 134.74865175000002,
+    "aaBenchmarkOutputCost": 54.70967925,
+    "aaBenchmarkAnswerCost": 54.70967925,
+    "aaBenchmarkReasoningCost": 0
   },
   {
     "id": "kimi-k2-6",
@@ -558,7 +968,17 @@
     "totalParams": 1100,
     "activeParams": 32,
     "experts": 384,
-    "architecture": "moe"
+    "architecture": "moe",
+    "aaBenchmarkInputTokens": 300716083,
+    "aaBenchmarkAnswerTokens": 9014992,
+    "aaBenchmarkOutputTokens": 165546938,
+    "aaBenchmarkReasoningTokens": 156531946,
+    "aaBenchmarkTotalTokens": 466263021,
+    "aaBenchmarkTotalCost": 947.8680308500001,
+    "aaBenchmarkInputCost": 285.68027885000004,
+    "aaBenchmarkOutputCost": 662.187752,
+    "aaBenchmarkAnswerCost": 36.059968,
+    "aaBenchmarkReasoningCost": 626.127784
   },
   {
     "id": "qwen3-6-max",
@@ -568,7 +988,17 @@
     "knowledgeCutoff": "2026-01",
     "openWeights": false,
     "contextWindow": 1000000,
-    "cohortLabel": "Qwen3.6"
+    "cohortLabel": "Qwen3.6",
+    "aaBenchmarkInputTokens": 218871129,
+    "aaBenchmarkAnswerTokens": 8616699,
+    "aaBenchmarkOutputTokens": 73850272,
+    "aaBenchmarkReasoningTokens": 65233573,
+    "aaBenchmarkTotalTokens": 292721401,
+    "aaBenchmarkTotalCost": 860.5645893,
+    "aaBenchmarkInputCost": 284.5324677,
+    "aaBenchmarkOutputCost": 576.0321216,
+    "aaBenchmarkAnswerCost": 67.2102522,
+    "aaBenchmarkReasoningCost": 508.8218694
   },
   {
     "id": "mimo-v2-5-pro",
@@ -577,7 +1007,17 @@
     "releaseDate": "2026-04-22",
     "knowledgeCutoff": "2026-01",
     "openWeights": false,
-    "contextWindow": 131072
+    "contextWindow": 131072,
+    "aaBenchmarkInputTokens": 185899606,
+    "aaBenchmarkAnswerTokens": 9493853,
+    "aaBenchmarkOutputTokens": 91897190,
+    "aaBenchmarkReasoningTokens": 82403337,
+    "aaBenchmarkTotalTokens": 277796796,
+    "aaBenchmarkTotalCost": 461.59117599999996,
+    "aaBenchmarkInputCost": 185.899606,
+    "aaBenchmarkOutputCost": 275.69156999999996,
+    "aaBenchmarkAnswerCost": 28.481558999999997,
+    "aaBenchmarkReasoningCost": 247.21001099999998
   },
   {
     "id": "qwen3-6-27b",
@@ -591,7 +1031,17 @@
     "totalParams": 27,
     "activeParams": 27,
     "architecture": "dense",
-    "cohortLabel": "Qwen3.6"
+    "cohortLabel": "Qwen3.6",
+    "aaBenchmarkInputTokens": 230914952,
+    "aaBenchmarkAnswerTokens": 10031286,
+    "aaBenchmarkOutputTokens": 144477839,
+    "aaBenchmarkReasoningTokens": 134446553,
+    "aaBenchmarkTotalTokens": 375392791,
+    "aaBenchmarkTotalCost": 658.6691916,
+    "aaBenchmarkInputCost": 138.54897119999998,
+    "aaBenchmarkOutputCost": 520.1202204,
+    "aaBenchmarkAnswerCost": 36.1126296,
+    "aaBenchmarkReasoningCost": 484.0075908
   },
   {
     "id": "qwen3-6-27b-non-reasoning",
@@ -605,7 +1055,17 @@
     "totalParams": 27,
     "activeParams": 27,
     "architecture": "dense",
-    "cohortLabel": "Qwen3.6"
+    "cohortLabel": "Qwen3.6",
+    "aaBenchmarkInputTokens": 256776101,
+    "aaBenchmarkAnswerTokens": 22301660,
+    "aaBenchmarkOutputTokens": 22301660,
+    "aaBenchmarkReasoningTokens": 0,
+    "aaBenchmarkTotalTokens": 279077761,
+    "aaBenchmarkTotalCost": 234.35163659999995,
+    "aaBenchmarkInputCost": 154.06566059999997,
+    "aaBenchmarkOutputCost": 80.28597599999999,
+    "aaBenchmarkAnswerCost": 80.28597599999999,
+    "aaBenchmarkReasoningCost": 0
   },
   {
     "id": "gpt-5-5",
@@ -615,7 +1075,17 @@
     "knowledgeCutoff": "2025-06",
     "contextWindow": 400000,
     "openWeights": false,
-    "cohortLabel": "GPT-5.5"
+    "cohortLabel": "GPT-5.5",
+    "aaBenchmarkInputTokens": 220273535,
+    "aaBenchmarkAnswerTokens": 7525826,
+    "aaBenchmarkOutputTokens": 75187902,
+    "aaBenchmarkReasoningTokens": 67662076,
+    "aaBenchmarkTotalTokens": 295461437,
+    "aaBenchmarkTotalCost": 3357.004735,
+    "aaBenchmarkInputCost": 1101.367675,
+    "aaBenchmarkOutputCost": 2255.63706,
+    "aaBenchmarkAnswerCost": 225.77478000000002,
+    "aaBenchmarkReasoningCost": 2029.86228
   },
   {
     "id": "gpt-5-5-high",
@@ -625,7 +1095,17 @@
     "knowledgeCutoff": "2025-06",
     "contextWindow": 400000,
     "openWeights": false,
-    "cohortLabel": "GPT-5.5"
+    "cohortLabel": "GPT-5.5",
+    "aaBenchmarkInputTokens": 164835431,
+    "aaBenchmarkAnswerTokens": 5852033,
+    "aaBenchmarkOutputTokens": 44506781,
+    "aaBenchmarkReasoningTokens": 38654748,
+    "aaBenchmarkTotalTokens": 209342212,
+    "aaBenchmarkTotalCost": 2159.380585,
+    "aaBenchmarkInputCost": 824.177155,
+    "aaBenchmarkOutputCost": 1335.2034299999998,
+    "aaBenchmarkAnswerCost": 175.56098999999998,
+    "aaBenchmarkReasoningCost": 1159.6424399999999
   },
   {
     "id": "gpt-5-5-low",
@@ -635,7 +1115,17 @@
     "knowledgeCutoff": "2025-06",
     "contextWindow": 400000,
     "openWeights": false,
-    "cohortLabel": "GPT-5.5"
+    "cohortLabel": "GPT-5.5",
+    "aaBenchmarkInputTokens": 58080715,
+    "aaBenchmarkAnswerTokens": 2328531,
+    "aaBenchmarkOutputTokens": 7008990,
+    "aaBenchmarkReasoningTokens": 4680459,
+    "aaBenchmarkTotalTokens": 65089705,
+    "aaBenchmarkTotalCost": 500.673275,
+    "aaBenchmarkInputCost": 290.403575,
+    "aaBenchmarkOutputCost": 210.2697,
+    "aaBenchmarkAnswerCost": 69.85593,
+    "aaBenchmarkReasoningCost": 140.41377
   },
   {
     "id": "gpt-5-5-medium",
@@ -645,7 +1135,17 @@
     "knowledgeCutoff": "2025-06",
     "contextWindow": 400000,
     "openWeights": false,
-    "cohortLabel": "GPT-5.5"
+    "cohortLabel": "GPT-5.5",
+    "aaBenchmarkInputTokens": 105075832,
+    "aaBenchmarkAnswerTokens": 4347016,
+    "aaBenchmarkOutputTokens": 22458733,
+    "aaBenchmarkReasoningTokens": 18111717,
+    "aaBenchmarkTotalTokens": 127534565,
+    "aaBenchmarkTotalCost": 1199.14115,
+    "aaBenchmarkInputCost": 525.3791600000001,
+    "aaBenchmarkOutputCost": 673.76199,
+    "aaBenchmarkAnswerCost": 130.41048,
+    "aaBenchmarkReasoningCost": 543.35151
   },
   {
     "id": "gpt-5-5-non-reasoning",
@@ -655,7 +1155,17 @@
     "knowledgeCutoff": "2025-06",
     "contextWindow": 400000,
     "openWeights": false,
-    "cohortLabel": "GPT-5.5"
+    "cohortLabel": "GPT-5.5",
+    "aaBenchmarkInputTokens": 55134838,
+    "aaBenchmarkAnswerTokens": 2833914,
+    "aaBenchmarkOutputTokens": 2833914,
+    "aaBenchmarkReasoningTokens": 0,
+    "aaBenchmarkTotalTokens": 57968752,
+    "aaBenchmarkTotalCost": 360.69161,
+    "aaBenchmarkInputCost": 275.67419,
+    "aaBenchmarkOutputCost": 85.01742,
+    "aaBenchmarkAnswerCost": 85.01742,
+    "aaBenchmarkReasoningCost": 0
   },
   {
     "id": "deepseek-v4-flash",
@@ -665,7 +1175,17 @@
     "knowledgeCutoff": "2025-01",
     "openWeights": false,
     "contextWindow": 128000,
-    "cohortLabel": "DeepSeek V4"
+    "cohortLabel": "DeepSeek V4",
+    "aaBenchmarkInputTokens": 323997022,
+    "aaBenchmarkAnswerTokens": 13193287,
+    "aaBenchmarkOutputTokens": 241060818,
+    "aaBenchmarkReasoningTokens": 227867531,
+    "aaBenchmarkTotalTokens": 565057840,
+    "aaBenchmarkTotalCost": 112.85661212000002,
+    "aaBenchmarkInputCost": 45.35958308000001,
+    "aaBenchmarkOutputCost": 67.49702904000002,
+    "aaBenchmarkAnswerCost": 3.6941203600000003,
+    "aaBenchmarkReasoningCost": 63.80290868000001
   },
   {
     "id": "deepseek-v4-flash-high",
@@ -675,7 +1195,17 @@
     "knowledgeCutoff": "2025-01",
     "openWeights": false,
     "contextWindow": 128000,
-    "cohortLabel": "DeepSeek V4"
+    "cohortLabel": "DeepSeek V4",
+    "aaBenchmarkInputTokens": 211069223,
+    "aaBenchmarkAnswerTokens": 7933272,
+    "aaBenchmarkOutputTokens": 98593232,
+    "aaBenchmarkReasoningTokens": 90659960,
+    "aaBenchmarkTotalTokens": 309662455,
+    "aaBenchmarkTotalCost": 57.15579618000001,
+    "aaBenchmarkInputCost": 29.549691220000003,
+    "aaBenchmarkOutputCost": 27.606104960000003,
+    "aaBenchmarkAnswerCost": 2.22131616,
+    "aaBenchmarkReasoningCost": 25.384788800000003
   },
   {
     "id": "deepseek-v4-pro",
@@ -685,7 +1215,17 @@
     "knowledgeCutoff": "2025-01",
     "openWeights": false,
     "contextWindow": 128000,
-    "cohortLabel": "DeepSeek V4"
+    "cohortLabel": "DeepSeek V4",
+    "aaBenchmarkInputTokens": 241313852,
+    "aaBenchmarkAnswerTokens": 10864142,
+    "aaBenchmarkOutputTokens": 187183189,
+    "aaBenchmarkReasoningTokens": 176319047,
+    "aaBenchmarkTotalTokens": 428497041,
+    "aaBenchmarkTotalCost": 1071.2836002,
+    "aaBenchmarkInputCost": 419.88610248,
+    "aaBenchmarkOutputCost": 651.39749772,
+    "aaBenchmarkAnswerCost": 37.80721416,
+    "aaBenchmarkReasoningCost": 613.59028356
   },
   {
     "id": "deepseek-v4-pro-high",
@@ -695,6 +1235,16 @@
     "knowledgeCutoff": "2025-01",
     "openWeights": false,
     "contextWindow": 128000,
-    "cohortLabel": "DeepSeek V4"
+    "cohortLabel": "DeepSeek V4",
+    "aaBenchmarkInputTokens": 189213845,
+    "aaBenchmarkAnswerTokens": 8700392,
+    "aaBenchmarkOutputTokens": 103731256,
+    "aaBenchmarkReasoningTokens": 95030864,
+    "aaBenchmarkTotalTokens": 292945101,
+    "aaBenchmarkTotalCost": 690.21686118,
+    "aaBenchmarkInputCost": 329.2320903,
+    "aaBenchmarkOutputCost": 360.98477088,
+    "aaBenchmarkAnswerCost": 30.27736416,
+    "aaBenchmarkReasoningCost": 330.70740672
   }
 ]

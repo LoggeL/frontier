@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import type { Benchmark, Model, Score } from "../lib/schema";
 import {
   baselineNormalize,
@@ -21,11 +21,22 @@ type SortKey =
   | { kind: "model" }
   | { kind: "release" }
   | { kind: "cutoff" }
+  | { kind: "cost" }
+  | { kind: "tokens" }
   | { kind: "benchmark"; benchmarkId: string; variant: string };
 
 interface SortState {
   key: SortKey;
   dir: "asc" | "desc";
+}
+
+interface ModelGroup {
+  key: string;
+  provider: string;
+  label: string;
+  models: Model[];
+  selectedModel: Model;
+  sortModel: Model;
 }
 
 const ALL_CATEGORIES: Benchmark["category"][] = [
@@ -67,13 +78,7 @@ export default function ComparisonTable({
     col: string;
     value: number;
   } | null>(null);
-  const effortGroups = useMemo(() => buildReasoningEffortGroups(models), [models]);
-  const [effortGroupId, setEffortGroupId] = useState(() =>
-    effortGroups[0]?.baseId ?? "",
-  );
-  const [effortModelIds, setEffortModelIds] = useState<Set<string>>(() =>
-    new Set(effortGroups[0]?.models.map((m) => m.id) ?? []),
-  );
+  const [selectedModelByGroup, setSelectedModelByGroup] = useState<Record<string, string>>({});
 
   const matrix = useMemo(() => buildScoreMatrix(scores), [scores]);
   const extents = useMemo(
@@ -85,22 +90,6 @@ export default function ComparisonTable({
     [search],
   );
 
-  useEffect(() => {
-    if (effortGroups.length === 0) return;
-    const current = effortGroups.find((g) => g.baseId === effortGroupId);
-    if (!current) {
-      const first = effortGroups[0]!;
-      setEffortGroupId(first.baseId);
-      setEffortModelIds(new Set(first.models.map((m) => m.id)));
-    }
-  }, [effortGroups, effortGroupId]);
-
-  const selectedEffortModels = useMemo(() => {
-    const group = effortGroups.find((g) => g.baseId === effortGroupId);
-    if (!group) return [];
-    return group.models.filter((m) => effortModelIds.has(m.id));
-  }, [effortGroups, effortGroupId, effortModelIds]);
-
   const visibleBenchmarks = useMemo(
     () => benchmarks.filter(
       (b) => categoryFilter.has(b.category) && (!visibleBenchmarkIds || visibleBenchmarkIds.includes(b.id)),
@@ -108,7 +97,7 @@ export default function ComparisonTable({
     [benchmarks, categoryFilter, visibleBenchmarkIds],
   );
 
-  const visibleModels = useMemo(() => {
+  const visibleModelGroups = useMemo(() => {
     const filtered = models.filter((m) => {
       if (!providerFilter.has(m.provider)) return false;
       if (openOnly && !m.openWeights) return false;
@@ -120,21 +109,24 @@ export default function ComparisonTable({
         m.knowledgeCutoff,
         m.releaseDate,
         m.cohortLabel ?? "",
+        reasoningFamilyLabel(m),
         m.openWeights ? "open open-weight open-weights" : "closed",
       ]
         .join(" ")
         .toLowerCase();
       return searchTerms.every((term) => haystack.includes(term));
     });
-    const sorted = [...filtered].sort(comparator(sort, matrix, activeVariant));
+
+    const grouped = groupModels(filtered, selectedModelByGroup);
+    const sorted = [...grouped].sort(groupComparator(sort, matrix, activeVariant));
     if (!focusModelId) return sorted;
-    const idx = sorted.findIndex((m) => m.id === focusModelId);
+    const idx = sorted.findIndex((g) => g.models.some((m) => m.id === focusModelId));
     if (idx <= 0) return sorted;
     const focus = sorted[idx]!;
-    const without = sorted.filter((m) => m.id !== focusModelId);
+    const without = sorted.filter((g) => g.key !== focus.key);
     const middle = Math.floor(without.length / 2);
     return [...without.slice(0, middle), focus, ...without.slice(middle)];
-  }, [models, providerFilter, openOnly, searchTerms, sort, matrix, activeVariant, focusModelId]);
+  }, [models, providerFilter, openOnly, searchTerms, selectedModelByGroup, sort, matrix, activeVariant, focusModelId]);
 
   return (
     <div className="flex flex-col gap-3">
@@ -148,19 +140,7 @@ export default function ComparisonTable({
         setCategoryFilter={setCategoryFilter}
         search={search}
         setSearch={setSearch}
-        resultCount={visibleModels.length}
-        effortGroups={effortGroups}
-        effortGroupId={effortGroupId}
-        setEffortGroupId={setEffortGroupId}
-        effortModelIds={effortModelIds}
-        setEffortModelIds={setEffortModelIds}
-      />
-
-      <ReasoningEffortCompare
-        models={selectedEffortModels}
-        benchmarks={visibleBenchmarks}
-        matrix={matrix}
-        activeVariant={activeVariant}
+        resultCount={visibleModelGroups.length}
       />
 
       <div className="overflow-x-auto rounded-lg border border-neutral-800 bg-neutral-900/40">
@@ -192,6 +172,24 @@ export default function ComparisonTable({
                 onClick={() => toggleSort(setSort, sort, { kind: "cutoff" })}
               >
                 Cutoff
+              </Th>
+              <Th
+                active={sort.key.kind === "cost"}
+                dir={sort.dir}
+                onClick={() => toggleSort(setSort, sort, { kind: "cost" })}
+              >
+                <span title="Artificial Analysis cost to run Intelligence Index benchmarks">
+                  AA bench $
+                </span>
+              </Th>
+              <Th
+                active={sort.key.kind === "tokens"}
+                dir={sort.dir}
+                onClick={() => toggleSort(setSort, sort, { kind: "tokens" })}
+              >
+                <span title="Artificial Analysis tokens used to run Intelligence Index benchmarks">
+                  AA bench tok
+                </span>
               </Th>
               {visibleBenchmarks.map((b) => {
                 const variant = activeVariant[b.id] ?? b.variants[0]!.key;
@@ -228,120 +226,157 @@ export default function ComparisonTable({
             </tr>
           </thead>
           <tbody>
-            {visibleModels.map((m) => {
-              const isFocus = m.id === focusModelId;
+            {visibleModelGroups.map((group) => {
+              const m = group.selectedModel;
+              const isFocus = group.models.some((model) => model.id === focusModelId);
+              const selectorValue = m.id;
+              const showReasoningSelect = group.models.length > 1;
               return (
-              <tr
-                key={m.id}
-                className={[
-                  "border-t border-neutral-800 hover:bg-neutral-900",
-                  isFocus ? "bg-amber-500/8" : "",
-                ].join(" ")}
-              >
-                <td className={[
-                  "sticky left-0 px-3 py-2 font-medium text-neutral-100",
-                  isFocus ? "bg-amber-950/40" : "bg-neutral-950",
-                ].join(" ")}>
-                  <a
-                    href={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/models/${m.id}/`}
-                    className="flex flex-col leading-tight hover:text-amber-300"
-                  >
-                    <span className="inline-flex items-center gap-1">
-                      {m.name}
-                      {isFocus && (
-                        <span className="rounded bg-amber-400/20 px-1 text-[9px] uppercase tracking-wider text-amber-200">
-                          target
-                        </span>
-                      )}
-                      {m.openWeights && (
-                        <span
-                          className="rounded bg-amber-500/15 px-1 text-[9px] uppercase tracking-wider text-amber-300"
-                          title="open weights"
-                        >
-                          open
-                        </span>
-                      )}
-                    </span>
-                    {m.cohortLabel && (
-                      <span
-                        className="text-[10px] text-amber-400"
-                        title={`Cohort: ${m.cohortLabel}`}
+                <tr
+                  key={group.key}
+                  className={[
+                    "border-t border-neutral-800 hover:bg-neutral-900",
+                    isFocus ? "bg-amber-500/8" : "",
+                  ].join(" ")}
+                >
+                  <td className={[
+                    "sticky left-0 px-3 py-2 font-medium text-neutral-100",
+                    isFocus ? "bg-amber-950/40" : "bg-neutral-950",
+                  ].join(" ")}>
+                    <div className="flex flex-col gap-1 leading-tight">
+                      <a
+                        href={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/models/${m.id}/`}
+                        className="flex flex-col hover:text-amber-300"
                       >
-                        {m.cohortLabel}
-                      </span>
-                    )}
-                  </a>
-                </td>
-                <td className="px-3 py-2 text-neutral-400">{m.provider}</td>
-                <td className="px-3 py-2 font-mono text-xs text-neutral-300">
-                  {m.releaseDate}
-                </td>
-                <td className="px-3 py-2 font-mono text-xs text-neutral-300">
-                  {m.knowledgeCutoff}
-                </td>
-                {visibleBenchmarks.map((b) => {
-                  const variant = activeVariant[b.id] ?? b.variants[0]!.key;
-                  const colKey = `${b.id}::${variant}`;
-                  const isHoveredCol = hoverCell?.col === colKey;
-                  const cells = matrix.get(m.id)?.get(b.id) ?? [];
-                  const cell = cells.find((c) => c.variant === variant);
-                  if (!cell) {
+                        <span className="inline-flex items-center gap-1">
+                          {group.label}
+                          {isFocus && (
+                            <span className="rounded bg-amber-400/20 px-1 text-[9px] uppercase tracking-wider text-amber-200">
+                              target
+                            </span>
+                          )}
+                          {m.openWeights && (
+                            <span
+                              className="rounded bg-amber-500/15 px-1 text-[9px] uppercase tracking-wider text-amber-300"
+                              title="open weights"
+                            >
+                              open
+                            </span>
+                          )}
+                        </span>
+                        {m.cohortLabel && (
+                          <span
+                            className="text-[10px] text-amber-400"
+                            title={`Cohort: ${m.cohortLabel}`}
+                          >
+                            {m.cohortLabel}
+                          </span>
+                        )}
+                      </a>
+                      {showReasoningSelect && (
+                        <select
+                          value={selectorValue}
+                          onChange={(e) =>
+                            setSelectedModelByGroup((prev) => ({
+                              ...prev,
+                              [group.key]: e.target.value,
+                            }))
+                          }
+                          className="w-fit rounded border border-neutral-800 bg-neutral-950 px-2 py-1 text-[11px] text-neutral-300 focus:border-amber-400 focus:outline-none"
+                          aria-label={`Reasoning effort for ${group.label}`}
+                        >
+                          {group.models.map((option) => (
+                            <option key={option.id} value={option.id}>
+                              {reasoningEffortLabel(option) ?? option.name}
+                            </option>
+                          ))}
+                        </select>
+                      )}
+                    </div>
+                  </td>
+                  <td className="px-3 py-2 text-neutral-400">{m.provider}</td>
+                  <td className="px-3 py-2 font-mono text-xs text-neutral-300">
+                    {m.releaseDate}
+                  </td>
+                  <td className="px-3 py-2 font-mono text-xs text-neutral-300">
+                    {m.knowledgeCutoff}
+                  </td>
+                  <td
+                    className="px-3 py-2 text-right font-mono text-xs text-neutral-300"
+                    title={formatBenchmarkCostTitle(m)}
+                  >
+                    {formatBenchmarkCost(m.aaBenchmarkTotalCost)}
+                  </td>
+                  <td
+                    className="px-3 py-2 text-right font-mono text-xs text-neutral-300"
+                    title={formatBenchmarkTokensTitle(m)}
+                  >
+                    {formatTokenCount(m.aaBenchmarkTotalTokens)}
+                  </td>
+                  {visibleBenchmarks.map((b) => {
+                    const variant = activeVariant[b.id] ?? b.variants[0]!.key;
+                    const colKey = `${b.id}::${variant}`;
+                    const isHoveredCol = hoverCell?.col === colKey;
+                    const cells = matrix.get(m.id)?.get(b.id) ?? [];
+                    const cell = cells.find((c) => c.variant === variant);
+                    if (!cell) {
+                      return (
+                        <td
+                          key={b.id}
+                          className="px-3 py-2 text-center text-neutral-700"
+                        >
+                          —
+                        </td>
+                      );
+                    }
+                    const ext = extents.get(colKey);
+                    const baseline =
+                      isHoveredCol && hoverCell ? hoverCell.value : undefined;
+                    const norm = ext
+                      ? baseline !== undefined
+                        ? baselineNormalize(cell.value, baseline, ext)
+                        : normalize(cell.value, ext)
+                      : 0.5;
+                    const bg = ext ? heatColor(norm) : undefined;
+                    const isBaselineCell =
+                      baseline !== undefined && cell.value === baseline;
+                    const variantMeta = b.variants.find(
+                      (v) => v.key === variant,
+                    );
+                    const tipLines = [
+                      `${b.name} — ${variantMeta?.label ?? variant}`,
+                      variantMeta?.notes,
+                      cell.notes ? `\nNote: ${cell.notes}` : "",
+                    ]
+                      .filter(Boolean)
+                      .join("\n");
                     return (
                       <td
                         key={b.id}
-                        className="px-3 py-2 text-center text-neutral-700"
+                        className={[
+                          "px-3 py-2 text-right transition-colors duration-75",
+                          isBaselineCell ? "ring-1 ring-inset ring-neutral-200" : "",
+                        ].join(" ")}
+                        style={bg ? { backgroundColor: bg } : undefined}
+                        onMouseEnter={() =>
+                          setHoverCell({ col: colKey, value: cell.value })
+                        }
+                        title={tipLines}
                       >
-                        —
+                        <span className="font-mono text-sm text-neutral-100">
+                          {formatScore(cell.value, b.unit)}
+                        </span>
+                        {variant !== "default" && (
+                          <span className="ml-1 rounded bg-neutral-800 px-1 text-[9px] uppercase tracking-wide text-neutral-300">
+                            {variant}
+                          </span>
+                        )}
                       </td>
                     );
-                  }
-                  const ext = extents.get(colKey);
-                  const baseline =
-                    isHoveredCol && hoverCell ? hoverCell.value : undefined;
-                  const norm = ext
-                    ? baseline !== undefined
-                      ? baselineNormalize(cell.value, baseline, ext)
-                      : normalize(cell.value, ext)
-                    : 0.5;
-                  const bg = ext ? heatColor(norm) : undefined;
-                  const isBaselineCell =
-                    baseline !== undefined && cell.value === baseline;
-                  const variantMeta = b.variants.find(
-                    (v) => v.key === variant,
-                  );
-                  const tipLines = [
-                    `${b.name} — ${variantMeta?.label ?? variant}`,
-                    variantMeta?.notes,
-                    cell.notes ? `\nNote: ${cell.notes}` : "",
-                  ]
-                    .filter(Boolean)
-                    .join("\n");
-                  return (
-                    <td
-                      key={b.id}
-                      className={[
-                        "px-3 py-2 text-right transition-colors duration-75",
-                        isBaselineCell ? "ring-1 ring-inset ring-neutral-200" : "",
-                      ].join(" ")}
-                      style={bg ? { backgroundColor: bg } : undefined}
-                      onMouseEnter={() =>
-                        setHoverCell({ col: colKey, value: cell.value })
-                      }
-                      title={tipLines}
-                    >
-                      <span className="font-mono text-sm text-neutral-100">
-                        {formatScore(cell.value, b.unit)}
-                      </span>
-                      {variant !== "default" && (
-                        <span className="ml-1 rounded bg-neutral-800 px-1 text-[9px] uppercase tracking-wide text-neutral-300">
-                          {variant}
-                        </span>
-                      )}
-                    </td>
-                  );
-                })}
-              </tr>
-            );})}
+                  })}
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>
@@ -349,49 +384,62 @@ export default function ComparisonTable({
   );
 }
 
-interface ReasoningEffortGroup {
-  baseId: string;
-  label: string;
-  models: Model[];
-}
-
-function buildReasoningEffortGroups(models: Model[]): ReasoningEffortGroup[] {
+function groupModels(
+  models: Model[],
+  selectedModelByGroup: Record<string, string>,
+): ModelGroup[] {
   const groups = new Map<string, Model[]>();
   for (const model of models) {
-    const effort = reasoningEffortLabel(model);
-    if (!effort) continue;
-    const baseId = model.id
-      .replace(/-non-reasoning$/, "")
-      .replace(/-(?:xhigh|high|medium|low)$/, "");
-    const arr = groups.get(baseId) ?? [];
+    const key = reasoningFamilyKey(model);
+    const arr = groups.get(key) ?? [];
     arr.push(model);
-    groups.set(baseId, arr);
+    groups.set(key, arr);
   }
 
-  return Array.from(groups.entries())
-    .map(([baseId, groupModels]) => ({
-      baseId,
-      label: baseModelLabel(groupModels[0]!),
-      models: groupModels.sort(
-        (a, b) => reasoningEffortRank(a) - reasoningEffortRank(b),
-      ),
-    }))
-    .filter((g) => g.models.length > 1)
-    .sort((a, b) => b.models.length - a.models.length || a.label.localeCompare(b.label));
+  return Array.from(groups.entries()).map(([key, groupModels]) => {
+    const sortedModels = [...groupModels].sort(compareReasoningVariants);
+    const selectedId = selectedModelByGroup[key];
+    const selectedModel =
+      sortedModels.find((model) => model.id === selectedId) ?? sortedModels[0]!;
+    return {
+      key,
+      provider: selectedModel.provider,
+      label: reasoningFamilyLabel(selectedModel),
+      models: sortedModels,
+      selectedModel,
+      sortModel: selectedModel,
+    };
+  });
 }
 
-function baseModelLabel(model: Model): string {
-  return model.name.replace(/\s*\((?:Non-reasoning|xhigh|high|medium|low)\)$/, "");
+function reasoningFamilyKey(model: Model): string {
+  const label = reasoningFamilyLabel(model).toLowerCase();
+  return `${model.provider}::${label}`;
+}
+
+function reasoningFamilyLabel(model: Model): string {
+  return model.name
+    .replace(/\s*\((?:Non-reasoning|xhigh|high|medium|low)\)$/i, "")
+    .replace(/\s*\((?:Reasoning|Reasoning,\s*Max Effort|Reasoning,\s*High Effort)\)$/i, "")
+    .trim();
 }
 
 function reasoningEffortLabel(model: Model): string | null {
-  const m = model.name.match(/\((Non-reasoning|xhigh|high|medium|low)\)$/i);
-  return m?.[1] ?? null;
+  const name = model.name;
+  const paren = name.match(/\((Non-reasoning|xhigh|high|medium|low|Reasoning|Reasoning,\s*Max Effort|Reasoning,\s*High Effort)\)$/i)?.[1];
+  if (paren) {
+    const normalized = paren.toLowerCase();
+    if (normalized === "reasoning") return "reasoning";
+    if (normalized === "reasoning, max effort") return "max";
+    if (normalized === "reasoning, high effort") return "high";
+    return normalized;
+  }
+  if (/\bthinking\b/i.test(name)) return "reasoning";
+  return null;
 }
 
 function reasoningEffortRank(model: Model): number {
-  const label = reasoningEffortLabel(model)?.toLowerCase();
-  switch (label) {
+  switch (reasoningEffortLabel(model)?.toLowerCase()) {
     case "non-reasoning":
       return 0;
     case "low":
@@ -400,129 +448,20 @@ function reasoningEffortRank(model: Model): number {
       return 2;
     case "high":
       return 3;
-    case "xhigh":
+    case "reasoning":
       return 4;
+    case "xhigh":
+    case "max":
+      return 5;
     default:
-      return 99;
+      return 5;
   }
 }
 
-function ReasoningEffortCompare({
-  models,
-  benchmarks,
-  matrix,
-  activeVariant,
-}: {
-  models: Model[];
-  benchmarks: Benchmark[];
-  matrix: ReturnType<typeof buildScoreMatrix>;
-  activeVariant: Record<string, string>;
-}) {
-  if (models.length < 2) return null;
-  const usableBenchmarks = benchmarks.filter((b) =>
-    models.some((m) => {
-      const variant = activeVariant[b.id] ?? b.variants[0]?.key ?? "default";
-      return matrix
-        .get(m.id)
-        ?.get(b.id)
-        ?.some((c) => c.variant === variant);
-    }),
-  );
-  if (usableBenchmarks.length === 0) return null;
-
-  return (
-    <div className="overflow-x-auto rounded-lg border border-amber-400/20 bg-amber-400/5">
-      <table className="w-full text-xs">
-        <thead className="bg-neutral-950/80 text-left uppercase tracking-wide text-neutral-500">
-          <tr>
-            <th className="px-3 py-2 text-neutral-300">Effort compare</th>
-            {models.map((m) => (
-              <th key={m.id} className="px-3 py-2 text-right text-neutral-300">
-                <a
-                  href={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/models/${m.id}/`}
-                  className="hover:text-amber-300"
-                >
-                  {reasoningEffortLabel(m)}
-                </a>
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {usableBenchmarks.map((b) => {
-            const variant = activeVariant[b.id] ?? b.variants[0]?.key ?? "default";
-            const values = models.map((m) =>
-              matrix
-                .get(m.id)
-                ?.get(b.id)
-                ?.find((c) => c.variant === variant),
-            );
-            const numeric = values.filter((v): v is NonNullable<typeof v> => Boolean(v));
-            const best = numeric.length
-              ? numeric.reduce((a, bCell) =>
-                  b.higherIsBetter
-                    ? bCell.value > a.value
-                      ? bCell
-                      : a
-                    : bCell.value < a.value
-                      ? bCell
-                      : a,
-                )
-              : undefined;
-            return (
-              <tr key={b.id} className="border-t border-neutral-800/80">
-                <td className="px-3 py-2 text-neutral-400">
-                  {b.name}
-                  {variant !== "default" && (
-                    <span className="ml-1 text-neutral-600">· {variant}</span>
-                  )}
-                </td>
-                {values.map((cell, idx) => {
-                  const isBest = best && cell?.value === best.value;
-                  const previous = idx > 0 ? values[idx - 1] : undefined;
-                  const delta = cell && previous ? cell.value - previous.value : undefined;
-                  return (
-                    <td key={models[idx]!.id} className="px-3 py-2 text-right">
-                      {cell ? (
-                        <span className={isBest ? "font-semibold text-amber-200" : "font-mono text-neutral-200"}>
-                          {formatScore(cell.value, b.unit)}
-                        </span>
-                      ) : (
-                        <span className="text-neutral-700">—</span>
-                      )}
-                      {delta !== undefined && Math.abs(delta) > 0 && (
-                        <span className={[
-                          "ml-1 font-mono text-[10px]",
-                          delta > 0 ? "text-emerald-300" : "text-red-300",
-                        ].join(" ")}>
-                          {delta > 0 ? "+" : ""}{formatDelta(delta, b.unit)}
-                        </span>
-                      )}
-                    </td>
-                  );
-                })}
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
-    </div>
-  );
-}
-
-function formatDelta(delta: number, unit: Benchmark["unit"]): string {
-  switch (unit) {
-    case "accuracy":
-    case "pass@1":
-      return `${(delta * 100).toFixed(1)}pp`;
-    case "elo":
-      return Math.round(delta).toString();
-    case "index":
-      return delta.toFixed(1);
-    case "score":
-    default:
-      return delta.toFixed(2);
-  }
+function compareReasoningVariants(a: Model, b: Model): number {
+  const rankDiff = reasoningEffortRank(b) - reasoningEffortRank(a);
+  if (rankDiff !== 0) return rankDiff;
+  return b.releaseDate.localeCompare(a.releaseDate) || a.name.localeCompare(b.name);
 }
 
 function Th({
@@ -574,11 +513,6 @@ function Toolbar({
   search,
   setSearch,
   resultCount,
-  effortGroups,
-  effortGroupId,
-  setEffortGroupId,
-  effortModelIds,
-  setEffortModelIds,
 }: {
   models: Model[];
   providerFilter: Set<string>;
@@ -590,14 +524,8 @@ function Toolbar({
   search: string;
   setSearch: (s: string) => void;
   resultCount: number;
-  effortGroups: ReasoningEffortGroup[];
-  effortGroupId: string;
-  setEffortGroupId: (id: string) => void;
-  effortModelIds: Set<string>;
-  setEffortModelIds: (s: Set<string>) => void;
 }) {
   const providers = Array.from(new Set(models.map((m) => m.provider))).sort();
-  const activeEffortGroup = effortGroups.find((g) => g.baseId === effortGroupId);
 
   return (
     <div className="flex flex-col gap-2 text-xs">
@@ -620,38 +548,6 @@ function Toolbar({
           open-weight only
         </label>
       </div>
-      {effortGroups.length > 0 && (
-        <div className="flex flex-wrap items-center gap-2 rounded-lg border border-neutral-800 bg-neutral-950/70 p-2">
-          <span className="text-neutral-500">Reasoning efforts:</span>
-          <select
-            value={effortGroupId}
-            onChange={(e) => {
-              const id = e.target.value;
-              const group = effortGroups.find((g) => g.baseId === id);
-              setEffortGroupId(id);
-              setEffortModelIds(new Set(group?.models.map((m) => m.id) ?? []));
-            }}
-            className="rounded-md border border-neutral-800 bg-neutral-950 px-2 py-1 text-neutral-200 focus:border-amber-400 focus:outline-none"
-          >
-            {effortGroups.map((g) => (
-              <option key={g.baseId} value={g.baseId}>
-                {g.label}
-              </option>
-            ))}
-          </select>
-          {activeEffortGroup?.models.map((m) => (
-            <label key={m.id} className="inline-flex items-center gap-1.5 text-neutral-400">
-              <input
-                type="checkbox"
-                checked={effortModelIds.has(m.id)}
-                onChange={() => toggleSet(effortModelIds, setEffortModelIds, m.id)}
-                className="accent-amber-400"
-              />
-              {reasoningEffortLabel(m)}
-            </label>
-          ))}
-        </div>
-      )}
       <div className="flex flex-wrap items-center gap-2">
         <span className="text-neutral-500">Providers:</span>
         {providers.map((p) => (
@@ -735,21 +631,21 @@ function sortKeyEquals(a: SortKey, b: SortKey): boolean {
   return true;
 }
 
-function comparator(
+function groupComparator(
   sort: SortState,
   matrix: ReturnType<typeof buildScoreMatrix>,
   activeVariant: Record<string, string>,
-): (a: Model, b: Model) => number {
+): (a: ModelGroup, b: ModelGroup) => number {
   const dir = sort.dir === "asc" ? 1 : -1;
   return (a, b) => {
-    const va = getSortValue(a, sort.key, matrix, activeVariant);
-    const vb = getSortValue(b, sort.key, matrix, activeVariant);
-    if (va === undefined && vb === undefined) return 0;
+    const va = getSortValue(a.sortModel, sort.key, matrix, activeVariant);
+    const vb = getSortValue(b.sortModel, sort.key, matrix, activeVariant);
+    if (va === undefined && vb === undefined) return a.label.localeCompare(b.label);
     if (va === undefined) return 1;
     if (vb === undefined) return -1;
-    if (typeof va === "number" && typeof vb === "number")
-      return (va - vb) * dir;
-    return String(va).localeCompare(String(vb)) * dir;
+    if (typeof va === "number" && typeof vb === "number") return (va - vb) * dir;
+    const cmp = String(va).localeCompare(String(vb)) * dir;
+    return cmp || a.label.localeCompare(b.label);
   };
 }
 
@@ -759,14 +655,60 @@ function getSortValue(
   matrix: ReturnType<typeof buildScoreMatrix>,
   activeVariant: Record<string, string>,
 ): number | string | undefined {
-  if (key.kind === "model") return m.name;
+  if (key.kind === "model") return reasoningFamilyLabel(m);
   if (key.kind === "release") return m.releaseDate;
   if (key.kind === "cutoff") return m.knowledgeCutoff;
+  if (key.kind === "cost") return m.aaBenchmarkTotalCost;
+  if (key.kind === "tokens") return m.aaBenchmarkTotalTokens;
   const cells = matrix.get(m.id)?.get(key.benchmarkId);
   if (!cells) return undefined;
   const wanted = activeVariant[key.benchmarkId] ?? key.variant;
   const cell = cells.find((c) => c.variant === wanted);
   return cell?.value;
+}
+
+function formatBenchmarkCost(value?: number): string {
+  if (value === undefined) return "—";
+  return `$${value.toLocaleString(undefined, {
+    minimumFractionDigits: value < 10 ? 2 : 0,
+    maximumFractionDigits: value < 10 ? 2 : 0,
+  })}`;
+}
+
+function formatTokenCount(value?: number): string {
+  if (value === undefined || value === 0) return "—";
+  if (value >= 1_000_000_000) return `${(value / 1_000_000_000).toFixed(2)}B`;
+  if (value >= 1_000_000) return `${(value / 1_000_000).toFixed(1)}M`;
+  if (value >= 1_000) return `${(value / 1_000).toFixed(1)}K`;
+  return value.toLocaleString();
+}
+
+function formatBenchmarkCostTitle(model: Model): string {
+  if (model.aaBenchmarkTotalCost === undefined) {
+    return "No Artificial Analysis benchmark cost data";
+  }
+  return [
+    "Artificial Analysis Intelligence Index benchmark cost",
+    `Total: ${formatBenchmarkCost(model.aaBenchmarkTotalCost)}`,
+    `Input: ${formatBenchmarkCost(model.aaBenchmarkInputCost)}`,
+    `Output: ${formatBenchmarkCost(model.aaBenchmarkOutputCost)}`,
+    `Answer: ${formatBenchmarkCost(model.aaBenchmarkAnswerCost)}`,
+    `Reasoning: ${formatBenchmarkCost(model.aaBenchmarkReasoningCost)}`,
+  ].join("\n");
+}
+
+function formatBenchmarkTokensTitle(model: Model): string {
+  if (model.aaBenchmarkTotalTokens === undefined) {
+    return "No Artificial Analysis benchmark token usage data";
+  }
+  return [
+    "Artificial Analysis Intelligence Index tokens used",
+    `Total: ${formatTokenCount(model.aaBenchmarkTotalTokens)}`,
+    `Input: ${formatTokenCount(model.aaBenchmarkInputTokens)}`,
+    `Output: ${formatTokenCount(model.aaBenchmarkOutputTokens)}`,
+    `Answer: ${formatTokenCount(model.aaBenchmarkAnswerTokens)}`,
+    `Reasoning: ${formatTokenCount(model.aaBenchmarkReasoningTokens)}`,
+  ].join("\n");
 }
 
 function heatColor(norm: number): string {
