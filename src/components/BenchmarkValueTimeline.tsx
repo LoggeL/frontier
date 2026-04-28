@@ -36,7 +36,22 @@ interface Point {
 }
 
 export default function BenchmarkValueTimeline({ models }: Props) {
-  const { points, minTs, maxTs, minValue, maxValue, yTicks, ticks, topPoints, regression } = useMemo(() => {
+  const {
+    points,
+    minTs,
+    maxTs,
+    minValue,
+    maxValue,
+    yTicks,
+    ticks,
+    topPoints,
+    regression,
+    quarterly,
+    medianRegression,
+    p90Regression,
+    bestRegression,
+    frontier,
+  } = useMemo(() => {
     const points = models
       .map((m) => {
         const releaseTs = new Date(`${m.releaseDate}T00:00:00Z`).getTime();
@@ -73,8 +88,28 @@ export default function BenchmarkValueTimeline({ models }: Props) {
     }
 
     const topPoints = [...points].sort((a, b) => b.value - a.value).slice(0, 10);
+    const quarterly = computeQuarterlyStats(points);
     const regression = computeLogRegression(points);
-    return { points, minTs, maxTs, minValue, maxValue, yTicks, ticks, topPoints, regression };
+    const medianRegression = computeLogRegressionFromSeries(quarterly.map((q) => ({ x: q.ts, y: q.median })));
+    const p90Regression = computeLogRegressionFromSeries(quarterly.map((q) => ({ x: q.ts, y: q.p90 })));
+    const bestRegression = computeLogRegressionFromSeries(quarterly.map((q) => ({ x: q.ts, y: q.best })));
+    const frontier = computeFrontier(points);
+    return {
+      points,
+      minTs,
+      maxTs,
+      minValue,
+      maxValue,
+      yTicks,
+      ticks,
+      topPoints,
+      regression,
+      quarterly,
+      medianRegression,
+      p90Regression,
+      bestRegression,
+      frontier,
+    };
   }, [models]);
 
   const rangeTs = Math.max(1, maxTs - minTs);
@@ -96,19 +131,47 @@ export default function BenchmarkValueTimeline({ models }: Props) {
             y = Artificial Analysis intelligence index / cost to run the full AA benchmark. Log scale; higher is better.
           </p>
         </div>
-        <div className="grid grid-cols-2 gap-2 text-xs sm:flex sm:items-center">
+        <div className="grid grid-cols-2 gap-2 text-xs sm:grid-cols-4">
           <StatPill label="models" value={String(points.length)} />
           <StatPill
-            label="trend"
-            value={regression ? `${regression.annualPct >= 0 ? "+" : ""}${regression.annualPct.toFixed(0)}% / yr` : "—"}
+            label="raw"
+            value={formatTrend(regression)}
             tone={regression && regression.annualPct < 0 ? "bad" : "good"}
+          />
+          <StatPill
+            label="median qtr"
+            value={formatTrend(medianRegression)}
+            tone={medianRegression && medianRegression.annualPct < 0 ? "bad" : "good"}
+          />
+          <StatPill
+            label="p90 qtr"
+            value={formatTrend(p90Regression)}
+            tone={p90Regression && p90Regression.annualPct < 0 ? "bad" : "good"}
           />
         </div>
       </div>
 
+      <div className="mb-4 grid gap-2 text-xs sm:grid-cols-3">
+        <InsightCard
+          label="Distribution trend"
+          value={formatTrend(medianRegression)}
+          note="Quarterly median. Better signal than raw points, but still affected by changing model mix."
+        />
+        <InsightCard
+          label="High-value tier"
+          value={formatTrend(p90Regression)}
+          note="Quarterly 90th percentile. Answers whether good cheap models are getting better."
+        />
+        <InsightCard
+          label="Best seen so far"
+          value={formatTrend(bestRegression)}
+          note={`${frontier.length} frontier jumps; mostly tiny/open models, so treat as a separate story.`}
+        />
+      </div>
+
       <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_18rem]">
         <div className="overflow-x-auto frontier-scroll rounded border border-neutral-800 bg-neutral-950/40">
-          <div className="relative h-[340px] min-w-[680px] px-10 py-6 sm:h-[460px] sm:px-12">
+          <div className="relative h-[360px] min-w-[720px] px-10 py-6 sm:h-[500px] sm:px-12">
             {yTicks.map((value) => {
               const top = yPct(value);
               return (
@@ -130,25 +193,53 @@ export default function BenchmarkValueTimeline({ models }: Props) {
               </div>
             ))}
 
-            {regression && (
-              <svg className="pointer-events-none absolute inset-x-10 inset-y-6 sm:inset-x-12" preserveAspectRatio="none">
+            <svg className="pointer-events-none absolute inset-x-10 inset-y-6 sm:inset-x-12" preserveAspectRatio="none">
+              {quarterly.length > 1 && (
+                <>
+                  <polyline
+                    points={quarterly.map((q) => `${xPct(q.ts)},${yPct(q.median)}`).join(" ")}
+                    fill="none"
+                    stroke="#60a5fa"
+                    strokeWidth="2.5"
+                    vectorEffect="non-scaling-stroke"
+                  />
+                  <polyline
+                    points={quarterly.map((q) => `${xPct(q.ts)},${yPct(q.p90)}`).join(" ")}
+                    fill="none"
+                    stroke="#34d399"
+                    strokeWidth="2"
+                    strokeDasharray="5 4"
+                    vectorEffect="non-scaling-stroke"
+                  />
+                </>
+              )}
+              {regression && (
                 <line
                   x1={`${xPct(regression.startTs)}%`}
                   y1={`${yPct(regression.startValue)}%`}
                   x2={`${xPct(regression.endTs)}%`}
                   y2={`${yPct(regression.endValue)}%`}
                   stroke="#f59e0b"
-                  strokeWidth="2"
-                  strokeDasharray="6 5"
+                  strokeWidth="1.5"
+                  strokeDasharray="7 5"
                   vectorEffect="non-scaling-stroke"
                 />
-              </svg>
-            )}
+              )}
+            </svg>
+
+            {quarterly.map((q) => (
+              <div
+                key={q.label}
+                className="absolute h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-sky-100 bg-sky-400"
+                style={{ left: `calc(${xPct(q.ts)}% + 3rem)`, top: `calc(${yPct(q.median)}% + 1.5rem)` }}
+                title={`${q.label} median ${q.median.toFixed(3)} (${q.count} models)`}
+              />
+            ))}
 
             {points.map((point) => (
               <div
                 key={point.id}
-                className="group absolute h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/70 sm:h-2.5 sm:w-2.5"
+                className="group absolute h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/30 opacity-40 hover:z-20 hover:h-3 hover:w-3 hover:opacity-100"
                 style={{
                   left: `calc(${xPct(point.releaseTs)}% + 3rem)`,
                   top: `calc(${yPct(point.value)}% + 1.5rem)`,
@@ -170,7 +261,12 @@ export default function BenchmarkValueTimeline({ models }: Props) {
         </div>
 
         <div className="rounded border border-neutral-800 bg-neutral-950/40 p-3">
-          <div className="text-xs font-semibold uppercase tracking-wide text-neutral-400">Top value models</div>
+          <div className="text-xs font-semibold uppercase tracking-wide text-neutral-400">Legend / top value</div>
+          <div className="mt-3 flex flex-wrap gap-2 text-[11px] text-neutral-400">
+            <span className="inline-flex items-center gap-1"><span className="h-0.5 w-4 bg-sky-400" />quarter median</span>
+            <span className="inline-flex items-center gap-1"><span className="h-0.5 w-4 border-t border-dashed border-emerald-400" />quarter p90</span>
+            <span className="inline-flex items-center gap-1"><span className="h-0.5 w-4 border-t border-dashed border-amber-400" />raw regression</span>
+          </div>
           <div className="mt-3 grid gap-2 text-xs sm:grid-cols-2 lg:grid-cols-1">
             {topPoints.map((point, idx) => (
               <div key={point.id} className="rounded border border-neutral-800 bg-neutral-900/70 p-2">
@@ -231,6 +327,111 @@ function formatTick(value: number) {
   if (value >= 1) return value.toFixed(1);
   if (value >= 0.1) return value.toFixed(1);
   return value.toFixed(2);
+}
+
+function InsightCard({ label, value, note }: { label: string; value: string; note: string }) {
+  return (
+    <div className="rounded border border-neutral-800 bg-neutral-950/50 p-3">
+      <div className="text-[10px] uppercase tracking-wide text-neutral-500">{label}</div>
+      <div className="mt-1 font-mono text-sm text-neutral-100">{value}</div>
+      <div className="mt-1 text-[11px] leading-snug text-neutral-500">{note}</div>
+    </div>
+  );
+}
+
+interface RegressionResult {
+  startTs: number;
+  endTs: number;
+  startValue: number;
+  endValue: number;
+  annualPct: number;
+}
+
+function formatTrend(regression?: RegressionResult) {
+  if (!regression) return "—";
+  return `${regression.annualPct >= 0 ? "+" : ""}${regression.annualPct.toFixed(0)}%/yr`;
+}
+
+interface QuarterStat {
+  label: string;
+  ts: number;
+  count: number;
+  median: number;
+  p90: number;
+  best: number;
+}
+
+function computeQuarterlyStats(points: Point[]): QuarterStat[] {
+  const groups = new Map<string, Point[]>();
+  for (const point of points) {
+    const d = new Date(point.releaseTs);
+    const quarter = Math.floor(d.getUTCMonth() / 3) + 1;
+    const label = `${d.getUTCFullYear()}Q${quarter}`;
+    const group = groups.get(label) ?? [];
+    group.push(point);
+    groups.set(label, group);
+  }
+  return Array.from(groups.entries())
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([label, group]) => {
+      const year = Number(label.slice(0, 4));
+      const quarter = Number(label.slice(-1));
+      const values = group.map((p) => p.value).sort((a, b) => a - b);
+      return {
+        label,
+        ts: Date.UTC(year, (quarter - 1) * 3 + 1, 15),
+        count: values.length,
+        median: quantile(values, 0.5),
+        p90: quantile(values, 0.9),
+        best: values[values.length - 1]!,
+      };
+    });
+}
+
+function computeFrontier(points: Point[]) {
+  let best = 0;
+  const frontier: Point[] = [];
+  for (const point of [...points].sort((a, b) => a.releaseTs - b.releaseTs)) {
+    if (point.value > best) {
+      frontier.push(point);
+      best = point.value;
+    }
+  }
+  return frontier;
+}
+
+function quantile(values: number[], q: number) {
+  if (values.length === 0) return 0;
+  if (values.length === 1) return values[0]!;
+  const pos = (values.length - 1) * q;
+  const base = Math.floor(pos);
+  const rest = pos - base;
+  const lo = values[base]!;
+  const hi = values[Math.min(base + 1, values.length - 1)]!;
+  return lo + (hi - lo) * rest;
+}
+
+function computeLogRegressionFromSeries(series: { x: number; y: number }[]): RegressionResult | undefined {
+  if (series.length < 2) return undefined;
+  const xs = series.map((p) => decimalYear(p.x));
+  const ys = series.map((p) => Math.log(p.y));
+  const meanX = mean(xs);
+  const meanY = mean(ys);
+  const sxx = xs.reduce((acc, x) => acc + (x - meanX) ** 2, 0);
+  if (sxx === 0) return undefined;
+  const slope = xs.reduce((acc, x, i) => acc + (x - meanX) * (ys[i]! - meanY), 0) / sxx;
+  const intercept = meanY - slope * meanX;
+  const startTs = Math.min(...series.map((p) => p.x));
+  const endTs = Math.max(...series.map((p) => p.x));
+  const startValue = Math.exp(intercept + slope * decimalYear(startTs));
+  const endValue = Math.exp(intercept + slope * decimalYear(endTs));
+  return {
+    startTs,
+    endTs,
+    startValue,
+    endValue,
+    annualPct: (Math.exp(slope) - 1) * 100,
+  };
 }
 
 function computeLogRegression(points: Point[]) {
