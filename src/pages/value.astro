@@ -12,6 +12,15 @@ const valueModels = models.filter(
 const topModels = [...valueModels]
   .sort((a, b) => (b.aaBenchmarkValue ?? 0) - (a.aaBenchmarkValue ?? 0))
   .slice(0, 20);
+
+const firstRelease = valueModels.reduce<string | undefined>((earliest, m) => {
+  if (!earliest || m.releaseDate < earliest) return m.releaseDate;
+  return earliest;
+}, undefined);
+const lastRelease = valueModels.reduce<string | undefined>((latest, m) => {
+  if (!latest || m.releaseDate > latest) return m.releaseDate;
+  return latest;
+}, undefined);
 ---
 
 <!doctype html>
@@ -26,40 +35,52 @@ const topModels = [...valueModels]
       content="Compare model value over time as Artificial Analysis Intelligence Index divided by the cost to run the full AA benchmark."
     />
   </head>
-  <body class="min-h-screen px-6 py-10 text-neutral-100">
-    <main class="mx-auto flex max-w-[1400px] flex-col gap-8">
+  <body class="min-h-screen px-3 py-6 text-neutral-100 sm:px-6 sm:py-10">
+    <main class="mx-auto flex max-w-[1400px] flex-col gap-6 sm:gap-8">
       <nav class="flex items-center gap-3 text-xs text-neutral-500">
         <a href={import.meta.env.BASE_URL} class="text-amber-300 hover:underline">← all models</a>
         <span>/</span>
         <span class="text-neutral-400">value</span>
       </nav>
 
-      <header class="flex flex-col gap-2">
-        <h1 class="text-3xl font-semibold tracking-tight">
-          Intelligence per benchmark-dollar
-        </h1>
-        <p class="max-w-3xl text-sm text-neutral-400">
-          Value chart for Artificial Analysis: intelligence index divided by
-          the dollar cost to run the full AA Intelligence benchmark. Higher is
-          better.
-          <span class="font-mono text-neutral-300">
-            {valueModels.length} / {models.length} models
-          </span>
-          currently have both benchmark cost and intelligence data.
-        </p>
+      <header class="grid gap-4 lg:grid-cols-[minmax(0,1fr)_22rem] lg:items-end">
+        <div class="flex flex-col gap-2">
+          <h1 class="text-2xl font-semibold tracking-tight sm:text-3xl">
+            Intelligence per benchmark-dollar
+          </h1>
+          <p class="max-w-3xl text-sm text-neutral-400">
+            Artificial Analysis Intelligence Index divided by the dollar cost to
+            run the full AA Intelligence benchmark. Higher means cheaper
+            intelligence.
+          </p>
+        </div>
+        <div class="grid grid-cols-3 gap-2 text-xs">
+          <div class="rounded border border-neutral-800 bg-neutral-900/50 p-2">
+            <div class="text-[10px] uppercase tracking-wide text-neutral-500">models</div>
+            <div class="font-mono text-neutral-100">{valueModels.length}/{models.length}</div>
+          </div>
+          <div class="rounded border border-neutral-800 bg-neutral-900/50 p-2">
+            <div class="text-[10px] uppercase tracking-wide text-neutral-500">first</div>
+            <div class="font-mono text-neutral-100">{firstRelease ?? "—"}</div>
+          </div>
+          <div class="rounded border border-neutral-800 bg-neutral-900/50 p-2">
+            <div class="text-[10px] uppercase tracking-wide text-neutral-500">latest</div>
+            <div class="font-mono text-neutral-100">{lastRelease ?? "—"}</div>
+          </div>
+        </div>
       </header>
 
       <BenchmarkValueTimeline client:load models={models} />
 
       <section class="flex flex-col gap-3">
-        <div class="flex items-baseline justify-between">
+        <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
           <h2 class="text-lg font-semibold text-neutral-200">Top value table</h2>
           <span class="text-xs text-neutral-500">
             Intelligence index / full AA benchmark-run cost
           </span>
         </div>
-        <div class="overflow-x-auto rounded-lg border border-neutral-800 bg-neutral-900/40">
-          <table class="w-full text-sm">
+        <div class="overflow-x-auto rounded-lg border border-neutral-800 bg-neutral-900/40 frontier-scroll">
+          <table class="min-w-[760px] w-full text-sm">
             <thead class="bg-neutral-900 text-left text-xs uppercase tracking-wide text-neutral-400">
               <tr>
                 <th class="px-3 py-2 text-right">#</th>
