@@ -81,7 +81,9 @@
     "aaBenchmarkInputCost": 21.58104219,
     "aaBenchmarkOutputCost": 4.84166628,
     "aaBenchmarkAnswerCost": 4.84166628,
-    "aaBenchmarkReasoningCost": 0
+    "aaBenchmarkReasoningCost": 0,
+    "aaIntelligenceIndex": 11.90129896307905,
+    "aaBenchmarkValue": 0.613388
   },
   {
     "id": "o3",
@@ -100,7 +102,9 @@
     "aaBenchmarkInputCost": 638.527306,
     "aaBenchmarkOutputCost": 386.258048,
     "aaBenchmarkAnswerCost": 58.752728,
-    "aaBenchmarkReasoningCost": 327.505312
+    "aaBenchmarkReasoningCost": 327.505312,
+    "aaIntelligenceIndex": 23.3486683592154,
+    "aaBenchmarkValue": 2.63062
   },
   {
     "id": "qwen3-235b-a22b",
@@ -133,7 +137,9 @@
     "aaBenchmarkInputCost": 40.57137719999999,
     "aaBenchmarkOutputCost": 43.70133250000001,
     "aaBenchmarkAnswerCost": 43.70133250000001,
-    "aaBenchmarkReasoningCost": 0
+    "aaBenchmarkReasoningCost": 0,
+    "aaIntelligenceIndex": 16.009462487620045,
+    "aaBenchmarkValue": 0.535883
   },
   {
     "id": "claude-opus-4",
@@ -176,7 +182,9 @@
     "aaBenchmarkInputCost": 73.68952725,
     "aaBenchmarkOutputCost": 206.4163794,
     "aaBenchmarkAnswerCost": 19.4680668,
-    "aaBenchmarkReasoningCost": 186.9483084
+    "aaBenchmarkReasoningCost": 186.9483084,
+    "aaIntelligenceIndex": 28.92366021996763,
+    "aaBenchmarkValue": 0.280381
   },
   {
     "id": "gemini-2-5-pro",
@@ -195,7 +203,9 @@
     "aaBenchmarkInputCost": 102.0614125,
     "aaBenchmarkOutputCost": 546.25405,
     "aaBenchmarkAnswerCost": 54.63027,
-    "aaBenchmarkReasoningCost": 491.62377
+    "aaBenchmarkReasoningCost": 491.62377,
+    "aaIntelligenceIndex": 47.72760505875047,
+    "aaBenchmarkValue": 0.171521
   },
   {
     "id": "o3-pro",
@@ -223,7 +233,9 @@
     "aaBenchmarkInputCost": 245.15633100000002,
     "aaBenchmarkOutputCost": 1323.18579,
     "aaBenchmarkAnswerCost": 47.254065,
-    "aaBenchmarkReasoningCost": 1275.9317250000001
+    "aaBenchmarkReasoningCost": 1275.9317250000001,
+    "aaIntelligenceIndex": 16.43067398648048,
+    "aaBenchmarkValue": 0.458624
   },
   {
     "id": "claude-opus-4-1",
@@ -379,7 +391,9 @@
     "aaBenchmarkInputCost": 58.124022,
     "aaBenchmarkOutputCost": 250.02643750000001,
     "aaBenchmarkAnswerCost": 12.0303175,
-    "aaBenchmarkReasoningCost": 237.99612
+    "aaBenchmarkReasoningCost": 237.99612,
+    "aaIntelligenceIndex": 20.856172610675117,
+    "aaBenchmarkValue": 0.164786
   },
   {
     "id": "gpt-5-1",
@@ -398,7 +412,9 @@
     "aaBenchmarkInputCost": 92.29653875,
     "aaBenchmarkOutputCost": 686.67516,
     "aaBenchmarkAnswerCost": 51.508120000000005,
-    "aaBenchmarkReasoningCost": 635.1670399999999
+    "aaBenchmarkReasoningCost": 635.1670399999999,
+    "aaIntelligenceIndex": 25.863248068693565,
+    "aaBenchmarkValue": 0.113793
   },
   {
     "id": "gemini-3-pro",
@@ -455,7 +471,9 @@
     "aaBenchmarkInputCost": 955.9545,
     "aaBenchmarkOutputCost": 196.8066,
     "aaBenchmarkAnswerCost": 196.8066,
-    "aaBenchmarkReasoningCost": 0
+    "aaBenchmarkReasoningCost": 0,
+    "aaIntelligenceIndex": 37.99083524612228,
+    "aaBenchmarkValue": 0.026043
   },
   {
     "id": "deepseek-v3-2",
@@ -885,7 +903,9 @@
     "aaBenchmarkInputCost": 0,
     "aaBenchmarkOutputCost": 0,
     "aaBenchmarkAnswerCost": 0,
-    "aaBenchmarkReasoningCost": 0
+    "aaBenchmarkReasoningCost": 0,
+    "aaIntelligenceIndex": 18.644570037720452,
+    "aaBenchmarkValue": 0.299358
   },
   {
     "id": "claude-opus-4-7",

@@ -32,6 +32,8 @@ export const modelSchema = z
     aaBenchmarkOutputCost: z.number().nonnegative().optional(),
     aaBenchmarkAnswerCost: z.number().nonnegative().optional(),
     aaBenchmarkReasoningCost: z.number().nonnegative().optional(),
+    aaIntelligenceIndex: z.number().nonnegative().optional(),
+    aaBenchmarkValue: z.number().nonnegative().optional(),
     hfLink: z.string().url().optional(),
     totalParams: z.number().positive().optional(),
     activeParams: z.number().positive().optional(),

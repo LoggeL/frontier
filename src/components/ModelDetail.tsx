@@ -86,6 +86,8 @@ export default function ModelDetail({
         matrix={matrix}
       />
 
+      <ReasoningEffortCostChart models={reasoningVariants} />
+
       <section className="flex flex-col gap-3">
         <div className="flex items-baseline justify-between gap-3 flex-wrap">
           <div>
@@ -397,6 +399,108 @@ function ReasoningEffortCompare({
         </table>
       </div>
     </section>
+  );
+}
+
+function ReasoningEffortCostChart({ models }: { models: Model[] }) {
+  const chartRows = models.filter(
+    (model) =>
+      model.aaBenchmarkTotalCost !== undefined ||
+      model.aaBenchmarkTotalTokens !== undefined,
+  );
+
+  if (chartRows.length < 2) return null;
+
+  const maxCost = Math.max(
+    ...chartRows.map((model) => model.aaBenchmarkTotalCost ?? 0),
+    1,
+  );
+  const maxTokens = Math.max(
+    ...chartRows.map((model) => model.aaBenchmarkTotalTokens ?? 0),
+    1,
+  );
+
+  return (
+    <section className="flex flex-col gap-3">
+      <div>
+        <h2 className="text-lg font-semibold text-neutral-200">
+          Benchmark cost / tokens
+        </h2>
+        <p className="text-xs text-neutral-500">
+          Artificial Analysis Intelligence Index run cost and token usage for each reasoning effort.
+        </p>
+      </div>
+      <div className="rounded-lg border border-neutral-800 bg-neutral-900/40 p-4">
+        <div className="grid gap-4 md:grid-cols-2">
+          <MetricBars
+            title="Cost"
+            rows={chartRows.map((model) => ({
+              label: reasoningEffortLabel(model) ?? model.name,
+              value: model.aaBenchmarkTotalCost ?? 0,
+              display: formatUsd(model.aaBenchmarkTotalCost),
+              sublabel: model.aaBenchmarkReasoningCost
+                ? `reasoning ${formatUsd(model.aaBenchmarkReasoningCost)}`
+                : undefined,
+            }))}
+            max={maxCost}
+            colorClass="bg-amber-400"
+          />
+          <MetricBars
+            title="Tokens"
+            rows={chartRows.map((model) => ({
+              label: reasoningEffortLabel(model) ?? model.name,
+              value: model.aaBenchmarkTotalTokens ?? 0,
+              display: formatCompactNumber(model.aaBenchmarkTotalTokens),
+              sublabel: model.aaBenchmarkReasoningTokens
+                ? `reasoning ${formatCompactNumber(model.aaBenchmarkReasoningTokens)}`
+                : undefined,
+            }))}
+            max={maxTokens}
+            colorClass="bg-sky-400"
+          />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function MetricBars({
+  title,
+  rows,
+  max,
+  colorClass,
+}: {
+  title: string;
+  rows: { label: string; value: number; display: string; sublabel?: string }[];
+  max: number;
+  colorClass: string;
+}) {
+  return (
+    <div className="flex flex-col gap-3">
+      <h3 className="text-sm font-semibold text-neutral-300">{title}</h3>
+      <div className="flex flex-col gap-3">
+        {rows.map((row) => {
+          const width = Math.max(2, (row.value / max) * 100);
+          return (
+            <div key={row.label} className="flex flex-col gap-1">
+              <div className="flex items-center justify-between gap-3 text-xs">
+                <span className="text-neutral-300">{row.label}</span>
+                <span className="font-mono text-neutral-100">{row.display}</span>
+              </div>
+              <div className="h-2 rounded bg-neutral-800">
+                <div
+                  className={["h-2 rounded", colorClass].join(" ")}
+                  style={{ width: `${width}%` }}
+                />
+              </div>
+              {row.sublabel && (
+                <div className="text-[11px] text-neutral-500">{row.sublabel}</div>
+              )}
+            </div>
+          );
+        })}
+      </div>
+    </div>
   );
 }
 
@@ -763,6 +867,22 @@ function lookupValue(
     ?.get(benchmarkId)
     ?.find((c) => c.variant === variant);
   return cell?.value;
+}
+
+function formatUsd(value?: number): string {
+  if (value === undefined) return "—";
+  return `$${value.toLocaleString(undefined, {
+    minimumFractionDigits: value < 10 ? 2 : 0,
+    maximumFractionDigits: value < 10 ? 2 : 0,
+  })}`;
+}
+
+function formatCompactNumber(value?: number): string {
+  if (value === undefined) return "—";
+  if (value >= 1_000_000_000) return `${(value / 1_000_000_000).toFixed(2)}B`;
+  if (value >= 1_000_000) return `${(value / 1_000_000).toFixed(1)}M`;
+  if (value >= 1_000) return `${(value / 1_000).toFixed(1)}K`;
+  return value.toLocaleString();
 }
 
 function shortHfSlug(url: string): string {
