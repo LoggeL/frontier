@@ -1,14 +1,9 @@
 ---
 import "../styles/global.css";
 import BenchmarkValueTimeline from "../components/BenchmarkValueTimeline";
-import { models } from "../lib/data";
+import { aaValueHistory, models } from "../lib/data";
 
-const valueModels = models.filter(
-  (m) =>
-    m.aaBenchmarkValue !== undefined &&
-    m.aaBenchmarkTotalCost !== undefined &&
-    m.aaIntelligenceIndex !== undefined,
-);
+const valueModels = aaValueHistory;
 const topModels = [...valueModels]
   .sort((a, b) => (b.aaBenchmarkValue ?? 0) - (a.aaBenchmarkValue ?? 0))
   .slice(0, 20);
@@ -70,7 +65,7 @@ const lastRelease = valueModels.reduce<string | undefined>((latest, m) => {
         </div>
       </header>
 
-      <BenchmarkValueTimeline client:load models={models} />
+      <BenchmarkValueTimeline client:load models={valueModels} />
 
       <section class="flex flex-col gap-3">
         <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">

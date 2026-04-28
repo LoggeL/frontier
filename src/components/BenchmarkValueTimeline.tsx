@@ -1,8 +1,8 @@
 import { useMemo } from "react";
-import type { Model } from "../lib/schema";
+import type { AaValueHistoryRow } from "../lib/schema";
 
 interface Props {
-  models: Model[];
+  models: AaValueHistoryRow[];
 }
 
 const PROVIDER_COLORS: Record<string, string> = {
@@ -38,7 +38,6 @@ interface Point {
 export default function BenchmarkValueTimeline({ models }: Props) {
   const { points, minTs, maxTs, minValue, maxValue, ticks, topPoints, regression } = useMemo(() => {
     const points = models
-      .filter((m) => m.aaBenchmarkValue !== undefined && m.aaBenchmarkTotalCost !== undefined && m.aaIntelligenceIndex !== undefined)
       .map((m) => {
         const releaseTs = new Date(`${m.releaseDate}T00:00:00Z`).getTime();
         return {
@@ -47,9 +46,9 @@ export default function BenchmarkValueTimeline({ models }: Props) {
           provider: m.provider,
           releaseTs,
           releaseLabel: m.releaseDate,
-          intelligence: m.aaIntelligenceIndex!,
-          cost: m.aaBenchmarkTotalCost!,
-          value: m.aaBenchmarkValue!,
+          intelligence: m.aaIntelligenceIndex,
+          cost: m.aaBenchmarkTotalCost,
+          value: m.aaBenchmarkValue,
           color: PROVIDER_COLORS[m.provider] ?? DEFAULT_COLOR,
         } satisfies Point;
       })

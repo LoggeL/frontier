@@ -1,11 +1,14 @@
 import modelsJson from "../data/models.json";
 import benchmarksJson from "../data/benchmarks.json";
 import scoresJson from "../data/scores.json";
+import aaValueHistoryJson from "../data/aa-value-history.json";
 import {
+  aaValueHistoryFileSchema,
   benchmarksFileSchema,
   modelsFileSchema,
   scoresFileSchema,
   validateReferences,
+  type AaValueHistoryRow,
   type Benchmark,
   type Model,
   type Score,
@@ -28,5 +31,10 @@ export const benchmarks: Benchmark[] = parse(
   benchmarksJson,
 );
 export const scores: Score[] = parse("scores.json", scoresFileSchema, scoresJson);
+export const aaValueHistory: AaValueHistoryRow[] = parse(
+  "aa-value-history.json",
+  aaValueHistoryFileSchema,
+  aaValueHistoryJson,
+);
 
 validateReferences({ models, benchmarks, scores });

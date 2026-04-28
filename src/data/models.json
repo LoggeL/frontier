@@ -20,7 +20,9 @@
     "aaBenchmarkInputCost": 108.410314,
     "aaBenchmarkOutputCost": 15.738935999999999,
     "aaBenchmarkAnswerCost": 15.738935999999999,
-    "aaBenchmarkReasoningCost": 0
+    "aaBenchmarkReasoningCost": 0,
+    "aaIntelligenceIndex": 15.09,
+    "aaBenchmarkValue": 0.121547
   },
   {
     "id": "llama-3-3-70b",
@@ -57,7 +59,9 @@
     "aaBenchmarkInputCost": 55.35083924999999,
     "aaBenchmarkOutputCost": 6.93105385,
     "aaBenchmarkAnswerCost": 6.93105385,
-    "aaBenchmarkReasoningCost": 0
+    "aaBenchmarkReasoningCost": 0,
+    "aaIntelligenceIndex": 18.36,
+    "aaBenchmarkValue": 0.294789
   },
   {
     "id": "llama-4-scout",
@@ -82,8 +86,8 @@
     "aaBenchmarkOutputCost": 4.84166628,
     "aaBenchmarkAnswerCost": 4.84166628,
     "aaBenchmarkReasoningCost": 0,
-    "aaIntelligenceIndex": 11.90129896307905,
-    "aaBenchmarkValue": 0.613388
+    "aaIntelligenceIndex": 13.52,
+    "aaBenchmarkValue": 0.511681
   },
   {
     "id": "o3",
@@ -103,8 +107,8 @@
     "aaBenchmarkOutputCost": 386.258048,
     "aaBenchmarkAnswerCost": 58.752728,
     "aaBenchmarkReasoningCost": 327.505312,
-    "aaIntelligenceIndex": 23.3486683592154,
-    "aaBenchmarkValue": 2.63062
+    "aaIntelligenceIndex": 38.37,
+    "aaBenchmarkValue": 0.037442
   },
   {
     "id": "qwen3-235b-a22b",
@@ -138,8 +142,8 @@
     "aaBenchmarkOutputCost": 43.70133250000001,
     "aaBenchmarkAnswerCost": 43.70133250000001,
     "aaBenchmarkReasoningCost": 0,
-    "aaIntelligenceIndex": 16.009462487620045,
-    "aaBenchmarkValue": 0.535883
+    "aaIntelligenceIndex": 20.56,
+    "aaBenchmarkValue": 0.24397
   },
   {
     "id": "claude-opus-4",
@@ -183,8 +187,8 @@
     "aaBenchmarkOutputCost": 206.4163794,
     "aaBenchmarkAnswerCost": 19.4680668,
     "aaBenchmarkReasoningCost": 186.9483084,
-    "aaIntelligenceIndex": 28.92366021996763,
-    "aaBenchmarkValue": 0.280381
+    "aaIntelligenceIndex": 27.07,
+    "aaBenchmarkValue": 0.096642
   },
   {
     "id": "gemini-2-5-pro",
@@ -204,8 +208,8 @@
     "aaBenchmarkOutputCost": 546.25405,
     "aaBenchmarkAnswerCost": 54.63027,
     "aaBenchmarkReasoningCost": 491.62377,
-    "aaIntelligenceIndex": 47.72760505875047,
-    "aaBenchmarkValue": 0.171521
+    "aaIntelligenceIndex": 34.63,
+    "aaBenchmarkValue": 0.053415
   },
   {
     "id": "o3-pro",
@@ -234,8 +238,8 @@
     "aaBenchmarkOutputCost": 1323.18579,
     "aaBenchmarkAnswerCost": 47.254065,
     "aaBenchmarkReasoningCost": 1275.9317250000001,
-    "aaIntelligenceIndex": 16.43067398648048,
-    "aaBenchmarkValue": 0.458624
+    "aaIntelligenceIndex": 41.52,
+    "aaBenchmarkValue": 0.026474
   },
   {
     "id": "claude-opus-4-1",
@@ -263,7 +267,9 @@
     "aaBenchmarkInputCost": 150.21511125,
     "aaBenchmarkOutputCost": 760.15676,
     "aaBenchmarkAnswerCost": 41.6159,
-    "aaBenchmarkReasoningCost": 718.54085
+    "aaBenchmarkReasoningCost": 718.54085,
+    "aaIntelligenceIndex": 44.63,
+    "aaBenchmarkValue": 0.049024
   },
   {
     "id": "gpt-5-mini",
@@ -282,7 +288,9 @@
     "aaBenchmarkInputCost": 30.612411,
     "aaBenchmarkOutputCost": 137.84529,
     "aaBenchmarkAnswerCost": 7.619198,
-    "aaBenchmarkReasoningCost": 130.226092
+    "aaBenchmarkReasoningCost": 130.226092,
+    "aaIntelligenceIndex": 41.17,
+    "aaBenchmarkValue": 0.244394
   },
   {
     "id": "deepseek-v3-1",
@@ -306,7 +314,9 @@
     "aaBenchmarkInputCost": 84.17797609500002,
     "aaBenchmarkOutputCost": 15.429011430000001,
     "aaBenchmarkAnswerCost": 15.429011430000001,
-    "aaBenchmarkReasoningCost": 0
+    "aaBenchmarkReasoningCost": 0,
+    "aaIntelligenceIndex": 28.13,
+    "aaBenchmarkValue": 0.28241
   },
   {
     "id": "gpt-5-codex",
@@ -325,7 +335,9 @@
     "aaBenchmarkInputCost": 274.07762625,
     "aaBenchmarkOutputCost": 720.68846,
     "aaBenchmarkAnswerCost": 36.574960000000004,
-    "aaBenchmarkReasoningCost": 684.1134999999999
+    "aaBenchmarkReasoningCost": 684.1134999999999,
+    "aaIntelligenceIndex": 44.63,
+    "aaBenchmarkValue": 0.044865
   },
   {
     "id": "claude-sonnet-4-5",
@@ -367,7 +379,9 @@
     "aaBenchmarkInputCost": 34.7622771,
     "aaBenchmarkOutputCost": 83.4429516,
     "aaBenchmarkAnswerCost": 5.5523052,
-    "aaBenchmarkReasoningCost": 77.8906464
+    "aaBenchmarkReasoningCost": 77.8906464,
+    "aaIntelligenceIndex": 36.09,
+    "aaBenchmarkValue": 0.305316
   },
   {
     "id": "kimi-k2-thinking",
@@ -392,8 +406,8 @@
     "aaBenchmarkOutputCost": 250.02643750000001,
     "aaBenchmarkAnswerCost": 12.0303175,
     "aaBenchmarkReasoningCost": 237.99612,
-    "aaIntelligenceIndex": 20.856172610675117,
-    "aaBenchmarkValue": 0.164786
+    "aaIntelligenceIndex": 40.89,
+    "aaBenchmarkValue": 0.132695
   },
   {
     "id": "gpt-5-1",
@@ -413,8 +427,8 @@
     "aaBenchmarkOutputCost": 686.67516,
     "aaBenchmarkAnswerCost": 51.508120000000005,
     "aaBenchmarkReasoningCost": 635.1670399999999,
-    "aaIntelligenceIndex": 25.863248068693565,
-    "aaBenchmarkValue": 0.113793
+    "aaIntelligenceIndex": 47.7,
+    "aaBenchmarkValue": 0.061235
   },
   {
     "id": "gemini-3-pro",
@@ -433,7 +447,9 @@
     "aaBenchmarkInputCost": 150.83459,
     "aaBenchmarkOutputCost": 669.002688,
     "aaBenchmarkAnswerCost": 59.813148000000005,
-    "aaBenchmarkReasoningCost": 609.189528
+    "aaBenchmarkReasoningCost": 609.189528,
+    "aaIntelligenceIndex": 48.39,
+    "aaBenchmarkValue": 0.059024
   },
   {
     "id": "grok-4-1-fast",
@@ -452,7 +468,9 @@
     "aaBenchmarkInputCost": 19.153844799999998,
     "aaBenchmarkOutputCost": 2.217895,
     "aaBenchmarkAnswerCost": 2.217895,
-    "aaBenchmarkReasoningCost": 0
+    "aaBenchmarkReasoningCost": 0,
+    "aaIntelligenceIndex": 23.56,
+    "aaBenchmarkValue": 1.10239
   },
   {
     "id": "claude-opus-4-5",
@@ -472,8 +490,8 @@
     "aaBenchmarkOutputCost": 196.8066,
     "aaBenchmarkAnswerCost": 196.8066,
     "aaBenchmarkReasoningCost": 0,
-    "aaIntelligenceIndex": 37.99083524612228,
-    "aaBenchmarkValue": 0.026043
+    "aaIntelligenceIndex": 43.09,
+    "aaBenchmarkValue": 0.03738
   },
   {
     "id": "deepseek-v3-2",
@@ -497,7 +515,9 @@
     "aaBenchmarkInputCost": 96.74665728000001,
     "aaBenchmarkOutputCost": 6.411748139999999,
     "aaBenchmarkAnswerCost": 6.411748139999999,
-    "aaBenchmarkReasoningCost": 0
+    "aaBenchmarkReasoningCost": 0,
+    "aaIntelligenceIndex": 32.09,
+    "aaBenchmarkValue": 0.311075
   },
   {
     "id": "deepseek-v3-2-reasoning",
@@ -521,7 +541,9 @@
     "aaBenchmarkInputCost": 44.833873000000004,
     "aaBenchmarkOutputCost": 25.80294738,
     "aaBenchmarkAnswerCost": 1.7525600399999999,
-    "aaBenchmarkReasoningCost": 24.050386919999998
+    "aaBenchmarkReasoningCost": 24.050386919999998,
+    "aaIntelligenceIndex": 41.71,
+    "aaBenchmarkValue": 0.590485
   },
   {
     "id": "mistral-large-3",
@@ -540,7 +562,9 @@
     "aaBenchmarkInputCost": 30.8786265,
     "aaBenchmarkOutputCost": 7.7951084999999996,
     "aaBenchmarkAnswerCost": 7.7951084999999996,
-    "aaBenchmarkReasoningCost": 0
+    "aaBenchmarkReasoningCost": 0,
+    "aaIntelligenceIndex": 22.8,
+    "aaBenchmarkValue": 0.589547
   },
   {
     "id": "gpt-5-2",
@@ -559,7 +583,9 @@
     "aaBenchmarkInputCost": 489.5360155,
     "aaBenchmarkOutputCost": 1814.683654,
     "aaBenchmarkAnswerCost": 64.516704,
-    "aaBenchmarkReasoningCost": 1750.16695
+    "aaBenchmarkReasoningCost": 1750.16695,
+    "aaIntelligenceIndex": 51.28,
+    "aaBenchmarkValue": 0.022255
   },
   {
     "id": "gemini-3-flash-reasoning",
@@ -578,7 +604,9 @@
     "aaBenchmarkInputCost": 62.20251,
     "aaBenchmarkOutputCost": 216.05794500000002,
     "aaBenchmarkAnswerCost": 12.629412,
-    "aaBenchmarkReasoningCost": 203.42853300000002
+    "aaBenchmarkReasoningCost": 203.42853300000002,
+    "aaIntelligenceIndex": 46.43,
+    "aaBenchmarkValue": 0.166858
   },
   {
     "id": "qwen3-max-thinking",
@@ -597,7 +625,9 @@
     "aaBenchmarkInputCost": 154.5318072,
     "aaBenchmarkOutputCost": 514.004898,
     "aaBenchmarkAnswerCost": 38.44464,
-    "aaBenchmarkReasoningCost": 475.560252
+    "aaBenchmarkReasoningCost": 475.560252,
+    "aaIntelligenceIndex": 39.85,
+    "aaBenchmarkValue": 0.059608
   },
   {
     "id": "kimi-k2-5",
@@ -621,7 +651,9 @@
     "aaBenchmarkInputCost": 104.74046759999999,
     "aaBenchmarkOutputCost": 265.91585399999997,
     "aaBenchmarkAnswerCost": 20.402757,
-    "aaBenchmarkReasoningCost": 245.51309700000002
+    "aaBenchmarkReasoningCost": 245.51309700000002,
+    "aaIntelligenceIndex": 46.81,
+    "aaBenchmarkValue": 0.126289
   },
   {
     "id": "claude-opus-4-6",
@@ -640,7 +672,9 @@
     "aaBenchmarkInputCost": 1178.662955,
     "aaBenchmarkOutputCost": 272.37782500000003,
     "aaBenchmarkAnswerCost": 272.37782500000003,
-    "aaBenchmarkReasoningCost": 0
+    "aaBenchmarkReasoningCost": 0,
+    "aaIntelligenceIndex": 46.46,
+    "aaBenchmarkValue": 0.032018
   },
   {
     "id": "gpt-5-3-codex",
@@ -659,7 +693,9 @@
     "aaBenchmarkInputCost": 486.55870725,
     "aaBenchmarkOutputCost": 1084.996738,
     "aaBenchmarkAnswerCost": 58.653938000000004,
-    "aaBenchmarkReasoningCost": 1026.3428
+    "aaBenchmarkReasoningCost": 1026.3428,
+    "aaIntelligenceIndex": 53.56,
+    "aaBenchmarkValue": 0.034081
   },
   {
     "id": "glm-5",
@@ -678,7 +714,9 @@
     "aaBenchmarkInputCost": 197.209375,
     "aaBenchmarkOutputCost": 349.8298528,
     "aaBenchmarkAnswerCost": 23.315408,
-    "aaBenchmarkReasoningCost": 326.51444480000004
+    "aaBenchmarkReasoningCost": 326.51444480000004,
+    "aaIntelligenceIndex": 49.77,
+    "aaBenchmarkValue": 0.090981
   },
   {
     "id": "qwen3-5-397b-a17b",
@@ -702,7 +740,9 @@
     "aaBenchmarkInputCost": 108.1566456,
     "aaBenchmarkOutputCost": 309.3878232,
     "aaBenchmarkAnswerCost": 22.5387072,
-    "aaBenchmarkReasoningCost": 286.84911600000004
+    "aaBenchmarkReasoningCost": 286.84911600000004,
+    "aaIntelligenceIndex": 45.05,
+    "aaBenchmarkValue": 0.107893
   },
   {
     "id": "claude-sonnet-4-6",
@@ -721,7 +761,9 @@
     "aaBenchmarkInputCost": 1190.255076,
     "aaBenchmarkOutputCost": 206.37462,
     "aaBenchmarkAnswerCost": 206.37462,
-    "aaBenchmarkReasoningCost": 0
+    "aaBenchmarkReasoningCost": 0,
+    "aaIntelligenceIndex": 44.38,
+    "aaBenchmarkValue": 0.031776
   },
   {
     "id": "gemini-3-1-pro-preview",
@@ -740,7 +782,9 @@
     "aaBenchmarkInputCost": 204.778352,
     "aaBenchmarkOutputCost": 687.505452,
     "aaBenchmarkAnswerCost": 51.73818,
-    "aaBenchmarkReasoningCost": 635.767272
+    "aaBenchmarkReasoningCost": 635.767272,
+    "aaIntelligenceIndex": 57.18,
+    "aaBenchmarkValue": 0.064083
   },
   {
     "id": "qwen3-5-122b-a10b",
@@ -764,7 +808,9 @@
     "aaBenchmarkInputCost": 61.6578308,
     "aaBenchmarkOutputCost": 292.2843872,
     "aaBenchmarkAnswerCost": 29.266387200000004,
-    "aaBenchmarkReasoningCost": 263.018
+    "aaBenchmarkReasoningCost": 263.018,
+    "aaIntelligenceIndex": 41.6,
+    "aaBenchmarkValue": 0.117533
   },
   {
     "id": "gpt-5-4",
@@ -783,7 +829,9 @@
     "aaBenchmarkInputCost": 1042.3252375,
     "aaBenchmarkOutputCost": 1808.6862,
     "aaBenchmarkAnswerCost": 91.27534499999999,
-    "aaBenchmarkReasoningCost": 1717.410855
+    "aaBenchmarkReasoningCost": 1717.410855,
+    "aaIntelligenceIndex": 56.8,
+    "aaBenchmarkValue": 0.019923
   },
   {
     "id": "nvidia-nemotron-3-super",
@@ -821,7 +869,9 @@
     "aaBenchmarkInputCost": 71.1905502,
     "aaBenchmarkOutputCost": 104.3160492,
     "aaBenchmarkAnswerCost": 10.091969999999998,
-    "aaBenchmarkReasoningCost": 94.22407919999999
+    "aaBenchmarkReasoningCost": 94.22407919999999,
+    "aaIntelligenceIndex": 49.62,
+    "aaBenchmarkValue": 0.282724
   },
   {
     "id": "qwen3-6-plus",
@@ -841,7 +891,9 @@
     "aaBenchmarkInputCost": 178.792998,
     "aaBenchmarkOutputCost": 303.857484,
     "aaBenchmarkAnswerCost": 47.061267,
-    "aaBenchmarkReasoningCost": 256.79621699999996
+    "aaBenchmarkReasoningCost": 256.79621699999996,
+    "aaIntelligenceIndex": 49.98,
+    "aaBenchmarkValue": 0.103553
   },
   {
     "id": "glm-5-1",
@@ -865,7 +917,9 @@
     "aaBenchmarkInputCost": 51.065544599999996,
     "aaBenchmarkOutputCost": 492.88191040000004,
     "aaBenchmarkAnswerCost": 7.999222000000001,
-    "aaBenchmarkReasoningCost": 484.8826884
+    "aaBenchmarkReasoningCost": 484.8826884,
+    "aaIntelligenceIndex": 51.41,
+    "aaBenchmarkValue": 0.094513
   },
   {
     "id": "grok-4-20",
@@ -884,7 +938,9 @@
     "aaBenchmarkInputCost": 148.504938,
     "aaBenchmarkOutputCost": 365.654358,
     "aaBenchmarkAnswerCost": 31.054518,
-    "aaBenchmarkReasoningCost": 334.59984000000003
+    "aaBenchmarkReasoningCost": 334.59984000000003,
+    "aaIntelligenceIndex": 49.33,
+    "aaBenchmarkValue": 0.095943
   },
   {
     "id": "muse-spark",
@@ -924,7 +980,9 @@
     "aaBenchmarkInputCost": 2012.6281700000002,
     "aaBenchmarkOutputCost": 2798.40965,
     "aaBenchmarkAnswerCost": 479.370575,
-    "aaBenchmarkReasoningCost": 2319.0390749999997
+    "aaBenchmarkReasoningCost": 2319.0390749999997,
+    "aaIntelligenceIndex": 57.28,
+    "aaBenchmarkValue": 0.011906
   },
   {
     "id": "qwen3-6-35b-a3b",
@@ -949,7 +1007,9 @@
     "aaBenchmarkInputCost": 101.3811105,
     "aaBenchmarkOutputCost": 322.17462675,
     "aaBenchmarkAnswerCost": 25.796295,
-    "aaBenchmarkReasoningCost": 296.37833175000003
+    "aaBenchmarkReasoningCost": 296.37833175000003,
+    "aaIntelligenceIndex": 43.49,
+    "aaBenchmarkValue": 0.102678
   },
   {
     "id": "qwen3-6-35b-a3b-non-reasoning",
@@ -974,7 +1034,9 @@
     "aaBenchmarkInputCost": 134.74865175000002,
     "aaBenchmarkOutputCost": 54.70967925,
     "aaBenchmarkAnswerCost": 54.70967925,
-    "aaBenchmarkReasoningCost": 0
+    "aaBenchmarkReasoningCost": 0,
+    "aaIntelligenceIndex": 31.53,
+    "aaBenchmarkValue": 0.166422
   },
   {
     "id": "kimi-k2-6",
@@ -998,7 +1060,9 @@
     "aaBenchmarkInputCost": 285.68027885000004,
     "aaBenchmarkOutputCost": 662.187752,
     "aaBenchmarkAnswerCost": 36.059968,
-    "aaBenchmarkReasoningCost": 626.127784
+    "aaBenchmarkReasoningCost": 626.127784,
+    "aaIntelligenceIndex": 53.9,
+    "aaBenchmarkValue": 0.056864
   },
   {
     "id": "qwen3-6-max",
@@ -1018,7 +1082,9 @@
     "aaBenchmarkInputCost": 284.5324677,
     "aaBenchmarkOutputCost": 576.0321216,
     "aaBenchmarkAnswerCost": 67.2102522,
-    "aaBenchmarkReasoningCost": 508.8218694
+    "aaBenchmarkReasoningCost": 508.8218694,
+    "aaIntelligenceIndex": 51.81,
+    "aaBenchmarkValue": 0.060205
   },
   {
     "id": "mimo-v2-5-pro",
@@ -1037,7 +1103,9 @@
     "aaBenchmarkInputCost": 185.899606,
     "aaBenchmarkOutputCost": 275.69156999999996,
     "aaBenchmarkAnswerCost": 28.481558999999997,
-    "aaBenchmarkReasoningCost": 247.21001099999998
+    "aaBenchmarkReasoningCost": 247.21001099999998,
+    "aaIntelligenceIndex": 53.83,
+    "aaBenchmarkValue": 0.116618
   },
   {
     "id": "qwen3-6-27b",
@@ -1061,7 +1129,9 @@
     "aaBenchmarkInputCost": 138.54897119999998,
     "aaBenchmarkOutputCost": 520.1202204,
     "aaBenchmarkAnswerCost": 36.1126296,
-    "aaBenchmarkReasoningCost": 484.0075908
+    "aaBenchmarkReasoningCost": 484.0075908,
+    "aaIntelligenceIndex": 45.82,
+    "aaBenchmarkValue": 0.069565
   },
   {
     "id": "qwen3-6-27b-non-reasoning",
@@ -1085,7 +1155,9 @@
     "aaBenchmarkInputCost": 154.06566059999997,
     "aaBenchmarkOutputCost": 80.28597599999999,
     "aaBenchmarkAnswerCost": 80.28597599999999,
-    "aaBenchmarkReasoningCost": 0
+    "aaBenchmarkReasoningCost": 0,
+    "aaIntelligenceIndex": 37.14,
+    "aaBenchmarkValue": 0.15848
   },
   {
     "id": "gpt-5-5",
@@ -1105,7 +1177,9 @@
     "aaBenchmarkInputCost": 1101.367675,
     "aaBenchmarkOutputCost": 2255.63706,
     "aaBenchmarkAnswerCost": 225.77478000000002,
-    "aaBenchmarkReasoningCost": 2029.86228
+    "aaBenchmarkReasoningCost": 2029.86228,
+    "aaIntelligenceIndex": 60.24,
+    "aaBenchmarkValue": 0.017945
   },
   {
     "id": "gpt-5-5-high",
@@ -1125,7 +1199,9 @@
     "aaBenchmarkInputCost": 824.177155,
     "aaBenchmarkOutputCost": 1335.2034299999998,
     "aaBenchmarkAnswerCost": 175.56098999999998,
-    "aaBenchmarkReasoningCost": 1159.6424399999999
+    "aaBenchmarkReasoningCost": 1159.6424399999999,
+    "aaIntelligenceIndex": 58.87,
+    "aaBenchmarkValue": 0.027262
   },
   {
     "id": "gpt-5-5-low",
@@ -1145,7 +1221,9 @@
     "aaBenchmarkInputCost": 290.403575,
     "aaBenchmarkOutputCost": 210.2697,
     "aaBenchmarkAnswerCost": 69.85593,
-    "aaBenchmarkReasoningCost": 140.41377
+    "aaBenchmarkReasoningCost": 140.41377,
+    "aaIntelligenceIndex": 50.78,
+    "aaBenchmarkValue": 0.101423
   },
   {
     "id": "gpt-5-5-medium",
@@ -1165,7 +1243,9 @@
     "aaBenchmarkInputCost": 525.3791600000001,
     "aaBenchmarkOutputCost": 673.76199,
     "aaBenchmarkAnswerCost": 130.41048,
-    "aaBenchmarkReasoningCost": 543.35151
+    "aaBenchmarkReasoningCost": 543.35151,
+    "aaIntelligenceIndex": 56.71,
+    "aaBenchmarkValue": 0.047292
   },
   {
     "id": "gpt-5-5-non-reasoning",
@@ -1185,7 +1265,9 @@
     "aaBenchmarkInputCost": 275.67419,
     "aaBenchmarkOutputCost": 85.01742,
     "aaBenchmarkAnswerCost": 85.01742,
-    "aaBenchmarkReasoningCost": 0
+    "aaBenchmarkReasoningCost": 0,
+    "aaIntelligenceIndex": 40.94,
+    "aaBenchmarkValue": 0.113504
   },
   {
     "id": "deepseek-v4-flash",
@@ -1205,7 +1287,9 @@
     "aaBenchmarkInputCost": 45.35958308000001,
     "aaBenchmarkOutputCost": 67.49702904000002,
     "aaBenchmarkAnswerCost": 3.6941203600000003,
-    "aaBenchmarkReasoningCost": 63.80290868000001
+    "aaBenchmarkReasoningCost": 63.80290868000001,
+    "aaIntelligenceIndex": 46.52,
+    "aaBenchmarkValue": 0.412204
   },
   {
     "id": "deepseek-v4-flash-high",
@@ -1225,7 +1309,9 @@
     "aaBenchmarkInputCost": 29.549691220000003,
     "aaBenchmarkOutputCost": 27.606104960000003,
     "aaBenchmarkAnswerCost": 2.22131616,
-    "aaBenchmarkReasoningCost": 25.384788800000003
+    "aaBenchmarkReasoningCost": 25.384788800000003,
+    "aaIntelligenceIndex": 44.87,
+    "aaBenchmarkValue": 0.785047
   },
   {
     "id": "deepseek-v4-pro",
@@ -1245,7 +1331,9 @@
     "aaBenchmarkInputCost": 419.88610248,
     "aaBenchmarkOutputCost": 651.39749772,
     "aaBenchmarkAnswerCost": 37.80721416,
-    "aaBenchmarkReasoningCost": 613.59028356
+    "aaBenchmarkReasoningCost": 613.59028356,
+    "aaIntelligenceIndex": 51.51,
+    "aaBenchmarkValue": 0.048083
   },
   {
     "id": "deepseek-v4-pro-high",
@@ -1265,6 +1353,8 @@
     "aaBenchmarkInputCost": 329.2320903,
     "aaBenchmarkOutputCost": 360.98477088,
     "aaBenchmarkAnswerCost": 30.27736416,
-    "aaBenchmarkReasoningCost": 330.70740672
+    "aaBenchmarkReasoningCost": 330.70740672,
+    "aaIntelligenceIndex": 49.79,
+    "aaBenchmarkValue": 0.072137
   }
 ]

@@ -1,0 +1,2441 @@
+[
+  {
+    "id": "claude-3-haiku",
+    "name": "Claude 3 Haiku",
+    "provider": "Anthropic",
+    "releaseDate": "2024-03-04",
+    "aaIntelligenceIndex": 12.26,
+    "aaBenchmarkTotalCost": 36.437722,
+    "aaBenchmarkValue": 0.336465
+  },
+  {
+    "id": "llama-3-instruct-70b",
+    "name": "Llama 3 70B",
+    "provider": "Meta",
+    "releaseDate": "2024-04-18",
+    "aaIntelligenceIndex": 8.88,
+    "aaBenchmarkTotalCost": 11.360165,
+    "aaBenchmarkValue": 0.781679
+  },
+  {
+    "id": "llama-3-instruct-8b",
+    "name": "Llama 3 8B",
+    "provider": "Meta",
+    "releaseDate": "2024-04-18",
+    "aaIntelligenceIndex": 6.38,
+    "aaBenchmarkTotalCost": 0.738962,
+    "aaBenchmarkValue": 8.633731
+  },
+  {
+    "id": "llama-3-1-instruct-405b",
+    "name": "Llama 3.1 405B",
+    "provider": "Meta",
+    "releaseDate": "2024-07-23",
+    "aaIntelligenceIndex": 17.38,
+    "aaBenchmarkTotalCost": 838.048557,
+    "aaBenchmarkValue": 0.020739
+  },
+  {
+    "id": "llama-3-1-instruct-70b",
+    "name": "Llama 3.1 70B",
+    "provider": "Meta",
+    "releaseDate": "2024-07-23",
+    "aaIntelligenceIndex": 12.47,
+    "aaBenchmarkTotalCost": 138.268762,
+    "aaBenchmarkValue": 0.090187
+  },
+  {
+    "id": "llama-3-1-instruct-8b",
+    "name": "Llama 3.1 8B",
+    "provider": "Meta",
+    "releaseDate": "2024-07-23",
+    "aaIntelligenceIndex": 11.76,
+    "aaBenchmarkTotalCost": 27.70784,
+    "aaBenchmarkValue": 0.424429
+  },
+  {
+    "id": "gpt-4o-2024-08-06",
+    "name": "GPT-4o (Aug)",
+    "provider": "OpenAI",
+    "releaseDate": "2024-08-06",
+    "aaIntelligenceIndex": 18.64,
+    "aaBenchmarkTotalCost": 221.025757,
+    "aaBenchmarkValue": 0.084334
+  },
+  {
+    "id": "llama-3-2-instruct-11b-vision",
+    "name": "Llama 3.2 11B (Vision)",
+    "provider": "Meta",
+    "releaseDate": "2024-09-25",
+    "aaIntelligenceIndex": 8.73,
+    "aaBenchmarkTotalCost": 19.402558,
+    "aaBenchmarkValue": 0.449941
+  },
+  {
+    "id": "llama-3-2-instruct-1b",
+    "name": "Llama 3.2 1B",
+    "provider": "Meta",
+    "releaseDate": "2024-09-25",
+    "aaIntelligenceIndex": 6.28,
+    "aaBenchmarkTotalCost": 4.356446,
+    "aaBenchmarkValue": 1.441542
+  },
+  {
+    "id": "llama-3-1-nemotron-instruct-70b",
+    "name": "Llama 3.1 Nemotron 70B",
+    "provider": "NVIDIA",
+    "releaseDate": "2024-10-15",
+    "aaIntelligenceIndex": 13.44,
+    "aaBenchmarkTotalCost": 73.535496,
+    "aaBenchmarkValue": 0.182769
+  },
+  {
+    "id": "claude-3-5-haiku",
+    "name": "Claude 3.5 Haiku",
+    "provider": "Anthropic",
+    "releaseDate": "2024-10-22",
+    "aaIntelligenceIndex": 18.66,
+    "aaBenchmarkTotalCost": 47.032358,
+    "aaBenchmarkValue": 0.396748
+  },
+  {
+    "id": "mistral-large-2",
+    "name": "Mistral Large 2 (Nov)",
+    "provider": "Mistral",
+    "releaseDate": "2024-11-18",
+    "aaIntelligenceIndex": 15.09,
+    "aaBenchmarkTotalCost": 124.14925,
+    "aaBenchmarkValue": 0.121547
+  },
+  {
+    "id": "gpt-4o",
+    "name": "GPT-4o (Nov)",
+    "provider": "OpenAI",
+    "releaseDate": "2024-11-20",
+    "aaIntelligenceIndex": 17.32,
+    "aaBenchmarkTotalCost": 196.974515,
+    "aaBenchmarkValue": 0.08793
+  },
+  {
+    "id": "nova-lite",
+    "name": "Nova Lite",
+    "provider": "Amazon",
+    "releaseDate": "2024-12-03",
+    "aaIntelligenceIndex": 12.65,
+    "aaBenchmarkTotalCost": 21.164724,
+    "aaBenchmarkValue": 0.597693
+  },
+  {
+    "id": "nova-micro",
+    "name": "Nova Micro",
+    "provider": "Amazon",
+    "releaseDate": "2024-12-03",
+    "aaIntelligenceIndex": 10.27,
+    "aaBenchmarkTotalCost": 6.384767,
+    "aaBenchmarkValue": 1.608516
+  },
+  {
+    "id": "nova-pro",
+    "name": "Nova Pro",
+    "provider": "Amazon",
+    "releaseDate": "2024-12-03",
+    "aaIntelligenceIndex": 13.48,
+    "aaBenchmarkTotalCost": 200.984304,
+    "aaBenchmarkValue": 0.06707
+  },
+  {
+    "id": "o1",
+    "name": "o1",
+    "provider": "OpenAI",
+    "releaseDate": "2024-12-05",
+    "aaIntelligenceIndex": 30.75,
+    "aaBenchmarkTotalCost": 3270.35733,
+    "aaBenchmarkValue": 0.009403
+  },
+  {
+    "id": "llama-3-3-instruct-70b",
+    "name": "Llama 3.3 70B",
+    "provider": "Meta",
+    "releaseDate": "2024-12-06",
+    "aaIntelligenceIndex": 14.49,
+    "aaBenchmarkTotalCost": 86.258303,
+    "aaBenchmarkValue": 0.167984
+  },
+  {
+    "id": "phi-4",
+    "name": "Phi-4",
+    "provider": "Microsoft",
+    "releaseDate": "2024-12-12",
+    "aaIntelligenceIndex": 10.41,
+    "aaBenchmarkTotalCost": 4.273383,
+    "aaBenchmarkValue": 2.436009
+  },
+  {
+    "id": "deepseek-v3",
+    "name": "DeepSeek V3 (Dec)",
+    "provider": "DeepSeek",
+    "releaseDate": "2024-12-26",
+    "aaIntelligenceIndex": 16.46,
+    "aaBenchmarkTotalCost": 26.781312,
+    "aaBenchmarkValue": 0.614608
+  },
+  {
+    "id": "deepseek-r1-0120",
+    "name": "DeepSeek R1 (Jan)",
+    "provider": "DeepSeek",
+    "releaseDate": "2025-01-20",
+    "aaIntelligenceIndex": 18.84,
+    "aaBenchmarkTotalCost": 1608.897147,
+    "aaBenchmarkValue": 0.01171
+  },
+  {
+    "id": "o3-mini-high",
+    "name": "o3-mini (high)",
+    "provider": "OpenAI",
+    "releaseDate": "2025-01-31",
+    "aaIntelligenceIndex": 25.21,
+    "aaBenchmarkTotalCost": 314.72153,
+    "aaBenchmarkValue": 0.080103
+  },
+  {
+    "id": "gemini-2-0-flash",
+    "name": "Gemini 2.0 Flash",
+    "provider": "Google",
+    "releaseDate": "2025-02-05",
+    "aaIntelligenceIndex": 18.51,
+    "aaBenchmarkTotalCost": 18.856247,
+    "aaBenchmarkValue": 0.981638
+  },
+  {
+    "id": "grok-3",
+    "name": "Grok 3",
+    "provider": "xAI",
+    "releaseDate": "2025-02-19",
+    "aaIntelligenceIndex": 25.17,
+    "aaBenchmarkTotalCost": 311.705406,
+    "aaBenchmarkValue": 0.080749
+  },
+  {
+    "id": "grok-3-mini-reasoning",
+    "name": "Grok 3 mini Reasoning (high)",
+    "provider": "xAI",
+    "releaseDate": "2025-02-19",
+    "aaIntelligenceIndex": 32.08,
+    "aaBenchmarkTotalCost": 104.772149,
+    "aaBenchmarkValue": 0.306188
+  },
+  {
+    "id": "claude-3-7-sonnet-thinking",
+    "name": "Claude 3.7 Sonnet",
+    "provider": "Anthropic",
+    "releaseDate": "2025-02-24",
+    "aaIntelligenceIndex": 34.71,
+    "aaBenchmarkTotalCost": 1199.493279,
+    "aaBenchmarkValue": 0.028937
+  },
+  {
+    "id": "claude-3-7-sonnet",
+    "name": "Claude 3.7 Sonnet",
+    "provider": "Anthropic",
+    "releaseDate": "2025-02-24",
+    "aaIntelligenceIndex": 30.81,
+    "aaBenchmarkTotalCost": 436.513305,
+    "aaBenchmarkValue": 0.070582
+  },
+  {
+    "id": "reka-flash-3",
+    "name": "Reka Flash 3",
+    "provider": "Reka AI",
+    "releaseDate": "2025-03-10",
+    "aaIntelligenceIndex": 9.52,
+    "aaBenchmarkTotalCost": 37.303407,
+    "aaBenchmarkValue": 0.255205
+  },
+  {
+    "id": "command-a",
+    "name": "Command A",
+    "provider": "Cohere",
+    "releaseDate": "2025-03-13",
+    "aaIntelligenceIndex": 13.48,
+    "aaBenchmarkTotalCost": 299.181555,
+    "aaBenchmarkValue": 0.045056
+  },
+  {
+    "id": "mistral-small-3-1",
+    "name": "Mistral Small 3.1",
+    "provider": "Mistral",
+    "releaseDate": "2025-03-17",
+    "aaIntelligenceIndex": 14.48,
+    "aaBenchmarkTotalCost": 46.094642,
+    "aaBenchmarkValue": 0.314136
+  },
+  {
+    "id": "deepseek-v3-0324",
+    "name": "DeepSeek V3 0324",
+    "provider": "DeepSeek",
+    "releaseDate": "2025-03-25",
+    "aaIntelligenceIndex": 22.28,
+    "aaBenchmarkTotalCost": 59.247363,
+    "aaBenchmarkValue": 0.37605
+  },
+  {
+    "id": "llama-4-maverick",
+    "name": "Llama 4 Maverick",
+    "provider": "Meta",
+    "releaseDate": "2025-04-05",
+    "aaIntelligenceIndex": 18.36,
+    "aaBenchmarkTotalCost": 62.281893,
+    "aaBenchmarkValue": 0.294789
+  },
+  {
+    "id": "llama-4-scout",
+    "name": "Llama 4 Scout",
+    "provider": "Meta",
+    "releaseDate": "2025-04-05",
+    "aaIntelligenceIndex": 13.52,
+    "aaBenchmarkTotalCost": 26.422708,
+    "aaBenchmarkValue": 0.511681
+  },
+  {
+    "id": "llama-3-1-nemotron-ultra-253b-v1-reasoning",
+    "name": "Llama Nemotron Ultra",
+    "provider": "NVIDIA",
+    "releaseDate": "2025-04-07",
+    "aaIntelligenceIndex": 15.02,
+    "aaBenchmarkTotalCost": 486.793676,
+    "aaBenchmarkValue": 0.030855
+  },
+  {
+    "id": "gpt-4-1",
+    "name": "GPT-4.1",
+    "provider": "OpenAI",
+    "releaseDate": "2025-04-14",
+    "aaIntelligenceIndex": 26.28,
+    "aaBenchmarkTotalCost": 277.806692,
+    "aaBenchmarkValue": 0.094598
+  },
+  {
+    "id": "gpt-4-1-mini",
+    "name": "GPT-4.1 mini",
+    "provider": "OpenAI",
+    "releaseDate": "2025-04-14",
+    "aaIntelligenceIndex": 22.9,
+    "aaBenchmarkTotalCost": 53.733446,
+    "aaBenchmarkValue": 0.426178
+  },
+  {
+    "id": "gpt-4-1-nano",
+    "name": "GPT-4.1 nano",
+    "provider": "OpenAI",
+    "releaseDate": "2025-04-14",
+    "aaIntelligenceIndex": 13.04,
+    "aaBenchmarkTotalCost": 31.025794,
+    "aaBenchmarkValue": 0.420295
+  },
+  {
+    "id": "granite-3-3-8b-instruct",
+    "name": "Granite 3.3 8B",
+    "provider": "IBM",
+    "releaseDate": "2025-04-16",
+    "aaIntelligenceIndex": 7,
+    "aaBenchmarkTotalCost": 13.363255,
+    "aaBenchmarkValue": 0.523824
+  },
+  {
+    "id": "o3",
+    "name": "o3",
+    "provider": "OpenAI",
+    "releaseDate": "2025-04-16",
+    "aaIntelligenceIndex": 38.37,
+    "aaBenchmarkTotalCost": 1024.785354,
+    "aaBenchmarkValue": 0.037442
+  },
+  {
+    "id": "o4-mini",
+    "name": "o4-mini (high)",
+    "provider": "OpenAI",
+    "releaseDate": "2025-04-16",
+    "aaIntelligenceIndex": 33.06,
+    "aaBenchmarkTotalCost": 459.79875,
+    "aaBenchmarkValue": 0.071901
+  },
+  {
+    "id": "qwen3-0.6b-instruct-reasoning",
+    "name": "Qwen3 0.6B",
+    "provider": "Alibaba",
+    "releaseDate": "2025-04-28",
+    "aaIntelligenceIndex": 6.47,
+    "aaBenchmarkTotalCost": 30.418224,
+    "aaBenchmarkValue": 0.212701
+  },
+  {
+    "id": "qwen3-0.6b-instruct",
+    "name": "Qwen3 0.6B",
+    "provider": "Alibaba",
+    "releaseDate": "2025-04-28",
+    "aaIntelligenceIndex": 5.68,
+    "aaBenchmarkTotalCost": 21.342667,
+    "aaBenchmarkValue": 0.266134
+  },
+  {
+    "id": "qwen3-1.7b-instruct-reasoning",
+    "name": "Qwen3 1.7B",
+    "provider": "Alibaba",
+    "releaseDate": "2025-04-28",
+    "aaIntelligenceIndex": 7.96,
+    "aaBenchmarkTotalCost": 52.534705,
+    "aaBenchmarkValue": 0.151519
+  },
+  {
+    "id": "qwen3-1.7b-instruct",
+    "name": "Qwen3 1.7B",
+    "provider": "Alibaba",
+    "releaseDate": "2025-04-28",
+    "aaIntelligenceIndex": 6.76,
+    "aaBenchmarkTotalCost": 15.77049,
+    "aaBenchmarkValue": 0.428649
+  },
+  {
+    "id": "qwen3-14b-instruct-reasoning",
+    "name": "Qwen3 14B",
+    "provider": "Alibaba",
+    "releaseDate": "2025-04-28",
+    "aaIntelligenceIndex": 16.19,
+    "aaBenchmarkTotalCost": 129.257541,
+    "aaBenchmarkValue": 0.125254
+  },
+  {
+    "id": "qwen3-14b-instruct",
+    "name": "Qwen3 14B",
+    "provider": "Alibaba",
+    "releaseDate": "2025-04-28",
+    "aaIntelligenceIndex": 12.76,
+    "aaBenchmarkTotalCost": 28.835855,
+    "aaBenchmarkValue": 0.442505
+  },
+  {
+    "id": "qwen3-235b-a22b-instruct-reasoning",
+    "name": "Qwen3 235B",
+    "provider": "Alibaba",
+    "releaseDate": "2025-04-28",
+    "aaIntelligenceIndex": 19.79,
+    "aaBenchmarkTotalCost": 488.152935,
+    "aaBenchmarkValue": 0.040541
+  },
+  {
+    "id": "qwen3-235b-a22b-instruct",
+    "name": "Qwen3 235B",
+    "provider": "Alibaba",
+    "releaseDate": "2025-04-28",
+    "aaIntelligenceIndex": 16.96,
+    "aaBenchmarkTotalCost": 161.266715,
+    "aaBenchmarkValue": 0.105167
+  },
+  {
+    "id": "qwen3-30b-a3b-instruct-reasoning",
+    "name": "Qwen3 30B",
+    "provider": "Alibaba",
+    "releaseDate": "2025-04-28",
+    "aaIntelligenceIndex": 15.28,
+    "aaBenchmarkTotalCost": 98.030321,
+    "aaBenchmarkValue": 0.15587
+  },
+  {
+    "id": "qwen3-30b-a3b-instruct",
+    "name": "Qwen3 30B",
+    "provider": "Alibaba",
+    "releaseDate": "2025-04-28",
+    "aaIntelligenceIndex": 12.53,
+    "aaBenchmarkTotalCost": 27.173045,
+    "aaBenchmarkValue": 0.461119
+  },
+  {
+    "id": "qwen3-32b-instruct-reasoning",
+    "name": "Qwen3 32B",
+    "provider": "Alibaba",
+    "releaseDate": "2025-04-28",
+    "aaIntelligenceIndex": 16.53,
+    "aaBenchmarkTotalCost": 321.139175,
+    "aaBenchmarkValue": 0.051473
+  },
+  {
+    "id": "qwen3-8b-instruct-reasoning",
+    "name": "Qwen3 8B",
+    "provider": "Alibaba",
+    "releaseDate": "2025-04-28",
+    "aaIntelligenceIndex": 13.18,
+    "aaBenchmarkTotalCost": 94.248605,
+    "aaBenchmarkValue": 0.139843
+  },
+  {
+    "id": "qwen3-8b-instruct",
+    "name": "Qwen3 8B",
+    "provider": "Alibaba",
+    "releaseDate": "2025-04-28",
+    "aaIntelligenceIndex": 10.63,
+    "aaBenchmarkTotalCost": 40.609613,
+    "aaBenchmarkValue": 0.261761
+  },
+  {
+    "id": "nova-premier",
+    "name": "Nova Premier",
+    "provider": "Amazon",
+    "releaseDate": "2025-04-30",
+    "aaIntelligenceIndex": 19.01,
+    "aaBenchmarkTotalCost": 375.97911,
+    "aaBenchmarkValue": 0.050561
+  },
+  {
+    "id": "mistral-medium-3",
+    "name": "Mistral Medium 3",
+    "provider": "Mistral",
+    "releaseDate": "2025-05-07",
+    "aaIntelligenceIndex": 18.76,
+    "aaBenchmarkTotalCost": 40.23623,
+    "aaBenchmarkValue": 0.466246
+  },
+  {
+    "id": "gemini-2-5-flash-reasoning",
+    "name": "Gemini 2.5 Flash",
+    "provider": "Google",
+    "releaseDate": "2025-05-20",
+    "aaIntelligenceIndex": 27.04,
+    "aaBenchmarkTotalCost": 171.947577,
+    "aaBenchmarkValue": 0.157257
+  },
+  {
+    "id": "gemini-2-5-flash",
+    "name": "Gemini 2.5 Flash",
+    "provider": "Google",
+    "releaseDate": "2025-05-20",
+    "aaIntelligenceIndex": 20.56,
+    "aaBenchmarkTotalCost": 84.27271,
+    "aaBenchmarkValue": 0.24397
+  },
+  {
+    "id": "claude-4-sonnet-thinking",
+    "name": "Claude 4 Sonnet",
+    "provider": "Anthropic",
+    "releaseDate": "2025-05-22",
+    "aaIntelligenceIndex": 38.66,
+    "aaBenchmarkTotalCost": 1242.480129,
+    "aaBenchmarkValue": 0.031115
+  },
+  {
+    "id": "claude-4-sonnet",
+    "name": "Claude 4 Sonnet",
+    "provider": "Anthropic",
+    "releaseDate": "2025-05-22",
+    "aaIntelligenceIndex": 33,
+    "aaBenchmarkTotalCost": 472.570059,
+    "aaBenchmarkValue": 0.069831
+  },
+  {
+    "id": "deepseek-r1",
+    "name": "DeepSeek R1 0528",
+    "provider": "DeepSeek",
+    "releaseDate": "2025-05-28",
+    "aaIntelligenceIndex": 27.07,
+    "aaBenchmarkTotalCost": 280.105907,
+    "aaBenchmarkValue": 0.096642
+  },
+  {
+    "id": "gemini-2-5-pro",
+    "name": "Gemini 2.5 Pro",
+    "provider": "Google",
+    "releaseDate": "2025-06-05",
+    "aaIntelligenceIndex": 34.63,
+    "aaBenchmarkTotalCost": 648.315462,
+    "aaBenchmarkValue": 0.053415
+  },
+  {
+    "id": "gemini-2-5-flash-lite-reasoning",
+    "name": "Gemini 2.5 Flash-Lite",
+    "provider": "Google",
+    "releaseDate": "2025-06-17",
+    "aaIntelligenceIndex": 17.57,
+    "aaBenchmarkTotalCost": 77.855934,
+    "aaBenchmarkValue": 0.225673
+  },
+  {
+    "id": "gemini-2-5-flash-lite",
+    "name": "Gemini 2.5 Flash-Lite",
+    "provider": "Google",
+    "releaseDate": "2025-06-17",
+    "aaIntelligenceIndex": 12.66,
+    "aaBenchmarkTotalCost": 29.874933,
+    "aaBenchmarkValue": 0.423767
+  },
+  {
+    "id": "minimax-m1-80k",
+    "name": "MiniMax M1 80k",
+    "provider": "MiniMax",
+    "releaseDate": "2025-06-17",
+    "aaIntelligenceIndex": 24.43,
+    "aaBenchmarkTotalCost": 114.973018,
+    "aaBenchmarkValue": 0.212485
+  },
+  {
+    "id": "mistral-small-3-2",
+    "name": "Mistral Small 3.2",
+    "provider": "Mistral",
+    "releaseDate": "2025-06-20",
+    "aaIntelligenceIndex": 15.07,
+    "aaBenchmarkTotalCost": 21.971349,
+    "aaBenchmarkValue": 0.685893
+  },
+  {
+    "id": "gemma-3n-e4b",
+    "name": "Gemma 3n E4B",
+    "provider": "Google",
+    "releaseDate": "2025-06-26",
+    "aaIntelligenceIndex": 6.38,
+    "aaBenchmarkTotalCost": 5.7215,
+    "aaBenchmarkValue": 1.115092
+  },
+  {
+    "id": "ernie-4-5-300b-a47b",
+    "name": "ERNIE 4.5 300B A47B",
+    "provider": "Baidu",
+    "releaseDate": "2025-06-30",
+    "aaIntelligenceIndex": 14.96,
+    "aaBenchmarkTotalCost": 8.085182,
+    "aaBenchmarkValue": 1.850298
+  },
+  {
+    "id": "jamba-1-7-large",
+    "name": "Jamba 1.7 Large",
+    "provider": "AI21 Labs",
+    "releaseDate": "2025-07-07",
+    "aaIntelligenceIndex": 10.88,
+    "aaBenchmarkTotalCost": 965.334858,
+    "aaBenchmarkValue": 0.011271
+  },
+  {
+    "id": "devstral-medium",
+    "name": "Devstral Medium",
+    "provider": "Mistral",
+    "releaseDate": "2025-07-10",
+    "aaIntelligenceIndex": 18.66,
+    "aaBenchmarkTotalCost": 67.392556,
+    "aaBenchmarkValue": 0.276885
+  },
+  {
+    "id": "devstral-small",
+    "name": "Devstral Small",
+    "provider": "Mistral",
+    "releaseDate": "2025-07-10",
+    "aaIntelligenceIndex": 15.21,
+    "aaBenchmarkTotalCost": 23.102588,
+    "aaBenchmarkValue": 0.658368
+  },
+  {
+    "id": "grok-4",
+    "name": "Grok 4",
+    "provider": "xAI",
+    "releaseDate": "2025-07-10",
+    "aaIntelligenceIndex": 41.52,
+    "aaBenchmarkTotalCost": 1568.342121,
+    "aaBenchmarkValue": 0.026474
+  },
+  {
+    "id": "kimi-k2",
+    "name": "Kimi K2",
+    "provider": "Kimi",
+    "releaseDate": "2025-07-11",
+    "aaIntelligenceIndex": 26.32,
+    "aaBenchmarkTotalCost": 180.802504,
+    "aaBenchmarkValue": 0.145573
+  },
+  {
+    "id": "qwen3-235b-a22b-instruct-2507",
+    "name": "Qwen3 235B 2507",
+    "provider": "Alibaba",
+    "releaseDate": "2025-07-21",
+    "aaIntelligenceIndex": 24.96,
+    "aaBenchmarkTotalCost": 255.940772,
+    "aaBenchmarkValue": 0.097523
+  },
+  {
+    "id": "qwen3-coder-480b-a35b-instruct",
+    "name": "Qwen3 Coder 480B",
+    "provider": "Alibaba",
+    "releaseDate": "2025-07-22",
+    "aaIntelligenceIndex": 24.77,
+    "aaBenchmarkTotalCost": 779.126035,
+    "aaBenchmarkValue": 0.031792
+  },
+  {
+    "id": "qwen3-235b-a22b-instruct-2507-reasoning",
+    "name": "Qwen3 235B A22B 2507",
+    "provider": "Alibaba",
+    "releaseDate": "2025-07-25",
+    "aaIntelligenceIndex": 29.54,
+    "aaBenchmarkTotalCost": 569.508078,
+    "aaBenchmarkValue": 0.051869
+  },
+  {
+    "id": "llama-nemotron-super-49b-v1-5",
+    "name": "Llama Nemotron Super 49B v1.5",
+    "provider": "NVIDIA",
+    "releaseDate": "2025-07-25",
+    "aaIntelligenceIndex": 14.59,
+    "aaBenchmarkTotalCost": 20.685299,
+    "aaBenchmarkValue": 0.705332
+  },
+  {
+    "id": "llama-nemotron-super-49b-v1-5-reasoning",
+    "name": "Llama Nemotron Super 49B v1.5",
+    "provider": "NVIDIA",
+    "releaseDate": "2025-07-25",
+    "aaIntelligenceIndex": 18.68,
+    "aaBenchmarkTotalCost": 37.178149,
+    "aaBenchmarkValue": 0.502446
+  },
+  {
+    "id": "glm-4.5",
+    "name": "GLM-4.5",
+    "provider": "Z AI",
+    "releaseDate": "2025-07-28",
+    "aaIntelligenceIndex": 26.42,
+    "aaBenchmarkTotalCost": 408.495303,
+    "aaBenchmarkValue": 0.064676
+  },
+  {
+    "id": "glm-4-5-air",
+    "name": "GLM-4.5-Air",
+    "provider": "Z AI",
+    "releaseDate": "2025-07-28",
+    "aaIntelligenceIndex": 23.17,
+    "aaBenchmarkTotalCost": 93.377005,
+    "aaBenchmarkValue": 0.248134
+  },
+  {
+    "id": "qwen3-30b-a3b-2507",
+    "name": "Qwen3 30B A3B 2507",
+    "provider": "Alibaba",
+    "releaseDate": "2025-07-29",
+    "aaIntelligenceIndex": 15,
+    "aaBenchmarkTotalCost": 75.440281,
+    "aaBenchmarkValue": 0.198833
+  },
+  {
+    "id": "qwen3-30b-a3b-2507-reasoning",
+    "name": "Qwen3 30B A3B 2507",
+    "provider": "Alibaba",
+    "releaseDate": "2025-07-30",
+    "aaIntelligenceIndex": 22.41,
+    "aaBenchmarkTotalCost": 140.962201,
+    "aaBenchmarkValue": 0.158979
+  },
+  {
+    "id": "qwen3-coder-30b-a3b-instruct",
+    "name": "Qwen3 Coder 30B A3B",
+    "provider": "Alibaba",
+    "releaseDate": "2025-07-31",
+    "aaIntelligenceIndex": 19.98,
+    "aaBenchmarkTotalCost": 72.841268,
+    "aaBenchmarkValue": 0.274295
+  },
+  {
+    "id": "gpt-oss-120b",
+    "name": "gpt-oss-120B (high)",
+    "provider": "OpenAI",
+    "releaseDate": "2025-08-05",
+    "aaIntelligenceIndex": 33.27,
+    "aaBenchmarkTotalCost": 67.365874,
+    "aaBenchmarkValue": 0.49387
+  },
+  {
+    "id": "gpt-oss-120b-low",
+    "name": "gpt-oss-120B (low)",
+    "provider": "OpenAI",
+    "releaseDate": "2025-08-05",
+    "aaIntelligenceIndex": 24.47,
+    "aaBenchmarkTotalCost": 15.896159,
+    "aaBenchmarkValue": 1.539366
+  },
+  {
+    "id": "gpt-oss-20b",
+    "name": "gpt-oss-20B (high)",
+    "provider": "OpenAI",
+    "releaseDate": "2025-08-05",
+    "aaIntelligenceIndex": 24.47,
+    "aaBenchmarkTotalCost": 22.091215,
+    "aaBenchmarkValue": 1.10768
+  },
+  {
+    "id": "gpt-oss-20b-low",
+    "name": "gpt-oss-20B (low)",
+    "provider": "OpenAI",
+    "releaseDate": "2025-08-05",
+    "aaIntelligenceIndex": 20.79,
+    "aaBenchmarkTotalCost": 8.875728,
+    "aaBenchmarkValue": 2.342343
+  },
+  {
+    "id": "gpt-5",
+    "name": "GPT-5 (high)",
+    "provider": "OpenAI",
+    "releaseDate": "2025-08-07",
+    "aaIntelligenceIndex": 44.63,
+    "aaBenchmarkTotalCost": 910.371871,
+    "aaBenchmarkValue": 0.049024
+  },
+  {
+    "id": "gpt-5-low",
+    "name": "GPT-5 (low)",
+    "provider": "OpenAI",
+    "releaseDate": "2025-08-07",
+    "aaIntelligenceIndex": 39.2,
+    "aaBenchmarkTotalCost": 227.283772,
+    "aaBenchmarkValue": 0.172472
+  },
+  {
+    "id": "gpt-5-medium",
+    "name": "GPT-5 (medium)",
+    "provider": "OpenAI",
+    "releaseDate": "2025-08-07",
+    "aaIntelligenceIndex": 42.03,
+    "aaBenchmarkTotalCost": 550.485785,
+    "aaBenchmarkValue": 0.076351
+  },
+  {
+    "id": "gpt-5-minimal",
+    "name": "GPT-5 (minimal)",
+    "provider": "OpenAI",
+    "releaseDate": "2025-08-07",
+    "aaIntelligenceIndex": 23.89,
+    "aaBenchmarkTotalCost": 151.722741,
+    "aaBenchmarkValue": 0.157458
+  },
+  {
+    "id": "gpt-5-mini",
+    "name": "GPT-5 mini (high)",
+    "provider": "OpenAI",
+    "releaseDate": "2025-08-07",
+    "aaIntelligenceIndex": 41.17,
+    "aaBenchmarkTotalCost": 168.457701,
+    "aaBenchmarkValue": 0.244394
+  },
+  {
+    "id": "gpt-5-mini-medium",
+    "name": "GPT-5 mini (medium)",
+    "provider": "OpenAI",
+    "releaseDate": "2025-08-07",
+    "aaIntelligenceIndex": 38.94,
+    "aaBenchmarkTotalCost": 61.911901,
+    "aaBenchmarkValue": 0.628958
+  },
+  {
+    "id": "gpt-5-mini-minimal",
+    "name": "GPT-5 mini (minimal)",
+    "provider": "OpenAI",
+    "releaseDate": "2025-08-07",
+    "aaIntelligenceIndex": 20.68,
+    "aaBenchmarkTotalCost": 25.163736,
+    "aaBenchmarkValue": 0.821818
+  },
+  {
+    "id": "gpt-5-nano",
+    "name": "GPT-5 nano (high)",
+    "provider": "OpenAI",
+    "releaseDate": "2025-08-07",
+    "aaIntelligenceIndex": 26.83,
+    "aaBenchmarkTotalCost": 51.705823,
+    "aaBenchmarkValue": 0.518897
+  },
+  {
+    "id": "gpt-5-nano-medium",
+    "name": "GPT-5 nano (medium)",
+    "provider": "OpenAI",
+    "releaseDate": "2025-08-07",
+    "aaIntelligenceIndex": 25.88,
+    "aaBenchmarkTotalCost": 25.850429,
+    "aaBenchmarkValue": 1.001144
+  },
+  {
+    "id": "gpt-5-nano-minimal",
+    "name": "GPT-5 nano (minimal)",
+    "provider": "OpenAI",
+    "releaseDate": "2025-08-07",
+    "aaIntelligenceIndex": 13.84,
+    "aaBenchmarkTotalCost": 24.881295,
+    "aaBenchmarkValue": 0.556241
+  },
+  {
+    "id": "glm-4-5v",
+    "name": "GLM-4.5V",
+    "provider": "Z AI",
+    "releaseDate": "2025-08-11",
+    "aaIntelligenceIndex": 12.74,
+    "aaBenchmarkTotalCost": 203.487592,
+    "aaBenchmarkValue": 0.062608
+  },
+  {
+    "id": "glm-4-5v-reasoning",
+    "name": "GLM-4.5V",
+    "provider": "Z AI",
+    "releaseDate": "2025-08-11",
+    "aaIntelligenceIndex": 15.09,
+    "aaBenchmarkTotalCost": 226.994971,
+    "aaBenchmarkValue": 0.066477
+  },
+  {
+    "id": "mistral-medium-3-1",
+    "name": "Mistral Medium 3.1",
+    "provider": "Mistral",
+    "releaseDate": "2025-08-12",
+    "aaIntelligenceIndex": 21.25,
+    "aaBenchmarkTotalCost": 51.651788,
+    "aaBenchmarkValue": 0.411409
+  },
+  {
+    "id": "nvidia-nemotron-nano-9b-v2-reasoning",
+    "name": "NVIDIA Nemotron Nano 9B V2",
+    "provider": "NVIDIA",
+    "releaseDate": "2025-08-18",
+    "aaIntelligenceIndex": 14.76,
+    "aaBenchmarkTotalCost": 10.526423,
+    "aaBenchmarkValue": 1.402186
+  },
+  {
+    "id": "nvidia-nemotron-nano-9b-v2",
+    "name": "NVIDIA Nemotron Nano 9B V2",
+    "provider": "NVIDIA",
+    "releaseDate": "2025-08-18",
+    "aaIntelligenceIndex": 13.16,
+    "aaBenchmarkTotalCost": 15.156911,
+    "aaBenchmarkValue": 0.868251
+  },
+  {
+    "id": "seed-oss-36b-instruct",
+    "name": "Seed-OSS-36B-Instruct",
+    "provider": "ByteDance Seed",
+    "releaseDate": "2025-08-20",
+    "aaIntelligenceIndex": 25.16,
+    "aaBenchmarkTotalCost": 53.046525,
+    "aaBenchmarkValue": 0.474301
+  },
+  {
+    "id": "deepseek-v3-1",
+    "name": "DeepSeek V3.1",
+    "provider": "DeepSeek",
+    "releaseDate": "2025-08-21",
+    "aaIntelligenceIndex": 28.13,
+    "aaBenchmarkTotalCost": 99.606988,
+    "aaBenchmarkValue": 0.28241
+  },
+  {
+    "id": "deepseek-v3-1-reasoning",
+    "name": "DeepSeek V3.1",
+    "provider": "DeepSeek",
+    "releaseDate": "2025-08-21",
+    "aaIntelligenceIndex": 27.71,
+    "aaBenchmarkTotalCost": 484.010068,
+    "aaBenchmarkValue": 0.057251
+  },
+  {
+    "id": "hermes-4-llama-3-1-405b",
+    "name": "Hermes 4 405B",
+    "provider": "Nous Research",
+    "releaseDate": "2025-08-27",
+    "aaIntelligenceIndex": 17.63,
+    "aaBenchmarkTotalCost": 178.696391,
+    "aaBenchmarkValue": 0.098659
+  },
+  {
+    "id": "hermes-4-llama-3-1-405b-reasoning",
+    "name": "Hermes 4 405B",
+    "provider": "Nous Research",
+    "releaseDate": "2025-08-27",
+    "aaIntelligenceIndex": 18.56,
+    "aaBenchmarkTotalCost": 294.450286,
+    "aaBenchmarkValue": 0.063033
+  },
+  {
+    "id": "hermes-4-llama-3-1-70b",
+    "name": "Hermes 4 70B",
+    "provider": "Nous Research",
+    "releaseDate": "2025-08-27",
+    "aaIntelligenceIndex": 12.63,
+    "aaBenchmarkTotalCost": 29.846955,
+    "aaBenchmarkValue": 0.423159
+  },
+  {
+    "id": "hermes-4-llama-3-1-70b-reasoning",
+    "name": "Hermes 4 70B",
+    "provider": "Nous Research",
+    "releaseDate": "2025-08-27",
+    "aaIntelligenceIndex": 15.99,
+    "aaBenchmarkTotalCost": 48.101212,
+    "aaBenchmarkValue": 0.332424
+  },
+  {
+    "id": "grok-code-fast-1",
+    "name": "Grok Code Fast 1",
+    "provider": "xAI",
+    "releaseDate": "2025-08-28",
+    "aaIntelligenceIndex": 28.74,
+    "aaBenchmarkTotalCost": 116.702084,
+    "aaBenchmarkValue": 0.246268
+  },
+  {
+    "id": "apertus-70b-instruct",
+    "name": "Apertus 70B Instruct",
+    "provider": "Swiss AI Initiative",
+    "releaseDate": "2025-09-02",
+    "aaIntelligenceIndex": 7.7,
+    "aaBenchmarkTotalCost": 3.782696,
+    "aaBenchmarkValue": 2.035585
+  },
+  {
+    "id": "apertus-8b-instruct",
+    "name": "Apertus 8B Instruct",
+    "provider": "Swiss AI Initiative",
+    "releaseDate": "2025-09-02",
+    "aaIntelligenceIndex": 5.88,
+    "aaBenchmarkTotalCost": 0.104703,
+    "aaBenchmarkValue": 56.158849
+  },
+  {
+    "id": "qwen3-max-preview",
+    "name": "Qwen3 Max (Preview)",
+    "provider": "Alibaba",
+    "releaseDate": "2025-09-05",
+    "aaIntelligenceIndex": 26.08,
+    "aaBenchmarkTotalCost": 249.512525,
+    "aaBenchmarkValue": 0.104524
+  },
+  {
+    "id": "kimi-k2-0905",
+    "name": "Kimi K2 0905",
+    "provider": "Kimi",
+    "releaseDate": "2025-09-05",
+    "aaIntelligenceIndex": 30.85,
+    "aaBenchmarkTotalCost": 126.565065,
+    "aaBenchmarkValue": 0.243748
+  },
+  {
+    "id": "gemini-2-5-flash-lite-preview-09-2025-reasoning",
+    "name": "Gemini 2.5 Flash-Lite (Sep)",
+    "provider": "Google",
+    "releaseDate": "2025-09-08",
+    "aaIntelligenceIndex": 21.65,
+    "aaBenchmarkTotalCost": 38.212236,
+    "aaBenchmarkValue": 0.566572
+  },
+  {
+    "id": "qwen3-next-80b-a3b-instruct",
+    "name": "Qwen3 Next 80B A3B",
+    "provider": "Alibaba",
+    "releaseDate": "2025-09-11",
+    "aaIntelligenceIndex": 20.11,
+    "aaBenchmarkTotalCost": 132.972724,
+    "aaBenchmarkValue": 0.151234
+  },
+  {
+    "id": "qwen3-next-80b-a3b-reasoning",
+    "name": "Qwen3 Next 80B A3B",
+    "provider": "Alibaba",
+    "releaseDate": "2025-09-11",
+    "aaIntelligenceIndex": 26.72,
+    "aaBenchmarkTotalCost": 357.342008,
+    "aaBenchmarkValue": 0.074774
+  },
+  {
+    "id": "ling-flash-2-0",
+    "name": "Ling-flash-2.0",
+    "provider": "InclusionAI",
+    "releaseDate": "2025-09-17",
+    "aaIntelligenceIndex": 15.74,
+    "aaBenchmarkTotalCost": 16.733559,
+    "aaBenchmarkValue": 0.940625
+  },
+  {
+    "id": "magistral-small-2509",
+    "name": "Magistral Small 1.2",
+    "provider": "Mistral",
+    "releaseDate": "2025-09-17",
+    "aaIntelligenceIndex": 18.16,
+    "aaBenchmarkTotalCost": 89.834539,
+    "aaBenchmarkValue": 0.202149
+  },
+  {
+    "id": "magistral-medium-2509",
+    "name": "Magistral Medium 1.2",
+    "provider": "Mistral",
+    "releaseDate": "2025-09-18",
+    "aaIntelligenceIndex": 27.1,
+    "aaBenchmarkTotalCost": 387.098364,
+    "aaBenchmarkValue": 0.070008
+  },
+  {
+    "id": "ring-flash-2-0",
+    "name": "Ring-flash-2.0",
+    "provider": "InclusionAI",
+    "releaseDate": "2025-09-19",
+    "aaIntelligenceIndex": 14.02,
+    "aaBenchmarkTotalCost": 59.807024,
+    "aaBenchmarkValue": 0.234421
+  },
+  {
+    "id": "grok-4-fast-reasoning",
+    "name": "Grok 4 Fast",
+    "provider": "xAI",
+    "releaseDate": "2025-09-19",
+    "aaIntelligenceIndex": 35.06,
+    "aaBenchmarkTotalCost": 35.826009,
+    "aaBenchmarkValue": 0.978619
+  },
+  {
+    "id": "grok-4-fast",
+    "name": "Grok 4 Fast",
+    "provider": "xAI",
+    "releaseDate": "2025-09-19",
+    "aaIntelligenceIndex": 23.12,
+    "aaBenchmarkTotalCost": 17.448048,
+    "aaBenchmarkValue": 1.325077
+  },
+  {
+    "id": "qwen3-omni-30b-a3b-reasoning",
+    "name": "Qwen3 Omni 30B A3B",
+    "provider": "Alibaba",
+    "releaseDate": "2025-09-22",
+    "aaIntelligenceIndex": 15.62,
+    "aaBenchmarkTotalCost": 132.30582,
+    "aaBenchmarkValue": 0.11806
+  },
+  {
+    "id": "qwen3-omni-30b-a3b-instruct",
+    "name": "Qwen3 Omni 30B A3B",
+    "provider": "Alibaba",
+    "releaseDate": "2025-09-22",
+    "aaIntelligenceIndex": 10.68,
+    "aaBenchmarkTotalCost": 85.067309,
+    "aaBenchmarkValue": 0.125548
+  },
+  {
+    "id": "deepseek-v3-1-terminus",
+    "name": "DeepSeek V3.1 Terminus",
+    "provider": "DeepSeek",
+    "releaseDate": "2025-09-22",
+    "aaIntelligenceIndex": 28.52,
+    "aaBenchmarkTotalCost": 40.893439,
+    "aaBenchmarkValue": 0.697422
+  },
+  {
+    "id": "deepseek-v3-1-terminus-reasoning",
+    "name": "DeepSeek V3.1 Terminus",
+    "provider": "DeepSeek",
+    "releaseDate": "2025-09-22",
+    "aaIntelligenceIndex": 33.93,
+    "aaBenchmarkTotalCost": 277.741173,
+    "aaBenchmarkValue": 0.122164
+  },
+  {
+    "id": "granite-4-0-h-small",
+    "name": "Granite 4.0 H Small",
+    "provider": "IBM",
+    "releaseDate": "2025-09-22",
+    "aaIntelligenceIndex": 10.81,
+    "aaBenchmarkTotalCost": 4.48095,
+    "aaBenchmarkValue": 2.412435
+  },
+  {
+    "id": "qwen3-max",
+    "name": "Qwen3 Max",
+    "provider": "Alibaba",
+    "releaseDate": "2025-09-23",
+    "aaIntelligenceIndex": 31.38,
+    "aaBenchmarkTotalCost": 196.59951,
+    "aaBenchmarkValue": 0.159614
+  },
+  {
+    "id": "qwen3-vl-235b-a22b-reasoning",
+    "name": "Qwen3 VL 235B A22B",
+    "provider": "Alibaba",
+    "releaseDate": "2025-09-23",
+    "aaIntelligenceIndex": 27.64,
+    "aaBenchmarkTotalCost": 427.928749,
+    "aaBenchmarkValue": 0.06459
+  },
+  {
+    "id": "qwen3-vl-235b-a22b-instruct",
+    "name": "Qwen3 VL 235B A22B",
+    "provider": "Alibaba",
+    "releaseDate": "2025-09-23",
+    "aaIntelligenceIndex": 20.75,
+    "aaBenchmarkTotalCost": 264.190512,
+    "aaBenchmarkValue": 0.078542
+  },
+  {
+    "id": "gpt-5-codex",
+    "name": "GPT-5 Codex (high)",
+    "provider": "OpenAI",
+    "releaseDate": "2025-09-23",
+    "aaIntelligenceIndex": 44.63,
+    "aaBenchmarkTotalCost": 994.766086,
+    "aaBenchmarkValue": 0.044865
+  },
+  {
+    "id": "gemini-2-5-flash-lite-preview-09-2025",
+    "name": "Gemini 2.5 Flash-Lite (Sep)",
+    "provider": "Google",
+    "releaseDate": "2025-09-25",
+    "aaIntelligenceIndex": 19.42,
+    "aaBenchmarkTotalCost": 33.388351,
+    "aaBenchmarkValue": 0.58164
+  },
+  {
+    "id": "claude-4-5-sonnet",
+    "name": "Claude 4.5 Sonnet",
+    "provider": "Anthropic",
+    "releaseDate": "2025-09-29",
+    "aaIntelligenceIndex": 37.14,
+    "aaBenchmarkTotalCost": 685.061592,
+    "aaBenchmarkValue": 0.054214
+  },
+  {
+    "id": "claude-4-5-sonnet-thinking",
+    "name": "Claude 4.5 Sonnet",
+    "provider": "Anthropic",
+    "releaseDate": "2025-09-29",
+    "aaIntelligenceIndex": 43.03,
+    "aaBenchmarkTotalCost": 1458.786333,
+    "aaBenchmarkValue": 0.029497
+  },
+  {
+    "id": "deepseek-v3-2-0925",
+    "name": "DeepSeek V3.2 Exp",
+    "provider": "DeepSeek",
+    "releaseDate": "2025-09-29",
+    "aaIntelligenceIndex": 28.44,
+    "aaBenchmarkTotalCost": 47.678963,
+    "aaBenchmarkValue": 0.596489
+  },
+  {
+    "id": "deepseek-v3-2-reasoning-0925",
+    "name": "DeepSeek V3.2 Exp",
+    "provider": "DeepSeek",
+    "releaseDate": "2025-09-29",
+    "aaIntelligenceIndex": 32.94,
+    "aaBenchmarkTotalCost": 39.663643,
+    "aaBenchmarkValue": 0.830483
+  },
+  {
+    "id": "glm-4-6-reasoning",
+    "name": "GLM-4.6",
+    "provider": "Z AI",
+    "releaseDate": "2025-09-30",
+    "aaIntelligenceIndex": 32.51,
+    "aaBenchmarkTotalCost": 191.570348,
+    "aaBenchmarkValue": 0.169703
+  },
+  {
+    "id": "glm-4-6",
+    "name": "GLM-4.6",
+    "provider": "Z AI",
+    "releaseDate": "2025-09-30",
+    "aaIntelligenceIndex": 30.24,
+    "aaBenchmarkTotalCost": 111.115913,
+    "aaBenchmarkValue": 0.272148
+  },
+  {
+    "id": "qwen3-vl-30b-a3b-instruct",
+    "name": "Qwen3 VL 30B A3B",
+    "provider": "Alibaba",
+    "releaseDate": "2025-10-03",
+    "aaIntelligenceIndex": 16.05,
+    "aaBenchmarkTotalCost": 120.754583,
+    "aaBenchmarkValue": 0.132914
+  },
+  {
+    "id": "qwen3-vl-30b-a3b-reasoning",
+    "name": "Qwen3 VL 30B A3B",
+    "provider": "Alibaba",
+    "releaseDate": "2025-10-03",
+    "aaIntelligenceIndex": 19.68,
+    "aaBenchmarkTotalCost": 156.746494,
+    "aaBenchmarkValue": 0.125553
+  },
+  {
+    "id": "qwen3-vl-8b-reasoning",
+    "name": "Qwen3 VL 8B",
+    "provider": "Alibaba",
+    "releaseDate": "2025-10-14",
+    "aaIntelligenceIndex": 16.66,
+    "aaBenchmarkTotalCost": 148.481044,
+    "aaBenchmarkValue": 0.112203
+  },
+  {
+    "id": "qwen3-vl-8b-instruct",
+    "name": "Qwen3 VL 8B",
+    "provider": "Alibaba",
+    "releaseDate": "2025-10-14",
+    "aaIntelligenceIndex": 14.3,
+    "aaBenchmarkTotalCost": 72.734892,
+    "aaBenchmarkValue": 0.196604
+  },
+  {
+    "id": "claude-4-5-haiku-reasoning",
+    "name": "Claude 4.5 Haiku",
+    "provider": "Anthropic",
+    "releaseDate": "2025-10-15",
+    "aaIntelligenceIndex": 37.09,
+    "aaBenchmarkTotalCost": 583.034723,
+    "aaBenchmarkValue": 0.063615
+  },
+  {
+    "id": "claude-4-5-haiku",
+    "name": "Claude 4.5 Haiku",
+    "provider": "Anthropic",
+    "releaseDate": "2025-10-15",
+    "aaIntelligenceIndex": 31.05,
+    "aaBenchmarkTotalCost": 205.112521,
+    "aaBenchmarkValue": 0.15138
+  },
+  {
+    "id": "qwen3-vl-32b-instruct",
+    "name": "Qwen3 VL 32B",
+    "provider": "Alibaba",
+    "releaseDate": "2025-10-21",
+    "aaIntelligenceIndex": 17.19,
+    "aaBenchmarkTotalCost": 275.360072,
+    "aaBenchmarkValue": 0.062427
+  },
+  {
+    "id": "qwen3-vl-32b-reasoning",
+    "name": "Qwen3 VL 32B",
+    "provider": "Alibaba",
+    "releaseDate": "2025-10-21",
+    "aaIntelligenceIndex": 24.72,
+    "aaBenchmarkTotalCost": 971.592424,
+    "aaBenchmarkValue": 0.025443
+  },
+  {
+    "id": "minimax-m2",
+    "name": "MiniMax-M2",
+    "provider": "MiniMax",
+    "releaseDate": "2025-10-26",
+    "aaIntelligenceIndex": 36.09,
+    "aaBenchmarkTotalCost": 118.205229,
+    "aaBenchmarkValue": 0.305316
+  },
+  {
+    "id": "nvidia-nemotron-nano-12b-v2-vl",
+    "name": "NVIDIA Nemotron Nano 12B v2 VL",
+    "provider": "NVIDIA",
+    "releaseDate": "2025-10-28",
+    "aaIntelligenceIndex": 10.09,
+    "aaBenchmarkTotalCost": 78.545836,
+    "aaBenchmarkValue": 0.12846
+  },
+  {
+    "id": "nvidia-nemotron-nano-12b-v2-vl-reasoning",
+    "name": "NVIDIA Nemotron Nano 12B v2 VL",
+    "provider": "NVIDIA",
+    "releaseDate": "2025-10-28",
+    "aaIntelligenceIndex": 14.89,
+    "aaBenchmarkTotalCost": 123.08223,
+    "aaBenchmarkValue": 0.120976
+  },
+  {
+    "id": "nova-2-0-lite",
+    "name": "Nova 2.0 Lite",
+    "provider": "Amazon",
+    "releaseDate": "2025-10-29",
+    "aaIntelligenceIndex": 18.03,
+    "aaBenchmarkTotalCost": 411.007704,
+    "aaBenchmarkValue": 0.043868
+  },
+  {
+    "id": "nova-2-0-lite-reasoning-low",
+    "name": "Nova 2.0 Lite (low)",
+    "provider": "Amazon",
+    "releaseDate": "2025-10-29",
+    "aaIntelligenceIndex": 24.59,
+    "aaBenchmarkTotalCost": 72.957347,
+    "aaBenchmarkValue": 0.337046
+  },
+  {
+    "id": "nova-2-0-lite-reasoning-medium",
+    "name": "Nova 2.0 Lite (medium)",
+    "provider": "Amazon",
+    "releaseDate": "2025-10-29",
+    "aaIntelligenceIndex": 29.73,
+    "aaBenchmarkTotalCost": 182.880253,
+    "aaBenchmarkValue": 0.162565
+  },
+  {
+    "id": "qwen3-max-thinking-preview",
+    "name": "Qwen3 Max Thinking (Preview)",
+    "provider": "Alibaba",
+    "releaseDate": "2025-11-03",
+    "aaIntelligenceIndex": 32.48,
+    "aaBenchmarkTotalCost": 293.353111,
+    "aaBenchmarkValue": 0.11072
+  },
+  {
+    "id": "kimi-k2-thinking",
+    "name": "Kimi K2 Thinking",
+    "provider": "Kimi",
+    "releaseDate": "2025-11-06",
+    "aaIntelligenceIndex": 40.89,
+    "aaBenchmarkTotalCost": 308.15046,
+    "aaBenchmarkValue": 0.132695
+  },
+  {
+    "id": "kat-coder-pro-v1",
+    "name": "KAT-Coder-Pro V1",
+    "provider": "KwaiKAT",
+    "releaseDate": "2025-11-11",
+    "aaIntelligenceIndex": 36.03,
+    "aaBenchmarkTotalCost": 76.16311,
+    "aaBenchmarkValue": 0.473064
+  },
+  {
+    "id": "gpt-5-1-non-reasoning",
+    "name": "GPT-5.1",
+    "provider": "OpenAI",
+    "releaseDate": "2025-11-13",
+    "aaIntelligenceIndex": 27.42,
+    "aaBenchmarkTotalCost": 94.731826,
+    "aaBenchmarkValue": 0.289449
+  },
+  {
+    "id": "gpt-5-1",
+    "name": "GPT-5.1 (high)",
+    "provider": "OpenAI",
+    "releaseDate": "2025-11-13",
+    "aaIntelligenceIndex": 47.7,
+    "aaBenchmarkTotalCost": 778.971699,
+    "aaBenchmarkValue": 0.061235
+  },
+  {
+    "id": "gpt-5-1-codex",
+    "name": "GPT-5.1 Codex (high)",
+    "provider": "OpenAI",
+    "releaseDate": "2025-11-13",
+    "aaIntelligenceIndex": 43.11,
+    "aaBenchmarkTotalCost": 891.969668,
+    "aaBenchmarkValue": 0.048331
+  },
+  {
+    "id": "gpt-5-1-codex-mini",
+    "name": "GPT-5.1 Codex mini (high)",
+    "provider": "OpenAI",
+    "releaseDate": "2025-11-13",
+    "aaIntelligenceIndex": 38.63,
+    "aaBenchmarkTotalCost": 201.597341,
+    "aaBenchmarkValue": 0.19162
+  },
+  {
+    "id": "gemini-3-pro",
+    "name": "Gemini 3 Pro Preview (high)",
+    "provider": "Google",
+    "releaseDate": "2025-11-18",
+    "aaIntelligenceIndex": 48.39,
+    "aaBenchmarkTotalCost": 819.837278,
+    "aaBenchmarkValue": 0.059024
+  },
+  {
+    "id": "gemini-3-pro-low",
+    "name": "Gemini 3 Pro Preview (low)",
+    "provider": "Google",
+    "releaseDate": "2025-11-18",
+    "aaIntelligenceIndex": 41.3,
+    "aaBenchmarkTotalCost": 354.97056,
+    "aaBenchmarkValue": 0.116348
+  },
+  {
+    "id": "grok-4-1-fast",
+    "name": "Grok 4.1 Fast",
+    "provider": "xAI",
+    "releaseDate": "2025-11-19",
+    "aaIntelligenceIndex": 23.56,
+    "aaBenchmarkTotalCost": 21.37174,
+    "aaBenchmarkValue": 1.10239
+  },
+  {
+    "id": "grok-4-1-fast-reasoning",
+    "name": "Grok 4.1 Fast",
+    "provider": "xAI",
+    "releaseDate": "2025-11-19",
+    "aaIntelligenceIndex": 38.61,
+    "aaBenchmarkTotalCost": 39.620943,
+    "aaBenchmarkValue": 0.974485
+  },
+  {
+    "id": "olmo-3-7b-instruct",
+    "name": "Olmo 3 7B",
+    "provider": "Allen Institute for AI",
+    "releaseDate": "2025-11-20",
+    "aaIntelligenceIndex": 8.15,
+    "aaBenchmarkTotalCost": 29.678575,
+    "aaBenchmarkValue": 0.274609
+  },
+  {
+    "id": "claude-opus-4-5",
+    "name": "Claude Opus 4.5",
+    "provider": "Anthropic",
+    "releaseDate": "2025-11-24",
+    "aaIntelligenceIndex": 43.09,
+    "aaBenchmarkTotalCost": 1152.7611,
+    "aaBenchmarkValue": 0.03738
+  },
+  {
+    "id": "claude-opus-4-5-thinking",
+    "name": "Claude Opus 4.5",
+    "provider": "Anthropic",
+    "releaseDate": "2025-11-24",
+    "aaIntelligenceIndex": 49.73,
+    "aaBenchmarkTotalCost": 2734.331055,
+    "aaBenchmarkValue": 0.018187
+  },
+  {
+    "id": "nova-2-0-omni",
+    "name": "Nova 2.0 Omni",
+    "provider": "Amazon",
+    "releaseDate": "2025-11-26",
+    "aaIntelligenceIndex": 16.61,
+    "aaBenchmarkTotalCost": 598.353343,
+    "aaBenchmarkValue": 0.02776
+  },
+  {
+    "id": "nova-2-0-omni-reasoning-low",
+    "name": "Nova 2.0 Omni (low)",
+    "provider": "Amazon",
+    "releaseDate": "2025-11-26",
+    "aaIntelligenceIndex": 23.22,
+    "aaBenchmarkTotalCost": 75.626494,
+    "aaBenchmarkValue": 0.307035
+  },
+  {
+    "id": "nova-2-0-omni-reasoning-medium",
+    "name": "Nova 2.0 Omni (medium)",
+    "provider": "Amazon",
+    "releaseDate": "2025-11-26",
+    "aaIntelligenceIndex": 28.02,
+    "aaBenchmarkTotalCost": 109.447081,
+    "aaBenchmarkValue": 0.256014
+  },
+  {
+    "id": "nova-2-0-pro",
+    "name": "Nova 2.0 Pro Preview",
+    "provider": "Amazon",
+    "releaseDate": "2025-11-27",
+    "aaIntelligenceIndex": 23.06,
+    "aaBenchmarkTotalCost": 1300.09755,
+    "aaBenchmarkValue": 0.017737
+  },
+  {
+    "id": "nova-2-0-pro-reasoning-low",
+    "name": "Nova 2.0 Pro Preview (low)",
+    "provider": "Amazon",
+    "releaseDate": "2025-11-27",
+    "aaIntelligenceIndex": 31.9,
+    "aaBenchmarkTotalCost": 204.690441,
+    "aaBenchmarkValue": 0.155845
+  },
+  {
+    "id": "nova-2-0-pro-reasoning-medium",
+    "name": "Nova 2.0 Pro Preview (medium)",
+    "provider": "Amazon",
+    "releaseDate": "2025-11-27",
+    "aaIntelligenceIndex": 35.71,
+    "aaBenchmarkTotalCost": 466.55138,
+    "aaBenchmarkValue": 0.07654
+  },
+  {
+    "id": "deepseek-v3-2-reasoning",
+    "name": "DeepSeek V3.2",
+    "provider": "DeepSeek",
+    "releaseDate": "2025-12-01",
+    "aaIntelligenceIndex": 41.71,
+    "aaBenchmarkTotalCost": 70.63682,
+    "aaBenchmarkValue": 0.590485
+  },
+  {
+    "id": "deepseek-v3-2",
+    "name": "DeepSeek V3.2",
+    "provider": "DeepSeek",
+    "releaseDate": "2025-12-01",
+    "aaIntelligenceIndex": 32.09,
+    "aaBenchmarkTotalCost": 103.158405,
+    "aaBenchmarkValue": 0.311075
+  },
+  {
+    "id": "ministral-3-14b",
+    "name": "Ministral 3 14B",
+    "provider": "Mistral",
+    "releaseDate": "2025-12-02",
+    "aaIntelligenceIndex": 15.98,
+    "aaBenchmarkTotalCost": 23.191633,
+    "aaBenchmarkValue": 0.689042
+  },
+  {
+    "id": "ministral-3-3b",
+    "name": "Ministral 3 3B",
+    "provider": "Mistral",
+    "releaseDate": "2025-12-02",
+    "aaIntelligenceIndex": 11.24,
+    "aaBenchmarkTotalCost": 15.931393,
+    "aaBenchmarkValue": 0.705525
+  },
+  {
+    "id": "ministral-3-8b",
+    "name": "Ministral 3 8B",
+    "provider": "Mistral",
+    "releaseDate": "2025-12-02",
+    "aaIntelligenceIndex": 14.84,
+    "aaBenchmarkTotalCost": 21.449481,
+    "aaBenchmarkValue": 0.691858
+  },
+  {
+    "id": "mistral-large-3",
+    "name": "Mistral Large 3",
+    "provider": "Mistral",
+    "releaseDate": "2025-12-02",
+    "aaIntelligenceIndex": 22.8,
+    "aaBenchmarkTotalCost": 38.673735,
+    "aaBenchmarkValue": 0.589547
+  },
+  {
+    "id": "glm-4-6v",
+    "name": "GLM-4.6V",
+    "provider": "Z AI",
+    "releaseDate": "2025-12-08",
+    "aaIntelligenceIndex": 17.1,
+    "aaBenchmarkTotalCost": 61.159427,
+    "aaBenchmarkValue": 0.279597
+  },
+  {
+    "id": "glm-4-6v-reasoning",
+    "name": "GLM-4.6V",
+    "provider": "Z AI",
+    "releaseDate": "2025-12-08",
+    "aaIntelligenceIndex": 23.42,
+    "aaBenchmarkTotalCost": 185.474872,
+    "aaBenchmarkValue": 0.12627
+  },
+  {
+    "id": "gpt-5-2-non-reasoning",
+    "name": "GPT-5.2",
+    "provider": "OpenAI",
+    "releaseDate": "2025-12-11",
+    "aaIntelligenceIndex": 33.57,
+    "aaBenchmarkTotalCost": 225.439013,
+    "aaBenchmarkValue": 0.148909
+  },
+  {
+    "id": "gpt-5-2-medium",
+    "name": "GPT-5.2 (medium)",
+    "provider": "OpenAI",
+    "releaseDate": "2025-12-11",
+    "aaIntelligenceIndex": 46.64,
+    "aaBenchmarkTotalCost": 699.647706,
+    "aaBenchmarkValue": 0.066662
+  },
+  {
+    "id": "gpt-5-2",
+    "name": "GPT-5.2 (xhigh)",
+    "provider": "OpenAI",
+    "releaseDate": "2025-12-11",
+    "aaIntelligenceIndex": 51.28,
+    "aaBenchmarkTotalCost": 2304.219669,
+    "aaBenchmarkValue": 0.022255
+  },
+  {
+    "id": "gpt-5-2-codex",
+    "name": "GPT-5.2 Codex (xhigh)",
+    "provider": "OpenAI",
+    "releaseDate": "2025-12-11",
+    "aaIntelligenceIndex": 49.03,
+    "aaBenchmarkTotalCost": 3244.326456,
+    "aaBenchmarkValue": 0.015113
+  },
+  {
+    "id": "nvidia-nemotron-3-nano-30b-a3b-reasoning",
+    "name": "NVIDIA Nemotron 3 Nano",
+    "provider": "NVIDIA",
+    "releaseDate": "2025-12-15",
+    "aaIntelligenceIndex": 24.27,
+    "aaBenchmarkTotalCost": 42.07613,
+    "aaBenchmarkValue": 0.576812
+  },
+  {
+    "id": "mimo-v2-flash",
+    "name": "MiMo-V2-Flash",
+    "provider": "Xiaomi",
+    "releaseDate": "2025-12-16",
+    "aaIntelligenceIndex": 30.35,
+    "aaBenchmarkTotalCost": 21.381511,
+    "aaBenchmarkValue": 1.419451
+  },
+  {
+    "id": "mimo-v2-flash-reasoning",
+    "name": "MiMo-V2-Flash",
+    "provider": "Xiaomi",
+    "releaseDate": "2025-12-16",
+    "aaIntelligenceIndex": 39.24,
+    "aaBenchmarkTotalCost": 47.486,
+    "aaBenchmarkValue": 0.826349
+  },
+  {
+    "id": "mimo-v2-0206",
+    "name": "MiMo-V2-Flash (Feb 2026)",
+    "provider": "Xiaomi",
+    "releaseDate": "2025-12-16",
+    "aaIntelligenceIndex": 41.46,
+    "aaBenchmarkTotalCost": 68.263875,
+    "aaBenchmarkValue": 0.607349
+  },
+  {
+    "id": "gemini-3-flash-reasoning",
+    "name": "Gemini 3 Flash",
+    "provider": "Google",
+    "releaseDate": "2025-12-17",
+    "aaIntelligenceIndex": 46.43,
+    "aaBenchmarkTotalCost": 278.260455,
+    "aaBenchmarkValue": 0.166858
+  },
+  {
+    "id": "gemini-3-flash",
+    "name": "Gemini 3 Flash",
+    "provider": "Google",
+    "releaseDate": "2025-12-17",
+    "aaIntelligenceIndex": 35.05,
+    "aaBenchmarkTotalCost": 65.979814,
+    "aaBenchmarkValue": 0.531223
+  },
+  {
+    "id": "glm-4-7-non-reasoning",
+    "name": "GLM-4.7",
+    "provider": "Z AI",
+    "releaseDate": "2025-12-22",
+    "aaIntelligenceIndex": 34.16,
+    "aaBenchmarkTotalCost": 147.141348,
+    "aaBenchmarkValue": 0.232158
+  },
+  {
+    "id": "glm-4-7",
+    "name": "GLM-4.7",
+    "provider": "Z AI",
+    "releaseDate": "2025-12-22",
+    "aaIntelligenceIndex": 42.11,
+    "aaBenchmarkTotalCost": 478.070402,
+    "aaBenchmarkValue": 0.088083
+  },
+  {
+    "id": "minimax-m2-1",
+    "name": "MiniMax-M2.1",
+    "provider": "MiniMax",
+    "releaseDate": "2025-12-23",
+    "aaIntelligenceIndex": 39.42,
+    "aaBenchmarkTotalCost": 114.457451,
+    "aaBenchmarkValue": 0.344407
+  },
+  {
+    "id": "olmo-3-1-32b-instruct",
+    "name": "Olmo 3.1 32B Instruct",
+    "provider": "Allen Institute for AI",
+    "releaseDate": "2026-01-13",
+    "aaIntelligenceIndex": 12.16,
+    "aaBenchmarkTotalCost": 70.476095,
+    "aaBenchmarkValue": 0.172541
+  },
+  {
+    "id": "glm-4-7-flash",
+    "name": "GLM-4.7-Flash",
+    "provider": "Z AI",
+    "releaseDate": "2026-01-19",
+    "aaIntelligenceIndex": 30.15,
+    "aaBenchmarkTotalCost": 40.012417,
+    "aaBenchmarkValue": 0.753516
+  },
+  {
+    "id": "glm-4-7-flash-non-reasoning",
+    "name": "GLM-4.7-Flash",
+    "provider": "Z AI",
+    "releaseDate": "2026-01-19",
+    "aaIntelligenceIndex": 22.07,
+    "aaBenchmarkTotalCost": 22.190866,
+    "aaBenchmarkValue": 0.994553
+  },
+  {
+    "id": "qwen3-max-thinking",
+    "name": "Qwen3 Max Thinking",
+    "provider": "Alibaba",
+    "releaseDate": "2026-01-26",
+    "aaIntelligenceIndex": 39.85,
+    "aaBenchmarkTotalCost": 668.536705,
+    "aaBenchmarkValue": 0.059608
+  },
+  {
+    "id": "kimi-k2-5-non-reasoning",
+    "name": "Kimi K2.5",
+    "provider": "Kimi",
+    "releaseDate": "2026-01-27",
+    "aaIntelligenceIndex": 37.27,
+    "aaBenchmarkTotalCost": 141.11665,
+    "aaBenchmarkValue": 0.264108
+  },
+  {
+    "id": "kimi-k2-5",
+    "name": "Kimi K2.5",
+    "provider": "Kimi",
+    "releaseDate": "2026-01-27",
+    "aaIntelligenceIndex": 46.81,
+    "aaBenchmarkTotalCost": 370.656322,
+    "aaBenchmarkValue": 0.126289
+  },
+  {
+    "id": "step-3-5-flash-0202",
+    "name": "Step 3.5 Flash",
+    "provider": "StepFun",
+    "releaseDate": "2026-02-02",
+    "aaIntelligenceIndex": 37.8,
+    "aaBenchmarkTotalCost": 74.800806,
+    "aaBenchmarkValue": 0.505342
+  },
+  {
+    "id": "qwen3-coder-next",
+    "name": "Qwen3 Coder Next",
+    "provider": "Alibaba",
+    "releaseDate": "2026-02-03",
+    "aaIntelligenceIndex": 28.28,
+    "aaBenchmarkTotalCost": 124.538796,
+    "aaBenchmarkValue": 0.227078
+  },
+  {
+    "id": "claude-opus-4-6",
+    "name": "Claude Opus 4.6 (high)",
+    "provider": "Anthropic",
+    "releaseDate": "2026-02-05",
+    "aaIntelligenceIndex": 46.46,
+    "aaBenchmarkTotalCost": 1451.04078,
+    "aaBenchmarkValue": 0.032018
+  },
+  {
+    "id": "claude-opus-4-6-adaptive",
+    "name": "Claude Opus 4.6 (max)",
+    "provider": "Anthropic",
+    "releaseDate": "2026-02-05",
+    "aaIntelligenceIndex": 52.95,
+    "aaBenchmarkTotalCost": 4969.681425,
+    "aaBenchmarkValue": 0.010655
+  },
+  {
+    "id": "gpt-5-3-codex",
+    "name": "GPT-5.3 Codex (xhigh)",
+    "provider": "OpenAI",
+    "releaseDate": "2026-02-05",
+    "aaIntelligenceIndex": 53.56,
+    "aaBenchmarkTotalCost": 1571.555445,
+    "aaBenchmarkValue": 0.034081
+  },
+  {
+    "id": "glm-5",
+    "name": "GLM-5",
+    "provider": "Z AI",
+    "releaseDate": "2026-02-11",
+    "aaIntelligenceIndex": 49.77,
+    "aaBenchmarkTotalCost": 547.039228,
+    "aaBenchmarkValue": 0.090981
+  },
+  {
+    "id": "glm-5-non-reasoning",
+    "name": "GLM-5",
+    "provider": "Z AI",
+    "releaseDate": "2026-02-11",
+    "aaIntelligenceIndex": 40.57,
+    "aaBenchmarkTotalCost": 239.991273,
+    "aaBenchmarkValue": 0.169048
+  },
+  {
+    "id": "minimax-m2-5",
+    "name": "MiniMax-M2.5",
+    "provider": "MiniMax",
+    "releaseDate": "2026-02-12",
+    "aaIntelligenceIndex": 41.93,
+    "aaBenchmarkTotalCost": 124.58035,
+    "aaBenchmarkValue": 0.33657
+  },
+  {
+    "id": "qwen3-5-397b-a17b-non-reasoning",
+    "name": "Qwen3.5 397B A17B",
+    "provider": "Alibaba",
+    "releaseDate": "2026-02-16",
+    "aaIntelligenceIndex": 40.1,
+    "aaBenchmarkTotalCost": 186.373838,
+    "aaBenchmarkValue": 0.215159
+  },
+  {
+    "id": "qwen3-5-397b-a17b",
+    "name": "Qwen3.5 397B A17B",
+    "provider": "Alibaba",
+    "releaseDate": "2026-02-16",
+    "aaIntelligenceIndex": 45.05,
+    "aaBenchmarkTotalCost": 417.544469,
+    "aaBenchmarkValue": 0.107893
+  },
+  {
+    "id": "claude-sonnet-4-6",
+    "name": "Claude Sonnet 4.6 (Non-reasoning)",
+    "provider": "Anthropic",
+    "releaseDate": "2026-02-17",
+    "aaIntelligenceIndex": 44.38,
+    "aaBenchmarkTotalCost": 1396.629696,
+    "aaBenchmarkValue": 0.031776
+  },
+  {
+    "id": "claude-sonnet-4-6-non-reasoning-low-effort",
+    "name": "Claude Sonnet 4.6 (Non-reasoning, Low Effort)",
+    "provider": "Anthropic",
+    "releaseDate": "2026-02-17",
+    "aaIntelligenceIndex": 42.6,
+    "aaBenchmarkTotalCost": 554.484411,
+    "aaBenchmarkValue": 0.076828
+  },
+  {
+    "id": "claude-sonnet-4-6-adaptive",
+    "name": "Claude Sonnet 4.6 (max)",
+    "provider": "Anthropic",
+    "releaseDate": "2026-02-17",
+    "aaIntelligenceIndex": 51.72,
+    "aaBenchmarkTotalCost": 3959.359683,
+    "aaBenchmarkValue": 0.013063
+  },
+  {
+    "id": "gemini-3-1-pro-preview",
+    "name": "Gemini 3.1 Pro Preview",
+    "provider": "Google",
+    "releaseDate": "2026-02-19",
+    "aaIntelligenceIndex": 57.18,
+    "aaBenchmarkTotalCost": 892.283804,
+    "aaBenchmarkValue": 0.064083
+  },
+  {
+    "id": "mercury-2",
+    "name": "Mercury 2",
+    "provider": "Inception",
+    "releaseDate": "2026-02-20",
+    "aaIntelligenceIndex": 32.82,
+    "aaBenchmarkTotalCost": 80.430927,
+    "aaBenchmarkValue": 0.408052
+  },
+  {
+    "id": "qwen3-5-122b-a10b-non-reasoning",
+    "name": "Qwen3.5 122B A10B",
+    "provider": "Alibaba",
+    "releaseDate": "2026-02-24",
+    "aaIntelligenceIndex": 35.87,
+    "aaBenchmarkTotalCost": 166.374999,
+    "aaBenchmarkValue": 0.215597
+  },
+  {
+    "id": "qwen3-5-122b-a10b",
+    "name": "Qwen3.5 122B A10B",
+    "provider": "Alibaba",
+    "releaseDate": "2026-02-24",
+    "aaIntelligenceIndex": 41.6,
+    "aaBenchmarkTotalCost": 353.942218,
+    "aaBenchmarkValue": 0.117533
+  },
+  {
+    "id": "qwen3-5-27b-non-reasoning",
+    "name": "Qwen3.5 27B",
+    "provider": "Alibaba",
+    "releaseDate": "2026-02-24",
+    "aaIntelligenceIndex": 37.18,
+    "aaBenchmarkTotalCost": 123.346389,
+    "aaBenchmarkValue": 0.301428
+  },
+  {
+    "id": "qwen3-5-27b",
+    "name": "Qwen3.5 27B",
+    "provider": "Alibaba",
+    "releaseDate": "2026-02-24",
+    "aaIntelligenceIndex": 42.07,
+    "aaBenchmarkTotalCost": 299.261091,
+    "aaBenchmarkValue": 0.14058
+  },
+  {
+    "id": "qwen3-5-35b-a3b-non-reasoning",
+    "name": "Qwen3.5 35B A3B",
+    "provider": "Alibaba",
+    "releaseDate": "2026-02-24",
+    "aaIntelligenceIndex": 30.69,
+    "aaBenchmarkTotalCost": 125.607107,
+    "aaBenchmarkValue": 0.244333
+  },
+  {
+    "id": "qwen3-5-35b-a3b",
+    "name": "Qwen3.5 35B A3B",
+    "provider": "Alibaba",
+    "releaseDate": "2026-02-24",
+    "aaIntelligenceIndex": 37.12,
+    "aaBenchmarkTotalCost": 301.69722,
+    "aaBenchmarkValue": 0.123037
+  },
+  {
+    "id": "lfm2-24b-a2b",
+    "name": "LFM2 24B A2B",
+    "provider": "Liquid AI",
+    "releaseDate": "2026-02-25",
+    "aaIntelligenceIndex": 10.49,
+    "aaBenchmarkTotalCost": 8.782296,
+    "aaBenchmarkValue": 1.194448
+  },
+  {
+    "id": "qwen3-5-0-8b-non-reasoning",
+    "name": "Qwen3.5 0.8B",
+    "provider": "Alibaba",
+    "releaseDate": "2026-03-02",
+    "aaIntelligenceIndex": 9.91,
+    "aaBenchmarkTotalCost": 6.67359,
+    "aaBenchmarkValue": 1.484958
+  },
+  {
+    "id": "qwen3-5-0-8b",
+    "name": "Qwen3.5 0.8B",
+    "provider": "Alibaba",
+    "releaseDate": "2026-03-02",
+    "aaIntelligenceIndex": 10.52,
+    "aaBenchmarkTotalCost": 14.656169,
+    "aaBenchmarkValue": 0.717786
+  },
+  {
+    "id": "qwen3-5-2b-non-reasoning",
+    "name": "Qwen3.5 2B",
+    "provider": "Alibaba",
+    "releaseDate": "2026-03-02",
+    "aaIntelligenceIndex": 14.67,
+    "aaBenchmarkTotalCost": 13.349338,
+    "aaBenchmarkValue": 1.098931
+  },
+  {
+    "id": "qwen3-5-2b",
+    "name": "Qwen3.5 2B",
+    "provider": "Alibaba",
+    "releaseDate": "2026-03-02",
+    "aaIntelligenceIndex": 16.29,
+    "aaBenchmarkTotalCost": 45.610308,
+    "aaBenchmarkValue": 0.357156
+  },
+  {
+    "id": "qwen3-5-4b-non-reasoning",
+    "name": "Qwen3.5 4B",
+    "provider": "Alibaba",
+    "releaseDate": "2026-03-02",
+    "aaIntelligenceIndex": 22.6,
+    "aaBenchmarkTotalCost": 26.217775,
+    "aaBenchmarkValue": 0.862011
+  },
+  {
+    "id": "qwen3-5-4b",
+    "name": "Qwen3.5 4B",
+    "provider": "Alibaba",
+    "releaseDate": "2026-03-02",
+    "aaIntelligenceIndex": 27.08,
+    "aaBenchmarkTotalCost": 44.87134,
+    "aaBenchmarkValue": 0.603503
+  },
+  {
+    "id": "qwen3-5-9b",
+    "name": "Qwen3.5 9B",
+    "provider": "Alibaba",
+    "releaseDate": "2026-03-02",
+    "aaIntelligenceIndex": 32.43,
+    "aaBenchmarkTotalCost": 82.059552,
+    "aaBenchmarkValue": 0.395201
+  },
+  {
+    "id": "gemini-3-1-flash-lite-preview",
+    "name": "Gemini 3.1 Flash-Lite Preview",
+    "provider": "Google",
+    "releaseDate": "2026-03-03",
+    "aaIntelligenceIndex": 33.52,
+    "aaBenchmarkTotalCost": 93.601058,
+    "aaBenchmarkValue": 0.358116
+  },
+  {
+    "id": "gpt-5-4-non-reasoning",
+    "name": "GPT-5.4 (Non-reasoning)",
+    "provider": "OpenAI",
+    "releaseDate": "2026-03-05",
+    "aaIntelligenceIndex": 35.39,
+    "aaBenchmarkTotalCost": 271.74131,
+    "aaBenchmarkValue": 0.130234
+  },
+  {
+    "id": "gpt-5-4",
+    "name": "GPT-5.4 (xhigh)",
+    "provider": "OpenAI",
+    "releaseDate": "2026-03-05",
+    "aaIntelligenceIndex": 56.8,
+    "aaBenchmarkTotalCost": 2851.011437,
+    "aaBenchmarkValue": 0.019923
+  },
+  {
+    "id": "grok-4-20-0309",
+    "name": "Grok 4.20 0309",
+    "provider": "xAI",
+    "releaseDate": "2026-03-10",
+    "aaIntelligenceIndex": 48.48,
+    "aaBenchmarkTotalCost": 484.421726,
+    "aaBenchmarkValue": 0.100078
+  },
+  {
+    "id": "grok-4-20-0309-non-reasoning",
+    "name": "Grok 4.20 0309",
+    "provider": "xAI",
+    "releaseDate": "2026-03-10",
+    "aaIntelligenceIndex": 29.69,
+    "aaBenchmarkTotalCost": 382.344676,
+    "aaBenchmarkValue": 0.077652
+  },
+  {
+    "id": "nvidia-nemotron-3-super-120b-a12b",
+    "name": "NVIDIA Nemotron 3 Super",
+    "provider": "NVIDIA",
+    "releaseDate": "2026-03-11",
+    "aaIntelligenceIndex": 35.97,
+    "aaBenchmarkTotalCost": 145.429848,
+    "aaBenchmarkValue": 0.247336
+  },
+  {
+    "id": "mistral-small-4-non-reasoning",
+    "name": "Mistral Small 4",
+    "provider": "Mistral",
+    "releaseDate": "2026-03-16",
+    "aaIntelligenceIndex": 18.62,
+    "aaBenchmarkTotalCost": 16.365544,
+    "aaBenchmarkValue": 1.137756
+  },
+  {
+    "id": "mistral-small-4",
+    "name": "Mistral Small 4",
+    "provider": "Mistral",
+    "releaseDate": "2026-03-16",
+    "aaIntelligenceIndex": 27.8,
+    "aaBenchmarkTotalCost": 47.884737,
+    "aaBenchmarkValue": 0.580561
+  },
+  {
+    "id": "gpt-5-4-mini-non-reasoning",
+    "name": "GPT-5.4 mini",
+    "provider": "OpenAI",
+    "releaseDate": "2026-03-17",
+    "aaIntelligenceIndex": 23.28,
+    "aaBenchmarkTotalCost": 56.358198,
+    "aaBenchmarkValue": 0.413072
+  },
+  {
+    "id": "gpt-5-4-mini-medium",
+    "name": "GPT-5.4 mini (medium)",
+    "provider": "OpenAI",
+    "releaseDate": "2026-03-17",
+    "aaIntelligenceIndex": 37.73,
+    "aaBenchmarkTotalCost": 302.29139,
+    "aaBenchmarkValue": 0.124813
+  },
+  {
+    "id": "gpt-5-4-mini",
+    "name": "GPT-5.4 mini (xhigh)",
+    "provider": "OpenAI",
+    "releaseDate": "2026-03-17",
+    "aaIntelligenceIndex": 48.9,
+    "aaBenchmarkTotalCost": 1353.866357,
+    "aaBenchmarkValue": 0.036119
+  },
+  {
+    "id": "gpt-5-4-nano-medium",
+    "name": "GPT-5.4 nano",
+    "provider": "OpenAI",
+    "releaseDate": "2026-03-17",
+    "aaIntelligenceIndex": 38.11,
+    "aaBenchmarkTotalCost": 90.994107,
+    "aaBenchmarkValue": 0.418818
+  },
+  {
+    "id": "gpt-5-4-nano-non-reasoning",
+    "name": "GPT-5.4 nano",
+    "provider": "OpenAI",
+    "releaseDate": "2026-03-17",
+    "aaIntelligenceIndex": 24.36,
+    "aaBenchmarkTotalCost": 23.550929,
+    "aaBenchmarkValue": 1.034354
+  },
+  {
+    "id": "gpt-5-4-nano",
+    "name": "GPT-5.4 nano (xhigh)",
+    "provider": "OpenAI",
+    "releaseDate": "2026-03-17",
+    "aaIntelligenceIndex": 43.98,
+    "aaBenchmarkTotalCost": 364.181128,
+    "aaBenchmarkValue": 0.120764
+  },
+  {
+    "id": "minimax-m2-7",
+    "name": "MiniMax-M2.7",
+    "provider": "MiniMax",
+    "releaseDate": "2026-03-18",
+    "aaIntelligenceIndex": 49.62,
+    "aaBenchmarkTotalCost": 175.506599,
+    "aaBenchmarkValue": 0.282724
+  },
+  {
+    "id": "kat-coder-pro-v2",
+    "name": "KAT-Coder-Pro V2",
+    "provider": "KwaiKAT",
+    "releaseDate": "2026-03-27",
+    "aaIntelligenceIndex": 43.83,
+    "aaBenchmarkTotalCost": 73.494053,
+    "aaBenchmarkValue": 0.596375
+  },
+  {
+    "id": "qwen3-5-omni-flash",
+    "name": "Qwen3.5 Omni Flash",
+    "provider": "Alibaba",
+    "releaseDate": "2026-03-30",
+    "aaIntelligenceIndex": 25.87,
+    "aaBenchmarkTotalCost": 38.801555,
+    "aaBenchmarkValue": 0.666726
+  },
+  {
+    "id": "qwen3-5-omni-plus",
+    "name": "Qwen3.5 Omni Plus",
+    "provider": "Alibaba",
+    "releaseDate": "2026-03-30",
+    "aaIntelligenceIndex": 38.63,
+    "aaBenchmarkTotalCost": 153.304556,
+    "aaBenchmarkValue": 0.251982
+  },
+  {
+    "id": "trinity-large-thinking",
+    "name": "Trinity Large Thinking",
+    "provider": "Arcee AI",
+    "releaseDate": "2026-04-01",
+    "aaIntelligenceIndex": 31.87,
+    "aaBenchmarkTotalCost": 174.984441,
+    "aaBenchmarkValue": 0.18213
+  },
+  {
+    "id": "qwen3-6-plus",
+    "name": "Qwen3.6 Plus",
+    "provider": "Alibaba",
+    "releaseDate": "2026-04-02",
+    "aaIntelligenceIndex": 49.98,
+    "aaBenchmarkTotalCost": 482.650482,
+    "aaBenchmarkValue": 0.103553
+  },
+  {
+    "id": "gemma-4-26b-a4b",
+    "name": "Gemma 4 26B A4B",
+    "provider": "Google",
+    "releaseDate": "2026-04-02",
+    "aaIntelligenceIndex": 31.21,
+    "aaBenchmarkTotalCost": 41.510528,
+    "aaBenchmarkValue": 0.751857
+  },
+  {
+    "id": "glm-5-1",
+    "name": "GLM-5.1",
+    "provider": "Z AI",
+    "releaseDate": "2026-04-07",
+    "aaIntelligenceIndex": 51.41,
+    "aaBenchmarkTotalCost": 543.947455,
+    "aaBenchmarkValue": 0.094513
+  },
+  {
+    "id": "glm-5-1-non-reasoning",
+    "name": "GLM-5.1",
+    "provider": "Z AI",
+    "releaseDate": "2026-04-07",
+    "aaIntelligenceIndex": 43.82,
+    "aaBenchmarkTotalCost": 617.564603,
+    "aaBenchmarkValue": 0.070956
+  },
+  {
+    "id": "grok-4-20",
+    "name": "Grok 4.20 0309 v2",
+    "provider": "xAI",
+    "releaseDate": "2026-04-07",
+    "aaIntelligenceIndex": 49.33,
+    "aaBenchmarkTotalCost": 514.159296,
+    "aaBenchmarkValue": 0.095943
+  },
+  {
+    "id": "grok-4-20-non-reasoning",
+    "name": "Grok 4.20 0309 v2",
+    "provider": "xAI",
+    "releaseDate": "2026-04-07",
+    "aaIntelligenceIndex": 28.99,
+    "aaBenchmarkTotalCost": 425.944948,
+    "aaBenchmarkValue": 0.06806
+  },
+  {
+    "id": "qwen3-6-35b-a3b",
+    "name": "Qwen3.6 35B A3B",
+    "provider": "Alibaba",
+    "releaseDate": "2026-04-16",
+    "aaIntelligenceIndex": 43.49,
+    "aaBenchmarkTotalCost": 279.681961,
+    "aaBenchmarkValue": 0.155498
+  },
+  {
+    "id": "qwen3-6-35b-a3b-non-reasoning",
+    "name": "Qwen3.6 35B A3B",
+    "provider": "Alibaba",
+    "releaseDate": "2026-04-16",
+    "aaIntelligenceIndex": 31.53,
+    "aaBenchmarkTotalCost": 189.458331,
+    "aaBenchmarkValue": 0.166422
+  },
+  {
+    "id": "claude-opus-4-7-non-reasoning",
+    "name": "Claude Opus 4.7 (Non-reasoning, high)",
+    "provider": "Anthropic",
+    "releaseDate": "2026-04-16",
+    "aaIntelligenceIndex": 51.82,
+    "aaBenchmarkTotalCost": 1029.862825,
+    "aaBenchmarkValue": 0.050317
+  },
+  {
+    "id": "claude-opus-4-7",
+    "name": "Claude Opus 4.7 (max)",
+    "provider": "Anthropic",
+    "releaseDate": "2026-04-16",
+    "aaIntelligenceIndex": 57.28,
+    "aaBenchmarkTotalCost": 4811.03782,
+    "aaBenchmarkValue": 0.011906
+  },
+  {
+    "id": "qwen3-6-max",
+    "name": "Qwen3.6 Max Preview",
+    "provider": "Alibaba",
+    "releaseDate": "2026-04-20",
+    "aaIntelligenceIndex": 51.81,
+    "aaBenchmarkTotalCost": 860.564589,
+    "aaBenchmarkValue": 0.060205
+  },
+  {
+    "id": "kimi-k2-6",
+    "name": "Kimi K2.6",
+    "provider": "Kimi",
+    "releaseDate": "2026-04-20",
+    "aaIntelligenceIndex": 53.9,
+    "aaBenchmarkTotalCost": 947.868031,
+    "aaBenchmarkValue": 0.056864
+  },
+  {
+    "id": "qwen3-6-27b",
+    "name": "Qwen3.6 27B",
+    "provider": "Alibaba",
+    "releaseDate": "2026-04-22",
+    "aaIntelligenceIndex": 45.82,
+    "aaBenchmarkTotalCost": 658.669192,
+    "aaBenchmarkValue": 0.069565
+  },
+  {
+    "id": "qwen3-6-27b-non-reasoning",
+    "name": "Qwen3.6 27B",
+    "provider": "Alibaba",
+    "releaseDate": "2026-04-22",
+    "aaIntelligenceIndex": 37.14,
+    "aaBenchmarkTotalCost": 234.351637,
+    "aaBenchmarkValue": 0.15848
+  },
+  {
+    "id": "mimo-v2-5-pro",
+    "name": "MiMo-V2.5-Pro",
+    "provider": "Xiaomi",
+    "releaseDate": "2026-04-22",
+    "aaIntelligenceIndex": 53.83,
+    "aaBenchmarkTotalCost": 461.591176,
+    "aaBenchmarkValue": 0.116618
+  },
+  {
+    "id": "gpt-5-5-non-reasoning",
+    "name": "GPT-5.5 (Non-reasoning)",
+    "provider": "OpenAI",
+    "releaseDate": "2026-04-23",
+    "aaIntelligenceIndex": 40.94,
+    "aaBenchmarkTotalCost": 360.69161,
+    "aaBenchmarkValue": 0.113504
+  },
+  {
+    "id": "gpt-5-5-high",
+    "name": "GPT-5.5 (high)",
+    "provider": "OpenAI",
+    "releaseDate": "2026-04-23",
+    "aaIntelligenceIndex": 58.87,
+    "aaBenchmarkTotalCost": 2159.380585,
+    "aaBenchmarkValue": 0.027262
+  },
+  {
+    "id": "gpt-5-5-low",
+    "name": "GPT-5.5 (low)",
+    "provider": "OpenAI",
+    "releaseDate": "2026-04-23",
+    "aaIntelligenceIndex": 50.78,
+    "aaBenchmarkTotalCost": 500.673275,
+    "aaBenchmarkValue": 0.101423
+  },
+  {
+    "id": "gpt-5-5-medium",
+    "name": "GPT-5.5 (medium)",
+    "provider": "OpenAI",
+    "releaseDate": "2026-04-23",
+    "aaIntelligenceIndex": 56.71,
+    "aaBenchmarkTotalCost": 1199.14115,
+    "aaBenchmarkValue": 0.047292
+  },
+  {
+    "id": "gpt-5-5",
+    "name": "GPT-5.5 (xhigh)",
+    "provider": "OpenAI",
+    "releaseDate": "2026-04-23",
+    "aaIntelligenceIndex": 60.24,
+    "aaBenchmarkTotalCost": 3357.004735,
+    "aaBenchmarkValue": 0.017945
+  },
+  {
+    "id": "deepseek-v4-flash-high",
+    "name": "DeepSeek V4 Flash (High)",
+    "provider": "DeepSeek",
+    "releaseDate": "2026-04-24",
+    "aaIntelligenceIndex": 44.87,
+    "aaBenchmarkTotalCost": 57.155796,
+    "aaBenchmarkValue": 0.785047
+  },
+  {
+    "id": "deepseek-v4-flash",
+    "name": "DeepSeek V4 Flash (Max)",
+    "provider": "DeepSeek",
+    "releaseDate": "2026-04-24",
+    "aaIntelligenceIndex": 46.52,
+    "aaBenchmarkTotalCost": 112.856612,
+    "aaBenchmarkValue": 0.412204
+  },
+  {
+    "id": "deepseek-v4-pro-high",
+    "name": "DeepSeek V4 Pro (High)",
+    "provider": "DeepSeek",
+    "releaseDate": "2026-04-24",
+    "aaIntelligenceIndex": 49.79,
+    "aaBenchmarkTotalCost": 690.216861,
+    "aaBenchmarkValue": 0.072137
+  },
+  {
+    "id": "deepseek-v4-pro",
+    "name": "DeepSeek V4 Pro (Max)",
+    "provider": "DeepSeek",
+    "releaseDate": "2026-04-24",
+    "aaIntelligenceIndex": 51.51,
+    "aaBenchmarkTotalCost": 1071.2836,
+    "aaBenchmarkValue": 0.048083
+  }
+]

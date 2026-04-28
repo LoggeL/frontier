@@ -101,6 +101,17 @@ export const scoreSchema = z.object({
 export type Score = z.infer<typeof scoreSchema>;
 
 export const modelsFileSchema = z.array(modelSchema);
+export const aaValueHistoryRowSchema = z.object({
+  id: z.string().min(1),
+  name: z.string().min(1),
+  provider: providerSchema,
+  releaseDate: isoDate,
+  aaIntelligenceIndex: z.number().nonnegative(),
+  aaBenchmarkTotalCost: z.number().positive(),
+  aaBenchmarkValue: z.number().nonnegative(),
+});
+export type AaValueHistoryRow = z.infer<typeof aaValueHistoryRowSchema>;
+export const aaValueHistoryFileSchema = z.array(aaValueHistoryRowSchema);
 export const benchmarksFileSchema = z.array(benchmarkSchema);
 export const scoresFileSchema = z.array(scoreSchema);
 
