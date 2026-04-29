@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import BenchmarkCostTimeline from "../components/BenchmarkCostTimeline";
 import BenchmarkValueTimeline from "../components/BenchmarkValueTimeline";
 import { aaApiModels, aaValueHistory, models } from "../lib/data";
 
@@ -65,7 +66,17 @@ const lastRelease = valueModels.reduce<string | undefined>((latest, m) => {
         </div>
       </header>
 
-      <BenchmarkValueTimeline client:load models={valueModels} />
+      <BenchmarkCostTimeline client:load models={valueModels} />
+
+      <section class="flex flex-col gap-3">
+        <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
+          <h2 class="text-lg font-semibold text-neutral-200">Value view</h2>
+          <span class="text-xs text-neutral-500">
+            Same dataset, but normalized as intelligence per benchmark-dollar
+          </span>
+        </div>
+        <BenchmarkValueTimeline client:load models={valueModels} />
+      </section>
 
       <section class="flex flex-col gap-3">
         <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
