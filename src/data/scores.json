@@ -9102,5 +9102,203 @@
     "reportedOn": "2026-04-26",
     "sourceUrl": "https://artificialanalysis.ai/api/v2/data/llms/models",
     "notes": "AA API \u2014 GPT-5.5 (Non-reasoning)"
+  },
+  {
+    "modelId": "claude-sonnet-4-6",
+    "benchmarkId": "bullshit-bench",
+    "variant": "v2-default",
+    "value": 0.89,
+    "reportedOn": "2026-04-27",
+    "sourceUrl": "https://petergpt.github.io/bullshit-benchmark/data/v2/latest/leaderboard_with_launch.csv",
+    "notes": "BullshitBench V2 overall green rate \u2014 anthropic/claude-sonnet-4.6@reasoning=none"
+  },
+  {
+    "modelId": "claude-opus-4-6",
+    "benchmarkId": "bullshit-bench",
+    "variant": "v2-default",
+    "value": 0.83,
+    "reportedOn": "2026-04-27",
+    "sourceUrl": "https://petergpt.github.io/bullshit-benchmark/data/v2/latest/leaderboard_with_launch.csv",
+    "notes": "BullshitBench V2 overall green rate \u2014 anthropic/claude-opus-4.6@reasoning=none"
+  },
+  {
+    "modelId": "claude-opus-4-7",
+    "benchmarkId": "bullshit-bench",
+    "variant": "v2-default",
+    "value": 0.83,
+    "reportedOn": "2026-04-27",
+    "sourceUrl": "https://petergpt.github.io/bullshit-benchmark/data/v2/latest/leaderboard_with_launch.csv",
+    "notes": "BullshitBench V2 overall green rate \u2014 anthropic/claude-opus-4.7@reasoning=none"
+  },
+  {
+    "modelId": "qwen3-5-397b-a17b",
+    "benchmarkId": "bullshit-bench",
+    "variant": "v2-default",
+    "value": 0.78,
+    "reportedOn": "2026-04-27",
+    "sourceUrl": "https://petergpt.github.io/bullshit-benchmark/data/v2/latest/leaderboard_with_launch.csv",
+    "notes": "BullshitBench V2 overall green rate \u2014 qwen/qwen3.5-397b-a17b@reasoning=high"
+  },
+  {
+    "modelId": "claude-opus-4-5",
+    "benchmarkId": "bullshit-bench",
+    "variant": "v2-default",
+    "value": 0.79,
+    "reportedOn": "2026-04-27",
+    "sourceUrl": "https://petergpt.github.io/bullshit-benchmark/data/v2/latest/leaderboard_with_launch.csv",
+    "notes": "BullshitBench V2 overall green rate \u2014 anthropic/claude-opus-4.5@reasoning=none"
+  },
+  {
+    "modelId": "claude-haiku-4-5",
+    "benchmarkId": "bullshit-bench",
+    "variant": "v2-default",
+    "value": 0.71,
+    "reportedOn": "2026-04-27",
+    "sourceUrl": "https://petergpt.github.io/bullshit-benchmark/data/v2/latest/leaderboard_with_launch.csv",
+    "notes": "BullshitBench V2 overall green rate \u2014 anthropic/claude-haiku-4.5@reasoning=none"
+  },
+  {
+    "modelId": "claude-sonnet-4-5",
+    "benchmarkId": "bullshit-bench",
+    "variant": "v2-default",
+    "value": 0.74,
+    "reportedOn": "2026-04-27",
+    "sourceUrl": "https://petergpt.github.io/bullshit-benchmark/data/v2/latest/leaderboard_with_launch.csv",
+    "notes": "BullshitBench V2 overall green rate \u2014 anthropic/claude-sonnet-4.5@reasoning=none"
+  },
+  {
+    "modelId": "qwen3-6-plus",
+    "benchmarkId": "bullshit-bench",
+    "variant": "v2-default",
+    "value": 0.59,
+    "reportedOn": "2026-04-27",
+    "sourceUrl": "https://petergpt.github.io/bullshit-benchmark/data/v2/latest/leaderboard_with_launch.csv",
+    "notes": "BullshitBench V2 overall green rate \u2014 qwen/qwen3.6-plus@reasoning=xhigh"
+  },
+  {
+    "modelId": "gpt-5-5",
+    "benchmarkId": "bullshit-bench",
+    "variant": "v2-default",
+    "value": 0.47,
+    "reportedOn": "2026-04-27",
+    "sourceUrl": "https://petergpt.github.io/bullshit-benchmark/data/v2/latest/leaderboard_with_launch.csv",
+    "notes": "BullshitBench V2 overall green rate \u2014 openai/gpt-5.5@reasoning=xhigh"
+  },
+  {
+    "modelId": "gpt-5-5-low",
+    "benchmarkId": "bullshit-bench",
+    "variant": "v2-default",
+    "value": 0.45,
+    "reportedOn": "2026-04-27",
+    "sourceUrl": "https://petergpt.github.io/bullshit-benchmark/data/v2/latest/leaderboard_with_launch.csv",
+    "notes": "BullshitBench V2 overall green rate \u2014 openai/gpt-5.5@reasoning=low"
+  },
+  {
+    "modelId": "gpt-5-4",
+    "benchmarkId": "bullshit-bench",
+    "variant": "v2-default",
+    "value": 0.42,
+    "reportedOn": "2026-04-27",
+    "sourceUrl": "https://petergpt.github.io/bullshit-benchmark/data/v2/latest/leaderboard_with_launch.csv",
+    "notes": "BullshitBench V2 overall green rate \u2014 openai/gpt-5.4@reasoning=xhigh"
+  },
+  {
+    "modelId": "gpt-5-2",
+    "benchmarkId": "bullshit-bench",
+    "variant": "v2-default",
+    "value": 0.28,
+    "reportedOn": "2026-04-27",
+    "sourceUrl": "https://petergpt.github.io/bullshit-benchmark/data/v2/latest/leaderboard_with_launch.csv",
+    "notes": "BullshitBench V2 overall green rate \u2014 openai/gpt-5.2@reasoning=high"
+  },
+  {
+    "modelId": "gpt-5-codex",
+    "benchmarkId": "bullshit-bench",
+    "variant": "v2-default",
+    "value": 0.39,
+    "reportedOn": "2026-04-27",
+    "sourceUrl": "https://petergpt.github.io/bullshit-benchmark/data/v2/latest/leaderboard_with_launch.csv",
+    "notes": "BullshitBench V2 overall green rate \u2014 openai/gpt-5-codex@reasoning=default"
+  },
+  {
+    "modelId": "kimi-k2-5",
+    "benchmarkId": "bullshit-bench",
+    "variant": "v2-default",
+    "value": 0.31,
+    "reportedOn": "2026-04-27",
+    "sourceUrl": "https://petergpt.github.io/bullshit-benchmark/data/v2/latest/leaderboard_with_launch.csv",
+    "notes": "BullshitBench V2 overall green rate \u2014 moonshotai/kimi-k2.5@reasoning=high"
+  },
+  {
+    "modelId": "gemini-3-pro",
+    "benchmarkId": "bullshit-bench",
+    "variant": "v2-default",
+    "value": 0.36,
+    "reportedOn": "2026-04-27",
+    "sourceUrl": "https://petergpt.github.io/bullshit-benchmark/data/v2/latest/leaderboard_with_launch.csv",
+    "notes": "BullshitBench V2 overall green rate \u2014 google/gemini-3-pro-preview@reasoning=high"
+  },
+  {
+    "modelId": "gemini-3-1-pro-preview",
+    "benchmarkId": "bullshit-bench",
+    "variant": "v2-default",
+    "value": 0.31,
+    "reportedOn": "2026-04-27",
+    "sourceUrl": "https://petergpt.github.io/bullshit-benchmark/data/v2/latest/leaderboard_with_launch.csv",
+    "notes": "BullshitBench V2 overall green rate \u2014 google/gemini-3.1-pro-preview@reasoning=high"
+  },
+  {
+    "modelId": "llama-4-maverick",
+    "benchmarkId": "bullshit-bench",
+    "variant": "v2-default",
+    "value": 0.28,
+    "reportedOn": "2026-04-27",
+    "sourceUrl": "https://petergpt.github.io/bullshit-benchmark/data/v2/latest/leaderboard_with_launch.csv",
+    "notes": "BullshitBench V2 overall green rate \u2014 meta-llama/llama-4-maverick@reasoning=default"
+  },
+  {
+    "modelId": "glm-5",
+    "benchmarkId": "bullshit-bench",
+    "variant": "v2-default",
+    "value": 0.28,
+    "reportedOn": "2026-04-27",
+    "sourceUrl": "https://petergpt.github.io/bullshit-benchmark/data/v2/latest/leaderboard_with_launch.csv",
+    "notes": "BullshitBench V2 overall green rate \u2014 z-ai/glm-5@reasoning=high"
+  },
+  {
+    "modelId": "gpt-5-3-codex",
+    "benchmarkId": "bullshit-bench",
+    "variant": "v2-default",
+    "value": 0.19,
+    "reportedOn": "2026-04-27",
+    "sourceUrl": "https://petergpt.github.io/bullshit-benchmark/data/v2/latest/leaderboard_with_launch.csv",
+    "notes": "BullshitBench V2 overall green rate \u2014 openai/gpt-5.3-codex@reasoning=xhigh"
+  },
+  {
+    "modelId": "glm-5-1",
+    "benchmarkId": "bullshit-bench",
+    "variant": "v2-default",
+    "value": 0.22,
+    "reportedOn": "2026-04-27",
+    "sourceUrl": "https://petergpt.github.io/bullshit-benchmark/data/v2/latest/leaderboard_with_launch.csv",
+    "notes": "BullshitBench V2 overall green rate \u2014 z-ai/glm-5.1@reasoning=xhigh"
+  },
+  {
+    "modelId": "deepseek-v4-pro",
+    "benchmarkId": "bullshit-bench",
+    "variant": "v2-default",
+    "value": 0.14,
+    "reportedOn": "2026-04-27",
+    "sourceUrl": "https://petergpt.github.io/bullshit-benchmark/data/v2/latest/leaderboard_with_launch.csv",
+    "notes": "BullshitBench V2 overall green rate \u2014 deepseek/deepseek-v4-pro@reasoning=xhigh"
+  },
+  {
+    "modelId": "deepseek-v4-flash",
+    "benchmarkId": "bullshit-bench",
+    "variant": "v2-default",
+    "value": 0.14,
+    "reportedOn": "2026-04-27",
+    "sourceUrl": "https://petergpt.github.io/bullshit-benchmark/data/v2/latest/leaderboard_with_launch.csv",
+    "notes": "BullshitBench V2 overall green rate \u2014 deepseek/deepseek-v4-flash@reasoning=xhigh"
   }
 ]
