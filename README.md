@@ -14,6 +14,18 @@ pnpm build     # static site to ./dist
 
 All content is in `src/data/*.json`. See `src/data/README.md` for the agent-maintainable guide — adding a model, a benchmark, a new variant (pass@N / with-tools / n-shot), or a score.
 
+### Syncing Artificial Analysis models
+
+To refresh the full AA model catalog from the API:
+
+```bash
+AA_API_KEY=... pnpm sync:aa
+```
+
+That regenerates:
+- `src/data/aa-models-api.json` — full raw AA API coverage
+- `src/data/aa-value-history.json` — benchmark-cost subset, preserving rows that already have AA benchmark-run cost data
+
 Validation runs on every build via Zod schemas in `src/lib/schema.ts`. Invalid JSON (unknown `modelId`, orphan `variant`, missing HF link on an open-weight model) fails the build with a line-precise error.
 
 ## Pages

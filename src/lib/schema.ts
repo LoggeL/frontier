@@ -107,11 +107,41 @@ export const aaValueHistoryRowSchema = z.object({
   provider: providerSchema,
   releaseDate: isoDate,
   aaIntelligenceIndex: z.number().nonnegative(),
-  aaBenchmarkTotalCost: z.number().positive(),
+  aaBenchmarkTotalCost: z.number().nonnegative(),
   aaBenchmarkValue: z.number().nonnegative(),
 });
 export type AaValueHistoryRow = z.infer<typeof aaValueHistoryRowSchema>;
 export const aaValueHistoryFileSchema = z.array(aaValueHistoryRowSchema);
+
+export const aaApiModelRowSchema = z.object({
+  id: z.string().min(1),
+  aaApiId: z.string().min(1),
+  name: z.string().min(1),
+  provider: providerSchema,
+  providerSlug: z.string().nullable(),
+  releaseDate: isoDate.nullable(),
+  aaIntelligenceIndex: z.number().nonnegative().nullable(),
+  aaCodingIndex: z.number().nonnegative().nullable(),
+  aaMathIndex: z.number().nonnegative().nullable(),
+  gpqa: z.number().nullable(),
+  hle: z.number().nullable(),
+  livecodebench: z.number().nullable(),
+  scicode: z.number().nullable(),
+  math500: z.number().nullable(),
+  aime25: z.number().nullable(),
+  ifbench: z.number().nullable(),
+  lcr: z.number().nullable(),
+  terminalBenchHard: z.number().nullable(),
+  tau2: z.number().nullable(),
+  price1mBlended3to1: z.number().nonnegative().nullable(),
+  price1mInputTokens: z.number().nonnegative().nullable(),
+  price1mOutputTokens: z.number().nonnegative().nullable(),
+  medianOutputTokensPerSecond: z.number().nonnegative().nullable(),
+  medianTimeToFirstTokenSeconds: z.number().nonnegative().nullable(),
+  medianTimeToFirstAnswerToken: z.number().nonnegative().nullable(),
+});
+export type AaApiModelRow = z.infer<typeof aaApiModelRowSchema>;
+export const aaApiModelsFileSchema = z.array(aaApiModelRowSchema);
 export const benchmarksFileSchema = z.array(benchmarkSchema);
 export const scoresFileSchema = z.array(scoreSchema);
 

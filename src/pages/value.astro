@@ -1,7 +1,7 @@
 ---
 import "../styles/global.css";
 import BenchmarkValueTimeline from "../components/BenchmarkValueTimeline";
-import { aaValueHistory, models } from "../lib/data";
+import { aaApiModels, aaValueHistory, models } from "../lib/data";
 
 const valueModels = aaValueHistory;
 const topModels = [...valueModels]
@@ -52,7 +52,7 @@ const lastRelease = valueModels.reduce<string | undefined>((latest, m) => {
         <div class="grid grid-cols-3 gap-2 text-xs">
           <div class="rounded border border-neutral-800 bg-neutral-900/50 p-2">
             <div class="text-[10px] uppercase tracking-wide text-neutral-500">models</div>
-            <div class="font-mono text-neutral-100">{valueModels.length}/{models.length}</div>
+            <div class="font-mono text-neutral-100">{valueModels.length}/{aaApiModels.length}</div>
           </div>
           <div class="rounded border border-neutral-800 bg-neutral-900/50 p-2">
             <div class="text-[10px] uppercase tracking-wide text-neutral-500">first</div>
@@ -71,7 +71,7 @@ const lastRelease = valueModels.reduce<string | undefined>((latest, m) => {
         <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
           <h2 class="text-lg font-semibold text-neutral-200">Top value table</h2>
           <span class="text-xs text-neutral-500">
-            Intelligence index / full AA benchmark-run cost
+            Intelligence index / full AA benchmark-run cost · coverage from {aaApiModels.length} AA API models
           </span>
         </div>
         <div class="overflow-x-auto rounded-lg border border-neutral-800 bg-neutral-900/40 frontier-scroll">
