@@ -739,7 +739,7 @@
   },
   {
     "id": "gpt-oss-120b",
-    "name": "gpt-oss-120B (high)",
+    "name": "gpt-oss-120b (high)",
     "provider": "OpenAI",
     "releaseDate": "2025-08-05",
     "aaIntelligenceIndex": 33.27,
@@ -748,7 +748,7 @@
   },
   {
     "id": "gpt-oss-120b-low",
-    "name": "gpt-oss-120B (low)",
+    "name": "gpt-oss-120b (low)",
     "provider": "OpenAI",
     "releaseDate": "2025-08-05",
     "aaIntelligenceIndex": 24.47,
@@ -2053,7 +2053,7 @@
   },
   {
     "id": "gemini-3-1-flash-lite-preview",
-    "name": "Gemini 3.1 Flash-Lite Preview",
+    "name": "Gemini 3.1 Flash-Lite",
     "provider": "Google",
     "releaseDate": "2026-03-03",
     "aaIntelligenceIndex": 33.52,
