@@ -1198,5 +1198,455 @@
         "notes": "BullshitBench V2 overall detection rate / clear-pushback rate from the public viewer. Higher means the model more reliably rejects nonsense."
       }
     ]
+  },
+  {
+    "id": "swe-atlas-qna",
+    "name": "SWE Atlas-Codebase QNA",
+    "category": "agentic",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "Codebase question-answering evaluation from the SWE Atlas suite.",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "MiniMax M3 release-post benchmark setup; vendor reported and not always cross-vendor comparable."
+      }
+    ]
+  },
+  {
+    "id": "nl2repo",
+    "name": "nl2repo",
+    "category": "agentic",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "score",
+    "primary": false,
+    "description": "Repository construction from natural-language instructions.",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "MiniMax M3 release-post benchmark setup; vendor reported and not always cross-vendor comparable."
+      }
+    ]
+  },
+  {
+    "id": "swe-atlas-test-writing",
+    "name": "SWE Atlas-Test Writing",
+    "category": "agentic",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "SWE Atlas test-writing task evaluation.",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "MiniMax M3 release-post benchmark setup; vendor reported and not always cross-vendor comparable."
+      }
+    ]
+  },
+  {
+    "id": "swe-fficiency",
+    "name": "SWE-fficiency",
+    "category": "agentic",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "Efficiency-oriented software engineering agent benchmark.",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "MiniMax M3 release-post benchmark setup; vendor reported and not always cross-vendor comparable."
+      }
+    ]
+  },
+  {
+    "id": "livesqlbench",
+    "name": "LiveSQLBench",
+    "category": "agentic",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "SQL agent benchmark over live PostgreSQL-style tasks.",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "MiniMax M3 release-post benchmark setup; vendor reported and not always cross-vendor comparable."
+      }
+    ]
+  },
+  {
+    "id": "cl-bench",
+    "name": "CL-bench",
+    "category": "agentic",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "score",
+    "primary": false,
+    "description": "Command-line / computer-use agent benchmark.",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "MiniMax M3 release-post benchmark setup; vendor reported and not always cross-vendor comparable."
+      }
+    ]
+  },
+  {
+    "id": "vibe-v2",
+    "name": "VIBE-V2",
+    "category": "agentic",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "score",
+    "primary": false,
+    "description": "Internal MiniMax benchmark for front-end and full-stack build-from-scratch tasks.",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "MiniMax M3 release-post benchmark setup; vendor reported and not always cross-vendor comparable."
+      }
+    ]
+  },
+  {
+    "id": "svg-bench",
+    "name": "SVG-Bench",
+    "category": "multimodal",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "score",
+    "primary": false,
+    "description": "SVG generation benchmark covering text and image-conditioned tasks.",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "MiniMax M3 release-post benchmark setup; vendor reported and not always cross-vendor comparable."
+      }
+    ]
+  },
+  {
+    "id": "posttrainbench",
+    "name": "PostTrainBench",
+    "category": "agentic",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "score",
+    "primary": false,
+    "description": "Autonomous post-training pipeline benchmark.",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "MiniMax M3 release-post benchmark setup; vendor reported and not always cross-vendor comparable."
+      }
+    ]
+  },
+  {
+    "id": "kernelbench-hard",
+    "name": "KernelBench Hard",
+    "category": "agentic",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "score",
+    "primary": false,
+    "description": "CUDA kernel optimization benchmark on hard tasks.",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "MiniMax M3 release-post benchmark setup; vendor reported and not always cross-vendor comparable."
+      }
+    ]
+  },
+  {
+    "id": "paperbench",
+    "name": "PaperBench",
+    "category": "agentic",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "score",
+    "primary": false,
+    "description": "Autonomous paper reproduction benchmark.",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "MiniMax M3 release-post benchmark setup; vendor reported and not always cross-vendor comparable."
+      }
+    ]
+  },
+  {
+    "id": "draco",
+    "name": "DRACO",
+    "category": "agentic",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "score",
+    "primary": false,
+    "description": "Deep research agent benchmark scored against task rubrics.",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "MiniMax M3 release-post benchmark setup; vendor reported and not always cross-vendor comparable."
+      }
+    ]
+  },
+  {
+    "id": "gdpval-rubrics",
+    "name": "GDPval-Rubrics",
+    "category": "agentic",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "score",
+    "primary": false,
+    "description": "Rubric-scored evaluation using public GDPval cases.",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "MiniMax M3 release-post benchmark setup; vendor reported and not always cross-vendor comparable."
+      }
+    ]
+  },
+  {
+    "id": "bankertoolbench",
+    "name": "BankerToolBench",
+    "category": "agentic",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "score",
+    "primary": false,
+    "description": "Banking tool-use benchmark with rubric scoring.",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "MiniMax M3 release-post benchmark setup; vendor reported and not always cross-vendor comparable."
+      }
+    ]
+  },
+  {
+    "id": "officeqa-pro",
+    "name": "OfficeQA Pro",
+    "category": "agentic",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "Office file-system question-answering benchmark.",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "MiniMax M3 release-post benchmark setup; vendor reported and not always cross-vendor comparable."
+      }
+    ]
+  },
+  {
+    "id": "spreadsheetbench-v1",
+    "name": "SpreadSheetBench-v1",
+    "category": "agentic",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "score",
+    "primary": false,
+    "description": "Spreadsheet task benchmark evaluated with an agent scaffold.",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "MiniMax M3 release-post benchmark setup; vendor reported and not always cross-vendor comparable."
+      }
+    ]
+  },
+  {
+    "id": "yc-bench",
+    "name": "YC-Bench",
+    "category": "agentic",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "score",
+    "primary": false,
+    "description": "Startup/funding asset benchmark; value is reported in millions.",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "MiniMax M3 release-post benchmark setup; vendor reported and not always cross-vendor comparable."
+      }
+    ]
+  },
+  {
+    "id": "loca-bench-256k",
+    "name": "LOCA-Bench (256k)",
+    "category": "agentic",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "score",
+    "primary": false,
+    "description": "Long-context agent benchmark at 256k environment description length.",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "MiniMax M3 release-post benchmark setup; vendor reported and not always cross-vendor comparable."
+      }
+    ]
+  },
+  {
+    "id": "mcp-atlas",
+    "name": "MCP Atlas",
+    "category": "agentic",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "score",
+    "primary": false,
+    "description": "MCP Atlas public-set agent benchmark.",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "MiniMax M3 release-post benchmark setup; vendor reported and not always cross-vendor comparable."
+      }
+    ]
+  },
+  {
+    "id": "apex-agents",
+    "name": "Apex-Agents",
+    "category": "agentic",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "score",
+    "primary": false,
+    "description": "Archipelago/ReAct Toolbelt agent benchmark.",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "MiniMax M3 release-post benchmark setup; vendor reported and not always cross-vendor comparable."
+      }
+    ]
+  },
+  {
+    "id": "claw-eval",
+    "name": "Claw-Eval",
+    "category": "agentic",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "score",
+    "primary": false,
+    "description": "General autonomous-task evaluation using Pass^3 score.",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "MiniMax M3 release-post benchmark setup; vendor reported and not always cross-vendor comparable."
+      }
+    ]
+  },
+  {
+    "id": "omnidocbench-score",
+    "name": "OmniDocBench",
+    "category": "multimodal",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "score",
+    "primary": false,
+    "description": "Document understanding benchmark reported by MiniMax as a higher-is-better score.",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "MiniMax M3 release-post benchmark setup; vendor reported and not always cross-vendor comparable."
+      }
+    ]
+  },
+  {
+    "id": "video-mme-sub",
+    "name": "VideoMME (w/ sub)",
+    "category": "multimodal",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "accuracy",
+    "primary": false,
+    "description": "VideoMME with subtitles inserted into frames.",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "MiniMax M3 release-post benchmark setup; vendor reported and not always cross-vendor comparable."
+      }
+    ]
+  },
+  {
+    "id": "imo-2025",
+    "name": "IMO 2025",
+    "category": "math",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "score",
+    "primary": false,
+    "description": "International Mathematical Olympiad 2025 result, reported as solved problems out of 42.",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "MiniMax M3 release-post benchmark setup; vendor reported and not always cross-vendor comparable."
+      }
+    ]
+  },
+  {
+    "id": "usamo-2026",
+    "name": "USAMO 2026",
+    "category": "math",
+    "source": "custom",
+    "higherIsBetter": true,
+    "unit": "score",
+    "primary": false,
+    "description": "USA Mathematical Olympiad 2026 result, reported as solved problems out of 42.",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "variants": [
+      {
+        "key": "default",
+        "label": "Default",
+        "notes": "MiniMax M3 release-post benchmark setup; vendor reported and not always cross-vendor comparable."
+      }
+    ]
   }
 ]

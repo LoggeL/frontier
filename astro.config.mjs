@@ -3,8 +3,8 @@ import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
 
 export default defineConfig({
-  site: "https://loggel.github.io",
-  base: "/frontier",
+  site: process.env.FRONTIER_SITE ?? "https://loggel.github.io",
+  base: process.env.FRONTIER_BASE ?? "/frontier",
   trailingSlash: "always",
   output: "static",
   integrations: [

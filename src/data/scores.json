@@ -9336,5 +9336,293 @@
     "reportedOn": "2026-04-27",
     "sourceUrl": "https://petergpt.github.io/bullshit-benchmark/data/v2/latest/leaderboard_with_launch.csv",
     "notes": "BullshitBench V2 overall green rate — deepseek/deepseek-v4-flash@reasoning=xhigh"
+  },
+  {
+    "modelId": "minimax-m3",
+    "benchmarkId": "swe-bench-verified",
+    "variant": "vendor-scaffold",
+    "value": 0.805,
+    "reportedOn": "2026-06-01",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "notes": "MiniMax M3 release post / launch benchmark table"
+  },
+  {
+    "modelId": "minimax-m3",
+    "benchmarkId": "swe-bench-pro",
+    "variant": "default",
+    "value": 0.59,
+    "reportedOn": "2026-06-01",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "notes": "MiniMax M3 release post / launch benchmark table"
+  },
+  {
+    "modelId": "minimax-m3",
+    "benchmarkId": "terminal-bench-2",
+    "variant": "default",
+    "value": 0.66,
+    "reportedOn": "2026-06-01",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "notes": "MiniMax M3 release post / launch benchmark table"
+  },
+  {
+    "modelId": "minimax-m3",
+    "benchmarkId": "swe-atlas-qna",
+    "variant": "default",
+    "value": 0.379,
+    "reportedOn": "2026-06-01",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "notes": "MiniMax M3 release post / launch benchmark table"
+  },
+  {
+    "modelId": "minimax-m3",
+    "benchmarkId": "nl2repo",
+    "variant": "default",
+    "value": 42.13,
+    "reportedOn": "2026-06-01",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "notes": "MiniMax M3 release post / launch benchmark table"
+  },
+  {
+    "modelId": "minimax-m3",
+    "benchmarkId": "swe-atlas-test-writing",
+    "variant": "default",
+    "value": 0.3083,
+    "reportedOn": "2026-06-01",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "notes": "MiniMax M3 release post / launch benchmark table"
+  },
+  {
+    "modelId": "minimax-m3",
+    "benchmarkId": "swe-fficiency",
+    "variant": "default",
+    "value": 0.348,
+    "reportedOn": "2026-06-01",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "notes": "MiniMax M3 release post / launch benchmark table"
+  },
+  {
+    "modelId": "minimax-m3",
+    "benchmarkId": "livesqlbench",
+    "variant": "default",
+    "value": 0.4017,
+    "reportedOn": "2026-06-01",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "notes": "MiniMax M3 release post / launch benchmark table"
+  },
+  {
+    "modelId": "minimax-m3",
+    "benchmarkId": "cl-bench",
+    "variant": "default",
+    "value": 20.48,
+    "reportedOn": "2026-06-01",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "notes": "MiniMax M3 release post / launch benchmark table"
+  },
+  {
+    "modelId": "minimax-m3",
+    "benchmarkId": "vibe-v2",
+    "variant": "default",
+    "value": 50.12,
+    "reportedOn": "2026-06-01",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "notes": "MiniMax M3 release post / launch benchmark table"
+  },
+  {
+    "modelId": "minimax-m3",
+    "benchmarkId": "svg-bench",
+    "variant": "default",
+    "value": 63.7,
+    "reportedOn": "2026-06-01",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "notes": "MiniMax M3 release post / launch benchmark table"
+  },
+  {
+    "modelId": "minimax-m3",
+    "benchmarkId": "posttrainbench",
+    "variant": "default",
+    "value": 37.1,
+    "reportedOn": "2026-06-01",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "notes": "MiniMax M3 release post / launch benchmark table"
+  },
+  {
+    "modelId": "minimax-m3",
+    "benchmarkId": "kernelbench-hard",
+    "variant": "default",
+    "value": 28.8,
+    "reportedOn": "2026-06-01",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "notes": "MiniMax M3 release post / launch benchmark table"
+  },
+  {
+    "modelId": "minimax-m3",
+    "benchmarkId": "paperbench",
+    "variant": "default",
+    "value": 52.6,
+    "reportedOn": "2026-06-01",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "notes": "MiniMax M3 release post / launch benchmark table"
+  },
+  {
+    "modelId": "minimax-m3",
+    "benchmarkId": "browsecomp",
+    "variant": "default",
+    "value": 0.8352,
+    "reportedOn": "2026-06-01",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "notes": "MiniMax M3 release post / launch benchmark table"
+  },
+  {
+    "modelId": "minimax-m3",
+    "benchmarkId": "draco",
+    "variant": "default",
+    "value": 73.23,
+    "reportedOn": "2026-06-01",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "notes": "MiniMax M3 release post / launch benchmark table"
+  },
+  {
+    "modelId": "minimax-m3",
+    "benchmarkId": "gdpval-rubrics",
+    "variant": "default",
+    "value": 74.78,
+    "reportedOn": "2026-06-01",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "notes": "MiniMax M3 release post / launch benchmark table"
+  },
+  {
+    "modelId": "minimax-m3",
+    "benchmarkId": "bankertoolbench",
+    "variant": "default",
+    "value": 76.12,
+    "reportedOn": "2026-06-01",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "notes": "MiniMax M3 release post / launch benchmark table"
+  },
+  {
+    "modelId": "minimax-m3",
+    "benchmarkId": "officeqa-pro",
+    "variant": "default",
+    "value": 0.451,
+    "reportedOn": "2026-06-01",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "notes": "MiniMax M3 release post / launch benchmark table"
+  },
+  {
+    "modelId": "minimax-m3",
+    "benchmarkId": "spreadsheetbench-v1",
+    "variant": "default",
+    "value": 89.35,
+    "reportedOn": "2026-06-01",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "notes": "MiniMax M3 release post / launch benchmark table"
+  },
+  {
+    "modelId": "minimax-m3",
+    "benchmarkId": "yc-bench",
+    "variant": "default",
+    "value": 2.1,
+    "reportedOn": "2026-06-01",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "notes": "MiniMax M3 release post / launch benchmark table"
+  },
+  {
+    "modelId": "minimax-m3",
+    "benchmarkId": "loca-bench-256k",
+    "variant": "default",
+    "value": 49.3,
+    "reportedOn": "2026-06-01",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "notes": "MiniMax M3 release post / launch benchmark table"
+  },
+  {
+    "modelId": "minimax-m3",
+    "benchmarkId": "mcp-atlas",
+    "variant": "default",
+    "value": 74.2,
+    "reportedOn": "2026-06-01",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "notes": "MiniMax M3 release post / launch benchmark table"
+  },
+  {
+    "modelId": "minimax-m3",
+    "benchmarkId": "apex-agents",
+    "variant": "default",
+    "value": 27.7,
+    "reportedOn": "2026-06-01",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "notes": "MiniMax M3 release post / launch benchmark table"
+  },
+  {
+    "modelId": "minimax-m3",
+    "benchmarkId": "claw-eval",
+    "variant": "default",
+    "value": 74.5,
+    "reportedOn": "2026-06-01",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "notes": "MiniMax M3 release post / launch benchmark table"
+  },
+  {
+    "modelId": "minimax-m3",
+    "benchmarkId": "osworld-verified",
+    "variant": "default",
+    "value": 0.7006,
+    "reportedOn": "2026-06-01",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "notes": "MiniMax M3 release post / launch benchmark table"
+  },
+  {
+    "modelId": "minimax-m3",
+    "benchmarkId": "omnidocbench-score",
+    "variant": "default",
+    "value": 91.6,
+    "reportedOn": "2026-06-01",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "notes": "MiniMax M3 release post / launch benchmark table"
+  },
+  {
+    "modelId": "minimax-m3",
+    "benchmarkId": "mmmu-pro",
+    "variant": "default",
+    "value": 0.781,
+    "reportedOn": "2026-06-01",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "notes": "MiniMax M3 release post / launch benchmark table"
+  },
+  {
+    "modelId": "minimax-m3",
+    "benchmarkId": "video-mmmu",
+    "variant": "default",
+    "value": 0.846,
+    "reportedOn": "2026-06-01",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "notes": "MiniMax M3 release post / launch benchmark table"
+  },
+  {
+    "modelId": "minimax-m3",
+    "benchmarkId": "video-mme-sub",
+    "variant": "default",
+    "value": 0.854,
+    "reportedOn": "2026-06-01",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "notes": "MiniMax M3 release post / launch benchmark table"
+  },
+  {
+    "modelId": "minimax-m3",
+    "benchmarkId": "imo-2025",
+    "variant": "default",
+    "value": 35,
+    "reportedOn": "2026-06-01",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "notes": "MiniMax M3 release post / launch benchmark table"
+  },
+  {
+    "modelId": "minimax-m3",
+    "benchmarkId": "usamo-2026",
+    "variant": "default",
+    "value": 36,
+    "reportedOn": "2026-06-01",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
+    "notes": "MiniMax M3 release post / launch benchmark table"
   }
 ]

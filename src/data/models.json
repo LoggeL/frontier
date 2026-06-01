@@ -1502,5 +1502,14 @@
     "openWeights": false,
     "contextWindow": 1000000,
     "cohortLabel": "Claude Opus 4.8"
+  },
+  {
+    "id": "minimax-m3",
+    "name": "MiniMax M3",
+    "provider": "MiniMax",
+    "releaseDate": "2026-06-01",
+    "knowledgeCutoff": "2026-05",
+    "openWeights": false,
+    "contextWindow": 1000000
   }
 ]
