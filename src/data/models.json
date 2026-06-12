@@ -1277,7 +1277,17 @@
     "knowledgeCutoff": "2025-01",
     "openWeights": false,
     "contextWindow": 128000,
-    "cohortLabel": "DeepSeek V4"
+    "cohortLabel": "DeepSeek V4",
+    "aaBenchmarkTotalCost": 40.04883344,
+    "aaBenchmarkInputCost": 36.99301424,
+    "aaBenchmarkOutputCost": 3.0558192,
+    "aaBenchmarkAnswerCost": 3.0558192,
+    "aaBenchmarkReasoningCost": 0,
+    "aaIntelligenceIndex": 36.5,
+    "aaBenchmarkValue": 0.911387,
+    "aaBenchmarkTotalTokens": 275149456,
+    "aaBenchmarkInputTokens": 264235816,
+    "aaBenchmarkOutputTokens": 10913640
   },
   {
     "id": "deepseek-v4-flash-high",
@@ -1331,7 +1341,19 @@
     "knowledgeCutoff": "2025-01",
     "openWeights": false,
     "contextWindow": 128000,
-    "cohortLabel": "DeepSeek V4"
+    "cohortLabel": "DeepSeek V4",
+    "aaBenchmarkAnswerTokens": 13522583,
+    "aaBenchmarkReasoningTokens": 0,
+    "aaBenchmarkOutputTokens": 13522583,
+    "aaBenchmarkInputCost": 142.20325044,
+    "aaBenchmarkAnswerCost": 11.76464721,
+    "aaBenchmarkReasoningCost": 0,
+    "aaBenchmarkOutputCost": 11.76464721,
+    "aaBenchmarkTotalCost": 153.96789765,
+    "aaBenchmarkInputTokens": 326904024,
+    "aaBenchmarkTotalTokens": 340426607,
+    "aaIntelligenceIndex": 39.3,
+    "aaBenchmarkValue": 0.255248
   },
   {
     "id": "deepseek-v4-pro-high",
@@ -1384,7 +1406,19 @@
     "releaseDate": "2026-04-29",
     "knowledgeCutoff": "2026-01",
     "openWeights": false,
-    "contextWindow": 128000
+    "contextWindow": 128000,
+    "aaBenchmarkAnswerTokens": 7049105,
+    "aaBenchmarkReasoningTokens": 82893511,
+    "aaBenchmarkOutputTokens": 89942616,
+    "aaBenchmarkInputCost": 326.38404149999997,
+    "aaBenchmarkAnswerCost": 52.8682875,
+    "aaBenchmarkReasoningCost": 621.7013325,
+    "aaBenchmarkOutputCost": 674.56962,
+    "aaBenchmarkTotalCost": 1000.9536615,
+    "aaBenchmarkInputTokens": 217589361,
+    "aaBenchmarkTotalTokens": 307531977,
+    "aaIntelligenceIndex": 39.2,
+    "aaBenchmarkValue": 0.039163
   },
   {
     "id": "grok-4-3",
@@ -1394,7 +1428,19 @@
     "knowledgeCutoff": "2025-11",
     "openWeights": false,
     "contextWindow": 256000,
-    "cohortLabel": "Grok 4.3"
+    "cohortLabel": "Grok 4.3",
+    "aaBenchmarkAnswerTokens": 7834560,
+    "aaBenchmarkReasoningTokens": 80185055,
+    "aaBenchmarkOutputTokens": 88019615,
+    "aaBenchmarkTotalCost": 395.1716575,
+    "aaBenchmarkInputCost": 175.12261999999998,
+    "aaBenchmarkOutputCost": 220.0490375,
+    "aaBenchmarkAnswerCost": 19.586399999999998,
+    "aaBenchmarkReasoningCost": 200.46263750000003,
+    "aaIntelligenceIndex": 53.2,
+    "aaBenchmarkValue": 0.134625,
+    "aaBenchmarkTotalTokens": 228117711,
+    "aaBenchmarkInputTokens": 140098096
   },
   {
     "id": "grok-4-3-low",
@@ -1404,7 +1450,17 @@
     "knowledgeCutoff": "2025-11",
     "openWeights": false,
     "contextWindow": 256000,
-    "cohortLabel": "Grok 4.3"
+    "cohortLabel": "Grok 4.3",
+    "aaBenchmarkTotalCost": 98.67587875,
+    "aaBenchmarkInputCost": 68.03899125,
+    "aaBenchmarkOutputCost": 30.6368875,
+    "aaBenchmarkAnswerCost": 6.6189,
+    "aaBenchmarkReasoningCost": 24.017987500000004,
+    "aaIntelligenceIndex": 43.9,
+    "aaBenchmarkValue": 0.444891,
+    "aaBenchmarkTotalTokens": 66685948,
+    "aaBenchmarkInputTokens": 54431193,
+    "aaBenchmarkOutputTokens": 12254755
   },
   {
     "id": "grok-4-3-medium",
@@ -1414,7 +1470,17 @@
     "knowledgeCutoff": "2025-11",
     "openWeights": false,
     "contextWindow": 256000,
-    "cohortLabel": "Grok 4.3"
+    "cohortLabel": "Grok 4.3",
+    "aaBenchmarkTotalCost": 161.480425,
+    "aaBenchmarkInputCost": 90.857715,
+    "aaBenchmarkOutputCost": 70.62271,
+    "aaBenchmarkAnswerCost": 8.8310975,
+    "aaBenchmarkReasoningCost": 61.7916125,
+    "aaIntelligenceIndex": 48.8,
+    "aaBenchmarkValue": 0.302204,
+    "aaBenchmarkTotalTokens": 100935256,
+    "aaBenchmarkInputTokens": 72686172,
+    "aaBenchmarkOutputTokens": 28249084
   },
   {
     "id": "grok-4-3-non-reasoning",
@@ -1424,7 +1490,17 @@
     "knowledgeCutoff": "2025-11",
     "openWeights": false,
     "contextWindow": 256000,
-    "cohortLabel": "Grok 4.3"
+    "cohortLabel": "Grok 4.3",
+    "aaBenchmarkInputCost": 239.98489,
+    "aaBenchmarkAnswerCost": 19.5390925,
+    "aaBenchmarkReasoningCost": 0,
+    "aaBenchmarkOutputCost": 19.5390925,
+    "aaBenchmarkTotalCost": 259.5239825,
+    "aaBenchmarkInputTokens": 191987912,
+    "aaIntelligenceIndex": 31,
+    "aaBenchmarkValue": 0.119449,
+    "aaBenchmarkTotalTokens": 199803549,
+    "aaBenchmarkOutputTokens": 7815637
   },
   {
     "id": "ring-2-6-1t",
@@ -1433,7 +1509,19 @@
     "releaseDate": "2026-05-08",
     "knowledgeCutoff": "2026-01",
     "openWeights": false,
-    "contextWindow": 128000
+    "contextWindow": 128000,
+    "aaBenchmarkAnswerTokens": 11487952,
+    "aaBenchmarkReasoningTokens": 93434329,
+    "aaBenchmarkOutputTokens": 104922281,
+    "aaBenchmarkInputCost": 71.3806125,
+    "aaBenchmarkAnswerCost": 28.71988,
+    "aaBenchmarkReasoningCost": 233.5858225,
+    "aaBenchmarkOutputCost": 262.3057025,
+    "aaBenchmarkTotalCost": 333.686315,
+    "aaBenchmarkInputTokens": 237935375,
+    "aaBenchmarkTotalTokens": 342857656,
+    "aaIntelligenceIndex": 38.5,
+    "aaBenchmarkValue": 0.115378
   },
   {
     "id": "jt-35b-flash",
@@ -1442,7 +1530,19 @@
     "releaseDate": "2026-05-14",
     "knowledgeCutoff": "2026-01",
     "openWeights": false,
-    "contextWindow": 128000
+    "contextWindow": 128000,
+    "aaBenchmarkAnswerTokens": 17300289,
+    "aaBenchmarkReasoningTokens": 0,
+    "aaBenchmarkOutputTokens": 17300289,
+    "aaBenchmarkTotalCost": 0,
+    "aaBenchmarkInputCost": 0,
+    "aaBenchmarkOutputCost": 0,
+    "aaBenchmarkAnswerCost": 0,
+    "aaBenchmarkReasoningCost": 0,
+    "aaBenchmarkInputTokens": 0,
+    "aaBenchmarkTotalTokens": 17300289,
+    "aaIntelligenceIndex": 36.1,
+    "aaBenchmarkValue": 0
   },
   {
     "id": "gemini-3-5-flash",
@@ -1452,7 +1552,19 @@
     "knowledgeCutoff": "2025-10",
     "openWeights": false,
     "contextWindow": 1000000,
-    "cohortLabel": "Gemini 3.5 Flash"
+    "cohortLabel": "Gemini 3.5 Flash",
+    "aaBenchmarkAnswerTokens": 10834936,
+    "aaBenchmarkReasoningTokens": 61767336,
+    "aaBenchmarkOutputTokens": 72602272,
+    "aaBenchmarkInputCost": 898.1840040000001,
+    "aaBenchmarkAnswerCost": 97.514424,
+    "aaBenchmarkReasoningCost": 555.906024,
+    "aaBenchmarkOutputCost": 653.420448,
+    "aaBenchmarkTotalCost": 1551.604452,
+    "aaBenchmarkInputTokens": 598789336,
+    "aaBenchmarkTotalTokens": 671391608,
+    "aaIntelligenceIndex": 55.3,
+    "aaBenchmarkValue": 0.035641
   },
   {
     "id": "gemini-3-5-flash-medium",
@@ -1462,7 +1574,17 @@
     "knowledgeCutoff": "2025-10",
     "openWeights": false,
     "contextWindow": 1000000,
-    "cohortLabel": "Gemini 3.5 Flash"
+    "cohortLabel": "Gemini 3.5 Flash",
+    "aaBenchmarkInputCost": 907.0730445,
+    "aaBenchmarkAnswerCost": 100.086975,
+    "aaBenchmarkReasoningCost": 410.325696,
+    "aaBenchmarkOutputCost": 510.412671,
+    "aaBenchmarkTotalCost": 1417.4857155,
+    "aaBenchmarkInputTokens": 604715363,
+    "aaIntelligenceIndex": 54.8,
+    "aaBenchmarkValue": 0.03866,
+    "aaBenchmarkTotalTokens": 661427882,
+    "aaBenchmarkOutputTokens": 56712519
   },
   {
     "id": "gemini-3-5-flash-minimal",
@@ -1472,7 +1594,17 @@
     "knowledgeCutoff": "2025-10",
     "openWeights": false,
     "contextWindow": 1000000,
-    "cohortLabel": "Gemini 3.5 Flash"
+    "cohortLabel": "Gemini 3.5 Flash",
+    "aaBenchmarkInputCost": 645.834423,
+    "aaBenchmarkAnswerCost": 103.88866499999999,
+    "aaBenchmarkReasoningCost": 0,
+    "aaBenchmarkOutputCost": 103.88866499999999,
+    "aaBenchmarkTotalCost": 749.723088,
+    "aaBenchmarkInputTokens": 430556282,
+    "aaIntelligenceIndex": 43.3,
+    "aaBenchmarkValue": 0.057755,
+    "aaBenchmarkTotalTokens": 442099467,
+    "aaBenchmarkOutputTokens": 11543185
   },
   {
     "id": "qwen3-7-max",
@@ -1482,7 +1614,19 @@
     "knowledgeCutoff": "2026-01",
     "openWeights": false,
     "contextWindow": 1000000,
-    "cohortLabel": "Qwen3.7"
+    "cohortLabel": "Qwen3.7",
+    "aaBenchmarkAnswerTokens": 7330468,
+    "aaBenchmarkReasoningTokens": 89401100,
+    "aaBenchmarkOutputTokens": 96731568,
+    "aaBenchmarkInputCost": 477.00518,
+    "aaBenchmarkAnswerCost": 54.97851,
+    "aaBenchmarkReasoningCost": 670.50825,
+    "aaBenchmarkOutputCost": 725.48676,
+    "aaBenchmarkTotalCost": 1202.4919399999999,
+    "aaBenchmarkInputTokens": 190802072,
+    "aaBenchmarkTotalTokens": 287533640,
+    "aaIntelligenceIndex": 56.6,
+    "aaBenchmarkValue": 0.047069
   },
   {
     "id": "command-a-plus",
@@ -1491,7 +1635,15 @@
     "releaseDate": "2026-05-20",
     "knowledgeCutoff": "2026-01",
     "openWeights": false,
-    "contextWindow": 256000
+    "contextWindow": 256000,
+    "aaBenchmarkTotalCost": 0,
+    "aaBenchmarkInputCost": 0,
+    "aaBenchmarkOutputCost": 0,
+    "aaBenchmarkAnswerCost": 0,
+    "aaBenchmarkReasoningCost": 0,
+    "aaIntelligenceIndex": 37.2,
+    "aaBenchmarkValue": 0,
+    "aaBenchmarkTotalTokens": 306825400
   },
   {
     "id": "claude-opus-4-8",
@@ -1501,7 +1653,19 @@
     "knowledgeCutoff": "2026-01",
     "openWeights": false,
     "contextWindow": 1000000,
-    "cohortLabel": "Claude Opus 4.8"
+    "cohortLabel": "Claude Opus 4.8",
+    "aaBenchmarkAnswerTokens": 7472226,
+    "aaBenchmarkReasoningTokens": 104558790,
+    "aaBenchmarkOutputTokens": 112031016,
+    "aaBenchmarkInputCost": 1508.060045,
+    "aaBenchmarkAnswerCost": 186.80565,
+    "aaBenchmarkReasoningCost": 2613.96975,
+    "aaBenchmarkOutputCost": 2800.7754000000004,
+    "aaBenchmarkTotalCost": 4308.835445000001,
+    "aaBenchmarkInputTokens": 301612009,
+    "aaBenchmarkTotalTokens": 413643025,
+    "aaIntelligenceIndex": 61.4,
+    "aaBenchmarkValue": 0.01425
   },
   {
     "id": "minimax-m3",
@@ -1524,7 +1688,19 @@
     "totalParams": 1,
     "activeParams": 1,
     "architecture": "dense",
-    "cohortLabel": "MiniCPM5-1B"
+    "cohortLabel": "MiniCPM5-1B",
+    "aaBenchmarkAnswerTokens": 7272839,
+    "aaBenchmarkReasoningTokens": 46922000,
+    "aaBenchmarkOutputTokens": 54194839,
+    "aaBenchmarkTotalCost": 0,
+    "aaBenchmarkInputCost": 0,
+    "aaBenchmarkOutputCost": 0,
+    "aaBenchmarkAnswerCost": 0,
+    "aaBenchmarkReasoningCost": 0,
+    "aaBenchmarkInputTokens": 0,
+    "aaBenchmarkTotalTokens": 54194839,
+    "aaIntelligenceIndex": 18.2,
+    "aaBenchmarkValue": 0
   },
   {
     "id": "hypernova-60b",
@@ -1533,7 +1709,19 @@
     "releaseDate": "2026-05-26",
     "knowledgeCutoff": "2026-01",
     "openWeights": false,
-    "contextWindow": 128000
+    "contextWindow": 128000,
+    "aaBenchmarkAnswerTokens": 8216798,
+    "aaBenchmarkReasoningTokens": 133917699,
+    "aaBenchmarkOutputTokens": 142134497,
+    "aaBenchmarkInputCost": 14.76630688,
+    "aaBenchmarkAnswerCost": 1.1503517200000002,
+    "aaBenchmarkReasoningCost": 18.74847786,
+    "aaBenchmarkOutputCost": 19.89882958,
+    "aaBenchmarkTotalCost": 34.66513646,
+    "aaBenchmarkInputTokens": 369157672,
+    "aaBenchmarkTotalTokens": 511292169,
+    "aaIntelligenceIndex": 29.3,
+    "aaBenchmarkValue": 0.84523
   },
   {
     "id": "lfm2-5-8b-a1b",
@@ -1542,7 +1730,15 @@
     "releaseDate": "2026-05-28",
     "knowledgeCutoff": "2025-12",
     "openWeights": false,
-    "contextWindow": 128000
+    "contextWindow": 128000,
+    "aaBenchmarkTotalCost": 0,
+    "aaBenchmarkInputCost": 0,
+    "aaBenchmarkOutputCost": 0,
+    "aaBenchmarkAnswerCost": 0,
+    "aaBenchmarkReasoningCost": 0,
+    "aaIntelligenceIndex": 14.2,
+    "aaBenchmarkValue": 0,
+    "aaBenchmarkTotalTokens": 346578027
   },
   {
     "id": "step-3-7-flash",
@@ -1551,7 +1747,19 @@
     "releaseDate": "2026-05-29",
     "knowledgeCutoff": "2026-01",
     "openWeights": false,
-    "contextWindow": 256000
+    "contextWindow": 256000,
+    "aaBenchmarkAnswerTokens": 6936054,
+    "aaBenchmarkReasoningTokens": 251509961,
+    "aaBenchmarkOutputTokens": 258446015,
+    "aaBenchmarkInputCost": 70.5304534,
+    "aaBenchmarkAnswerCost": 7.9764621,
+    "aaBenchmarkReasoningCost": 289.23645515,
+    "aaBenchmarkOutputCost": 297.21291725,
+    "aaBenchmarkTotalCost": 367.74337065,
+    "aaBenchmarkInputTokens": 352652267,
+    "aaBenchmarkTotalTokens": 611098282,
+    "aaIntelligenceIndex": 42.6,
+    "aaBenchmarkValue": 0.115842
   },
   {
     "id": "qwen3-7-plus",
@@ -1561,7 +1769,19 @@
     "knowledgeCutoff": "2026-01",
     "openWeights": false,
     "contextWindow": 1000000,
-    "cohortLabel": "Qwen3.7"
+    "cohortLabel": "Qwen3.7",
+    "aaBenchmarkAnswerTokens": 7801714,
+    "aaBenchmarkReasoningTokens": 102729323,
+    "aaBenchmarkOutputTokens": 110531037,
+    "aaBenchmarkInputCost": 80.6707968,
+    "aaBenchmarkAnswerCost": 9.04998824,
+    "aaBenchmarkReasoningCost": 119.16601467999999,
+    "aaBenchmarkOutputCost": 128.21600292,
+    "aaBenchmarkTotalCost": 208.88679972,
+    "aaBenchmarkInputTokens": 201676992,
+    "aaBenchmarkTotalTokens": 312208029,
+    "aaIntelligenceIndex": 53.3,
+    "aaBenchmarkValue": 0.255162
   },
   {
     "id": "gemma-4-12b-non-reasoning",
@@ -1575,7 +1795,19 @@
     "totalParams": 12,
     "activeParams": 12,
     "architecture": "dense",
-    "cohortLabel": "Gemma 4 12B"
+    "cohortLabel": "Gemma 4 12B",
+    "aaBenchmarkAnswerTokens": 22278821,
+    "aaBenchmarkReasoningTokens": 0,
+    "aaBenchmarkOutputTokens": 22278821,
+    "aaBenchmarkTotalCost": 0,
+    "aaBenchmarkInputCost": 0,
+    "aaBenchmarkOutputCost": 0,
+    "aaBenchmarkAnswerCost": 0,
+    "aaBenchmarkReasoningCost": 0,
+    "aaBenchmarkInputTokens": 0,
+    "aaBenchmarkTotalTokens": 22278821,
+    "aaIntelligenceIndex": 19.5,
+    "aaBenchmarkValue": 0
   },
   {
     "id": "gemma-4-12b",
@@ -1589,7 +1821,19 @@
     "totalParams": 12,
     "activeParams": 12,
     "architecture": "dense",
-    "cohortLabel": "Gemma 4 12B"
+    "cohortLabel": "Gemma 4 12B",
+    "aaBenchmarkAnswerTokens": 7838284,
+    "aaBenchmarkReasoningTokens": 59911823,
+    "aaBenchmarkOutputTokens": 67750107,
+    "aaBenchmarkInputCost": 28.5944508,
+    "aaBenchmarkAnswerCost": 2.3514852,
+    "aaBenchmarkReasoningCost": 17.9735469,
+    "aaBenchmarkOutputCost": 20.325032099999998,
+    "aaBenchmarkTotalCost": 48.9194829,
+    "aaBenchmarkInputTokens": 285944508,
+    "aaBenchmarkTotalTokens": 353694615,
+    "aaIntelligenceIndex": 29.2,
+    "aaBenchmarkValue": 0.596899
   },
   {
     "id": "nvidia-nemotron-3-ultra-550b-a55b",
@@ -1604,7 +1848,19 @@
     "activeParams": 55,
     "experts": 10,
     "architecture": "moe",
-    "cohortLabel": "Nemotron 3"
+    "cohortLabel": "Nemotron 3",
+    "aaBenchmarkAnswerTokens": 8026971,
+    "aaBenchmarkReasoningTokens": 95127268,
+    "aaBenchmarkOutputTokens": 103154239,
+    "aaBenchmarkInputCost": 133.52654385000002,
+    "aaBenchmarkAnswerCost": 21.472147425,
+    "aaBenchmarkReasoningCost": 254.46544189999997,
+    "aaBenchmarkOutputCost": 275.937589325,
+    "aaBenchmarkTotalCost": 409.46413317500003,
+    "aaBenchmarkInputTokens": 197817102,
+    "aaBenchmarkTotalTokens": 300971341,
+    "aaIntelligenceIndex": 47.7,
+    "aaBenchmarkValue": 0.116494
   },
   {
     "id": "claude-fable-5",
@@ -1614,7 +1870,19 @@
     "knowledgeCutoff": "2026-01",
     "openWeights": false,
     "contextWindow": 1000000,
-    "cohortLabel": "Claude Fable 5"
+    "cohortLabel": "Claude Fable 5",
+    "aaBenchmarkAnswerTokens": 9777680,
+    "aaBenchmarkReasoningTokens": 76543842,
+    "aaBenchmarkOutputTokens": 86321522,
+    "aaBenchmarkInputCost": 5772.382865785,
+    "aaBenchmarkAnswerCost": 472.26194399999997,
+    "aaBenchmarkReasoningCost": 3695.15397255,
+    "aaBenchmarkOutputCost": 4167.4159165500005,
+    "aaBenchmarkTotalCost": 9939.798782335001,
+    "aaBenchmarkInputTokens": 577238287,
+    "aaBenchmarkTotalTokens": 663559809,
+    "aaIntelligenceIndex": 64.9,
+    "aaBenchmarkValue": 0.006529
   },
   {
     "id": "north-mini-code",
@@ -1623,6 +1891,18 @@
     "releaseDate": "2026-06-09",
     "knowledgeCutoff": "2026-01",
     "openWeights": false,
-    "contextWindow": 256000
+    "contextWindow": 256000,
+    "aaBenchmarkAnswerTokens": 5507429,
+    "aaBenchmarkReasoningTokens": 69956292,
+    "aaBenchmarkOutputTokens": 75463721,
+    "aaBenchmarkTotalCost": 0,
+    "aaBenchmarkInputCost": 0,
+    "aaBenchmarkOutputCost": 0,
+    "aaBenchmarkAnswerCost": 0,
+    "aaBenchmarkReasoningCost": 0,
+    "aaBenchmarkInputTokens": 0,
+    "aaBenchmarkTotalTokens": 75463721,
+    "aaIntelligenceIndex": 27.6,
+    "aaBenchmarkValue": 0
   }
 ]
