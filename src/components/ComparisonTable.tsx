@@ -668,7 +668,7 @@ function getSortValue(
 }
 
 function formatBenchmarkCost(value?: number): string {
-  if (value === undefined) return "—";
+  if (value === undefined) return "pending";
   return `$${value.toLocaleString(undefined, {
     minimumFractionDigits: value < 10 ? 2 : 0,
     maximumFractionDigits: value < 10 ? 2 : 0,
@@ -676,7 +676,8 @@ function formatBenchmarkCost(value?: number): string {
 }
 
 function formatTokenCount(value?: number): string {
-  if (value === undefined || value === 0) return "—";
+  if (value === undefined) return "pending";
+  if (value === 0) return "—";
   if (value >= 1_000_000_000) return `${(value / 1_000_000_000).toFixed(2)}B`;
   if (value >= 1_000_000) return `${(value / 1_000_000).toFixed(1)}M`;
   if (value >= 1_000) return `${(value / 1_000).toFixed(1)}K`;
@@ -685,7 +686,7 @@ function formatTokenCount(value?: number): string {
 
 function formatBenchmarkCostTitle(model: Model): string {
   if (model.aaBenchmarkTotalCost === undefined) {
-    return "No Artificial Analysis benchmark cost data";
+    return "Pending: Artificial Analysis API exposes scores/pricing for this model, but not full benchmark-run cost breakdown";
   }
   return [
     "Artificial Analysis Intelligence Index benchmark cost",
@@ -699,7 +700,7 @@ function formatBenchmarkCostTitle(model: Model): string {
 
 function formatBenchmarkTokensTitle(model: Model): string {
   if (model.aaBenchmarkTotalTokens === undefined) {
-    return "No Artificial Analysis benchmark token usage data";
+    return "Pending: Artificial Analysis API exposes scores/pricing for this model, but not full benchmark-run token usage";
   }
   return [
     "Artificial Analysis Intelligence Index tokens used",
