@@ -1511,5 +1511,118 @@
     "knowledgeCutoff": "2026-05",
     "openWeights": false,
     "contextWindow": 1000000
+  },
+  {
+    "id": "minicpm5-1b",
+    "name": "MiniCPM5-1B (Reasoning)",
+    "provider": "OpenBMB",
+    "releaseDate": "2026-05-25",
+    "knowledgeCutoff": "2026-01",
+    "openWeights": true,
+    "contextWindow": 200000,
+    "hfLink": "https://huggingface.co/openbmb/MiniCPM5-1B",
+    "totalParams": 1,
+    "activeParams": 1,
+    "architecture": "dense",
+    "cohortLabel": "MiniCPM5-1B"
+  },
+  {
+    "id": "hypernova-60b",
+    "name": "HyperNova 60B 2605",
+    "provider": "Multiverse Computing",
+    "releaseDate": "2026-05-26",
+    "knowledgeCutoff": "2026-01",
+    "openWeights": false,
+    "contextWindow": 128000
+  },
+  {
+    "id": "lfm2-5-8b-a1b",
+    "name": "LFM2.5-8B-A1B",
+    "provider": "Liquid AI",
+    "releaseDate": "2026-05-28",
+    "knowledgeCutoff": "2025-12",
+    "openWeights": false,
+    "contextWindow": 128000
+  },
+  {
+    "id": "step-3-7-flash",
+    "name": "Step 3.7 Flash",
+    "provider": "StepFun",
+    "releaseDate": "2026-05-29",
+    "knowledgeCutoff": "2026-01",
+    "openWeights": false,
+    "contextWindow": 256000
+  },
+  {
+    "id": "qwen3-7-plus",
+    "name": "Qwen3.7 Plus",
+    "provider": "Alibaba",
+    "releaseDate": "2026-06-01",
+    "knowledgeCutoff": "2026-01",
+    "openWeights": false,
+    "contextWindow": 1000000,
+    "cohortLabel": "Qwen3.7"
+  },
+  {
+    "id": "gemma-4-12b-non-reasoning",
+    "name": "Gemma 4 12B (Non-reasoning)",
+    "provider": "Google",
+    "releaseDate": "2026-06-03",
+    "knowledgeCutoff": "2026-01",
+    "openWeights": true,
+    "contextWindow": 128000,
+    "hfLink": "https://huggingface.co/google/gemma-4-12b-it",
+    "totalParams": 12,
+    "activeParams": 12,
+    "architecture": "dense",
+    "cohortLabel": "Gemma 4 12B"
+  },
+  {
+    "id": "gemma-4-12b",
+    "name": "Gemma 4 12B (Reasoning)",
+    "provider": "Google",
+    "releaseDate": "2026-06-03",
+    "knowledgeCutoff": "2026-01",
+    "openWeights": true,
+    "contextWindow": 128000,
+    "hfLink": "https://huggingface.co/google/gemma-4-12b-it",
+    "totalParams": 12,
+    "activeParams": 12,
+    "architecture": "dense",
+    "cohortLabel": "Gemma 4 12B"
+  },
+  {
+    "id": "nvidia-nemotron-3-ultra-550b-a55b",
+    "name": "Nemotron 3 Ultra 550B A55B (Reasoning)",
+    "provider": "NVIDIA",
+    "releaseDate": "2026-06-04",
+    "knowledgeCutoff": "2025-09",
+    "openWeights": true,
+    "contextWindow": 128000,
+    "hfLink": "https://huggingface.co/nvidia/Nemotron-3-Ultra-550B-A55B",
+    "totalParams": 550,
+    "activeParams": 55,
+    "experts": 10,
+    "architecture": "moe",
+    "cohortLabel": "Nemotron 3"
+  },
+  {
+    "id": "claude-fable-5",
+    "name": "Claude Fable 5 (Adaptive Reasoning, Max Effort, Opus 4.8 Fallback)",
+    "provider": "Anthropic",
+    "releaseDate": "2026-06-09",
+    "knowledgeCutoff": "2026-01",
+    "openWeights": false,
+    "contextWindow": 1000000,
+    "cohortLabel": "Claude Fable 5"
+  },
+  {
+    "id": "north-mini-code",
+    "name": "North Mini Code",
+    "provider": "Cohere",
+    "releaseDate": "2026-06-09",
+    "knowledgeCutoff": "2026-01",
+    "openWeights": false,
+    "contextWindow": 256000
   }
 ]

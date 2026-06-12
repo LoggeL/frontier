@@ -9624,5 +9624,815 @@
     "reportedOn": "2026-06-01",
     "sourceUrl": "https://www.minimax.io/blog/minimax-m3",
     "notes": "MiniMax M3 release post / launch benchmark table"
+  },
+  {
+    "modelId": "minicpm5-1b",
+    "benchmarkId": "aa-intelligence-index",
+    "variant": "default",
+    "value": 18.2,
+    "reportedOn": "2026-05-25",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "minicpm5-1b",
+    "benchmarkId": "aa-coding-index",
+    "variant": "default",
+    "value": 1.5,
+    "reportedOn": "2026-05-25",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "minicpm5-1b",
+    "benchmarkId": "gpqa-diamond",
+    "variant": "default",
+    "value": 0.278,
+    "reportedOn": "2026-05-25",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "minicpm5-1b",
+    "benchmarkId": "hle",
+    "variant": "default",
+    "value": 0.065,
+    "reportedOn": "2026-05-25",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "minicpm5-1b",
+    "benchmarkId": "scicode",
+    "variant": "default",
+    "value": 0.044,
+    "reportedOn": "2026-05-25",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "minicpm5-1b",
+    "benchmarkId": "ifbench",
+    "variant": "default",
+    "value": 0.493197278911565,
+    "reportedOn": "2026-05-25",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "minicpm5-1b",
+    "benchmarkId": "aa-lcr",
+    "variant": "default",
+    "value": 0.0366666666666667,
+    "reportedOn": "2026-05-25",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "minicpm5-1b",
+    "benchmarkId": "terminal-bench-hard",
+    "variant": "default",
+    "value": 0,
+    "reportedOn": "2026-05-25",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "minicpm5-1b",
+    "benchmarkId": "tau2-telecom",
+    "variant": "default",
+    "value": 0.809941520467836,
+    "reportedOn": "2026-05-25",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "hypernova-60b",
+    "benchmarkId": "aa-intelligence-index",
+    "variant": "default",
+    "value": 29.3,
+    "reportedOn": "2026-05-26",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "hypernova-60b",
+    "benchmarkId": "aa-coding-index",
+    "variant": "default",
+    "value": 26.7,
+    "reportedOn": "2026-05-26",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "hypernova-60b",
+    "benchmarkId": "gpqa-diamond",
+    "variant": "default",
+    "value": 0.733,
+    "reportedOn": "2026-05-26",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "hypernova-60b",
+    "benchmarkId": "hle",
+    "variant": "default",
+    "value": 0.151,
+    "reportedOn": "2026-05-26",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "hypernova-60b",
+    "benchmarkId": "scicode",
+    "variant": "default",
+    "value": 0.33,
+    "reportedOn": "2026-05-26",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "hypernova-60b",
+    "benchmarkId": "ifbench",
+    "variant": "default",
+    "value": 0.664625850340136,
+    "reportedOn": "2026-05-26",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "hypernova-60b",
+    "benchmarkId": "aa-lcr",
+    "variant": "default",
+    "value": 0.316666666666667,
+    "reportedOn": "2026-05-26",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "hypernova-60b",
+    "benchmarkId": "terminal-bench-hard",
+    "variant": "default",
+    "value": 0.234848484848485,
+    "reportedOn": "2026-05-26",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "hypernova-60b",
+    "benchmarkId": "tau2-telecom",
+    "variant": "default",
+    "value": 0.631578947368421,
+    "reportedOn": "2026-05-26",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "lfm2-5-8b-a1b",
+    "benchmarkId": "aa-intelligence-index",
+    "variant": "default",
+    "value": 14.2,
+    "reportedOn": "2026-05-28",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "lfm2-5-8b-a1b",
+    "benchmarkId": "aa-coding-index",
+    "variant": "default",
+    "value": 5.6,
+    "reportedOn": "2026-05-28",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "lfm2-5-8b-a1b",
+    "benchmarkId": "gpqa-diamond",
+    "variant": "default",
+    "value": 0.513,
+    "reportedOn": "2026-05-28",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "lfm2-5-8b-a1b",
+    "benchmarkId": "hle",
+    "variant": "default",
+    "value": 0.069,
+    "reportedOn": "2026-05-28",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "lfm2-5-8b-a1b",
+    "benchmarkId": "scicode",
+    "variant": "default",
+    "value": 0.078,
+    "reportedOn": "2026-05-28",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "lfm2-5-8b-a1b",
+    "benchmarkId": "ifbench",
+    "variant": "default",
+    "value": 0.556462585034014,
+    "reportedOn": "2026-05-28",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "lfm2-5-8b-a1b",
+    "benchmarkId": "aa-lcr",
+    "variant": "default",
+    "value": 0,
+    "reportedOn": "2026-05-28",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "lfm2-5-8b-a1b",
+    "benchmarkId": "terminal-bench-hard",
+    "variant": "default",
+    "value": 0.0454545454545455,
+    "reportedOn": "2026-05-28",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "lfm2-5-8b-a1b",
+    "benchmarkId": "tau2-telecom",
+    "variant": "default",
+    "value": 0.160818713450292,
+    "reportedOn": "2026-05-28",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "step-3-7-flash",
+    "benchmarkId": "aa-intelligence-index",
+    "variant": "default",
+    "value": 42.6,
+    "reportedOn": "2026-05-29",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "step-3-7-flash",
+    "benchmarkId": "aa-coding-index",
+    "variant": "default",
+    "value": 37.1,
+    "reportedOn": "2026-05-29",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "step-3-7-flash",
+    "benchmarkId": "gpqa-diamond",
+    "variant": "default",
+    "value": 0.809,
+    "reportedOn": "2026-05-29",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "step-3-7-flash",
+    "benchmarkId": "hle",
+    "variant": "default",
+    "value": 0.199,
+    "reportedOn": "2026-05-29",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "step-3-7-flash",
+    "benchmarkId": "scicode",
+    "variant": "default",
+    "value": 0.4,
+    "reportedOn": "2026-05-29",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "step-3-7-flash",
+    "benchmarkId": "ifbench",
+    "variant": "default",
+    "value": 0.672789115646258,
+    "reportedOn": "2026-05-29",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "step-3-7-flash",
+    "benchmarkId": "aa-lcr",
+    "variant": "default",
+    "value": 0.636666666666667,
+    "reportedOn": "2026-05-29",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "step-3-7-flash",
+    "benchmarkId": "terminal-bench-hard",
+    "variant": "default",
+    "value": 0.356060606060606,
+    "reportedOn": "2026-05-29",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "step-3-7-flash",
+    "benchmarkId": "tau2-telecom",
+    "variant": "default",
+    "value": 0.985380116959064,
+    "reportedOn": "2026-05-29",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "qwen3-7-plus",
+    "benchmarkId": "aa-intelligence-index",
+    "variant": "default",
+    "value": 53.3,
+    "reportedOn": "2026-06-01",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "qwen3-7-plus",
+    "benchmarkId": "aa-coding-index",
+    "variant": "default",
+    "value": 46.5,
+    "reportedOn": "2026-06-01",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "qwen3-7-plus",
+    "benchmarkId": "gpqa-diamond",
+    "variant": "default",
+    "value": 0.9,
+    "reportedOn": "2026-06-01",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "qwen3-7-plus",
+    "benchmarkId": "hle",
+    "variant": "default",
+    "value": 0.334,
+    "reportedOn": "2026-06-01",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "qwen3-7-plus",
+    "benchmarkId": "scicode",
+    "variant": "default",
+    "value": 0.455,
+    "reportedOn": "2026-06-01",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "qwen3-7-plus",
+    "benchmarkId": "ifbench",
+    "variant": "default",
+    "value": 0.779591836734694,
+    "reportedOn": "2026-06-01",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "qwen3-7-plus",
+    "benchmarkId": "aa-lcr",
+    "variant": "default",
+    "value": 0.65,
+    "reportedOn": "2026-06-01",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "qwen3-7-plus",
+    "benchmarkId": "terminal-bench-hard",
+    "variant": "default",
+    "value": 0.46969696969697,
+    "reportedOn": "2026-06-01",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "qwen3-7-plus",
+    "benchmarkId": "tau2-telecom",
+    "variant": "default",
+    "value": 0.929824561403509,
+    "reportedOn": "2026-06-01",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "gemma-4-12b-non-reasoning",
+    "benchmarkId": "aa-intelligence-index",
+    "variant": "default",
+    "value": 19.5,
+    "reportedOn": "2026-06-03",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "gemma-4-12b-non-reasoning",
+    "benchmarkId": "aa-coding-index",
+    "variant": "default",
+    "value": 17.5,
+    "reportedOn": "2026-06-03",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "gemma-4-12b-non-reasoning",
+    "benchmarkId": "gpqa-diamond",
+    "variant": "default",
+    "value": 0.661,
+    "reportedOn": "2026-06-03",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "gemma-4-12b-non-reasoning",
+    "benchmarkId": "hle",
+    "variant": "default",
+    "value": 0.062,
+    "reportedOn": "2026-06-03",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "gemma-4-12b-non-reasoning",
+    "benchmarkId": "scicode",
+    "variant": "default",
+    "value": 0.297,
+    "reportedOn": "2026-06-03",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "gemma-4-12b-non-reasoning",
+    "benchmarkId": "ifbench",
+    "variant": "default",
+    "value": 0.451700680272109,
+    "reportedOn": "2026-06-03",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "gemma-4-12b-non-reasoning",
+    "benchmarkId": "aa-lcr",
+    "variant": "default",
+    "value": 0.306666666666667,
+    "reportedOn": "2026-06-03",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "gemma-4-12b-non-reasoning",
+    "benchmarkId": "terminal-bench-hard",
+    "variant": "default",
+    "value": 0.113636363636364,
+    "reportedOn": "2026-06-03",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "gemma-4-12b-non-reasoning",
+    "benchmarkId": "tau2-telecom",
+    "variant": "default",
+    "value": 0.318713450292398,
+    "reportedOn": "2026-06-03",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "gemma-4-12b",
+    "benchmarkId": "aa-intelligence-index",
+    "variant": "default",
+    "value": 29.2,
+    "reportedOn": "2026-06-03",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "gemma-4-12b",
+    "benchmarkId": "aa-coding-index",
+    "variant": "default",
+    "value": 24.9,
+    "reportedOn": "2026-06-03",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "gemma-4-12b",
+    "benchmarkId": "gpqa-diamond",
+    "variant": "default",
+    "value": 0.753,
+    "reportedOn": "2026-06-03",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "gemma-4-12b",
+    "benchmarkId": "hle",
+    "variant": "default",
+    "value": 0.148,
+    "reportedOn": "2026-06-03",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "gemma-4-12b",
+    "benchmarkId": "scicode",
+    "variant": "default",
+    "value": 0.382,
+    "reportedOn": "2026-06-03",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "gemma-4-12b",
+    "benchmarkId": "ifbench",
+    "variant": "default",
+    "value": 0.735374149659864,
+    "reportedOn": "2026-06-03",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "gemma-4-12b",
+    "benchmarkId": "aa-lcr",
+    "variant": "default",
+    "value": 0.553333333333333,
+    "reportedOn": "2026-06-03",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "gemma-4-12b",
+    "benchmarkId": "terminal-bench-hard",
+    "variant": "default",
+    "value": 0.181818181818182,
+    "reportedOn": "2026-06-03",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "gemma-4-12b",
+    "benchmarkId": "tau2-telecom",
+    "variant": "default",
+    "value": 0.362573099415205,
+    "reportedOn": "2026-06-03",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "nvidia-nemotron-3-ultra-550b-a55b",
+    "benchmarkId": "aa-intelligence-index",
+    "variant": "default",
+    "value": 47.7,
+    "reportedOn": "2026-06-04",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "nvidia-nemotron-3-ultra-550b-a55b",
+    "benchmarkId": "aa-coding-index",
+    "variant": "default",
+    "value": 37.6,
+    "reportedOn": "2026-06-04",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "nvidia-nemotron-3-ultra-550b-a55b",
+    "benchmarkId": "gpqa-diamond",
+    "variant": "default",
+    "value": 0.867,
+    "reportedOn": "2026-06-04",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "nvidia-nemotron-3-ultra-550b-a55b",
+    "benchmarkId": "hle",
+    "variant": "default",
+    "value": 0.266,
+    "reportedOn": "2026-06-04",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "nvidia-nemotron-3-ultra-550b-a55b",
+    "benchmarkId": "scicode",
+    "variant": "default",
+    "value": 0.399,
+    "reportedOn": "2026-06-04",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "nvidia-nemotron-3-ultra-550b-a55b",
+    "benchmarkId": "ifbench",
+    "variant": "default",
+    "value": 0.813605442176871,
+    "reportedOn": "2026-06-04",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "nvidia-nemotron-3-ultra-550b-a55b",
+    "benchmarkId": "aa-lcr",
+    "variant": "default",
+    "value": 0.67,
+    "reportedOn": "2026-06-04",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "nvidia-nemotron-3-ultra-550b-a55b",
+    "benchmarkId": "terminal-bench-hard",
+    "variant": "default",
+    "value": 0.363636363636364,
+    "reportedOn": "2026-06-04",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "nvidia-nemotron-3-ultra-550b-a55b",
+    "benchmarkId": "tau2-telecom",
+    "variant": "default",
+    "value": 0.833333333333333,
+    "reportedOn": "2026-06-04",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "claude-fable-5",
+    "benchmarkId": "aa-intelligence-index",
+    "variant": "default",
+    "value": 64.9,
+    "reportedOn": "2026-06-09",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "claude-fable-5",
+    "benchmarkId": "aa-coding-index",
+    "variant": "default",
+    "value": 62,
+    "reportedOn": "2026-06-09",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "claude-fable-5",
+    "benchmarkId": "gpqa-diamond",
+    "variant": "default",
+    "value": 0.926,
+    "reportedOn": "2026-06-09",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "claude-fable-5",
+    "benchmarkId": "hle",
+    "variant": "default",
+    "value": 0.533,
+    "reportedOn": "2026-06-09",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "claude-fable-5",
+    "benchmarkId": "scicode",
+    "variant": "default",
+    "value": 0.602,
+    "reportedOn": "2026-06-09",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "claude-fable-5",
+    "benchmarkId": "ifbench",
+    "variant": "default",
+    "value": 0.63469387755102,
+    "reportedOn": "2026-06-09",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "claude-fable-5",
+    "benchmarkId": "aa-lcr",
+    "variant": "default",
+    "value": 0.7,
+    "reportedOn": "2026-06-09",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "claude-fable-5",
+    "benchmarkId": "terminal-bench-hard",
+    "variant": "default",
+    "value": 0.628787878787879,
+    "reportedOn": "2026-06-09",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "claude-fable-5",
+    "benchmarkId": "tau2-telecom",
+    "variant": "default",
+    "value": 0.985380116959064,
+    "reportedOn": "2026-06-09",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "north-mini-code",
+    "benchmarkId": "aa-intelligence-index",
+    "variant": "default",
+    "value": 27.6,
+    "reportedOn": "2026-06-09",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "north-mini-code",
+    "benchmarkId": "aa-coding-index",
+    "variant": "default",
+    "value": 33.4,
+    "reportedOn": "2026-06-09",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "north-mini-code",
+    "benchmarkId": "gpqa-diamond",
+    "variant": "default",
+    "value": 0.757,
+    "reportedOn": "2026-06-09",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "north-mini-code",
+    "benchmarkId": "hle",
+    "variant": "default",
+    "value": 0.099,
+    "reportedOn": "2026-06-09",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "north-mini-code",
+    "benchmarkId": "scicode",
+    "variant": "default",
+    "value": 0.382,
+    "reportedOn": "2026-06-09",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "north-mini-code",
+    "benchmarkId": "ifbench",
+    "variant": "default",
+    "value": 0.575510204081633,
+    "reportedOn": "2026-06-09",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "north-mini-code",
+    "benchmarkId": "aa-lcr",
+    "variant": "default",
+    "value": 0.323333333333333,
+    "reportedOn": "2026-06-09",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "north-mini-code",
+    "benchmarkId": "terminal-bench-hard",
+    "variant": "default",
+    "value": 0.310606060606061,
+    "reportedOn": "2026-06-09",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
+  },
+  {
+    "modelId": "north-mini-code",
+    "benchmarkId": "tau2-telecom",
+    "variant": "default",
+    "value": 0.374269005847953,
+    "reportedOn": "2026-06-09",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "notes": "Synced from Artificial Analysis API"
   }
 ]
